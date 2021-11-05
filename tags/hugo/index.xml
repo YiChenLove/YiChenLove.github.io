@@ -14,11 +14,35 @@
     <managingEditor>chen61813772@gmail.com (wangyichen)</managingEditor>
     <webMaster>chen61813772@gmail.com (wangyichen)</webMaster>
     <copyright>©2021, All Rights Reserved</copyright>
-    <lastBuildDate>Wed, 18 Dec 2019 10:33:41 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 05 Nov 2021 17:07:31 +0800</lastBuildDate>
     
         <atom:link href="https://yichenlove.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>Use Hugo</title>
+        <link>https://yichenlove.github.io/posts/use-hugo/</link>
+        <pubDate>Fri, 05 Nov 2021 17:07:31 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        <atom:modified>Fri, 05 Nov 2021 17:07:31 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/use-hugo/</guid>
+        <description>Hugo 完整使用教程 官网 基于go 语言开发 官网地址：https://gohugo.io/ 环境 1.Homebrew 如果你是macOS用户，请使用Homebrew快速安装</description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>hugo</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>Syntax highlighting</title>
