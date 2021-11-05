@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>android on wangyichen&#39;s blog</title>
+    <link>https://yichenlove.github.io/tags/android/</link>
+    <description>Recent content in android on wangyichen&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>chen61813772@gmail.com (wangyichen)</managingEditor>
+    <webMaster>chen61813772@gmail.com (wangyichen)</webMaster>
+    <copyright>©2021, All Rights Reserved</copyright>
+    <lastBuildDate>Fri, 05 Nov 2021 16:54:48 +0800</lastBuildDate>
+    
+        <atom:link href="https://yichenlove.github.io/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>Android Activity的Launch Mode</title>
+        <link>https://yichenlove.github.io/posts/android-launchmode/</link>
+        <pubDate>Fri, 05 Nov 2021 16:54:48 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        <atom:modified>Fri, 05 Nov 2021 16:54:48 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/android-launchmode/</guid>
+        <description>Android Activity的Launch Mode 综述 对安卓而言，Activity有四种启动模式，它们是： standard 标准模式，每次都新建一个实例对象 singleTop 如果在任务栈顶</description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+        
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

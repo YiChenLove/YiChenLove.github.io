@@ -14,7 +14,7 @@
     <managingEditor>chen61813772@gmail.com (wangyichen)</managingEditor>
     <webMaster>chen61813772@gmail.com (wangyichen)</webMaster>
     <copyright>©2021, All Rights Reserved</copyright>
-    <lastBuildDate>Thu, 05 Mar 2020 14:08:48 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 05 Nov 2021 17:07:31 +0800</lastBuildDate>
     
         <atom:link href="https://yichenlove.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -40,6 +40,66 @@
         
       
 
+      
+      <item>
+        <title>Use Hugo</title>
+        <link>https://yichenlove.github.io/posts/use-hugo/</link>
+        <pubDate>Fri, 05 Nov 2021 17:07:31 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        <atom:modified>Fri, 05 Nov 2021 17:07:31 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/use-hugo/</guid>
+        <description>Hugo 完整使用教程 官网 基于go 语言开发 官网地址：https://gohugo.io/ 环境 1.Homebrew 如果你是macOS用户，请使用Homebrew快速安装</description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Android Activity的Launch Mode</title>
+        <link>https://yichenlove.github.io/posts/android-launchmode/</link>
+        <pubDate>Fri, 05 Nov 2021 16:54:48 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        <atom:modified>Fri, 05 Nov 2021 16:54:48 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/android-launchmode/</guid>
+        <description>Android Activity的Launch Mode 综述 对安卓而言，Activity有四种启动模式，它们是： standard 标准模式，每次都新建一个实例对象 singleTop 如果在任务栈顶</description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>My First Post</title>
+        <link>https://yichenlove.github.io/posts/my-first-post/</link>
+        <pubDate>Mon, 27 Sep 2021 15:03:48 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        <atom:modified>Mon, 27 Sep 2021 15:03:48 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/my-first-post/</guid>
+        <description></description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>Shortcodes</title>
