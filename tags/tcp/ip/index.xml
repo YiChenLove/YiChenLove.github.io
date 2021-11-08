@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>TCP/IP on wangyichen&#39;s blog</title>
+    <link>https://yichenlove.github.io/tags/tcp/ip/</link>
+    <description>Recent content in TCP/IP on wangyichen&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>chen61813772@gmail.com (wangyichen)</managingEditor>
+    <webMaster>chen61813772@gmail.com (wangyichen)</webMaster>
+    <copyright>©2021, All Rights Reserved</copyright>
+    
+        <atom:link href="https://yichenlove.github.io/tags/tcp/ip/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>TCP/IP 协议</title>
+        <link>https://yichenlove.github.io/posts/tcpip/</link>
+        <pubDate>Mon, 08 Nov 2021 17:21:56 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        <atom:modified>Mon, 08 Nov 2021 17:21:56 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/tcpip/</guid>
+        <description>熟悉 TCP/IP 协议 一张思维导图 一图看完本文 一、 计算机网络体系结构分层 计算机网络体系结构分层 计算机网络体系结构分层 不难看出，TCP/IP 与 OSI 在分层模块</description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>TCP/IP</category>
+            
+          
+        
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>
