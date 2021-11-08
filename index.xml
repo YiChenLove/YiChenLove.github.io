@@ -14,7 +14,7 @@
     <managingEditor>chen61813772@gmail.com (wangyichen)</managingEditor>
     <webMaster>chen61813772@gmail.com (wangyichen)</webMaster>
     <copyright>©2021, All Rights Reserved</copyright>
-    <lastBuildDate>Fri, 05 Nov 2021 17:25:44 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 08 Nov 2021 14:42:48 +0800</lastBuildDate>
     
         <atom:link href="https://yichenlove.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -40,6 +40,118 @@
         
       
 
+      
+      <item>
+        <title>cocos creator Material Effect梳理（⼀）</title>
+        <link>https://yichenlove.github.io/posts/cocos_creator_material_effect1/</link>
+        <pubDate>Mon, 08 Nov 2021 14:42:48 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        <atom:modified>Mon, 08 Nov 2021 14:42:48 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/cocos_creator_material_effect1/</guid>
+        <description>cocos creator Material Effect梳理（⼀） cocos creator 右键菜单，除了创建组件，Effect Material是什么？ * 什么是Material(纹理)？: ``` three</description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>cocos creator</category>
+            
+          
+            
+              <category>Material Effect</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Javascript中apply、call、bind</title>
+        <link>https://yichenlove.github.io/posts/javascripts-bind/</link>
+        <pubDate>Mon, 08 Nov 2021 11:03:43 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        <atom:modified>Mon, 08 Nov 2021 11:03:43 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/javascripts-bind/</guid>
+        <description>apply、call 在 javascript 中，call 和 apply 都是为了改变某个函数运行时的上下文（context）而存在的，换句话说，就是为了改变函数体内部 this 的指</description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>javascript</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>【unity】使用Profiler进行性能分析</title>
+        <link>https://yichenlove.github.io/posts/unity-profiler/</link>
+        <pubDate>Mon, 08 Nov 2021 10:45:06 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        <atom:modified>Mon, 08 Nov 2021 10:45:06 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/unity-profiler/</guid>
+        <description>在游戏开发过程中，游戏性能是非常重要的，学会使用unity自带的profiler工具是非常必要的，以下是我从官方地址找到的进阶教程，感觉文章</description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>Unity</category>
+            
+          
+            
+              <category>Profiler</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Unity中xLua与toLua对Vector3的优化</title>
+        <link>https://yichenlove.github.io/posts/unity-xlua-vector3/</link>
+        <pubDate>Fri, 05 Nov 2021 17:55:54 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        <atom:modified>Fri, 05 Nov 2021 17:55:54 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/unity-xlua-vector3/</guid>
+        <description>目录 概述 1.1 Vector3的定义 1.2 主要优化的是什么？ xLua对Vector3的优化 2.1 xLua创建Vector3 2.2 xLua获取Vector3 &amp;ndash; C</description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>Unity</category>
+            
+          
+            
+              <category>xLua</category>
+            
+          
+            
+              <category>toLua</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>Litjson Fix</title>
