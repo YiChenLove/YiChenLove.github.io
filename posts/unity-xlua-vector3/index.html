@@ -1860,12 +1860,12 @@
 要注意的是push方法是<code>PushUnityEngineVector3</code>，普通是<code>translator.Push</code></p>
 </li>
 </ol>
-<p><img src="//upload-images.jianshu.io/upload_images/4276633-73446b15de18a8f1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/715/format/webp" alt="" /></p>
+<p><img src="media/image1.png" alt="" /></p>
 <p>xlua push vec3 to lua 2.png</p>
 <ol start="4">
 <li><code>PushUnityEngineVector3</code>做的优化是申请一块userdata（size=12），将Vector3拆成3个float，Pack到userdata，push到lua</li>
 </ol>
-<p><img src="//upload-images.jianshu.io/upload_images/4276633-38d4abe36253f959.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/589/format/webp" alt="" /></p>
+<p><img src="media/image2.png" alt="" /></p>
 <p>xlua push float3 to lua 3.png</p>
 <ol start="5">
 <li>这种Vector3 userdata传给C#后，有一个与Pack对应的UnPack 过程。</li>
@@ -1884,7 +1884,7 @@
 <ol>
 <li><code>UnityEngineTransformWrap. _g_get_position</code> lua想从transform获取position</li>
 </ol>
-<p><img src="//upload-images.jianshu.io/upload_images/4276633-2c796c0f1bccdf4c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/882/format/webp" alt="" /></p>
+<p><img src="media/image3.png" alt="" /></p>
 <p>transform getposition.png</p>
 <ol start="2">
 <li>获取C# transform对象：<code>UnityEngine.Transform __cl_gen_to_be_invoked = (UnityEngine.Transform)translator.FastGetCSObj(L, 1);</code></li>
@@ -1895,7 +1895,8 @@
 <ol>
 <li>
 <p><code>UnityEngineTransformWrap. _s_set_position</code>, lua想把pos设置到transform.position</p>
-<p>xLua transform setposition.png</p>
+<p><img src="media/image4.png" alt="" /><br />
+xLua transform setposition.png</p>
 </li>
 <li>
 <p>设置position有2.1中的2种方式：</p>
@@ -1907,32 +1908,35 @@
 <li>Table替代 : <code>aTransform.position = {x = 1, y = 2, z = 3}</code><br />
 直接调用 <code>CopyByValue.UnPack</code>，将Table的x，y，z值取出，设置到<code>out UnityEngine.Vector3 val</code></li>
 </ol>
+<p><img src="media/image5.png" alt="" /><br />
+transform setposition get.png</p>
 </li>
-</ol>
-<p>transform setposition get.png</p>
-<ol start="3">
 <li>
 <p><code>CopyByValue.UnPack</code><br />
 上面2种方式调用的 <code>CopyByValue.UnPack</code>实现不同;</p>
 <ol>
-<li>userdata的方式，Pack的时候，使用<code>xlua_pack_float3</code>,对应的UnPack过程使用<code>xlua_unpack_float3</code>,解出userdata struct.</li>
+<li>userdata的方式，Pack的时候，使用<code>xlua_pack_float3</code>,对应的UnPack过程使用<code>xlua_unpack_float3</code>,解出userdata struct.<br />
+<img src="media/image6.png" alt="" /><br />
+xlua userdata方式设置vector3.png</li>
+<li>lua table,从栈中依次读取3个float值。</li>
 </ol>
-<p>xlua userdata方式设置vector3.png<br />
-2.  lua table,从栈中依次读取3个float值。</p>
-<p>xlua table方式设置vector3.png</p>
+<p><img src="media/image7.png" alt="" /><br />
+xlua table方式设置vector3.png</p>
 </li>
 </ol>
 <h4 id="24-gcoptimize----pushunityenginevector3的由来">2.4 GCOptimize &ndash; <code>PushUnityEngineVector3</code>的由来</h4>
 <ol>
 <li>
 <p>为何Vector3的push到lua 会有一个针对优化的接口<code>PushUnityEngineVector3</code>？<br />
-Vector3 struct配置了GCOptimize属性（对于常用的UnityEngine的几个struct，Vector系列，Quaternion，Color。。。均已经配置了该属性），这个属性可以通过配置文件或者C# Attribute实现；</p>
-<p>GCOptimize Vector3.png</p>
+Vector3 struct配置了GCOptimize属性（对于常用的UnityEngine的几个struct，Vector系列，Quaternion，Color。。。均已经配置了该属性），这个属性可以通过配置文件或者C# Attribute实现；<br />
+<img src="media/image8.png" alt="" /><br />
+GCOptimize Vector3.png</p>
 </li>
 <li>
 <p>从GCOptimize列表中去掉Vector3 会怎么样呢？<br />
-<code>PushUnityEngineVector3</code>接口就不存在了，而Vector3的push到lua会使用<code>translator.Push(L, __cl_gen_ret);</code> ，不做优化<code>public void Push(RealStatePtr L, object o)</code>，会产生boxing（装箱）和unboxing（拆箱），代表着一个gc。</p>
-<p>去掉vector3的GCOptimize后的push.png</p>
+<code>PushUnityEngineVector3</code>接口就不存在了，而Vector3的push到lua会使用<code>translator.Push(L, __cl_gen_ret);</code> ，不做优化<code>public void Push(RealStatePtr L, object o)</code>，会产生boxing（装箱）和unboxing（拆箱），代表着一个gc。<br />
+<img src="media/image9.png" alt="" /><br />
+去掉vector3的GCOptimize后的push.png</p>
 </li>
 </ol>
 <hr />
@@ -1952,12 +1956,14 @@ Vector3 struct配置了GCOptimize属性（对于常用的UnityEngine的几个str
 <p>lua中 aTransform.position获取Vector3坐标：</p>
 <ol>
 <li>
-<p>C# <code>UnityEngine_TransformWrap.get_position</code>；调用<code>ToLua.Push</code></p>
-<p>toLua get_position.png</p>
+<p>C# <code>UnityEngine_TransformWrap.get_position</code>；调用<code>ToLua.Push</code><br />
+<img src="media/image10.png" alt="" /><br />
+toLua get_position.png</p>
 </li>
 <li>
-<p>C#传入Vector3的x，y，z；</p>
-<p>toLua get_position pushvec3.png</p>
+<p>C#传入Vector3的x，y，z；<br />
+<img src="media/image11.png" alt="" /><br />
+toLua get_position pushvec3.png</p>
 </li>
 <li>
 <p>在lua建一个lua table，把x，y，z设置为对应字段；</p>
@@ -1969,8 +1975,9 @@ Vector3 struct配置了GCOptimize属性（对于常用的UnityEngine的几个str
 <h4 id="33-tolua-设置-vector3到c">3.3 toLua 设置 Vector3到C#</h4>
 <ol>
 <li>
-<p>从栈中取出对应table的x，y，z字段</p>
-<p>toLua set_position ToVector3.png</p>
+<p>从栈中取出对应table的x，y，z字段<br />
+<img src="media/image12.png" alt="" /><br />
+toLua set_position ToVector3.png</p>
 </li>
 <li>
 <p>C# new一个Vector3，将x，y，z赋值到Vector3；<br />
@@ -1989,7 +1996,8 @@ Vector3 struct配置了GCOptimize属性（对于常用的UnityEngine的几个str
 <li>扩展性的比较，xLua高<br />
 toLua重新Lua实现的类,需要增加一种新的值类型十分困难, 数量有限,并且与Unity C# Vector3核心代码深度耦合。</li>
 </ol>
-<p>toLua lua类列表.png</p>
+<p><img src="media/image13.png" alt="" /><br />
+toLua lua类列表.png</p>
 <p>xLua支持的struct类型宽泛的多，包含枚举，用户要做的事情也很简单，用GCOptimize声明一下类型即可。支持自定义struct。（struct要求1.含无参构造函数 2.只包含值类型，可以嵌套其它只包含值类型的struct）</p>
 <h3 id="相关链接">相关链接</h3>
 <ol>

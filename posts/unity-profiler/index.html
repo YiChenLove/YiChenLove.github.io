@@ -1845,7 +1845,7 @@
 </li>
 <li>
 <p>在<strong>Profiler</strong>窗口的上方，选择显示性能较差的帧。这可能是低于我们要求帧率的“尖峰”或是有代表性的帧。我们可以使用左右按键或前进后退键在帧之间更好的移动。</p>
-<p><img src="//upload-images.jianshu.io/upload_images/9907652-198731cdca6e17dc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/860/format/webp" alt="" /></p>
+<p><img src="media/image1.png" alt="" /></p>
 </li>
 </ul>
 <p>我们已经获取游戏中性能较差的分析数据。下一步，让我们学习如何分析这些数据。</p>
@@ -1855,25 +1855,25 @@
 <p>为了学习如何分析，我们将会使用CPU分析器作为例子，这可能是我们在研究帧率问题上用的最多的分析器。</p>
 <h3 id="cpu分析器">CPU分析器</h3>
 <p>当我们在Profiler窗口看CPU分析器的时候，我们可以看到CPU完成每帧所花费的时间。</p>
-<p><img src="//upload-images.jianshu.io/upload_images/9907652-392d546555d11236.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/535/format/webp" alt="" /></p>
+<p><img src="media/image2.png" alt="" /></p>
 <p>我们可以看到时间花费的彩色浪图。不同的颜色代表时间花在渲染操作上，物理计算上等等。那些关键字标明哪些颜色代表哪些任务。</p>
 <p>在接下来的截图中，我们可以到这一帧的主要时间花费在渲染操作上。下方的CPU时间指示器表明了我们的总的CPU时间在这一帧花费了<strong>85.95</strong>毫秒。</p>
-<p><img src="//upload-images.jianshu.io/upload_images/9907652-1695c588ea443b04.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/810/format/webp" alt="" /></p>
+<p><img src="media/image3.png" alt="" /></p>
 <h4 id="层次结构图">层次结构图</h4>
 <p>让我们使用CPU分析器的层次结构视图去深挖当前数据并且更精确的查看当前帧哪一个任务花费CPU时间最多。当选中CPU分析器的时候，我们可以在Profiler窗口的下半屏看到当前帧的详细信息。查看Profiler窗口的下半屏，我们在做上方可以使用下拉菜单选择结构视图。这可以让我们看到CPU上正在发生的任务的详细信息。</p>
-<p><img src="//upload-images.jianshu.io/upload_images/9907652-efb5ce1a4a7986cd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/810/format/webp" alt="" /></p>
+<p><img src="media/image4.png" alt="" /></p>
 <p>在层次结构图中，点击任何列的列头按该值排序。比如，点击<strong>Time ms</strong>按花费时间最长开始排序，点击<strong>Calls</strong>按当前高亮的帧调用次数最多的函数排序。在以上截图中，我们按照耗时排序，我们可以看到CPU最耗时的函数是Camera.Render。</p>
 <p>如果一个函数名字的左右有小箭头，我们可以展开看到这个函数调用了其他哪些函数和他们的性能影响。<strong>Self ms</strong>列表明这个函数自己的耗时，<strong>Time me</strong>列表明这个函数和它调用的其他函数的耗时。</p>
-<p><img src="//upload-images.jianshu.io/upload_images/9907652-128823c176a13d3f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/810/format/webp" alt="" /></p>
+<p><img src="media/image5.png" alt="" /></p>
 <p>在这种情况下，我们可以看到Camera.Render下，最耗时的函数是Shadows.RenderJob。即使我们对这个具体的函数还不太了解，但是我们已经有关于我们游戏问题的信息了。我们知道我们的问题跟渲染有关，这个当前最耗时的任务是shaodws有关。</p>
 <p>我们可以在层次结构图做的另一个有用的事是比较我们游戏的帧，这样我们可以明白性能是如何随着时间的变化而变化的。我们使用CPU分析器一帧一帧的分析出单个最耗时的函数。当我们点击CPU分析器层级结构图上的函数名的时候，函数相关数据会高亮。</p>
-<p><img src="//upload-images.jianshu.io/upload_images/9907652-f9ddf4455e42ce48.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/810/format/webp" alt="" /></p>
+<p><img src="media/image6.png" alt="" /></p>
 <p>比如，我们在层级结构视图点击Gfx.WaitForPresent，跟Gfx.WaitForPresent相关的渲染函数会高亮显示。</p>
 <h4 id="时间线视图">时间线视图</h4>
 <p>现在让我们使用CPU分析器的时间视图学习更多关于我们渲染的问题。时间视图显示了两个东西：CPU任务执行的顺序和哪个线程负责哪个任务。我们可以在Profiler窗口的下半屏的左上角使用下拉按钮选择时间线视图（那里之前显示的是结构视图选项）</p>
-<p><img src="//upload-images.jianshu.io/upload_images/9907652-fb32772ed301e2fe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/810/format/webp" alt="" /></p>
+<p><img src="media/image7.png" alt="" /></p>
 <p>线程可以同时运行多个单独任务。当一个线程执行任务的时，另一个线程可以执行完全独立的任务。Unity的渲染处理包含三种类型的线程：<strong>main thread、render thread和worker threads</strong>。了解哪些线程负责哪些任务是非常有帮助的：一旦我们知道了哪个线程执行了的任务最慢，我们就明白应该集中精力去优化那些线程的操作。</p>
-<p><img src="//upload-images.jianshu.io/upload_images/9907652-e064dac75eb05359.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/810/format/webp" alt="" /></p>
+<p><img src="media/image8.png" alt="" /></p>
 <p>我们可以放大时间线视图来更仔细的查看单个任务。被调用的函数也会在调用者下方立即显示出来。在这个例子中，我们已经放大了Shadows.RenderJob看到了组成这个任务的单个任务。我们可以看到Shadows.RenderJob是在main thread调用的。我们同样看到workder threads执行了跟shadows相关的任务。主线程列出了一个叫WaitingForJob的任务，表明main thread正在等待worker thread完成任务。从这我们可以得出结论，shadows相关的渲染操作在main thread和worker threads花费太长时间了。我们现在知道问题所在了。</p>
 <h4 id="其他分析器">其他分析器</h4>
 <p>尽管在跟踪与帧率相关的性能问题时，CPU分析器是最常用的工具，其他分析器也同样非常有用。熟悉他们提供的信息是一个不错的主意。</p>
@@ -1905,7 +1905,7 @@
 <li>通过下拉菜单选择GPU</li>
 </ul>
 <p>如果GPU分析器不支持使用，我们会在GPU正常显示数据的区域看到一条以“GPU Profiling is not supported”开头的信息。</p>
-<p><img src="//upload-images.jianshu.io/upload_images/9907652-3abbeb07a6c4a4fe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1019/format/webp" alt="" /></p>
+<p><img src="media/image9.png" alt="" /></p>
 <p>如果没有没有看到这条信息，这意味着GPU分析器在目标设备上是支持的。如果GPU分析器是可用的，那执行一下步骤就能非常快速辨别出我们游戏是否是GPU密集：</p>
 <ul>
 <li>
@@ -1914,7 +1914,7 @@
 <li>
 <p>查看屏幕正中心区域，那里显示了当前选中帧的CPU和GPU耗时。</p>
 <p>如果GPU耗时大于CPU耗时，则我们可以确认我们的游戏是GPU密集。</p>
-<p><img src="//upload-images.jianshu.io/upload_images/9907652-30e7b7b9134faee8.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp" alt="" /></p>
+<p><img src="media/image10.jpg" alt="" /></p>
 </li>
 </ul>
 <p>如果GPU分析器不能在目标设备上使用，我们仍然可以辨别我们的游戏是否是GPU密集。我们可以通过观察CPU分析器。如果我们看到CPU正在等待GPU完成任务，这就是意味着我们游戏是GPU密集。为了查明是否存在这种情况，我们可以执行以下步骤：</p>
@@ -1925,7 +1925,7 @@
 <li>选择<strong>Time ms</strong>列头，函数耗时按时间排序</li>
 </ul>
 <p>如果函数Gfx.WaitForPresent是CPU分析器中最好是的函数，这表明CPU正在等待GPU。这意味着我们的游戏是GPU密集。</p>
-<p><img src="//upload-images.jianshu.io/upload_images/9907652-246bc32b3a0e057b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/860/format/webp" alt="" /></p>
+<p><img src="media/image11.png" alt="" /></p>
 <p>解决我们游戏是GPU密集时的渲染问题。<br />
 如果我们已经确认我们的游戏是GPU密集，我们应该<a href="https://unity3d.com/cn/learn/tutorials/temas/performance-optimization/optimizing-graphics-rendering-unity-games?playlist=44069">阅读这篇文章</a></p>
 <h4 id="辨别我们的游戏是否是cpu密集">辨别我们的游戏是否是CPU密集</h4>
@@ -1952,8 +1952,9 @@
 <p>点击选择CPU分析器</p>
 </li>
 <li>
-<p>注意，你可以拖拽你感兴趣的部分的名称，重新排序它们，在下面的截图中，我们拖拽GarbageCollector到顶部，并且点击关掉了其他方面的数据。</p>
-<p>如果慢帧的大部分时间被垃圾回收占用了，这指明了我们有垃圾回收过度的问题。我们可以深入研究以确认问题。</p>
+<p>注意，你可以拖拽你感兴趣的部分的名称，重新排序它们，在下面的截图中，我们拖拽GarbageCollector到顶部，并且点击关掉了其他方面的数据。<br />
+<img src="media/image12.jpg" alt="" /><br />
+如果慢帧的大部分时间被垃圾回收占用了，这指明了我们有垃圾回收过度的问题。我们可以深入研究以确认问题。</p>
 </li>
 <li>
 <p>点击选择CPU分析器，检测Profiler窗口底部显示的当前帧相信信息</p>
