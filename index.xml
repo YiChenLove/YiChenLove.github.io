@@ -43,11 +43,11 @@
       
       <item>
         <title>cocos creator Material Effect梳理（⼀）</title>
-        <link>https://yichenlove.github.io/posts/cocos_creator_material_effect1/</link>
+        <link>https://yichenlove.github.io/posts/creator_material_effect1/</link>
         <pubDate>Mon, 08 Nov 2021 14:42:48 +0800</pubDate>
         <author>chen61813772@gmail.com (wangyichen)</author>
         <atom:modified>Mon, 08 Nov 2021 14:42:48 +0800</atom:modified>
-        <guid>https://yichenlove.github.io/posts/cocos_creator_material_effect1/</guid>
+        <guid>https://yichenlove.github.io/posts/creator_material_effect1/</guid>
         <description>cocos creator Material Effect梳理（⼀） cocos creator 右键菜单，除了创建组件，Effect Material是什么？ * 什么是Material(纹理)？: ``` three</description>
         
         <dc:creator>wangyichen</dc:creator>
