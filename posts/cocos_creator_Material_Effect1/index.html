@@ -1818,7 +1818,7 @@
 <p>* 什么是Material</p>
 <p>* threejs对⾃⼰内置的⼏种基础Material的描述</p>
 <p>⼀个⼀个看下去，看到最后.&hellip;</p>
-<p><img src="cocos_creator_Material_Effect1/media/image1.png" alt="" />{width=&ldquo;6.461111111111111in&rdquo;<br />
+<p><img src="media/image1.png" alt="" />{width=&ldquo;6.461111111111111in&rdquo;<br />
 height=&ldquo;5.086111111111111in&rdquo;}</p>
 <p>...</p>
 <p>Phone Material</p>
@@ -1851,16 +1851,16 @@ side:THREE.DoubleSide);</p>
 <p>```</p>
 <p>Material是怎么来的？先重温下Opengl渲染管线 关注Vertex Shader ,Fragment<br />
 Shader</p>
-<p><img src="cocos_creator_Material_Effect1/media/image2.png" alt="" />{width=&ldquo;6.461111111111111in&rdquo;<br />
+<p><img src="media/image2.png" alt="" />{width=&ldquo;6.461111111111111in&rdquo;<br />
 height=&ldquo;8.493055555555555in&rdquo;}</p>
 <p>我们同时回顾下刚才threejs看Material⾥⾯描述的⼏种常⻅Material</p>
-<p><img src="cocos_creator_Material_Effect1/media/image3.png" alt="" />{width=&ldquo;6.304166666666666in&rdquo;<br />
+<p><img src="media/image3.png" alt="" />{width=&ldquo;6.304166666666666in&rdquo;<br />
 height=&ldquo;6.993055555555555in&rdquo;}</p>
 <p>等下...</p>
 <p>Sprite和 Phone 是不是有点眼熟</p>
-<p><img src="cocos_creator_Material_Effect1/media/image4.png" alt="" />{width=&ldquo;2.2916666666666665in&rdquo;<br />
+<p><img src="media/image4.png" alt="" />{width=&ldquo;2.2916666666666665in&rdquo;<br />
 height=&ldquo;1.3125in&rdquo;}</p>
-<p><img src="cocos_creator_Material_Effect1/media/image5.png" alt="" />{width=&ldquo;2.4791666666666665in&rdquo;<br />
+<p><img src="media/image5.png" alt="" />{width=&ldquo;2.4791666666666665in&rdquo;<br />
 height=&ldquo;2.7930555555555556in&rdquo;}</p>
 <p>.&hellip;</p>
 <p>是的 都是⼀样的东⻄</p>
@@ -1884,11 +1884,11 @@ fragshader都是单独的资源⽂件，渲染</p>
 <p>就是⼀个可序列化的配置，理解成⾼级json即可，go python<br />
 等都有对应的解析库 类似 yaml.decode</p>
 <p>上百科：</p>
-<p><img src="cocos_creator_Material_Effect1/media/image6.png" alt="" />{width=&ldquo;6.461111111111111in&rdquo;<br />
+<p><img src="media/image6.png" alt="" />{width=&ldquo;6.461111111111111in&rdquo;<br />
 height=&ldquo;17.15277777777778in&rdquo;}</p>
-<p><img src="cocos_creator_Material_Effect1/media/image6.png" alt="" />{width=&ldquo;6.461111111111111in&rdquo;<br />
+<p><img src="media/image6.png" alt="" />{width=&ldquo;6.461111111111111in&rdquo;<br />
 height=&ldquo;17.15277777777778in&rdquo;}</p>
-<p><img src="cocos_creator_Material_Effect1/media/image6.png" alt="" />{width=&ldquo;6.461111111111111in&rdquo;<br />
+<p><img src="media/image6.png" alt="" />{width=&ldquo;6.461111111111111in&rdquo;<br />
 height=&ldquo;17.15277777777778in&rdquo;}</p>
 <p>其实就是⽤了个配置表包起来了。。。</p>
 <p>```</p>
@@ -1896,7 +1896,7 @@ height=&ldquo;17.15277777777778in&rdquo;}</p>
 <p>当然是从来不⽣产代码，只做代码的搬运⼯...上⼯地</p>
 <p>这⾥都是基于webgl能使⽤的shader的在线显示，都是采⽤glsl语⾔来的，和Unity不⼀样，unity也包裹了⼀层，当</p>
 <p>然根上还是可以⽤glsl的，所以，⽤什么引擎，只要是opengl渲染的，都可以上来看看glsl的实现搬运⼀把</p>
-<p><img src="cocos_creator_Material_Effect1/media/image7.png" alt="" />{width=&ldquo;6.461111111111111in&rdquo;<br />
+<p><img src="media/image7.png" alt="" />{width=&ldquo;6.461111111111111in&rdquo;<br />
 height=&ldquo;2.9499989063867016in&rdquo;}</p>
 <p>我们关注⼏个地⽅：</p>
 <p>* 着⾊器输⼊</p>
@@ -1907,22 +1907,22 @@ height=&ldquo;2.9499989063867016in&rdquo;}</p>
 <p>* compile下⽅的区域</p>
 <p>有些效果是基于纹理的，⼤部分是噪点纹理或具体实物材质表⾯效果的纹理。</p>
 <p>怎么这么多⿊框？</p>
-<p><img src="cocos_creator_Material_Effect1/media/image8.png" alt="" />{width=&ldquo;5.908333333333333in&rdquo;<br />
+<p><img src="media/image8.png" alt="" />{width=&ldquo;5.908333333333333in&rdquo;<br />
 height=&ldquo;2.522222222222222in&rdquo;}</p>
 <p>cocos creator 也是⽀持传⼊8张纹理之多来叠加的.&hellip;.</p>
 <p>搬运步骤:</p>
 <p>1. 创建</p>
-<p><img src="cocos_creator_Material_Effect1/media/image9.png" alt="" />{width=&ldquo;2.5527777777777776in&rdquo;<br />
+<p><img src="media/image9.png" alt="" />{width=&ldquo;2.5527777777777776in&rdquo;<br />
 height=&ldquo;3.376388888888889in&rdquo;}</p>
 <p>最好在这个路径，我们都知道glsl可能写起来⼀⼤堆⼀⼤堆，每个引擎多多少少为了复⽤，都有include机制</p>
-<p><img src="cocos_creator_Material_Effect1/media/image10.png" alt="" />{width=&ldquo;6.461111111111111in&rdquo;<br />
+<p><img src="media/image10.png" alt="" />{width=&ldquo;6.461111111111111in&rdquo;<br />
 height=&ldquo;2.8027777777777776in&rdquo;}</p>
 <p>include 可以导⼊别的glsl⽂件短，增加复⽤和抽象</p>
 <p>loadcloud 对应的Effect⽂件抄起来~</p>
-<p><img src="cocos_creator_Material_Effect1/media/image11.png" alt="" />{width=&ldquo;6.461111111111111in&rdquo;<br />
+<p><img src="media/image11.png" alt="" />{width=&ldquo;6.461111111111111in&rdquo;<br />
 height=&ldquo;8.858332239720035in&rdquo;}</p>
 <p>顺利替换完变量抄完，拖⼊sprite内运⾏查看效果</p>
-<p><img src="cocos_creator_Material_Effect1/media/image12.png" alt="" />{width=&ldquo;4.783333333333333in&rdquo;<br />
+<p><img src="media/image12.png" alt="" />{width=&ldquo;4.783333333333333in&rdquo;<br />
 height=&ldquo;4.095832239720035in&rdquo;}</p>
 <p>duang!</p>
 
