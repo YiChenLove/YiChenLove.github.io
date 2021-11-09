@@ -14,7 +14,7 @@
     <managingEditor>chen61813772@gmail.com (wangyichen)</managingEditor>
     <webMaster>chen61813772@gmail.com (wangyichen)</webMaster>
     <copyright>©2021, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 08 Nov 2021 17:45:53 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 09 Nov 2021 15:47:27 +0800</lastBuildDate>
     
         <atom:link href="https://yichenlove.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -40,6 +40,38 @@
         
       
 
+      
+      <item>
+        <title> XLua框架——lua协程实现</title>
+        <link>https://yichenlove.github.io/posts/xluacoroutine/</link>
+        <pubDate>Tue, 09 Nov 2021 15:47:27 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        <atom:modified>Tue, 09 Nov 2021 15:47:27 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/xluacoroutine/</guid>
+        <description>协程在unity中是一个很常用的方法，我们可以利用协程使代码看起来更连贯，易于理解。xlua在示例6中提供了一个协程的示例。 1 2 3 4 5 6 7 8</description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>unity</category>
+            
+          
+            
+              <category>xlua</category>
+            
+          
+            
+              <category>lua</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>详解 HTTP 协议</title>
