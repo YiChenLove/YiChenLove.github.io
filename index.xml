@@ -14,7 +14,7 @@
     <managingEditor>chen61813772@gmail.com (wangyichen)</managingEditor>
     <webMaster>chen61813772@gmail.com (wangyichen)</webMaster>
     <copyright>©2021, All Rights Reserved</copyright>
-    <lastBuildDate>Tue, 09 Nov 2021 15:47:27 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 10 Nov 2021 14:18:32 +0800</lastBuildDate>
     
         <atom:link href="https://yichenlove.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -40,6 +40,24 @@
         
       
 
+      
+      <item>
+        <title>Game Developer Roadmap</title>
+        <link>https://yichenlove.github.io/posts/game-developer-roadmap/</link>
+        <pubDate>Wed, 10 Nov 2021 14:18:32 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        <atom:modified>Wed, 10 Nov 2021 14:18:32 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/game-developer-roadmap/</guid>
+        <description></description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title> XLua框架——lua协程实现</title>
