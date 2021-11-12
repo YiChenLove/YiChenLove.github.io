@@ -1349,7 +1349,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="The blog of wangyichen.">
 
-<meta name="generator" content="Hugo 0.87.0" />
+<meta name="generator" content="Hugo 0.89.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1909,10 +1909,10 @@ HTTP是客户端浏览器或其他程序与Web服务器之间的应用层通信�
 <h3 id="五http-报文首部之请求行状态行">五、HTTP 报文首部之请求行、状态行</h3>
 <h4 id="1请求行">1.请求行</h4>
 <p>举个栗子，下面是一个 HTTP 请求的报文：</p>
-<pre><code class="language-undefined" data-lang="undefined">GET  /index.htm  HTTP/1.1
+<pre tabindex="0"><code class="language-undefined" data-lang="undefined">GET  /index.htm  HTTP/1.1
 Host: sample.com
 </code></pre><p>其中，下面的这行就是请求行，</p>
-<pre><code class="language-undefined" data-lang="undefined">GET  /index.htm  HTTP/1.1
+<pre tabindex="0"><code class="language-undefined" data-lang="undefined">GET  /index.htm  HTTP/1.1
 </code></pre><ul>
 <li>开头的 GET 表示请求访问服务器的类型，称为方法；</li>
 <li>随后的字符串 <code>/index.htm</code> 指明了请求访问的资源对象，也叫做请求 URI；</li>
@@ -1942,7 +1942,7 @@ Host: sample.com
 </code></pre></td></tr></table>
 </div>
 </div><p>其中，下面的这行就是状态行，</p>
-<pre><code class="language-undefined" data-lang="undefined">HTTP/1.1  200  OK
+<pre tabindex="0"><code class="language-undefined" data-lang="undefined">HTTP/1.1  200  OK
 </code></pre><ul>
 <li>开头的 <code>HTTP/1.1</code> 表示服务器对应的 HTTP 版本；</li>
 <li>紧挨着的 <code>200 OK</code> 表示请求的处理结果的状态码和原因短语。</li>
@@ -2250,7 +2250,7 @@ HTTP/1.1 协议使用在 RFC1123 中规定的日期时间的格式。</p>
 <li>该首部字段属于通用首部字段，但只用在客户端发送的请求中，要求所有的中间服务器不返回缓存的资源。</li>
 <li>所有的中间服务器如果都能以 HTTP/1.1 为基准，那直接采用 <code>Cache-Control: no-cache</code> 指定缓存的处理方式最为理想。但是要整体掌握所有中间服务器使用的 HTTP 协议版本却是不现实的，所以，发送的请求会同时包含下面两个首部字段：</li>
 </ul>
-<pre><code class="language-undefined" data-lang="undefined">Cache-Control: no-cache
+<pre tabindex="0"><code class="language-undefined" data-lang="undefined">Cache-Control: no-cache
 Pragma: no-cache
 </code></pre><h5 id="45-trailer">4.5 Trailer</h5>
 <p><code>Trailer: Expires</code><br />
@@ -2965,7 +2965,7 @@ Accept-Encoding 首部字段用来告知服务器用户代理支持的内容编�
 <h4 id="6-范围请求">6. 范围请求</h4>
 <p>假设你正在下载一个很大的文件，已经下了四分之三，忽然网络中断了，那下载就必须重头再来一遍。为了解决这个问题，需要一种可恢复的机制，即能从之前下载中断处恢复下载。要实现该功能，这就要用到范围请求。<br />
 有了范围请求， HTTP 客户端可以通过请求曾获取失败的实体的一个范围（或者说一部分），来恢复下载该实体。当然这有一个前提，那就是从客户端上一次请求该实体到这一次发出范围请求的时间段内，该对象没有改变过。例如：</p>
-<pre><code class="language-undefined" data-lang="undefined">GET  /bigfile.html  HTTP/1.1
+<pre tabindex="0"><code class="language-undefined" data-lang="undefined">GET  /bigfile.html  HTTP/1.1
 Host: www.sample.com
 Range: bytes=20224-
 ···

@@ -1349,7 +1349,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="The blog of wangyichen.">
 
-<meta name="generator" content="Hugo 0.87.0" />
+<meta name="generator" content="Hugo 0.89.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -2026,10 +2026,10 @@
 <pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">foo</span> <span class="o">=</span> <span class="p">{</span>
     <span class="nx">bar</span> <span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
     <span class="nx">eventBind</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){</span>
-        <span class="kd">var</span> <span class="mi">_</span><span class="k">this</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+        <span class="kd">var</span> <span class="nx">_this</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
         <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.someClass&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
             <span class="cm">/* Act on the event */</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">_</span><span class="k">this</span><span class="p">.</span><span class="nx">bar</span><span class="p">);</span>     <span class="c1">//1
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">_this</span><span class="p">.</span><span class="nx">bar</span><span class="p">);</span>     <span class="c1">//1
 </span><span class="c1"></span>        <span class="p">});</span>
     <span class="p">}</span>
 <span class="p">}</span>
