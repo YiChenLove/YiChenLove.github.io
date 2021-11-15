@@ -14,11 +14,35 @@
     <managingEditor>chen61813772@gmail.com (wangyichen)</managingEditor>
     <webMaster>chen61813772@gmail.com (wangyichen)</webMaster>
     <copyright>©2021, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 08 Nov 2021 11:03:43 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 15 Nov 2021 20:02:11 +0800</lastBuildDate>
     
         <atom:link href="https://yichenlove.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>说说 Javascript 数字精度丢失的问题，如何解决？</title>
+        <link>https://yichenlove.github.io/posts/javascripts-float/</link>
+        <pubDate>Mon, 15 Nov 2021 20:02:11 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        <atom:modified>Mon, 15 Nov 2021 20:02:11 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/javascripts-float/</guid>
+        <description># 一、场景复现 一个经典的面试题 1 0.1 + 0.2 === 0.3 // false 为什么是false呢? 先看下面这个比喻 比如一个数 1÷3=0.33333333&amp;hellip;&amp;</description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>javascript</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>Javascript中apply、call、bind</title>
