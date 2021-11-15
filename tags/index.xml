@@ -14,11 +14,47 @@
     <managingEditor>chen61813772@gmail.com (wangyichen)</managingEditor>
     <webMaster>chen61813772@gmail.com (wangyichen)</webMaster>
     <copyright>©2021, All Rights Reserved</copyright>
-    <lastBuildDate>Tue, 09 Nov 2021 15:47:27 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 15 Nov 2021 16:03:25 +0800</lastBuildDate>
     
         <atom:link href="https://yichenlove.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>java</title>
+        <link>https://yichenlove.github.io/tags/java/</link>
+        <pubDate>Mon, 15 Nov 2021 16:03:25 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        
+        <guid>https://yichenlove.github.io/tags/java/</guid>
+        <description></description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>jdk</title>
+        <link>https://yichenlove.github.io/tags/jdk/</link>
+        <pubDate>Mon, 15 Nov 2021 16:03:25 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        
+        <guid>https://yichenlove.github.io/tags/jdk/</guid>
+        <description></description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>lua</title>

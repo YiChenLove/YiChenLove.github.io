@@ -14,11 +14,39 @@
     <managingEditor>chen61813772@gmail.com (wangyichen)</managingEditor>
     <webMaster>chen61813772@gmail.com (wangyichen)</webMaster>
     <copyright>©2021, All Rights Reserved</copyright>
-    <lastBuildDate>Fri, 12 Nov 2021 17:58:54 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 15 Nov 2021 16:03:25 +0800</lastBuildDate>
     
         <atom:link href="https://yichenlove.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>你安装的是Oracle JDK还是OpenJDK?</title>
+        <link>https://yichenlove.github.io/posts/javajdk/</link>
+        <pubDate>Mon, 15 Nov 2021 16:03:25 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        <atom:modified>Mon, 15 Nov 2021 16:03:25 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/javajdk/</guid>
+        <description>你安装的是SUN/Oracle JDK还是OpenJDK? 还傻傻分不清楚吗? 快来看看这篇吧😁 目录 1 如何查看你安装的JDK版本 1.1 要用到的命令行工</description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>java</category>
+            
+          
+            
+              <category>jdk</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>iTem2 &#43; oh-my-zsh 打造Mac上好用的终端</title>
