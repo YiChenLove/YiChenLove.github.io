@@ -14,7 +14,7 @@
     <managingEditor>chen61813772@gmail.com (wangyichen)</managingEditor>
     <webMaster>chen61813772@gmail.com (wangyichen)</webMaster>
     <copyright>©2021, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 15 Nov 2021 20:02:11 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 17 Nov 2021 15:06:54 +0800</lastBuildDate>
     
         <atom:link href="https://yichenlove.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -40,6 +40,54 @@
         
       
 
+      
+      <item>
+        <title>IC设计验证参考</title>
+        <link>https://yichenlove.github.io/posts/ic-verification/</link>
+        <pubDate>Wed, 17 Nov 2021 15:06:54 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        <atom:modified>Wed, 17 Nov 2021 15:06:54 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/ic-verification/</guid>
+        <description>01 验证对于IC的重要性 IC是集成电路的缩写，也就是我们常说的芯片；IC行业的技术门槛高、投入资金大、回报周期长、失败风险高，做一款中等规模的</description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>IC</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Java中char，int，String的相加减</title>
+        <link>https://yichenlove.github.io/posts/java-char-add/</link>
+        <pubDate>Tue, 16 Nov 2021 15:40:31 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        <atom:modified>Tue, 16 Nov 2021 15:40:31 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/java-char-add/</guid>
+        <description>要点： char与int ：可以相加减；int取本身数值，char取对应的ASCII码值；得到的结果是ASCII码增大或减小了int对应的数值大</description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>java</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>说说 Javascript 数字精度丢失的问题，如何解决？</title>

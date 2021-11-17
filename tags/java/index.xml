@@ -14,11 +14,35 @@
     <managingEditor>chen61813772@gmail.com (wangyichen)</managingEditor>
     <webMaster>chen61813772@gmail.com (wangyichen)</webMaster>
     <copyright>©2021, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 15 Nov 2021 16:03:25 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 16 Nov 2021 15:40:31 +0800</lastBuildDate>
     
         <atom:link href="https://yichenlove.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>Java中char，int，String的相加减</title>
+        <link>https://yichenlove.github.io/posts/java-char-add/</link>
+        <pubDate>Tue, 16 Nov 2021 15:40:31 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        <atom:modified>Tue, 16 Nov 2021 15:40:31 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/java-char-add/</guid>
+        <description>要点： char与int ：可以相加减；int取本身数值，char取对应的ASCII码值；得到的结果是ASCII码增大或减小了int对应的数值大</description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>java</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>你安装的是Oracle JDK还是OpenJDK?</title>

@@ -14,19 +14,19 @@
     <managingEditor>chen61813772@gmail.com (wangyichen)</managingEditor>
     <webMaster>chen61813772@gmail.com (wangyichen)</webMaster>
     <copyright>©2021, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 15 Nov 2021 20:02:11 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 17 Nov 2021 15:06:54 +0800</lastBuildDate>
     
         <atom:link href="https://yichenlove.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
-        <title>javascript</title>
-        <link>https://yichenlove.github.io/tags/javascript/</link>
-        <pubDate>Mon, 15 Nov 2021 20:02:11 +0800</pubDate>
+        <title>IC</title>
+        <link>https://yichenlove.github.io/tags/ic/</link>
+        <pubDate>Wed, 17 Nov 2021 15:06:54 +0800</pubDate>
         <author>chen61813772@gmail.com (wangyichen)</author>
         
-        <guid>https://yichenlove.github.io/tags/javascript/</guid>
+        <guid>https://yichenlove.github.io/tags/ic/</guid>
         <description></description>
         
         <dc:creator>wangyichen</dc:creator>
@@ -41,10 +41,28 @@
       <item>
         <title>java</title>
         <link>https://yichenlove.github.io/tags/java/</link>
-        <pubDate>Mon, 15 Nov 2021 16:03:25 +0800</pubDate>
+        <pubDate>Tue, 16 Nov 2021 15:40:31 +0800</pubDate>
         <author>chen61813772@gmail.com (wangyichen)</author>
         
         <guid>https://yichenlove.github.io/tags/java/</guid>
+        <description></description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>javascript</title>
+        <link>https://yichenlove.github.io/tags/javascript/</link>
+        <pubDate>Mon, 15 Nov 2021 20:02:11 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        
+        <guid>https://yichenlove.github.io/tags/javascript/</guid>
         <description></description>
         
         <dc:creator>wangyichen</dc:creator>
