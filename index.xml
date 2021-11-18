@@ -14,7 +14,7 @@
     <managingEditor>chen61813772@gmail.com (wangyichen)</managingEditor>
     <webMaster>chen61813772@gmail.com (wangyichen)</webMaster>
     <copyright>©2021, All Rights Reserved</copyright>
-    <lastBuildDate>Wed, 17 Nov 2021 15:06:54 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 18 Nov 2021 17:23:40 +0800</lastBuildDate>
     
         <atom:link href="https://yichenlove.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -40,6 +40,30 @@
         
       
 
+      
+      <item>
+        <title>算法的时间与空间复杂度</title>
+        <link>https://yichenlove.github.io/posts/algorithms-0/</link>
+        <pubDate>Thu, 18 Nov 2021 17:23:40 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        <atom:modified>Thu, 18 Nov 2021 17:23:40 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/algorithms-0/</guid>
+        <description>算法（Algorithm）是指用来操作数据、解决程序问题的一组方法。对于同一个问题，使用不同的算法，也许最终得到的结果是一样的，但在过程中消</description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>algorithms</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>IC设计验证参考</title>
