@@ -14,7 +14,7 @@
     <managingEditor>chen61813772@gmail.com (wangyichen)</managingEditor>
     <webMaster>chen61813772@gmail.com (wangyichen)</webMaster>
     <copyright>©2021, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 22 Nov 2021 20:48:05 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 23 Nov 2021 21:12:17 +0800</lastBuildDate>
     
         <atom:link href="https://yichenlove.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -40,6 +40,24 @@
         
       
 
+      
+      <item>
+        <title>滑动关闭Activity</title>
+        <link>https://yichenlove.github.io/posts/android-activity2/</link>
+        <pubDate>Tue, 23 Nov 2021 21:12:17 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        <atom:modified>Tue, 23 Nov 2021 21:12:17 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/android-activity2/</guid>
+        <description>常常可以看到，很多Android应用都有这么一个功能，就是滑动关闭Activity，比如微信，CSDN移动端，百度贴吧移动端等。我自己也想写</description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>深入理解 Typescript 高级用法</title>

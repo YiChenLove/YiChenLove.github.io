@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>深入理解 Typescript 高级用法 – wangyichen&#39;s blog</title>
+    <title>滑动关闭Activity – wangyichen&#39;s blog</title>
     
 
 
@@ -653,7 +653,7 @@
     
     var baseurl = JSON.parse("\"https://yichenlove.github.io/\"");
     
-    var permalink = JSON.parse("\"https://yichenlove.github.io/posts/typescripts-high/\"");
+    var permalink = JSON.parse("\"https://yichenlove.github.io/posts/android-activity2/\"");
     
     var langprefix = JSON.parse("\"\"");
     var searchResults = null;
@@ -1334,18 +1334,16 @@
 <meta name="description" content="The blog of wangyichen." />
 
 
-<meta name="keywords" content="javascript,typescript">
-
-<meta name="created" content="2021-11-22T20:48:05&#43;0800">
-<meta name="modified" content="2021-11-22T20:48:05&#43;0800">
-<meta property="article:published_time" content="2021-11-22T20:48:05&#43;0800">
+<meta name="created" content="2021-11-23T21:12:17&#43;0800">
+<meta name="modified" content="2021-11-23T21:12:17&#43;0800">
+<meta property="article:published_time" content="2021-11-23T21:12:17&#43;0800">
 
 <meta name="author" content="wangyichen">
 
 
 <meta property="og:site_name" content="wangyichen&#39;s blog">
-<meta property="og:title" content="深入理解 Typescript 高级用法">
-<meta property="og:url" content="https://yichenlove.github.io/posts/typescripts-high/">
+<meta property="og:title" content="滑动关闭Activity">
+<meta property="og:url" content="https://yichenlove.github.io/posts/android-activity2/">
 <meta property="og:type" content="article">
 <meta property="og:description" content="The blog of wangyichen.">
 
@@ -1358,7 +1356,7 @@
 
 <meta name="apple-mobile-web-app-status-bar-style" content="#fff">
 
-<link rel="canonical" href="https://yichenlove.github.io/posts/typescripts-high/">
+<link rel="canonical" href="https://yichenlove.github.io/posts/android-activity2/">
 
 <link rel="manifest" href="/manifest.json">
 
@@ -1384,12 +1382,11 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "深入理解 Typescript 高级用法",
-    "datePublished": "2021-11-22T20:48:05+08:00",
-    "dateModified": "2021-11-22T20:48:05+08:00",
-    "url" : "https://yichenlove.github.io/posts/typescripts-high/",
-    "description": "❝**「前言」**：这里的标题看起来是 \u0026ldquo;高级用法\u0026rdquo;，不少同学可能就表示被劝退了。其实 Typescript 作为一门 强类型 编程语言，最具特",
-    "keywords": ["javascript","typescript"],
+    "headline": "滑动关闭Activity",
+    "datePublished": "2021-11-23T21:12:17+08:00",
+    "dateModified": "2021-11-23T21:12:17+08:00",
+    "url" : "https://yichenlove.github.io/posts/android-activity2/",
+    "description": "常常可以看到，很多Android应用都有这么一个功能，就是滑动关闭Activity，比如微信，CSDN移动端，百度贴吧移动端等。我自己也想写",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://yichenlove.github.io/"
@@ -1766,7 +1763,7 @@
   
   <li  class="is-active" >
     
-      <span>深入理解 Typescript 高级用法</span>
+      <span>滑动关闭Activity</span>
     
   </li>
   
@@ -1778,14 +1775,14 @@
   <div class="single ">
     <div class="single__nojs">This page looks best with JavaScript enabled</div>
     <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
-    <h2 class="single__title" data-ani="true">深入理解 Typescript 高级用法</h2>
+    <h2 class="single__title" data-ani="true">滑动关闭Activity</h2>
     <h3 class="single__subtitle"></h3>
     <div class="single__meta">
       
 <div class="single__infos">
-  <time class="single__info" title="Written At">📅&nbsp;Nov 22, 2021 </time>
+  <time class="single__info" title="Written At">📅&nbsp;Nov 23, 2021 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;22&nbsp;min read </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;5&nbsp;min read </span>
   
   <span class="single__info">
     
@@ -1795,356 +1792,20 @@
       
 <ul class="single__tags caption">
   
-  🏷️
-  
-
-  <li><a href="https://yichenlove.github.io/tags/javascript/" class="single__tag" title="javascript">#javascript</a></li>
-
-  <li><a href="https://yichenlove.github.io/tags/typescript/" class="single__tag" title="typescript">#typescript</a></li>
 
 </ul>
 
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <blockquote>
-<p>❝**「前言」**：这里的标题看起来是 &ldquo;高级用法&rdquo;，不少同学可能就表示被劝退了。其实 <code>Typescript</code> 作为一门 <code>强类型</code> 编程语言，最具特色的就是他的类型表达能力，这是很多完备的后端语言都难以媲美的 <del>说的很对，但PHP是最好的语言</del>，所以如果你搞懂了他的类型系统，对将来的日常开发一定是大有裨益的，但过于灵活的类型系统也注定了 <code>Typescript</code> 无法成为一门纯粹的静态语言，不过每一行代码都有代码提示他不香嘛？ ❞</p>
-</blockquote>
-<h2 id="基础准备"><strong>基础准备</strong></h2>
-<p>阅读本文需要具备的基础知识。</p>
-<h3 id="预备知识"><strong>预备知识</strong></h3>
-<p>本文的定位为理解高级用法，故不会涉及过多基础知识相关的讲解，需要读者自己去完善这方面的知识储备。</p>
-<h6 id="此文档的内容默认要求读者已经具备以下知识"><strong>此文档的内容默认要求读者已经具备以下知识：</strong></h6>
-<ol>
-<li>有 <code>Javascript</code> 或其他语言编程经验。</li>
-<li>有 <code>Typescript</code> 实际使用经验，最好在正经项目中完整地使用过。</li>
-<li>了解 <code>Typescript</code> 基础语法以及常见关键字地作用。</li>
-<li>对 <code>Typescript</code> 的 <code>类型系统</code> 架构有一个最基本的了解。</li>
-</ol>
-<h3 id="相关资源推荐"><strong>相关资源推荐</strong></h3>
-<ol>
-<li>Typescript 官网[1]</li>
-<li>TypeScript Deep Dive[2]</li>
-<li>TypeScript GitHub地址[3]</li>
-</ol>
-<h2 id="背景"><strong>背景</strong></h2>
-<p>初用 <code>Typescript</code> 开发的同学一定有这样的困扰：</p>
-<ol>
-<li>代码代码提示并不智能，似乎只能显式的定义类型，才能有代码提示，无法理解这样的编程语言居然有这么多人趋之若鹜。</li>
-<li>各种各样的类型报错苦不堪言，本以为听信网上说 <code>Typescript</code> 可以提高代码可维护性，结果却发现徒增了不少开发负担。</li>
-<li>显式地定义所有的类型似乎能应付大部分常见，但遇到有些复杂的情况却发现无能为力，只能含恨写下若干的 <code>as any</code> 默默等待代码 <code>review</code> 时的公开处刑。</li>
-<li>项目急时间紧却发现 <code>Typescript</code> 成了首要难题，思索片刻决定投靠的 <code>Anyscript</code>，快速开发业务逻辑，待到春暖花开时再回来补充类型。双倍的工作量，双倍的快乐只有自己才懂。</li>
-</ol>
-<p>为了避免以上悲剧的发生或者重演，我们只有在对它有更加深刻的理解之后，才能在开发时游刃有余、在撸码时纵横捭阖。</p>
-<h2 id="typescript-类型系统简述"><strong>Typescript 类型系统简述</strong></h2>
-<blockquote>
-<p>❝**「思考题」**：有人说 <code>Typescript</code> = <code>Type</code> + <code>Javascript</code>，那么抛开 <code>Javascript</code> 不谈，这里的 <code>Type</code> 是一门完备的编程语言吗？ ❞</p>
-</blockquote>
-<h3 id="typescript-的类型是支持定义-函数定义-的"><strong>Typescript 的类型是支持定义 &ldquo;函数定义&rdquo; 的</strong></h3>
-<p>有过编程经验的同学都知道，函数是一门编程语言中最基础的功能之一，函数是过程化、面向对象、函数式编程中程序封装的基本单元，其重要程度不言而喻。</p>
-<p>函数可以帮助我们做很多事，比如 ：</p>
-<ul>
-<li>函数可以把程序封装成一个个功能，并形成函数内部的变量作用域，通过静态变量保存函数状态，通过返回值返回结果。</li>
-<li>函数可以帮助我们实现过程的复用，如果一段逻辑可以被使用多次，就封装成函数，被其它过程多次调用。</li>
-<li>函数也可以帮我们更好地组织代码结构，帮助我们更好地维护代码。</li>
-</ul>
-<h5 id="那么言归正传如何在-typescript-类型系统中定义函数呢"><strong>那么言归正传，如何在 Typescript 类型系统中定义函数呢？</strong></h5>
-<p><code>Typescript</code> 中类型系统中的的函数被称作 <code>泛型操作符</code>，其定义的简单的方式就是使用 <code>type</code> 关键字：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// 这里我们就定义了一个最简单的泛型操作符
-</span><span class="c1"></span><span class="nx">type</span> <span class="nx">foo</span><span class="err">\</span><span class="o">&lt;</span><span class="nx">T</span><span class="err">\</span><span class="o">&gt;</span> <span class="err">\</span><span class="o">=</span> <span class="nx">T</span><span class="p">;</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>这里的代码如何理解呢，其实这里我把代码转换成大家最熟悉的 <code>Javascript</code> 代码其实就不难理解了：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// 把上面的类型代码转换成 \`JavaScript\` 代码
-</span><span class="c1"></span><span class="kd">function</span> <span class="nx">foo</span><span class="err">\</span><span class="p">(</span><span class="nx">T</span><span class="err">\</span><span class="p">)</span> <span class="err">\</span><span class="p">{</span>
-  <span class="k">return</span> <span class="nx">T</span>
-<span class="err">\</span><span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>那么看到这里有同学心里要犯嘀咕了，心想你这不是忽悠我嘛？这不就是 <code>Typescript</code> 中定义类型的方式嘛？这玩意儿我可太熟了，这玩意儿不就和 <code>interface</code> 一样的嘛，我还知道 <code>Type</code> 关键字和 <code>interface</code> 关键字有啥细微的区别呢！</p>
-<p>嗯，同学你说的太对了，不过你不要着急，接着听我说，其实类型系统中的函数还支持对入参的约束。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// 这里我们就对入参 T 进行了类型约束
-</span><span class="c1"></span><span class="nx">type</span> <span class="nx">foo</span><span class="err">\</span><span class="o">&lt;</span><span class="nx">T</span> <span class="kr">extends</span> <span class="nx">string</span><span class="err">\</span><span class="o">&gt;</span> <span class="err">\</span><span class="o">=</span> <span class="nx">T</span><span class="p">;</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>那么把这里的代码转换成我们常见的 <code>Typescript</code> 是什么样子的呢？</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">foo</span><span class="err">\</span><span class="p">(</span><span class="nx">T</span><span class="o">:</span> <span class="nx">string</span><span class="err">\</span><span class="p">)</span> <span class="err">\</span><span class="p">{</span>
-  <span class="k">return</span> <span class="nx">T</span>
-<span class="err">\</span><span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>当然啦我们也可以给它设置默认值：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// 这里我们就对入参 T 增加了默认值
-</span><span class="c1"></span><span class="nx">type</span> <span class="nx">foo</span><span class="err">\</span><span class="o">&lt;</span><span class="nx">T</span> <span class="kr">extends</span> <span class="nx">string</span> <span class="err">\</span><span class="o">=</span> <span class="s1">&#39;hello world&#39;</span><span class="err">\</span><span class="o">&gt;</span> <span class="err">\</span><span class="o">=</span> <span class="nx">T</span><span class="p">;</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>那么这里的代码转换成我们常见的 <code>Typescript</code> 就是这样的：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">foo</span><span class="err">\</span><span class="p">(</span><span class="nx">T</span><span class="o">:</span> <span class="nx">string</span> <span class="err">\</span><span class="o">=</span> <span class="s1">&#39;hello world&#39;</span><span class="err">\</span><span class="p">)</span> <span class="err">\</span><span class="p">{</span>
-  <span class="k">return</span> <span class="nx">T</span>
-<span class="err">\</span><span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>看到这里肯定有同学迫不及待地想要提问了：<strong>「那能不能像 JS 里的函数一样支持剩余参数呢？」</strong></p>
-<p>很遗憾，目前暂时是不支持的，但是在我们日常开发中一定是有这样的需求存在的。那就真的没有办法了嘛？其实也不一定，我们可以通过一些骚操作来模拟这种场景，当然这个是后话了，这里就不作拓展了。</p>
-<h3 id="typescript-的类型是支持-条件判断-的"><strong>Typescript 的类型是支持 &ldquo;条件判断&rdquo; 的</strong></h3>
-<blockquote>
-<p>❝人生总会面临很多选择，编程也是一样。 ——我瞎编的 ❞</p>
-</blockquote>
-<p>条件判断也是编程语言中最基础的功能之一，也是我们日常撸码过程成最常用的功能，无论是 <code>if else</code> 还是 <code>三元运算符</code>，相信大家都有使用过。</p>
-<h5 id="那么在-typescript-类型系统中的类型判断要怎么实现呢"><strong>那么在 Typescript 类型系统中的类型判断要怎么实现呢？</strong></h5>
-<p>其实这在 <code>Typescript</code> 官方文档被称为 <code>条件类型(Conditional Types)</code>，定义的方法也非常简单，就是使用 <code>extends</code> 关键字。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">T</span> <span class="kr">extends</span> <span class="nx">U</span> <span class="err">\</span><span class="o">?</span> <span class="nx">X</span> <span class="o">:</span> <span class="nx">Y</span><span class="p">;</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>这里相信聪明的你一眼就看出来了，这不就是 <code>三元运算符</code> 嘛！是的，而且这和三元运算符的也发也非常像，如果 <code>T extends U</code> 为 <code>true</code> 那么 返回 <code>X</code> ，否则返回 <code>Y</code>。</p>
-<p>结合之前刚刚讲过的 &ldquo;函数&rdquo;，我们就可以简单的拓展一下：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">type</span> <span class="nx">num</span> <span class="err">\</span><span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-<span class="nx">type</span> <span class="nx">str</span> <span class="err">\</span><span class="o">=</span> <span class="s1">&#39;hello world&#39;</span><span class="p">;</span>
-
-<span class="nx">type</span> <span class="nx">IsNumber</span><span class="err">\</span><span class="o">&lt;</span><span class="nx">N</span><span class="err">\</span><span class="o">&gt;</span> <span class="err">\</span><span class="o">=</span> <span class="nx">N</span> <span class="kr">extends</span> <span class="nx">number</span> <span class="err">\</span><span class="o">?</span> <span class="s1">&#39;yes, is a number&#39;</span> <span class="o">:</span> <span class="s1">&#39;no, not a number&#39;</span><span class="p">;</span>
-
-<span class="nx">type</span> <span class="nx">result1</span> <span class="err">\</span><span class="o">=</span> <span class="nx">IsNumber</span><span class="err">\</span><span class="o">&lt;</span><span class="nx">num</span><span class="err">\</span><span class="o">&gt;</span><span class="p">;</span> <span class="c1">// &#34;yes, is a number&#34;
-</span><span class="c1"></span><span class="nx">type</span> <span class="nx">result2</span> <span class="err">\</span><span class="o">=</span> <span class="nx">IsNumber</span><span class="err">\</span><span class="o">&lt;</span><span class="nx">str</span><span class="err">\</span><span class="o">&gt;</span><span class="p">;</span> <span class="c1">// &#34;no, not a number&#34;
-</span></code></pre></td></tr></table>
-</div>
-</div><p>这里我们就实现了一个简单的带判断逻辑的函数。</p>
-<h3 id="typescript-的类型是支持-数据结构-的"><strong>Typescript 的类型是支持 &ldquo;数据结构&rdquo; 的</strong></h3>
-<h4 id="模拟真实数组"><strong>模拟真实数组</strong></h4>
-<p>看到这里肯定有同学就笑了，这还不简单，就举例来说，<code>Typescript</code> 中最常见数据类型就是 <code>数组（Array）</code> 或者 <code>元组（tuple）</code>。</p>
-<p>同学你说的很对，<strong>「那你知道如何对 <code>元组类型</code> 作 <code>push</code>、<code>pop</code>、<code>shift</code>、<code>unshift</code> 这些行为操作吗？」</strong></p>
-<p>其实这些操作都是可以被实现的：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// 这里定义一个工具类型，简化代码
-</span><span class="c1"></span><span class="nx">type</span> <span class="nx">ReplaceValByOwnKey</span><span class="err">\</span><span class="o">&lt;</span><span class="nx">T</span><span class="p">,</span> <span class="nx">S</span> <span class="kr">extends</span> <span class="nx">any</span><span class="err">\</span><span class="o">&gt;</span> <span class="err">\</span><span class="o">=</span> <span class="err">\</span><span class="p">{</span> <span class="err">\</span><span class="p">[</span><span class="nx">P</span> <span class="k">in</span> <span class="nx">keyof</span> <span class="nx">T</span><span class="err">\</span><span class="p">]</span><span class="o">:</span> <span class="nx">S</span><span class="err">\</span><span class="p">[</span><span class="nx">P</span><span class="err">\</span><span class="p">]</span> <span class="err">\</span><span class="p">};</span>
-
-<span class="c1">// shift action
-</span><span class="c1"></span><span class="nx">type</span> <span class="nx">ShiftAction</span><span class="err">\</span><span class="o">&lt;</span><span class="nx">T</span> <span class="kr">extends</span> <span class="nx">any</span><span class="err">\</span><span class="p">[</span><span class="err">\</span><span class="p">]</span><span class="err">\</span><span class="o">&gt;</span> <span class="err">\</span><span class="o">=</span> <span class="err">\</span><span class="p">(</span><span class="err">\</span><span class="p">(...</span><span class="nx">args</span><span class="o">:</span> <span class="nx">T</span><span class="err">\</span><span class="p">)</span> <span class="err">\</span><span class="p">=&gt;</span> <span class="nx">any</span><span class="err">\</span><span class="p">)</span> <span class="kr">extends</span> <span class="err">\</span><span class="p">(</span><span class="err">\</span><span class="p">(</span><span class="nx">arg1</span><span class="o">:</span> <span class="nx">any</span><span class="p">,</span> <span class="p">...</span><span class="nx">rest</span><span class="o">:</span> <span class="nx">infer</span> <span class="nx">R</span><span class="err">\</span><span class="p">)</span> <span class="err">\</span><span class="p">=&gt;</span> <span class="nx">any</span><span class="err">\</span><span class="p">)</span> <span class="err">\</span><span class="o">?</span> <span class="nx">R</span> <span class="o">:</span> <span class="nx">never</span><span class="p">;</span>
-
-<span class="c1">// unshift action
-</span><span class="c1"></span><span class="nx">type</span> <span class="nx">UnshiftAction</span><span class="err">\</span><span class="o">&lt;</span><span class="nx">T</span> <span class="kr">extends</span> <span class="nx">any</span><span class="err">\</span><span class="p">[</span><span class="err">\</span><span class="p">],</span> <span class="nx">A</span><span class="err">\</span><span class="o">&gt;</span> <span class="err">\</span><span class="o">=</span> <span class="err">\</span><span class="p">(</span><span class="err">\</span><span class="p">(</span><span class="nx">args1</span><span class="o">:</span> <span class="nx">A</span><span class="p">,</span> <span class="p">...</span><span class="nx">rest</span><span class="o">:</span> <span class="nx">T</span><span class="err">\</span><span class="p">)</span> <span class="err">\</span><span class="p">=&gt;</span> <span class="nx">any</span><span class="err">\</span><span class="p">)</span> <span class="kr">extends</span> <span class="err">\</span><span class="p">(</span><span class="err">\</span><span class="p">(...</span><span class="nx">args</span><span class="o">:</span> <span class="nx">infer</span> <span class="nx">R</span><span class="err">\</span><span class="p">)</span> <span class="err">\</span><span class="p">=&gt;</span> <span class="nx">any</span><span class="err">\</span><span class="p">)</span> <span class="err">\</span><span class="o">?</span> <span class="nx">R</span> <span class="o">:</span> <span class="nx">never</span><span class="p">;</span>
-
-<span class="c1">// pop action
-</span><span class="c1"></span><span class="nx">type</span> <span class="nx">PopAction</span><span class="err">\</span><span class="o">&lt;</span><span class="nx">T</span> <span class="kr">extends</span> <span class="nx">any</span><span class="err">\</span><span class="p">[</span><span class="err">\</span><span class="p">]</span><span class="err">\</span><span class="o">&gt;</span> <span class="err">\</span><span class="o">=</span> <span class="nx">ReplaceValByOwnKey</span><span class="err">\</span><span class="o">&lt;</span><span class="nx">ShiftAction</span><span class="err">\</span><span class="o">&lt;</span><span class="nx">T</span><span class="err">\</span><span class="o">&gt;</span><span class="p">,</span> <span class="nx">T</span><span class="err">\</span><span class="o">&gt;</span><span class="p">;</span>
-
-<span class="c1">// push action
-</span><span class="c1"></span><span class="nx">type</span> <span class="nx">PushAction</span><span class="err">\</span><span class="o">&lt;</span><span class="nx">T</span> <span class="kr">extends</span> <span class="nx">any</span><span class="err">\</span><span class="p">[</span><span class="err">\</span><span class="p">],</span> <span class="nx">E</span><span class="err">\</span><span class="o">&gt;</span> <span class="err">\</span><span class="o">=</span> <span class="nx">ReplaceValByOwnKey</span><span class="err">\</span><span class="o">&lt;</span><span class="nx">UnshiftAction</span><span class="err">\</span><span class="o">&lt;</span><span class="nx">T</span><span class="p">,</span> <span class="nx">any</span><span class="err">\</span><span class="o">&gt;</span><span class="p">,</span> <span class="nx">T</span> <span class="err">\</span><span class="o">&amp;</span> <span class="err">\</span><span class="p">{</span> <span class="err">\</span><span class="p">[</span><span class="nx">k</span><span class="o">:</span> <span class="nx">string</span><span class="err">\</span><span class="p">]</span><span class="o">:</span> <span class="nx">E</span> <span class="err">\</span><span class="p">}</span><span class="err">\</span><span class="o">&gt;</span><span class="p">;</span>
-
-<span class="c1">// test ...
-</span><span class="c1"></span><span class="nx">type</span> <span class="nx">tuple</span> <span class="err">\</span><span class="o">=</span> <span class="err">\</span><span class="p">[</span><span class="s1">&#39;vue&#39;</span><span class="p">,</span> <span class="s1">&#39;react&#39;</span><span class="p">,</span> <span class="s1">&#39;angular&#39;</span><span class="err">\</span><span class="p">];</span>
-
-<span class="nx">type</span> <span class="nx">resultWithShiftAction</span> <span class="err">\</span><span class="o">=</span> <span class="nx">ShiftAction</span><span class="err">\</span><span class="o">&lt;</span><span class="nx">tuple</span><span class="err">\</span><span class="o">&gt;</span><span class="p">;</span> <span class="c1">// \[&#34;react&#34;, &#34;angular&#34;\]
-</span><span class="c1"></span><span class="nx">type</span> <span class="nx">resultWithUnshiftAction</span> <span class="err">\</span><span class="o">=</span> <span class="nx">UnshiftAction</span><span class="err">\</span><span class="o">&lt;</span><span class="nx">tuple</span><span class="p">,</span> <span class="s1">&#39;jquery&#39;</span><span class="err">\</span><span class="o">&gt;</span><span class="p">;</span> <span class="c1">// \[&#34;jquery&#34;, &#34;vue&#34;, &#34;react&#34;, &#34;angular&#34;\]
-</span><span class="c1"></span><span class="nx">type</span> <span class="nx">resultWithPopAction</span> <span class="err">\</span><span class="o">=</span> <span class="nx">PopAction</span><span class="err">\</span><span class="o">&lt;</span><span class="nx">tuple</span><span class="err">\</span><span class="o">&gt;</span><span class="p">;</span> <span class="c1">// \[&#34;vue&#34;, &#34;react&#34;\]
-</span><span class="c1"></span><span class="nx">type</span> <span class="nx">resultWithPushAction</span> <span class="err">\</span><span class="o">=</span> <span class="nx">PushAction</span><span class="err">\</span><span class="o">&lt;</span><span class="nx">tuple</span><span class="p">,</span> <span class="s1">&#39;jquery&#39;</span><span class="err">\</span><span class="o">&gt;</span><span class="p">;</span> <span class="c1">// \[&#34;vue&#34;, &#34;react&#34;, &#34;angular&#34;, &#34;jquery&#34;\]
-</span></code></pre></td></tr></table>
-</div>
-</div><blockquote>
-<p>❝**「注意」**：这里的代码仅用于测试，操作某些复杂类型可能会报错，需要做进一步兼容处理，这里简化了相关代码，请勿用于生产环境！ ❞</p>
-</blockquote>
-<p>相信读到这里，大部分同学应该可以已经可以感受到 <code>Typescript</code> 类型系统的强大之处了，其实这里还是继续完善，为元组增加 <code>concat</code> 、<code>map</code> 等数组的常用的功能，这里不作详细探讨，留给同学们自己课后尝试吧。</p>
-<p>但是其实上面提到的 &ldquo;数据类型&rdquo; 并不是我这里想讲解的 &ldquo;数据类型&rdquo;，上述的数据类型本质上还是服务于代码逻辑的数据类型，其实并不是服务于 <code>类型系统</code> 本身的数据类型。</p>
-<p>上面这句话的怎么理解呢？</p>
-<p>不管是 <code>数组</code> 还是 <code>元组</code>，在广义的理解中，其实都是用来对 <strong>「数据」</strong> 作 <strong>「批量操作」</strong>，同理，服务于 <code>类型系统</code> 本身的数据结构，应该也可以对 <strong>「类型」</strong> 作 <strong>「批量操作」</strong>。</p>
-<p>那么如何对 <strong>「类型」</strong> 作 <strong>「批量操作」</strong> 呢？或者说服务于 <code>类型系统</code> 中的 <strong>「数组」</strong> 是什么呢？</p>
-<p>下面就引出了本小节真正的 &ldquo;数组&rdquo;：<code>联合类型(Union Types)</code></p>
-<p>说起 <code>联合类型(Union Types)</code> ，相信使用过 <code>Typescript</code> 同学的一定对它又爱又恨：</p>
-<ol>
-<li>定义函数入参的时候，当同一个位置的参数允许传入多种参数类型，使用 <code>联合类型(Union Types)</code> 会非常的方便，但想智能地推导出返回值的类型地时候却又犯了难。</li>
-<li>当函数入参个数不确定地时候，又不愿意写出 <code>(...args: any[]) =&gt; void</code> 这种毫无卵用的参数类型定义。</li>
-<li>使用 <code>联合类型(Union Types)</code> 时，虽然有 <code>类型守卫（Type guard）</code>，但是某些场景下依然不够好用。</li>
-</ol>
-<p>其实当你对它有足够的了解时，你就会发现 <code>联合类型(Union Types)</code> 比 <code>交叉类型(Intersection Types)</code> 不知道高到哪里去了，我和它谈笑风生。</p>
-<h4 id="类型系统中的-数组"><strong>类型系统中的 &ldquo;数组&rdquo;</strong></h4>
-<h5 id="下面就让我们更加深入地了解一下-联合类型union-types"><strong>下面就让我们更加深入地了解一下 联合类型(Union Types)：</strong></h5>
-<h6 id="如何遍历-联合类型union-types-呢"><strong>如何遍历 联合类型(Union Types) 呢？</strong></h6>
-<p>既然目标是 <strong>「批量操作类型」</strong>，自然少不了类型的 <strong>「遍历」</strong>，和大多数编程语言方法一样，在 <code>Typescript</code> 类型系统中也是 <code>in</code> 关键字来遍历。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">type</span> <span class="nx">key</span> <span class="err">\</span><span class="o">=</span> <span class="s1">&#39;vue&#39;</span> <span class="o">|</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
-
-<span class="nx">type</span> <span class="nx">MappedType</span> <span class="err">\</span><span class="o">=</span> <span class="err">\</span><span class="p">{</span> <span class="err">\</span><span class="p">[</span><span class="nx">k</span> <span class="k">in</span> <span class="nx">key</span><span class="err">\</span><span class="p">]</span><span class="o">:</span> <span class="nx">string</span> <span class="err">\</span><span class="p">}</span> <span class="c1">// \{ vue: string; react: string; \}
-</span></code></pre></td></tr></table>
-</div>
-</div><p>你看，通过 <code>in</code> 关键字，我们可以很容易地遍历 <code>联合类型(Union Types)</code>，并对类型作一些变换操作。</p>
-<p>但有时候并不是所有所有 <code>联合类型(Union Types)</code> 都是我们显式地定义出来的。</p>
-<h6 id="我们想动态地推导出-联合类型union-types-类型有哪些方法呢"><strong>我们想动态地推导出 联合类型(Union Types) 类型有哪些方法呢？</strong></h6>
-<p>可以使用 <code>keyof</code> 关键字动态地取出某个键值对类型的 <code>key</code></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kr">interface</span> <span class="nx">Student</span> <span class="err">\</span><span class="p">{</span>
-  <span class="nx">name</span><span class="o">:</span> <span class="nx">string</span><span class="p">;</span>
-  <span class="nx">age</span><span class="o">:</span> <span class="nx">number</span><span class="p">;</span>
-<span class="err">\</span><span class="p">}</span>
-
-
-<span class="nx">type</span> <span class="nx">studentKey</span> <span class="err">\</span><span class="o">=</span> <span class="nx">keyof</span> <span class="nx">Student</span><span class="p">;</span> <span class="c1">// &#34;name&#34; | &#34;age&#34;
-</span></code></pre></td></tr></table>
-</div>
-</div><p>同样的我们也可以通过一些方法取出 <code>元组类型</code> 子类型</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">type</span> <span class="nx">framework</span> <span class="err">\</span><span class="o">=</span> <span class="err">\</span><span class="p">[</span><span class="s1">&#39;vue&#39;</span><span class="p">,</span> <span class="s1">&#39;react&#39;</span><span class="p">,</span> <span class="s1">&#39;angular&#39;</span><span class="err">\</span><span class="p">];</span>
-
-<span class="nx">type</span> <span class="nx">frameworkVal1</span> <span class="err">\</span><span class="o">=</span> <span class="nx">framework</span><span class="err">\</span><span class="p">[</span><span class="nx">number</span><span class="err">\</span><span class="p">];</span> <span class="c1">// &#34;vue&#34; | &#34;react&#34; | &#34;angular&#34;
-</span><span class="c1"></span><span class="nx">type</span> <span class="nx">frameworkVal2</span> <span class="err">\</span><span class="o">=</span> <span class="nx">framework</span><span class="err">\</span><span class="p">[</span><span class="nx">any</span><span class="err">\</span><span class="p">];</span> <span class="c1">// &#34;vue&#34; | &#34;react&#34; | &#34;angular&#34;
-</span></code></pre></td></tr></table>
-</div>
-</div><h4 id="实战应用"><strong>实战应用</strong></h4>
-<p>看到这里，有的同学可能要问了，你既然说 <code>联合类型(Union Types)</code> 可以批量操作类型，<strong>「那我想把某一组类型批量映射成另一种类型，该怎么操作呢」</strong>？</p>
-<p>方法其实有很多，这里提供一种思路，抛砖引玉一下，别的方法就留给同学们自行研究吧。</p>
-<p>其实分析一下上面那个需求，不难看出，这个需求其实和数组的 <code>map</code> 方法有点相似</p>
-<h6 id="那么如何实现一个操作-联合类型union-types-的-map-函数呢"><strong>那么如何实现一个操作 联合类型(Union Types) 的 map 函数呢？</strong></h6>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// 这里的 placeholder 可以键入任何你所希望映射成为的类型
-</span><span class="c1"></span><span class="nx">type</span> <span class="nx">UnionTypesMap</span><span class="err">\</span><span class="o">&lt;</span><span class="nx">T</span><span class="err">\</span><span class="o">&gt;</span> <span class="err">\</span><span class="o">=</span> <span class="nx">T</span> <span class="kr">extends</span> <span class="nx">any</span> <span class="err">\</span><span class="o">?</span> <span class="s1">&#39;placeholder&#39;</span> <span class="o">:</span> <span class="nx">never</span><span class="p">;</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>其实这里聪明的同学已经看出来，我们只是利用了 <code>条件类型(Conditional Types)</code>，使其的判断条件总是为 <code>true</code>，那么它就总是会返回左边的类型，我们就可以拿到 <code>泛型操作符</code> 的入参并自定义我们的操作。</p>
-<p>让我们趁热打铁，再举个具体的栗子：把 <strong>「联合类型(Union Types)」</strong> 的每一项映射成某个函数的 <strong>「返回值」</strong>。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">type</span> <span class="nx">UnionTypesMap2Func</span><span class="err">\</span><span class="o">&lt;</span><span class="nx">T</span><span class="err">\</span><span class="o">&gt;</span> <span class="err">\</span><span class="o">=</span> <span class="nx">T</span> <span class="kr">extends</span> <span class="nx">any</span> <span class="err">\</span><span class="o">?</span> <span class="err">\</span><span class="p">(</span><span class="err">\</span><span class="p">)</span> <span class="err">\</span><span class="p">=&gt;</span> <span class="nx">T</span> <span class="o">:</span> <span class="nx">never</span><span class="p">;</span>
-
-<span class="nx">type</span> <span class="nx">myUnionTypes</span> <span class="err">\</span><span class="o">=</span> <span class="s2">&#34;vue&#34;</span> <span class="o">|</span> <span class="s2">&#34;react&#34;</span> <span class="o">|</span> <span class="s2">&#34;angular&#34;</span><span class="p">;</span>
-
-<span class="nx">type</span> <span class="nx">myUnionTypes2FuncResult</span> <span class="err">\</span><span class="o">=</span> <span class="nx">UnionTypesMap2Func</span><span class="err">\</span><span class="o">&lt;</span><span class="nx">myUnionTypes</span><span class="err">\</span><span class="o">&gt;</span><span class="p">;</span>
-<span class="c1">// \(\(\) =&gt; &#34;vue&#34;\) | \(\(\) =&gt; &#34;react&#34;\) | \(\(\) =&gt; &#34;angular&#34;\)
-</span></code></pre></td></tr></table>
-</div>
-</div><p>相信有了上述内容的学习，我们已经对 <code>联合类型(Union Types)</code> 有了一个相对全面的了解，后续在此基础之上在作一些高级的拓展，也如砍瓜切菜一般简单了。</p>
-<h4 id="其他数据类型"><strong>其他数据类型</strong></h4>
-<p>当然除了数组，还存在其他的数据类型，例如可以用 <code>type</code> 或 <code>interface</code> 模拟 <code>Javascript</code> 中的 <strong>「字面量对象」</strong>，其特征之一就是可以使用 <code>myType['propKey']</code> 这样的方式取出子类型。这里抛砖引玉一下，有兴趣的同学可以自行研究。</p>
-<h3 id="typescript-的类型是支持-作用域-的"><strong>Typescript 的类型是支持 &ldquo;作用域&rdquo; 的</strong></h3>
-<h4 id="全局作用域"><strong>全局作用域</strong></h4>
-<p>就像常见的编程语言一样，在 <code>Typescript</code> 的类型系统中，也是支持 <strong>「全局作用域」</strong> 的。换句话说，你可以在没有 <strong>「导入」</strong> 的前提下，在 <strong>「任意文件任意位置」</strong> 直接获取到并且使用它。</p>
-<p>通常使用 <code>declare</code> 关键字来修饰，例如我们常见的 <code>图片资源</code> 的类型定义：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">declare</span> <span class="nx">module</span> <span class="s1">&#39;\*.png&#39;</span><span class="p">;</span>
-<span class="nx">declare</span> <span class="nx">module</span> <span class="s1">&#39;\*.svg&#39;</span><span class="p">;</span>
-<span class="nx">declare</span> <span class="nx">module</span> <span class="s1">&#39;\*.jpg&#39;</span><span class="p">;</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>当然我们也可以在 <strong>「全局作用域」</strong> 内声明一个类型：</p>
+      <p>常常可以看到，很多Android应用都有这么一个功能，就是滑动关闭Activity，比如微信，CSDN移动端，百度贴吧移动端等。我自己也想写个滑动关闭Activity，最近事情没有那么多，我就google了一下，查看了一下实现滑动关闭Activity的实现方法，其中，有个思路，我觉得很不错，因此，在这里，我通过别人的思路，自己实现了一下滑动关闭Activity的方法，在此记录一下。我希望这篇博客，能给人有所启发，也希望大家能对我有所批判，如有更好的方式，请给我留言，不甚感激。</p>
+<p>首先我们先看下实现效果：</p>
+<p><img src="https://img-blog.csdn.net/20160229111052044?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="" /></p>
+<p>      要写滑动关闭Activity，有几个问题要解决：</p>
+<p>1.透明的显示底层的Activity。</p>
+<p>2.边界检测，滑动视图，以及自动滚动。</p>
+<p>3.阴影绘制。</p>
+<p>一、透明的显示底层Activity，可以使用透明主题，也可以使用其他主题，但是必须修改主题的几个属性，来达到透明的效果，如：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -2154,143 +1815,387 @@
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">declare</span> <span class="nx">type</span> <span class="nx">str</span> <span class="err">\</span><span class="o">=</span> <span class="nx">string</span><span class="p">;</span>
-<span class="nx">declare</span> <span class="kr">interface</span> <span class="nx">Foo</span> <span class="err">\</span><span class="p">{</span>
-  <span class="nx">propA</span><span class="o">:</span> <span class="nx">string</span><span class="p">;</span>
-  <span class="nx">propB</span><span class="o">:</span> <span class="nx">number</span><span class="p">;</span>
-<span class="err">\</span><span class="p">}</span>
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html">    <span class="p">&lt;</span><span class="nt">style</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;AppTheme&#34;</span> <span class="na">parent</span><span class="o">=</span><span class="s">&#34;@style/Theme.AppCompat.Light&#34;</span><span class="p">&gt;</span>
+        <span class="o">&lt;</span><span class="nt">item</span> <span class="nt">name</span><span class="o">=</span><span class="s2">&#34;android:windowBackground&#34;</span><span class="o">&gt;</span><span class="p">@</span><span class="k">android</span><span class="p">:</span><span class="nd">color</span><span class="o">/</span><span class="nt">transparent</span><span class="o">&lt;/</span><span class="nt">item</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nt">item</span> <span class="nt">name</span><span class="o">=</span><span class="s2">&#34;android:windowIsTranslucent&#34;</span><span class="o">&gt;</span><span class="nt">true</span><span class="o">&lt;/</span><span class="nt">item</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nt">item</span> <span class="nt">name</span><span class="o">=</span><span class="s2">&#34;android:windowAnimationStyle&#34;</span><span class="o">&gt;</span><span class="p">@</span><span class="k">android</span><span class="p">:</span><span class="nd">style</span><span class="o">/</span><span class="nt">Animation</span><span class="p">.</span><span class="nc">Translucent</span><span class="o">&lt;/</span><span class="nt">item</span><span class="o">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>需要注意的是，如何你的模块使用了 <code>export</code> 关键字导出了内容，上述的声明方式可能会失效，如果你依然想要将类型声明到全局，那么你就需要显式地声明到全局：</p>
+</div><p>二、谷歌在V4包中，增加ViewDragHelper类，这个类能够对滑动，边界检测，自动滚动等功能，提供了很好的实现。因此在这里我们选择ViewDragHelper来实现滑动功能。</p>
+<p>三、阴影绘制，Paint画笔来绘制。我们选择在dispatchDraw（）方法中绘制，为什么不用onDraw()，因为onDraw有时候在ViewGroup中不会执行。我们使用画笔的setShader（）,通过写一个LinearGradient(),再绘制一个矩形，得到阴影效果。</p>
+<p>最核心的原理就是在于，替换Window的DecorView下的LinearLayout。下面从代码直观的说明：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span><span class="lnt">155
+</span><span class="lnt">156
+</span><span class="lnt">157
+</span><span class="lnt">158
+</span><span class="lnt">159
+</span><span class="lnt">160
+</span><span class="lnt">161
+</span><span class="lnt">162
+</span><span class="lnt">163
+</span><span class="lnt">164
+</span><span class="lnt">165
+</span><span class="lnt">166
+</span><span class="lnt">167
+</span><span class="lnt">168
+</span><span class="lnt">169
+</span><span class="lnt">170
+</span><span class="lnt">171
+</span><span class="lnt">172
+</span><span class="lnt">173
+</span><span class="lnt">174
+</span><span class="lnt">175
+</span><span class="lnt">176
+</span><span class="lnt">177
+</span><span class="lnt">178
+</span><span class="lnt">179
+</span><span class="lnt">180
+</span><span class="lnt">181
+</span><span class="lnt">182
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">declare</span> <span class="nx">global</span> <span class="err">\</span><span class="p">{</span>
-  <span class="kr">const</span> <span class="nx">ModuleGlobalFoo</span><span class="o">:</span> <span class="nx">string</span><span class="p">;</span>
-<span class="err">\</span><span class="p">}</span>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">com.mjc.slidebackdemo.view</span><span class="o">;</span>
+ 
+<span class="kn">import</span> <span class="nn">android.app.Activity</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.content.Context</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.graphics.Bitmap</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.graphics.BitmapFactory</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.graphics.BitmapShader</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.graphics.Canvas</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.graphics.Color</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.graphics.LinearGradient</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.graphics.Paint</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.graphics.RectF</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.graphics.Shader</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.support.v4.widget.ViewDragHelper</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.util.DisplayMetrics</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.view.MotionEvent</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.view.View</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.view.ViewGroup</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.widget.FrameLayout</span><span class="o">;</span>
+ 
+<span class="kn">import</span> <span class="nn">java.util.Map</span><span class="o">;</span>
+ 
+<span class="cm">/**
+</span><span class="cm"> * Created by mjc on 2016/2/26.
+</span><span class="cm"> * 功能：当activity布局中嵌入当前布局，该activity可以从边缘滑动关闭
+</span><span class="cm"> * 实现原理：
+</span><span class="cm"> * 1.获取DecorView的RootView,删除RootView，把RootView添加到当前View
+</span><span class="cm"> * 再把当前View添加到DecorView
+</span><span class="cm"> */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">SlideBackLayout</span> <span class="kd">extends</span> <span class="n">FrameLayout</span> <span class="o">{</span>
+    <span class="cm">/**当前Activity的DecorView*/</span>
+    <span class="kd">private</span> <span class="n">ViewGroup</span> <span class="n">mDecorView</span><span class="o">;</span>
+    <span class="cm">/**DecorView下的LinearLayout*/</span>
+    <span class="kd">private</span> <span class="n">View</span> <span class="n">mRootView</span><span class="o">;</span>
+    <span class="cm">/**需要边缘滑动删除的Activity*/</span>
+    <span class="kd">private</span> <span class="n">Activity</span> <span class="n">mActivity</span><span class="o">;</span>
+    <span class="cm">/**Drag助手类*/</span>
+    <span class="kd">private</span> <span class="n">ViewDragHelper</span> <span class="n">mViewDragHelper</span><span class="o">;</span>
+    <span class="cm">/**触发退出当前Activity的宽度*/</span>
+    <span class="kd">private</span> <span class="kt">float</span> <span class="n">mSlideWidth</span><span class="o">;</span>
+    <span class="cm">/**屏幕的宽和高*/</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">mScreenWidth</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">mScreenHeight</span><span class="o">;</span>
+    <span class="cm">/**画笔，用来绘制阴影效果*/</span>
+    <span class="kd">private</span> <span class="n">Paint</span> <span class="n">mPaint</span><span class="o">;</span>
+    <span class="cm">/**用于记录当前滑动距离*/</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">curSlideX</span><span class="o">;</span>
+ 
+ 
+    <span class="kd">public</span> <span class="nf">SlideBackLayout</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kd">super</span><span class="o">(</span><span class="n">context</span><span class="o">);</span>
+        <span class="n">init</span><span class="o">(</span><span class="n">context</span><span class="o">);</span>
+    <span class="o">}</span>
+ 
+    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">init</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">//必须是传入Activity
+</span><span class="c1"></span>        <span class="n">mActivity</span> <span class="o">=</span> <span class="o">(</span><span class="n">Activity</span><span class="o">)</span> <span class="n">context</span><span class="o">;</span>
+        <span class="c1">//构造ViewDragHelper
+</span><span class="c1"></span>        <span class="n">mViewDragHelper</span> <span class="o">=</span> <span class="n">ViewDragHelper</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="k">new</span> <span class="n">DragCallback</span><span class="o">());</span>
+        <span class="c1">//设置从左边缘捕捉View
+</span><span class="c1"></span>        <span class="n">mViewDragHelper</span><span class="o">.</span><span class="na">setEdgeTrackingEnabled</span><span class="o">(</span><span class="n">ViewDragHelper</span><span class="o">.</span><span class="na">EDGE_LEFT</span><span class="o">);</span>
+        <span class="c1">//初始化画笔
+</span><span class="c1"></span>        <span class="n">mPaint</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Paint</span><span class="o">();</span>
+        <span class="n">mPaint</span><span class="o">.</span><span class="na">setStrokeWidth</span><span class="o">(</span><span class="n">2</span><span class="o">);</span>
+        <span class="n">mPaint</span><span class="o">.</span><span class="na">setAntiAlias</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+        <span class="n">mPaint</span><span class="o">.</span><span class="na">setColor</span><span class="o">(</span><span class="n">Color</span><span class="o">.</span><span class="na">GRAY</span><span class="o">);</span>
+    <span class="o">}</span>
+ 
+    <span class="c1">//绑定方法，在Activity的DecorView下插入当前ViewGroup,原来的RootView放于当前ViewGroup下
+</span><span class="c1"></span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">bind</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">mDecorView</span> <span class="o">=</span> <span class="o">(</span><span class="n">ViewGroup</span><span class="o">)</span> <span class="n">mActivity</span><span class="o">.</span><span class="na">getWindow</span><span class="o">().</span><span class="na">getDecorView</span><span class="o">();</span>
+        <span class="n">mRootView</span> <span class="o">=</span> <span class="n">mDecorView</span><span class="o">.</span><span class="na">getChildAt</span><span class="o">(</span><span class="n">0</span><span class="o">);</span>
+        <span class="n">mDecorView</span><span class="o">.</span><span class="na">removeView</span><span class="o">(</span><span class="n">mRootView</span><span class="o">);</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">addView</span><span class="o">(</span><span class="n">mRootView</span><span class="o">);</span>
+        <span class="n">mDecorView</span><span class="o">.</span><span class="na">addView</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+ 
+        <span class="c1">//计算屏幕宽度
+</span><span class="c1"></span>        <span class="n">DisplayMetrics</span> <span class="n">dm</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DisplayMetrics</span><span class="o">();</span>
+        <span class="n">mActivity</span><span class="o">.</span><span class="na">getWindowManager</span><span class="o">().</span><span class="na">getDefaultDisplay</span><span class="o">().</span><span class="na">getMetrics</span><span class="o">(</span><span class="n">dm</span><span class="o">);</span>
+        <span class="n">mScreenWidth</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="na">widthPixels</span><span class="o">;</span>
+        <span class="n">mScreenHeight</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="na">heightPixels</span><span class="o">;</span>
+        <span class="n">mSlideWidth</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="na">widthPixels</span> <span class="o">*</span><span class="n">0</span><span class="o">.</span><span class="na">28f</span><span class="o">;</span>
+    <span class="o">}</span>
+ 
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">onInterceptHoverEvent</span><span class="o">(</span><span class="n">MotionEvent</span> <span class="n">event</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">mViewDragHelper</span><span class="o">.</span><span class="na">shouldInterceptTouchEvent</span><span class="o">(</span><span class="n">event</span><span class="o">);</span>
+    <span class="o">}</span>
+ 
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">onTouchEvent</span><span class="o">(</span><span class="n">MotionEvent</span> <span class="n">event</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">mViewDragHelper</span><span class="o">.</span><span class="na">processTouchEvent</span><span class="o">(</span><span class="n">event</span><span class="o">);</span>
+        <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+    <span class="o">}</span>
+ 
+    <span class="kd">class</span> <span class="nc">DragCallback</span> <span class="kd">extends</span> <span class="n">ViewDragHelper</span><span class="o">.</span><span class="na">Callback</span> <span class="o">{</span>
+ 
+        <span class="nd">@Override</span>
+        <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">tryCaptureView</span><span class="o">(</span><span class="n">View</span> <span class="n">child</span><span class="o">,</span> <span class="kt">int</span> <span class="n">pointerId</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+        <span class="o">}</span>
+ 
+        <span class="nd">@Override</span>
+        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onViewReleased</span><span class="o">(</span><span class="n">View</span> <span class="n">releasedChild</span><span class="o">,</span> <span class="kt">float</span> <span class="n">xvel</span><span class="o">,</span> <span class="kt">float</span> <span class="n">yvel</span><span class="o">)</span> <span class="o">{</span>
+            <span class="c1">//当前回调，松开手时触发，比较触发条件和当前的滑动距离
+</span><span class="c1"></span>            <span class="kt">int</span> <span class="n">left</span> <span class="o">=</span> <span class="n">releasedChild</span><span class="o">.</span><span class="na">getLeft</span><span class="o">();</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">left</span> <span class="o">&lt;=</span> <span class="n">mSlideWidth</span><span class="o">)</span> <span class="o">{</span>
+                <span class="c1">//缓慢滑动的方法,小于触发条件，滚回去
+</span><span class="c1"></span>                <span class="n">mViewDragHelper</span><span class="o">.</span><span class="na">settleCapturedViewAt</span><span class="o">(</span><span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">);</span>
+            <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+                <span class="c1">//大于触发条件，滚出去...
+</span><span class="c1"></span>                <span class="n">mViewDragHelper</span><span class="o">.</span><span class="na">settleCapturedViewAt</span><span class="o">(</span><span class="n">mScreenWidth</span><span class="o">,</span> <span class="n">0</span><span class="o">);</span>
+            <span class="o">}</span>
+            <span class="c1">//需要手动调用更新界面的方法
+</span><span class="c1"></span>            <span class="n">invalidate</span><span class="o">();</span>
+ 
+        <span class="o">}</span>
+ 
+        <span class="nd">@Override</span>
+        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onViewPositionChanged</span><span class="o">(</span><span class="n">View</span> <span class="n">changedView</span><span class="o">,</span> <span class="kt">int</span> <span class="n">left</span><span class="o">,</span> <span class="kt">int</span> <span class="n">top</span><span class="o">,</span> <span class="kt">int</span> <span class="n">dx</span><span class="o">,</span> <span class="kt">int</span> <span class="n">dy</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">curSlideX</span> <span class="o">=</span> <span class="n">left</span><span class="o">;</span>
+            <span class="c1">//当滑动位置改变时，刷新View,绘制新的阴影位置
+</span><span class="c1"></span>            <span class="n">invalidate</span><span class="o">();</span>
+            <span class="c1">//当滚动位置到达屏幕最右边，则关掉Activity
+</span><span class="c1"></span>            <span class="k">if</span> <span class="o">(</span><span class="n">changedView</span> <span class="o">==</span> <span class="n">mRootView</span> <span class="o">&amp;&amp;</span> <span class="n">left</span> <span class="o">&gt;=</span> <span class="n">mScreenWidth</span><span class="o">)</span> <span class="o">{</span>
+                <span class="n">mActivity</span><span class="o">.</span><span class="na">finish</span><span class="o">();</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+ 
+        <span class="nd">@Override</span>
+        <span class="kd">public</span> <span class="kt">int</span> <span class="nf">clampViewPositionHorizontal</span><span class="o">(</span><span class="n">View</span> <span class="n">child</span><span class="o">,</span> <span class="kt">int</span> <span class="n">left</span><span class="o">,</span> <span class="kt">int</span> <span class="n">dx</span><span class="o">)</span> <span class="o">{</span>
+            <span class="c1">//限制左右拖拽的位移
+</span><span class="c1"></span>            <span class="n">left</span> <span class="o">=</span> <span class="n">left</span> <span class="o">&gt;=</span> <span class="n">0</span> <span class="o">?</span> <span class="n">left</span> <span class="o">:</span> <span class="n">0</span><span class="o">;</span>
+            <span class="k">return</span> <span class="n">left</span><span class="o">;</span>
+        <span class="o">}</span>
+ 
+        <span class="nd">@Override</span>
+        <span class="kd">public</span> <span class="kt">int</span> <span class="nf">clampViewPositionVertical</span><span class="o">(</span><span class="n">View</span> <span class="n">child</span><span class="o">,</span> <span class="kt">int</span> <span class="n">top</span><span class="o">,</span> <span class="kt">int</span> <span class="n">dy</span><span class="o">)</span> <span class="o">{</span>
+            <span class="c1">//上下不能移动，返回0
+</span><span class="c1"></span>            <span class="k">return</span> <span class="n">0</span><span class="o">;</span>
+        <span class="o">}</span>
+ 
+        <span class="nd">@Override</span>
+        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onEdgeDragStarted</span><span class="o">(</span><span class="kt">int</span> <span class="n">edgeFlags</span><span class="o">,</span> <span class="kt">int</span> <span class="n">pointerId</span><span class="o">)</span> <span class="o">{</span>
+            <span class="c1">//触发边缘时，主动捕捉mRootView
+</span><span class="c1"></span>            <span class="n">mViewDragHelper</span><span class="o">.</span><span class="na">captureChildView</span><span class="o">(</span><span class="n">mRootView</span><span class="o">,</span> <span class="n">pointerId</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+ 
+ 
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">computeScroll</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">//使用settleCapturedViewAt方法是，必须重写computeScroll方法，传入true
+</span><span class="c1"></span>        <span class="c1">//持续滚动期间，不断刷新ViewGroup
+</span><span class="c1"></span>        <span class="k">if</span> <span class="o">(</span><span class="n">mViewDragHelper</span><span class="o">.</span><span class="na">continueSettling</span><span class="o">(</span><span class="kc">true</span><span class="o">))</span>
+            <span class="n">invalidate</span><span class="o">();</span>
+ 
+    <span class="o">}</span>
+ 
+    <span class="nd">@Override</span>
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">dispatchDraw</span><span class="o">(</span><span class="n">Canvas</span> <span class="n">canvas</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">//进行阴影绘制,onDraw（）方法在ViewGroup中不一定会执行
+</span><span class="c1"></span>        <span class="n">drawShadow</span><span class="o">(</span><span class="n">canvas</span><span class="o">);</span>
+        <span class="kd">super</span><span class="o">.</span><span class="na">dispatchDraw</span><span class="o">(</span><span class="n">canvas</span><span class="o">);</span>
+ 
+    <span class="o">}</span>
+ 
+ 
+    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">drawShadow</span><span class="o">(</span><span class="n">Canvas</span> <span class="n">canvas</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">canvas</span><span class="o">.</span><span class="na">save</span><span class="o">();</span>
+        <span class="c1">//构造一个渐变
+</span><span class="c1"></span>        <span class="n">Shader</span> <span class="n">mShader</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinearGradient</span><span class="o">(</span><span class="n">curSlideX</span> <span class="o">-</span> <span class="n">40</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">curSlideX</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[]{</span><span class="n">Color</span><span class="o">.</span><span class="na">parseColor</span><span class="o">(</span><span class="s">&#34;#1edddddd&#34;</span><span class="o">),</span> <span class="n">Color</span><span class="o">.</span><span class="na">parseColor</span><span class="o">(</span><span class="s">&#34;#6e666666&#34;</span><span class="o">),</span> <span class="n">Color</span><span class="o">.</span><span class="na">parseColor</span><span class="o">(</span><span class="s">&#34;#9e666666&#34;</span><span class="o">)},</span> <span class="kc">null</span><span class="o">,</span> <span class="n">Shader</span><span class="o">.</span><span class="na">TileMode</span><span class="o">.</span><span class="na">REPEAT</span><span class="o">);</span>
+        <span class="c1">//设置着色器
+</span><span class="c1"></span>        <span class="n">mPaint</span><span class="o">.</span><span class="na">setShader</span><span class="o">(</span><span class="n">mShader</span><span class="o">);</span>
+        <span class="c1">//绘制时，注意向左边偏移
+</span><span class="c1"></span>        <span class="n">RectF</span> <span class="n">rectF</span> <span class="o">=</span> <span class="k">new</span> <span class="n">RectF</span><span class="o">(</span><span class="n">curSlideX</span> <span class="o">-</span> <span class="n">40</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">curSlideX</span><span class="o">,</span> <span class="n">mScreenHeight</span><span class="o">);</span>
+        <span class="n">canvas</span><span class="o">.</span><span class="na">drawRect</span><span class="o">(</span><span class="n">rectF</span><span class="o">,</span> <span class="n">mPaint</span><span class="o">);</span>
+        <span class="n">canvas</span><span class="o">.</span><span class="na">restore</span><span class="o">();</span>
+    <span class="o">}</span>
+ 
+ 
+<span class="o">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><h4 id="模块作用域"><strong>模块作用域</strong></h4>
-<p>就像 <code>nodejs</code> 中的模块一样，每个文件都是一个模块，每个模块都是独立的模块作用域。这里模块作用域触发的条件之一就是使用 <code>export</code> 关键字导出内容。</p>
-<p>每一个模块中定义的内容是无法直接在其他模块中直接获取到的，如果有需要的话，可以使用 <code>import</code> 关键字按需导入。</p>
-<h4 id="泛型操作符作用域函数作用域"><strong>泛型操作符作用域&amp;函数作用域</strong></h4>
-<p>泛型操作符是存在作用域的，还记得这一章的第一节为了方便大家理解，我把泛型操作符类比为函数吗？既然可以类比为函数，那么函数所具备的性质，泛型操作符自然也可以具备，所以存在泛型操作符作用域自然也就很好理解了。</p>
-<p>这里定义的两个同名的 <code>T</code> 并不会相互影响：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">type</span> <span class="nx">TypeOperator</span><span class="err">\</span><span class="o">&lt;</span><span class="nx">T</span><span class="err">\</span><span class="o">&gt;</span> <span class="err">\</span><span class="o">=</span> <span class="nx">T</span><span class="p">;</span>
-<span class="nx">type</span> <span class="nx">TypeOperator2</span><span class="err">\</span><span class="o">&lt;</span><span class="nx">T</span><span class="err">\</span><span class="o">&gt;</span> <span class="err">\</span><span class="o">=</span> <span class="nx">T</span><span class="p">;</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>上述是关于泛型操作符作用域的描述，下面我们聊一聊真正的函数作用域：</p>
-<p><strong>「类型也可以支持闭包」</strong>：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">Foo</span><span class="err">\</span><span class="o">&lt;</span><span class="nx">T</span><span class="err">\</span><span class="o">&gt;</span> <span class="err">\</span><span class="p">(</span><span class="err">\</span><span class="p">)</span> <span class="err">\</span><span class="p">{</span>
-  <span class="k">return</span> <span class="kd">function</span><span class="err">\</span><span class="p">(</span><span class="nx">param</span><span class="o">:</span> <span class="nx">T</span><span class="err">\</span><span class="p">)</span> <span class="err">\</span><span class="p">{</span>
-    <span class="k">return</span> <span class="nx">param</span><span class="p">;</span>
-  <span class="err">\</span><span class="p">}</span>
-<span class="err">\</span><span class="p">}</span>
-
-<span class="kr">const</span> <span class="nx">myFooStr</span> <span class="err">\</span><span class="o">=</span> <span class="nx">Foo</span><span class="err">\</span><span class="o">&lt;</span><span class="nx">string</span><span class="err">\</span><span class="o">&gt;</span><span class="err">\</span><span class="p">(</span><span class="err">\</span><span class="p">);</span>
-<span class="c1">// const myFooStr: \(param: string\) =&gt; string
-</span><span class="c1">// 这里触发了闭包，类型依然可以被保留
-</span><span class="c1"></span><span class="kr">const</span> <span class="nx">myFooNum</span> <span class="err">\</span><span class="o">=</span> <span class="nx">Foo</span><span class="err">\</span><span class="o">&lt;</span><span class="nx">number</span><span class="err">\</span><span class="o">&gt;</span><span class="err">\</span><span class="p">(</span><span class="err">\</span><span class="p">);</span>
-<span class="c1">// const myFooNum: \(param: number\) =&gt; number
-</span><span class="c1">// 这里触发了闭包，类型也会保持相互独立，互不干涉
-</span></code></pre></td></tr></table>
-</div>
-</div><h3 id="typescript-的类型是支持-递归-的"><strong>Typescript 的类型是支持 &ldquo;递归&rdquo; 的</strong></h3>
-<p><code>Typescript</code> 中的类型也是可以支持递归的，递归相关的问题比较抽象，这里还是举例来讲解，同时为了方便大家的理解，我也会像第一节一样，把类型递归的逻辑用 <code>Javascript</code> 语法描述一遍。</p>
-<p>首先来让我们举个栗子：</p>
-<h6 id="假如现在需要把一个任意长度的元组类型中的子类型依次取出并用--拼接并返回"><strong>假如现在需要把一个任意长度的元组类型中的子类型依次取出，并用 <code>&amp;</code> 拼接并返回。</strong></h6>
-<p>这里解决的方法其实非常非常多，解决的思路也非常非常多，由于这一小节讲的是 <strong>「递归」</strong>，所以我们使用递归的方式来解决。废话不罗嗦，先上代码：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// shift action
-</span><span class="c1"></span><span class="nx">type</span> <span class="nx">ShiftAction</span><span class="err">\</span><span class="o">&lt;</span><span class="nx">T</span> <span class="kr">extends</span> <span class="nx">any</span><span class="err">\</span><span class="p">[</span><span class="err">\</span><span class="p">]</span><span class="err">\</span><span class="o">&gt;</span> <span class="err">\</span><span class="o">=</span> <span class="err">\</span><span class="p">(</span><span class="err">\</span><span class="p">(...</span><span class="nx">args</span><span class="o">:</span> <span class="nx">T</span><span class="err">\</span><span class="p">)</span> <span class="err">\</span><span class="p">=&gt;</span> <span class="nx">any</span><span class="err">\</span><span class="p">)</span> <span class="kr">extends</span> <span class="err">\</span><span class="p">(</span><span class="err">\</span><span class="p">(</span><span class="nx">arg1</span><span class="o">:</span> <span class="nx">any</span><span class="p">,</span> <span class="p">...</span><span class="nx">rest</span><span class="o">:</span> <span class="nx">infer</span> <span class="nx">R</span><span class="err">\</span><span class="p">)</span> <span class="err">\</span><span class="p">=&gt;</span> <span class="nx">any</span><span class="err">\</span><span class="p">)</span> <span class="err">\</span><span class="o">?</span> <span class="nx">R</span> <span class="o">:</span> <span class="nx">never</span><span class="p">;</span>
-
-<span class="nx">type</span> <span class="nx">combineTupleTypeWithTecursion</span><span class="err">\</span><span class="o">&lt;</span><span class="nx">T</span> <span class="kr">extends</span> <span class="nx">any</span><span class="err">\</span><span class="p">[</span><span class="err">\</span><span class="p">],</span> <span class="nx">E</span> <span class="err">\</span><span class="o">=</span> <span class="err">\</span><span class="p">{</span><span class="err">\</span><span class="p">}</span><span class="err">\</span><span class="o">&gt;</span> <span class="err">\</span><span class="o">=</span> <span class="err">\</span><span class="p">{</span>
-  <span class="mi">1</span><span class="o">:</span> <span class="nx">E</span><span class="p">,</span>
-  <span class="mi">0</span><span class="o">:</span> <span class="nx">combineTupleTypeWithTecursion</span><span class="err">\</span><span class="o">&lt;</span><span class="nx">ShiftAction</span><span class="err">\</span><span class="o">&lt;</span><span class="nx">T</span><span class="err">\</span><span class="o">&gt;</span><span class="p">,</span> <span class="nx">E</span> <span class="err">\</span><span class="o">&amp;</span> <span class="nx">T</span><span class="err">\</span><span class="p">[</span><span class="mi">0</span><span class="err">\</span><span class="p">]</span><span class="err">\</span><span class="o">&gt;</span>
-<span class="err">\</span><span class="p">}</span><span class="err">\</span><span class="p">[</span><span class="nx">T</span> <span class="kr">extends</span> <span class="err">\</span><span class="p">[</span><span class="err">\</span><span class="p">]</span> <span class="err">\</span><span class="o">?</span> <span class="mi">1</span> <span class="o">:</span> <span class="mi">0</span><span class="err">\</span><span class="p">]</span>
-
-<span class="nx">type</span> <span class="nx">test</span> <span class="err">\</span><span class="o">=</span> <span class="err">\</span><span class="p">[</span><span class="err">\</span><span class="p">{</span> <span class="nx">a</span><span class="o">:</span> <span class="nx">string</span> <span class="err">\</span><span class="p">},</span> <span class="err">\</span><span class="p">{</span> <span class="nx">b</span><span class="o">:</span> <span class="nx">number</span> <span class="err">\</span><span class="p">}</span><span class="err">\</span><span class="p">];</span>
-<span class="nx">type</span> <span class="nx">testResult</span> <span class="err">\</span><span class="o">=</span> <span class="nx">combineTupleTypeWithTecursion</span><span class="err">\</span><span class="o">&lt;</span><span class="nx">test</span><span class="err">\</span><span class="o">&gt;</span><span class="p">;</span> <span class="c1">// \{ a: string; \} \&amp; \{ b: number; \}
-</span></code></pre></td></tr></table>
-</div>
-</div><p>看到上面的代码是不是一脸懵逼？没关系，接下来我们用普通的 <code>Typescript</code> 代码来 &ldquo;翻译&rdquo; 一下上述的代码。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">combineTupleTypeWithTecursion</span><span class="err">\</span><span class="p">(</span><span class="nx">T</span><span class="o">:</span> <span class="nx">object</span><span class="err">\</span><span class="p">[</span><span class="err">\</span><span class="p">],</span> <span class="nx">E</span><span class="o">:</span> <span class="nx">object</span> <span class="err">\</span><span class="o">=</span> <span class="err">\</span><span class="p">{</span><span class="err">\</span><span class="p">}</span><span class="err">\</span><span class="p">)</span><span class="o">:</span> <span class="nx">object</span> <span class="err">\</span><span class="p">{</span>
-  <span class="k">return</span> <span class="nx">T</span><span class="p">.</span><span class="nx">length</span> <span class="err">\</span><span class="o">?</span> <span class="nx">combineTupleTypeWithTecursion</span><span class="err">\</span><span class="p">(</span><span class="nx">T</span><span class="p">.</span><span class="nx">slice</span><span class="err">\</span><span class="p">(</span><span class="mi">1</span><span class="err">\</span><span class="p">),</span> <span class="err">\</span><span class="p">{</span> <span class="p">...</span><span class="nx">E</span><span class="p">,</span> <span class="p">...</span><span class="nx">T</span><span class="err">\</span><span class="p">[</span><span class="mi">0</span><span class="err">\</span><span class="p">]</span> <span class="err">\</span><span class="p">}</span><span class="err">\</span><span class="p">)</span> <span class="o">:</span> <span class="nx">E</span>
-<span class="err">\</span><span class="p">}</span>
-
-<span class="kr">const</span> <span class="nx">testData</span> <span class="err">\</span><span class="o">=</span> <span class="err">\</span><span class="p">[</span><span class="err">\</span><span class="p">{</span> <span class="nx">a</span><span class="o">:</span> <span class="s1">&#39;hello world&#39;</span> <span class="err">\</span><span class="p">},</span> <span class="err">\</span><span class="p">{</span> <span class="nx">b</span><span class="o">:</span> <span class="mi">100</span> <span class="err">\</span><span class="p">}</span><span class="err">\</span><span class="p">];</span>
-<span class="c1">// 此时函数的返回值为 \{ a: &#39;hello world&#39;, b: 100 \}
-</span><span class="c1"></span><span class="nx">combineTupleTypeWithTecursion</span><span class="err">\</span><span class="p">(</span><span class="nx">testData</span><span class="err">\</span><span class="p">);</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>看到这儿，相信聪明的同学一下子就懂了，原来类型的递归与普通函数的递归本质上是一样的。如果触发结束条件，就直接返回，否则就一直地递归调用下去，所传递的第二个参数用来保存上一次递归的计算结果。</p>
-<p>当然熟悉递归的同学都知道，常见的编程语言中，递归行为非常消耗计算机资源的，一旦超出了最大限制那么程序就会崩溃。同理类型中的递归也是一样的，如果递归地过深，类型系统一样会崩溃，所以这里的代码大家理解就好，尽量不要在生产环境使用哈。</p>
-<h3 id="小结"><strong>小结</strong></h3>
-<p>还记得一开始提出的思考题吗？其实通过上述的学习，我们完全可以自信地说出，<code>Typescript</code> 的 <code>Type</code> 本身也是一套完备的编程语言，甚至可以说是完备的图灵语言。因此类型本身也是可以用来编程的，你完全可以用它来编写一些有趣的东西，更别说是搞定日常开发中遇到的简单的业务场景了。</p>
-<h2 id="高级用法-的使用场景与价值"><strong>&ldquo;高级用法&rdquo; 的使用场景与价值</strong></h2>
-<h3 id="哪些用法可以被称为-高级用法"><strong>哪些用法可以被称为 &ldquo;高级用法&rdquo;</strong></h3>
-<p>其实所谓 &ldquo;高级用法&rdquo;，不过是用来解决某些特定的场景而产生的特定的约定俗称的写法或者语法糖。那高级用法重要吗？重要，也不重要。怎理解呢，根据编程中的 &ldquo;二八原则&rdquo;，20%的知识储备已经可以解决80%的需求问题，但是这剩余的20%，就是入门与熟练的分水岭。</p>
-<p>其实只要当我们仔细翻阅一遍官方提供的 handbook[4]，就已经可以应付日常开发了。但是就像本文一开头说的那样，你是否觉得：</p>
-<ol>
-<li><code>Typescript</code> 在某些场景下用起来很费劲，远不及 <code>Javascript</code> 灵活度的十分之一。</li>
-<li>你是否为自己使用 <code>Javascript</code> 中了某些 <strong>「骚操作」</strong> 用极简短的代码解决了某个复杂的代码而沾沾自喜，但却为不正确的 <strong>「返回类型」</strong> 挠秃了头。</li>
-<li>你是否明知用了若干 <code>as xxx</code> 会让你的代码看起来很挫，但却无能为力，含恨而终。</li>
-</ol>
-<p>同学，当你使用某种办法解决了上述的这些问题，那么这种用法就可以被称作 &ldquo;高级用法&rdquo;。</p>
-<h3 id="举例说明-高级用法-的使用场景"><strong>举例说明 &ldquo;高级用法&rdquo; 的使用场景</strong></h3>
-<p>举个栗子：在 <code>Redux</code> 中有一个叫作 <code>combineReducers</code> 的函数，因为某些场景，我们需要增加一个 <code>combineReducersParamFactory</code> 的函数，该函数支持传入多个函数，传入函数的返回值为作为<code>combineReducers</code> 的入参，我们需要整合多个入参数函数的返回值，并生成最终的对象供 <code>combineReducers</code> 函数使用。</p>
-<p>思考一下逻辑，发现其实并不复杂，用 <code>Javascript</code> 可以很容易地实现出来：</p>
+</div><p>我在代码中，进行详细的注释。总体来说，不难理解。我们在使用的时候，在布局文件中，一定要在根布局设置背景颜色，否则整个布局将会是透明的。下面是使用方法：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -2322,486 +2227,41 @@
 </span><span class="lnt">27
 </span><span class="lnt">28
 </span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="err">/\*\*</span>
- <span class="err">\</span><span class="o">*</span> <span class="nx">合并多个参数的返回数值并返回</span>
- <span class="err">\</span><span class="o">*</span> <span class="err">\@</span><span class="nx">param</span> <span class="err">\</span><span class="p">{</span> <span class="nb">Function</span><span class="err">\</span><span class="p">[</span><span class="err">\</span><span class="p">]</span> <span class="err">\</span><span class="p">}</span> <span class="nx">reducerCreators</span>
- <span class="err">\</span><span class="o">*</span> <span class="err">\@</span><span class="nx">returns</span> <span class="err">\</span><span class="p">{</span> <span class="nb">Object</span> <span class="err">\</span><span class="p">}</span>
- <span class="err">\</span><span class="o">*</span><span class="err">/</span>
-<span class="kd">function</span> <span class="nx">combineReducersParamFactory</span><span class="err">\</span><span class="p">(...</span><span class="nx">reducerCreators</span><span class="err">\</span><span class="p">)</span> <span class="err">\</span><span class="p">{</span>
-  <span class="k">return</span> <span class="nx">reducerCreators</span><span class="p">.</span><span class="nx">reduce</span><span class="err">\</span><span class="p">(</span><span class="err">\</span><span class="p">(</span><span class="nx">acc</span><span class="p">,</span> <span class="nx">creator</span><span class="err">\</span><span class="p">)</span> <span class="err">\</span><span class="p">=&gt;</span> <span class="err">\</span><span class="p">(</span><span class="err">\</span><span class="p">{</span> <span class="p">...</span><span class="nx">acc</span><span class="p">,</span> <span class="p">...</span><span class="nx">creator</span><span class="err">\</span><span class="p">(</span><span class="err">\</span><span class="p">)</span> <span class="err">\</span><span class="p">}</span><span class="err">\</span><span class="p">),</span> <span class="err">\</span><span class="p">{</span><span class="err">\</span><span class="p">}</span><span class="err">\</span><span class="p">)</span>
-<span class="err">\</span><span class="p">}</span>
-
-<span class="c1">// test ...
-</span><span class="c1"></span>
-<span class="kd">function</span> <span class="nx">todosReducer</span><span class="err">\</span><span class="p">(</span><span class="nx">state</span> <span class="err">\</span><span class="o">=</span> <span class="err">\</span><span class="p">[</span><span class="err">\</span><span class="p">],</span> <span class="nx">action</span><span class="err">\</span><span class="p">)</span> <span class="err">\</span><span class="p">{</span>
-  <span class="k">switch</span> <span class="err">\</span><span class="p">(</span><span class="nx">action</span><span class="p">.</span><span class="nx">type</span><span class="err">\</span><span class="p">)</span> <span class="err">\</span><span class="p">{</span>
-    <span class="k">case</span> <span class="s1">&#39;ADD\_TODO&#39;</span><span class="o">:</span>
-      <span class="k">return</span> <span class="nx">state</span><span class="p">.</span><span class="nx">concat</span><span class="err">\</span><span class="p">(</span><span class="err">\</span><span class="p">[</span><span class="nx">action</span><span class="p">.</span><span class="nx">text</span><span class="err">\</span><span class="p">]</span><span class="err">\</span><span class="p">)</span>
-    <span class="k">default</span><span class="o">:</span>
-      <span class="k">return</span> <span class="nx">state</span>
-  <span class="err">\</span><span class="p">}</span>
-<span class="err">\</span><span class="p">}</span>
-
-<span class="kd">function</span> <span class="nx">counterReducer</span><span class="err">\</span><span class="p">(</span><span class="nx">state</span> <span class="err">\</span><span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">action</span><span class="err">\</span><span class="p">)</span> <span class="err">\</span><span class="p">{</span>
-  <span class="k">switch</span> <span class="err">\</span><span class="p">(</span><span class="nx">action</span><span class="p">.</span><span class="nx">type</span><span class="err">\</span><span class="p">)</span> <span class="err">\</span><span class="p">{</span>
-    <span class="k">case</span> <span class="s1">&#39;INCREMENT&#39;</span><span class="o">:</span>
-      <span class="k">return</span> <span class="nx">state</span> <span class="o">+</span> <span class="mi">1</span>
-    <span class="k">case</span> <span class="s1">&#39;DECREMENT&#39;</span><span class="o">:</span>
-      <span class="k">return</span> <span class="nx">state</span> <span class="err">\</span><span class="o">-</span> <span class="mi">1</span>
-    <span class="k">default</span><span class="o">:</span>
-      <span class="k">return</span> <span class="nx">state</span>
-  <span class="err">\</span><span class="p">}</span>
-<span class="err">\</span><span class="p">}</span>
-
-<span class="kr">const</span> <span class="nx">ret</span> <span class="err">\</span><span class="o">=</span> <span class="nx">combineReducersParamFactory</span><span class="err">\</span><span class="p">(</span>
-  <span class="err">\</span><span class="p">(</span><span class="err">\</span><span class="p">)</span> <span class="err">\</span><span class="p">=&gt;</span> <span class="err">\</span><span class="p">(</span><span class="err">\</span><span class="p">{</span> <span class="nx">todosReducer</span> <span class="err">\</span><span class="p">}</span><span class="err">\</span><span class="p">),</span>
-  <span class="err">\</span><span class="p">(</span><span class="err">\</span><span class="p">)</span> <span class="err">\</span><span class="p">=&gt;</span> <span class="err">\</span><span class="p">(</span><span class="err">\</span><span class="p">{</span> <span class="nx">counterReducer</span> <span class="err">\</span><span class="p">}</span><span class="err">\</span><span class="p">)</span>
-<span class="err">\</span><span class="p">);</span>
-<span class="c1">// \{ todosReducer: \[Function: todosReducer\], counterReducer: \[Function: counterReducer\] \}
-</span></code></pre></td></tr></table>
-</div>
-</div><p>但如果用需要配备对应的类型，应该如何编写呢？</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span><span class="lnt">38
-</span><span class="lnt">39
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">type</span> <span class="nx">Combine</span><span class="err">\</span><span class="o">&lt;</span><span class="nx">T</span><span class="err">\</span><span class="o">&gt;</span> <span class="err">\</span><span class="o">=</span> <span class="err">\</span><span class="p">(</span><span class="nx">T</span> <span class="kr">extends</span> <span class="nx">any</span> <span class="err">\</span><span class="o">?</span> <span class="err">\</span><span class="p">(</span><span class="nx">args</span><span class="o">:</span> <span class="nx">T</span><span class="err">\</span><span class="p">)</span> <span class="err">\</span><span class="p">=&gt;</span> <span class="nx">any</span> <span class="o">:</span> <span class="nx">never</span><span class="err">\</span><span class="p">)</span> <span class="kr">extends</span> <span class="err">\</span><span class="p">(</span><span class="nx">args</span><span class="o">:</span> <span class="nx">infer</span> <span class="nx">A</span><span class="err">\</span><span class="p">)</span> <span class="err">\</span><span class="p">=&gt;</span> <span class="nx">any</span> <span class="err">\</span><span class="o">?</span> <span class="nx">A</span> <span class="o">:</span> <span class="nx">never</span><span class="p">;</span>
-
-<span class="err">/\*\*</span>
- <span class="err">\</span><span class="o">*</span> <span class="nx">合并多个参数的返回数值并返回</span>
- <span class="err">\</span><span class="o">*</span> <span class="err">\@</span><span class="nx">param</span> <span class="err">\</span><span class="p">{</span> <span class="nb">Function</span><span class="err">\</span><span class="p">[</span><span class="err">\</span><span class="p">]</span> <span class="err">\</span><span class="p">}</span> <span class="nx">reducerCreators</span>
- <span class="err">\</span><span class="o">*</span> <span class="err">\@</span><span class="nx">returns</span> <span class="err">\</span><span class="p">{</span> <span class="nb">Object</span> <span class="err">\</span><span class="p">}</span>
- <span class="err">\</span><span class="o">*</span><span class="err">/</span>
-<span class="kd">function</span> <span class="nx">combineReducersParamFactory</span><span class="err">\</span><span class="o">&lt;</span><span class="nx">T</span> <span class="kr">extends</span> <span class="err">\</span><span class="p">(</span><span class="err">\</span><span class="p">(...</span><span class="nx">args</span><span class="err">\</span><span class="p">)</span> <span class="err">\</span><span class="p">=&gt;</span> <span class="nx">object</span><span class="err">\</span><span class="p">)</span><span class="err">\</span><span class="p">[</span><span class="err">\</span><span class="p">]</span><span class="err">\</span><span class="o">&gt;</span><span class="err">\</span><span class="p">(...</span><span class="nx">reducerCreators</span><span class="o">:</span> <span class="nx">T</span><span class="err">\</span><span class="p">)</span><span class="o">:</span> <span class="nx">Combine</span><span class="err">\</span><span class="o">&lt;</span><span class="nx">ReturnType</span><span class="err">\</span><span class="o">&lt;</span><span class="nx">T</span><span class="err">\</span><span class="p">[</span><span class="nx">number</span><span class="err">\</span><span class="p">]</span><span class="err">\</span><span class="o">&gt;&gt;</span> <span class="err">\</span><span class="p">{</span>
-  <span class="k">return</span> <span class="nx">reducerCreators</span><span class="p">.</span><span class="nx">reduce</span><span class="err">\</span><span class="o">&lt;</span><span class="nx">any</span><span class="err">\</span><span class="o">&gt;</span><span class="err">\</span><span class="p">(</span><span class="err">\</span><span class="p">(</span><span class="nx">acc</span><span class="p">,</span> <span class="nx">creator</span><span class="err">\</span><span class="p">)</span> <span class="err">\</span><span class="p">=&gt;</span> <span class="err">\</span><span class="p">(</span><span class="err">\</span><span class="p">{</span> <span class="p">...</span><span class="nx">acc</span><span class="p">,</span> <span class="p">...</span><span class="nx">creator</span><span class="err">\</span><span class="p">(</span><span class="err">\</span><span class="p">)</span> <span class="err">\</span><span class="p">}</span><span class="err">\</span><span class="p">),</span> <span class="err">\</span><span class="p">{</span><span class="err">\</span><span class="p">}</span><span class="err">\</span><span class="p">);</span>
-<span class="err">\</span><span class="p">}</span>
-
-<span class="c1">// test ...
-</span><span class="c1"></span>
-<span class="kd">function</span> <span class="nx">todosReducer</span><span class="err">\</span><span class="p">(</span><span class="nx">state</span><span class="o">:</span> <span class="nx">object</span><span class="err">\</span><span class="p">[</span><span class="err">\</span><span class="p">],</span> <span class="nx">action</span><span class="o">:</span> <span class="err">\</span><span class="p">{</span> <span class="err">\</span><span class="p">[</span><span class="nx">x</span><span class="o">:</span> <span class="nx">string</span><span class="err">\</span><span class="p">]</span><span class="o">:</span> <span class="nx">string</span><span class="err">\</span><span class="p">}</span><span class="err">\</span><span class="p">)</span> <span class="err">\</span><span class="p">{</span>
-  <span class="k">switch</span> <span class="err">\</span><span class="p">(</span><span class="nx">action</span><span class="p">.</span><span class="nx">type</span><span class="err">\</span><span class="p">)</span> <span class="err">\</span><span class="p">{</span>
-    <span class="k">case</span> <span class="s1">&#39;ADD\_TODO&#39;</span><span class="o">:</span>
-      <span class="k">return</span> <span class="nx">state</span><span class="p">.</span><span class="nx">concat</span><span class="err">\</span><span class="p">(</span><span class="err">\</span><span class="p">[</span><span class="nx">action</span><span class="p">.</span><span class="nx">text</span><span class="err">\</span><span class="p">]</span><span class="err">\</span><span class="p">)</span>
-    <span class="k">default</span><span class="o">:</span>
-      <span class="k">return</span> <span class="nx">state</span>
-  <span class="err">\</span><span class="p">}</span>
-<span class="err">\</span><span class="p">}</span>
-
-<span class="kd">function</span> <span class="nx">counterReducer</span><span class="err">\</span><span class="p">(</span><span class="nx">state</span><span class="o">:</span> <span class="nx">number</span><span class="p">,</span> <span class="nx">action</span><span class="o">:</span> <span class="err">\</span><span class="p">{</span> <span class="err">\</span><span class="p">[</span><span class="nx">x</span><span class="o">:</span> <span class="nx">string</span><span class="err">\</span><span class="p">]</span><span class="o">:</span> <span class="nx">string</span><span class="err">\</span><span class="p">}</span><span class="err">\</span><span class="p">)</span> <span class="err">\</span><span class="p">{</span>
-  <span class="k">switch</span> <span class="err">\</span><span class="p">(</span><span class="nx">action</span><span class="p">.</span><span class="nx">type</span><span class="err">\</span><span class="p">)</span> <span class="err">\</span><span class="p">{</span>
-    <span class="k">case</span> <span class="s1">&#39;INCREMENT&#39;</span><span class="o">:</span>
-      <span class="k">return</span> <span class="nx">state</span> <span class="o">+</span> <span class="mi">1</span>
-    <span class="k">case</span> <span class="s1">&#39;DECREMENT&#39;</span><span class="o">:</span>
-      <span class="k">return</span> <span class="nx">state</span> <span class="err">\</span><span class="o">-</span> <span class="mi">1</span>
-    <span class="k">default</span><span class="o">:</span>
-      <span class="k">return</span> <span class="nx">state</span>
-  <span class="err">\</span><span class="p">}</span>
-<span class="err">\</span><span class="p">}</span>
-
-<span class="c1">// 这里不需要显示传入类型，这里就可以得到正确的代码提示
-</span><span class="c1"></span><span class="kr">const</span> <span class="nx">ret</span> <span class="err">\</span><span class="o">=</span> <span class="nx">combineReducersParamFactory</span><span class="err">\</span><span class="p">(</span>
-  <span class="err">\</span><span class="p">(</span><span class="err">\</span><span class="p">)</span> <span class="err">\</span><span class="p">=&gt;</span> <span class="err">\</span><span class="p">(</span><span class="err">\</span><span class="p">{</span> <span class="nx">todosReducer</span> <span class="err">\</span><span class="p">}</span><span class="err">\</span><span class="p">),</span>
-  <span class="err">\</span><span class="p">(</span><span class="err">\</span><span class="p">)</span> <span class="err">\</span><span class="p">=&gt;</span> <span class="err">\</span><span class="p">(</span><span class="err">\</span><span class="p">{</span> <span class="nx">counterReducer</span> <span class="err">\</span><span class="p">}</span><span class="err">\</span><span class="p">)</span>
-<span class="err">\</span><span class="p">);</span>
-<span class="c1">// \{ todosReducer: \[Function: todosReducer\], counterReducer: \[Function: counterReducer\] \}
-</span></code></pre></td></tr></table>
-</div>
-</div><p>你看，类型经过精心编排之后，就是可以让调用者不增加任何负担的前提下，享受到代码提示的快乐。</p>
-<h3 id="小结-1"><strong>小结</strong></h3>
-<p>经过这一章节的学习，我们可以明确了解到，经过我们精心编排的类型，可以变得非常的智能，可以让调用者几乎零成本地享受到代码提示的快乐。或许在编排类型时所耗费的时间成本比较大，但是一旦我们编排完成，就可以极大地减少调用者的脑力负担，让调用者享受到编程的快乐。</p>
-<h2 id="类型推导与泛型操作符"><strong>类型推导与泛型操作符</strong></h2>
-<h3 id="流动的类型类型编写思路"><strong>流动的类型（类型编写思路）</strong></h3>
-<p>熟悉 <strong>「函数式编程」</strong> 的同学一定对 <strong>「数据流动」</strong> 的概念有较为深刻的理解。当你在 &ldquo;上游&rdquo; 改变了一个值之后，&ldquo;下游&rdquo; 相关的会跟着自动更新。有 <strong>「响应式编程」</strong> 经验的同学这是时候应该迫不及待地想举手了，同学把手放下，这里我们并不想深入地讨论 <strong>「流式编程思想」</strong>，之所以引出这些概念，是想类比出本小节的重点: <strong>「流动的类型」</strong>。</p>
-<p>是的，编写类型系统的思路是可以借鉴 <strong>「函数式编程」</strong> 的思想的。因此某一个类型发生变化时，其他相关的类型也会自动更新，并且当代码的臃肿到不可维护的时候，你会得到一个友好的提示，整个类型系统就好像一个被精心设计过的约束系统。</p>
-<h3 id="typescript-代码哲学"><strong>Typescript 代码哲学</strong></h3>
-<p>聊完了类型系统的编写思路，咱们再来聊一聊代码哲学。其实之所以现在 <code>Typescript</code> 越来越火，撇开哪些聊烂了的优势不谈，其实最大的优势在于强大的类型表现能力，以及编辑器（VSCode）完备的代码提示能力。</p>
-<p>那么在这些优势的基础上，我个人拓展了一些编码哲学（习惯），这里见仁见智，大佬轻喷~：</p>
-<ol>
-<li>减少不必要的显式类型定义，尽可能多地使用类型推导，让类型的流动像呼吸一样自然。</li>
-<li>尽可能少地使用 <code>any</code> 或 <code>as any</code>，注意这里并不是说不能用，而是你判断出目前情况下使用 <code>any</code> 是最优解。</li>
-<li>如果确定要使用 <code>any</code> 作为类型，优先考虑一下是否可以使用 <code>unknown</code> 类型替代，毕竟 <code>any</code> 会破坏类型的流动。</li>
-<li>尽可能少地使用 <code>as xxx</code>，如果大量使用这种方式纠正类型，那么大概率你对 <strong>「类型流动」</strong> 理解的还不够透彻。</li>
-</ol>
-<h2 id="常见类型推导实现逻辑梳理与实践入门"><strong>常见类型推导实现逻辑梳理与实践入门</strong></h2>
-<h3 id="类型的传递流动"><strong>类型的传递（流动）</strong></h3>
-<p>前面我们说到，类型是具备流动性的，结合 <strong>「响应式编程」</strong> 的概念其实很容易理解。这一小节我们将列举几个常见的例子，来和大家具体讲解一下。</p>
-<p>有编程经验的同学都知道，数据是可以被传递的，同理，类型也可以。</p>
-<p>你可用 <code>type</code> 创建一个类型指针，指向对应的类型，那么就可以实现类型的传递，当然你也可以理解为指定起一个别名，或者说是拷贝，这里见仁见智，但是通过上述方法可以实现类型的传递，这是显而易见的。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">type</span> <span class="nx">RawType</span> <span class="err">\</span><span class="o">=</span> <span class="err">\</span><span class="p">{</span> <span class="nx">a</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">b</span><span class="o">:</span> <span class="nx">number</span> <span class="err">\</span><span class="p">};</span>
-
-<span class="c1">// 这里就拿到了上述类型的引用
-</span><span class="c1"></span><span class="nx">type</span> <span class="nx">InferType</span> <span class="err">\</span><span class="o">=</span> <span class="nx">RawType</span><span class="p">;</span> <span class="c1">// \{ a: string, b: number \};
-</span><span class="c1"></span>
-<span class="nx">同样</span><span class="err">，</span><span class="nx">类型也可以随着数据的传递而传递</span><span class="err">：</span>
-
-<span class="kd">var</span> <span class="nx">num</span><span class="o">:</span> <span class="nx">number</span> <span class="err">\</span><span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
-<span class="kd">var</span> <span class="nx">num2</span>  <span class="err">\</span><span class="o">=</span> <span class="nx">num</span><span class="p">;</span>
-
-<span class="nx">type</span> <span class="nx">Num2Type</span> <span class="err">\</span><span class="o">=</span> <span class="k">typeof</span> <span class="nx">num2</span><span class="p">;</span> <span class="c1">// number
-</span></code></pre></td></tr></table>
-</div>
-</div><p>也正是依赖这一点，<code>Typescript</code> 才得以实现 <strong>「类型检查」</strong>、<strong>「定义跳转」</strong> 等功能。</p>
-<p>到这里熟悉 <strong>「流式编程」</strong> 的同学就要举手了：你光说了类型的 <strong>「传递」</strong>，<strong>「输入」</strong> 与 <strong>「输出」</strong>，那我如果希望在类型 <strong>「传递」</strong> 的过程中对它进行操作，该怎么做呢？同学你不要急，这正是我下面所想要讲的内容。</p>
-<h3 id="类型的过滤与分流"><strong>类型的过滤与分流</strong></h3>
-<p>在上一小节中，我们反复地扯到了 <strong>「函数式编程」</strong>、<strong>「响应式编程」</strong>、<strong>「流式编程」</strong> 这些抽象的概念，其实并不是跑题，而是者两者的思想（理念）实在太相似了，在本小节后续的讲解中，我还会一直延用这些概念帮助大家理解。翻看一下常用 <strong>「函数式编程」</strong> 的库，不管是 <code>Ramda</code> 、<code>RXJS</code> 还是我们耳熟能详的 <code>lodash</code> 、<code>underscore</code>，里面一定有一个操作符叫作 <code>filter</code>，也就是对数据流的过滤。</p>
-<p>这个操作符的使用频率一定远超其他操作符，那么这么重要的功能，我们在类型系统中该如何实现呢？</p>
-<p>要解决这个问题，这里我们先要了解一个在各大 技术社区/平台 搜索频率非常高的一个问题:</p>
-<p><strong>「TypeScript中 的 never 类型具体有什么用？」</strong></p>
-<p>既然这个问题搜索频率非常之高，这里我也就不重复作答，有兴趣的同学可以看一下尤大大的回答： TypeScript中的never类型具体有什么用？ - 尤雨溪的回答 - 知乎[5]。</p>
-<p>这里我们简单总结一下：</p>
-<ol>
-<li><code>never</code> 代表空集。</li>
-<li>常用于用于校验 &ldquo;类型收窄&rdquo; 是否符合预期，就是写出类型绝对安全的代码。</li>
-<li><code>never</code> 常被用来作 &ldquo;类型兜底&rdquo;。</li>
-</ol>
-<p>当然上面的总结并不完整，但已经足够帮助理解本小节内容，感兴趣的同学可以自行查阅相关资料。</p>
-<p>上面提到了 &ldquo;类型收窄&rdquo;，这与我们的目标已经十分接近了，当然我们还需要了解 <code>never</code> 参与类型运算的相关表现：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">type</span> <span class="nx">NeverTest</span> <span class="err">\</span><span class="o">=</span> <span class="nx">string</span> <span class="o">|</span> <span class="nx">never</span> <span class="c1">// stirng
-</span><span class="c1"></span><span class="nx">type</span> <span class="nx">NeverTest2</span> <span class="err">\</span><span class="o">=</span> <span class="nx">string</span> <span class="err">\</span><span class="o">&amp;</span> <span class="nx">never</span> <span class="c1">// never
-</span></code></pre></td></tr></table>
-</div>
-</div><p>重要的知识出现了：<code>T | never</code>，结果为 <code>T</code>。</p>
-<p>看到这里，相信聪明的同学们已经有思路了，我们可以用 <code>never</code> 来过滤掉 <code>联合类型(Union Types)</code> 中不和期望的类型，其实这个 <strong>「泛型操作符」</strong> 早在 Typescript 2.8[6] 就已经被加入到了官方文档中了。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="err">/\*\*</span>
- <span class="err">\</span><span class="o">*</span> <span class="nx">Exclude</span> <span class="nx">from</span> <span class="nx">T</span> <span class="nx">those</span> <span class="nx">types</span> <span class="nx">that</span> <span class="nx">are</span> <span class="nx">assignable</span> <span class="nx">to</span> <span class="nx">U</span>
- <span class="err">\</span><span class="o">*</span><span class="err">/</span>
-<span class="nx">type</span> <span class="nx">Exclude</span><span class="err">\</span><span class="o">&lt;</span><span class="nx">T</span><span class="p">,</span> <span class="nx">U</span><span class="err">\</span><span class="o">&gt;</span> <span class="err">\</span><span class="o">=</span> <span class="nx">T</span> <span class="kr">extends</span> <span class="nx">U</span> <span class="err">\</span><span class="o">?</span> <span class="nx">never</span> <span class="o">:</span> <span class="nx">T</span><span class="p">;</span>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">com.mjc.slidebackdemo</span><span class="o">;</span>
+ 
+<span class="kn">import</span> <span class="nn">android.support.v7.app.AppCompatActivity</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.os.Bundle</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.widget.TextView</span><span class="o">;</span>
+ 
+<span class="kn">import</span> <span class="nn">com.mjc.slidebackdemo.view.SlideBackLayout</span><span class="o">;</span>
+ 
+<span class="cm">/**
+</span><span class="cm"> * 从左侧边缘向右滑动可以关闭当前页面
+</span><span class="cm"> */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">SecondActivity</span> <span class="kd">extends</span> <span class="n">AppCompatActivity</span> <span class="o">{</span>
+ 
+    <span class="kd">private</span> <span class="n">TextView</span> <span class="n">tv</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="n">SlideBackLayout</span> <span class="n">mSlideBackLayout</span><span class="o">;</span>
+ 
+    <span class="nd">@Override</span>
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
+        <span class="n">setContentView</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">activity_main</span><span class="o">);</span>
+        <span class="n">mSlideBackLayout</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SlideBackLayout</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+        <span class="n">mSlideBackLayout</span><span class="o">.</span><span class="na">bind</span><span class="o">();</span>
+        <span class="n">tv</span> <span class="o">=</span> <span class="o">(</span><span class="n">TextView</span><span class="o">)</span> <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">tv</span><span class="o">);</span>
+ 
+ 
+    <span class="o">}</span>
+ 
+ 
+<span class="o">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>相信经过这么长时间的学习，看到这里你一定很容易就能这种写法的思路。</p>
-<p>好了，讲完了 <strong>「过滤」</strong>，我们再来讲讲 <strong>「分流」</strong>。类型 <strong>「分流」</strong> 的概念其实也不难理解，这个概念常常与逻辑判断一同出现，毕竟从逻辑层面来讲，<code>联合类型(Union Types)</code> 本质上还是用来描述 <strong>「或」</strong> 的关系。同样的概念如果引入到 <strong>「流式编程」</strong> 中，就自然而然地会引出 <strong>「分流」</strong>。换成打白话来讲，就是不同数据应被分该发到不同的 <strong>「管道」</strong> 中，同理，类型也需要。</p>
-<p>那么这么常用的功能，在 <code>Typescript</code> 中如何处理呢？其实这种常见的问题，官方也非常贴心地为我们考虑到了，那就是：<code>类型守卫（Type guard）</code>。网上对 <code>类型守卫（Type guard）</code> 有讲解的文章非常的多，这里也不作赘述，有兴趣的同学可以自行搜索学习。我们这里用一个简单的栗子简单地演示一下用法：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">foo</span><span class="err">\</span><span class="p">(</span><span class="nx">x</span><span class="o">:</span> <span class="nx">A</span> <span class="o">|</span> <span class="nx">B</span><span class="err">\</span><span class="p">)</span> <span class="err">\</span><span class="p">{</span>
-  <span class="k">if</span> <span class="err">\</span><span class="p">(</span><span class="nx">x</span> <span class="k">instanceof</span> <span class="nx">A</span><span class="err">\</span><span class="p">)</span> <span class="err">\</span><span class="p">{</span>
-    <span class="c1">// x is A
-</span><span class="c1"></span>  <span class="err">\</span><span class="p">}</span> <span class="k">else</span> <span class="err">\</span><span class="p">{</span>
-  <span class="c1">// x is B
-</span><span class="c1"></span>  <span class="err">\</span><span class="p">}</span>
-<span class="err">\</span><span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div><p><strong>「可以触发类型守卫的常见方式有」</strong>：<code>typeof</code>、<code>instanceof</code>、<code>in</code>、<code>==</code>、 <code>===</code>、 <code>!=</code>、 <code>!==</code> 等等。</p>
-<p>当然在有些场景中，单单通过以上的方式不能满足我们的需求，该怎么办呢？其实这种问题，官方也早已经帮我考虑到了：使用 <code>is</code> 关键字自定义 <code>类型守卫（Type guard）</code>。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// 注意这里需要返回 boolean 类型
-</span><span class="c1"></span><span class="kd">function</span> <span class="nx">isA</span><span class="err">\</span><span class="p">(</span><span class="nx">x</span><span class="err">\</span><span class="p">)</span><span class="o">:</span> <span class="nx">x</span> <span class="nx">is</span> <span class="nx">A</span> <span class="err">\</span><span class="p">{</span>
-  <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
-<span class="err">\</span><span class="p">}</span>
-
-<span class="c1">// 注意这里需要返回 boolean 类型
-</span><span class="c1"></span><span class="kd">function</span> <span class="nx">isB</span><span class="err">\</span><span class="p">(</span><span class="nx">x</span><span class="err">\</span><span class="p">)</span><span class="o">:</span> <span class="nx">x</span> <span class="nx">is</span> <span class="nx">B</span> <span class="err">\</span><span class="p">{</span>
-  <span class="k">return</span> <span class="nx">x</span> <span class="k">instanceof</span> <span class="nx">B</span><span class="p">;</span>
-<span class="err">\</span><span class="p">}</span>
-
-<span class="kd">function</span> <span class="nx">foo2</span><span class="err">\</span><span class="p">(</span><span class="nx">x</span><span class="o">:</span> <span class="nx">unknown</span><span class="err">\</span><span class="p">)</span> <span class="err">\</span><span class="p">{</span>
-  <span class="k">if</span> <span class="err">\</span><span class="p">(</span><span class="nx">isA</span><span class="err">\</span><span class="p">(</span><span class="nx">x</span><span class="err">\</span><span class="p">)</span><span class="err">\</span><span class="p">)</span> <span class="err">\</span><span class="p">{</span>
-    <span class="c1">// x is A
-</span><span class="c1"></span>  <span class="err">\</span><span class="p">}</span> <span class="k">else</span> <span class="err">\</span><span class="p">{</span>
-    <span class="c1">// x is B
-</span><span class="c1"></span>  <span class="err">\</span><span class="p">}</span>
-<span class="err">\</span><span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="小结-2"><strong>小结</strong></h3>
-<p>这一章节中，我们通过类比 <code>响应式编程</code>、<code>流式编程</code> 的概念方式，帮助大家更好地理解了 <strong>「类型推导」</strong> 的实现逻辑与思路，相信经过了这一章节的学习，我们对 <code>Typescript</code> 中的类型推导又有了更加深入的理解。不过这一章引入的抽象的概念比较多，也比较杂，基础不是太好的同学需要多花点时间翻看一下相关资料。</p>
-<h2 id="定制化扩展你的-typescript"><strong>定制化扩展你的 Typescript</strong></h2>
-<h3 id="typescript-service-plugins-的产生背景功能定位基础使用"><strong>Typescript Service Plugins 的产生背景、功能定位、基础使用</strong></h3>
-<h4 id="产生背景"><strong>产生背景</strong></h4>
-<p>说起 <code>Typescript</code> 的编译手段大部分同学应该都不会陌生，无论是在 <code>webpack</code> 中使用 <code>ts-loader</code> 或 <code>babel-loader</code>，还是在 <code>gulp</code> 中使用 <code>gulp-typescript</code>，亦或是直接使用 <code>Typescript</code> 自带的<a href="https://cloud.tencent.com/product/cli?from=10680">命令行工具</a>，相信大部分同学也都已经驾轻就熟了，这里不做赘述。</p>
-<p>这里我们把目光聚焦到撸码体验上，相信有使用过 <code>Typescritp</code> 开发前端项目的同学一定有过各种各样的困扰，这里列举几个常见的问题：</p>
-<ol>
-<li>在处理 CSS Module 的样式资源的类型定义时，不满足于使用 <code>declare module '*.module.css'</code> 这种毫无卵用的类型定义。</li>
-<li>不想给编辑器安装各种各样的插件，下次启动编辑器的时间明显变长，小破电脑不堪重负，而且每次重装系统都是一次噩梦降临。</li>
-<li>不想妥协于同事的使用习惯，想使用自己熟悉的编辑器。</li>
-<li>并不满足于官方已有的代码提示，想让自己的编辑器更加地贴心与智能。</li>
-</ol>
-<h6 id="为了提供更加贴心的开发体验typescript-官方提供一种解决思路typescript-service-plugins"><strong>为了提供更加贴心的开发体验，Typescript 官方提供一种解决思路——Typescript Service Plugins</strong></h6>
-<h4 id="功能定位"><strong>功能定位</strong></h4>
-<h6 id="以下内容摘自官方-wiki"><strong>以下内容摘自官方 WIKI：</strong></h6>
-<blockquote>
-<p>❝In TypeScript 2.2 and later, developers can enable <em>language service plugins</em> to <strong>「augment the TypeScript code editing experience」</strong>. ❞</p>
-</blockquote>
-<p>其实官方文档已经写的很清楚了，这玩意儿旨在优化 <code>Typescript</code> 代码的 <strong>「编写体验」</strong>。所以想利用这玩意儿改变编译结果或是想自创新语法的还是省省吧 嗯，我在说我自己呢！</p>
-<p>那么 <code>Typescript Service Plugins</code> 的可以用来做哪些事呢？</p>
-<p>官方也有明确的回答：</p>
-<blockquote>
-<p>❝plugins are for augmenting the editing experience. Some examples of things plugins might do:</p>
-</blockquote>
-<ul>
-<li>Provide errors from a linter inline in the editor</li>
-<li>Filter the completion list to remove certain properties from <code>window</code></li>
-<li>Redirect &ldquo;Go to definition&rdquo; to go to a different location for certain identifiers</li>
-<li>Enable new errors or completions in string literals for a custom templating language</li>
-</ul>
-<p>❞</p>
-<p>同样官方也给出了不推荐使用 <code>Typescript Service Plugins</code> 的场景：</p>
-<blockquote>
-<p>❝Examples of things language plugins cannot do:</p>
-</blockquote>
-<ul>
-<li>Add new custom syntax to TypeScript</li>
-<li>Change how the compiler emits JavaScript</li>
-<li>Customize the type system to change what is or isn&rsquo;t an error when running <code>tsc</code></li>
-</ul>
-<p>❞</p>
-<p>好了，相信读到这里大家一定对 <code>Typescript Service Plugins</code> 有了一个大致的了解，下面我会介绍一下 <code>Typescript Service Plugins</code> 的安装与使用。</p>
-<h4 id="如何安装以及如何配置-typescript-service-plugins"><strong>如何安装以及如何配置 Typescript Service Plugins</strong></h4>
-<h5 id="typescript-service-plugins-的安装方法"><strong>Typescript Service Plugins 的安装方法</strong></h5>
-<p># 就像安装普通的 `npm` 包一样</p>
-<pre tabindex="0"><code>npm install \--save\-dev your\_plugin\_name
-</code></pre><h5 id="如何在-tsconfigjson-中配置-typescript-service-plugins"><strong>如何在 tsconfig.json 中配置 Typescript Service Plugins</strong></h5>
-<pre tabindex="0"><code>\{
-  &quot;compilerOptions&quot;: \{
-    /\*\* compilerOptions Configuration ... \*/
-    &quot;noImplicitAny&quot;: true,
-    &quot;plugins&quot;: \[
-      \{
-        /\*\* 配置插件名称，也可以填写本地路径 \*/
-        &quot;name&quot;: &quot;sample-ts-plugin&quot;
-        /\*\* 这里可以给插件传参 ... \*/
-      \}
-      /\*\* 支持同时引入多个插件 ... \*/
-    \]
-  \}
-\}
-</code></pre><h5 id="几个需要注意的地方"><strong>几个需要注意的地方:</strong></h5>
-<ol>
-<li>如果使用 <code>VSCode</code> 开发，记得务必 using the workspace version of typescript[7]，否则可能导致插件不生效。</li>
-<li><code>Typescript Service Plugins</code> 产生的告警或者报错不会影响编译结果。</li>
-<li>如果配置完了不生效可以先尝试重启你的编辑器。</li>
-</ol>
-<h3 id="市面上已有的-typescript-service-plugins-举例介绍"><strong>市面上已有的 Typescript Service Plugins 举例介绍</strong></h3>
-<blockquote>
-<p>❝具体使用细节请用编辑器打开我提供的 demo，自行体验。 ❞</p>
-</blockquote>
-<h4 id="示例插件typescript-plugin-css-modules8"><strong>示例插件：typescript-plugin-css-modules[8]</strong></h4>
-<h5 id="插件安装"><strong>插件安装</strong></h5>
-<pre tabindex="0"><code>npm install \--save\-dev typescript\-styled\-plugin typescript
-</code></pre><h5 id="配置方法"><strong>配置方法</strong></h5>
-<h6 id="在-tsconfigjson-中增加配置"><strong>在 tsconfig.json 中增加配置</strong></h6>
-<pre tabindex="0"><code>\{
-  &quot;compilerOptions&quot;: \{
-    &quot;plugins&quot;: \[
-      \{
-        &quot;name&quot;: &quot;typescript-styled-plugin&quot;
-        /\*\* 具体配置参数请查看官方文档 \*/
-      \}
-    \]
-  \}
-\}
-</code></pre><h5 id="插件基本介绍与使用场景"><strong>插件基本介绍与使用场景</strong></h5>
-<p>此插件可以用来缓解在使用 <code>CSS Module</code> 时没有代码提示的困境，主要思路就是通过读取对应的 CSS Module 文件并解析成对应的 <code>AST</code>，并生成对应的类型文件从而支持对应的代码提示。但是根据反馈来看，似乎某些场景下表现并不尽人意，是否值得大规模使用有待商榷。</p>
-<p>类似实现思路的还有 typings-for-css-modules-loader[9]，功能来说肯定是 <code>webpack loader</code> 更加强大，但是 <code>Typescript Plugin</code> 更加轻量、入侵度也越低，取舍与否，见仁见智吧</p>
-<h4 id="示例插件typescript-eslint-language-service10"><strong>示例插件：typescript-eslint-language-service[10]</strong></h4>
-<h5 id="插件安装-1"><strong>插件安装</strong></h5>
-<pre tabindex="0"><code>npm install \--save\-dev eslint typescript\-eslint\-language\-service
-</code></pre><h5 id="配置方法-1"><strong>配置方法</strong></h5>
-<p>在 <code>.eslintrc.*</code> 文件中，添加对应的 <code>eslint</code> 配置</p>
-<h6 id="在-tsconfigjson-中增加配置-1"><strong>在 tsconfig.json 中增加配置</strong></h6>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-  <span class="nt">&#34;compilerOptions&#34;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&#34;plugins&#34;</span><span class="p">:</span> <span class="p">[</span>
-      <span class="p">{</span>
-        <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;typescript-eslint-language-service&#34;</span>
-        <span class="err">/*\*</span> <span class="err">默认会读取</span> <span class="err">\`.eslintrc.\*\`</span> <span class="err">文件</span> <span class="err">\*/</span>
-        <span class="err">/*\*</span> <span class="err">具体配置参数请查看官方文档</span> <span class="err">\*/</span>
-      <span class="p">}</span>
-    <span class="p">]</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div><h5 id="插件基本介绍与使用场景-1"><strong>插件基本介绍与使用场景</strong></h5>
-<p>此插件可以让 <code>Typescript</code> 原生支持 <code>eslint</code> 检查及告警，编辑器不需要安装任何插件即可自持，但是报错并不影响编译结果。</p>
-<h4 id="示例插件typescript-styled-plugin11"><strong>示例插件：typescript-styled-plugin[11]</strong></h4>
-<h5 id="插件安装-2"><strong>插件安装</strong></h5>
-<pre tabindex="0"><code>npm install \--save\-dev typescript\-styled\-plugin typescript
-</code></pre><h5 id="配置方法-2"><strong>配置方法</strong></h5>
-<h6 id="在-tsconfigjson-中增加配置-2"><strong>在 tsconfig.json 中增加配置</strong></h6>
-<pre tabindex="0"><code>\{
-  &quot;compilerOptions&quot;: \{
-    &quot;plugins&quot;: \[
-      \{
-        &quot;name&quot;: &quot;typescript-styled-plugin&quot;
-        /\*\* 具体配置参数请查看官方文档 \*/
-      \}
-    \]
-  \}
-\}
-</code></pre><h5 id="插件基本介绍与使用场景-2"><strong>插件基本介绍与使用场景</strong></h5>
-<p>此插件可以为 styled-components[12] 的样式字符串模板提供 <code>属性/属性值</code> 做语法检查。 同时也推荐安装 <code>VSCode</code> 插件 vscode-styled-components[13]，为你的样式字符串模板提供代码提示以及语法高亮。</p>
-<h3 id="参考资料链接"><strong>参考资料链接</strong></h3>
-<ol>
-<li>Using the Compiler API[14]</li>
-<li>Using the Language Service API[15]</li>
-<li>Writing a Language Service Plugin[16]</li>
-<li>Useful Links for TypeScript Issue Management[17]</li>
-</ol>
-<h2 id="qa"><strong>Q&amp;A</strong></h2>
-<h3 id="可以利用-typescript-service-plugin例如配置-eslint-规则阻塞编译或者在编译时告警吗"><strong>可以利用 Typescript Service Plugin（例如配置 eslint 规则）阻塞编译或者在编译时告警吗？</strong></h3>
-<p><strong>「答」</strong>：不可以，所有可以使用 <code>Typescript Plugin</code> 的场景一定都是编码阶段的，而且官方对 plugins 的定位局限在了 <code>只改善编写体验</code> 这方面，你并不能自定义语法或者自定义规则来改变编译结果，不过你可以考虑使用自定义 <code>compiler</code>，当然这是另一个话题了。</p>
-<p>以下引用自官方文档：</p>
-<blockquote>
-<p>❝TypeScript Language Service Plugins (&ldquo;plugins&rdquo;) are for changing the <strong>「editing experience only」</strong>. The core TypeScript language remains the same. Plugins can&rsquo;t add new language features such as new syntax or different typechecking behavior, and <strong>「plugins aren&rsquo;t loaded during normal commandline typechecking or emitting」</strong>. ❞</p>
-</blockquote>
-<h3 id="reference"><strong>Reference</strong></h3>
-<p>[1]</p>
-<p><strong>Typescript 官网: <em><a href="https://www.typescriptlang.org/">https://www.typescriptlang.org/</a></em></strong></p>
-<p>[2]</p>
-<p><strong>TypeScript Deep Dive: <em><a href="https://basarat.gitbook.io/typescript/">https://basarat.gitbook.io/typescript/</a></em></strong></p>
-<p>[3]</p>
-<p><strong>TypeScript GitHub地址: <em><a href="https://github.com/microsoft/TypeScript">https://github.com/microsoft/TypeScript</a></em></strong></p>
-<p>[4]</p>
-<p><strong>handbook: <em><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html">https://www.typescriptlang.org/docs/handbook/basic-types.html</a></em></strong></p>
-<p>[5]</p>
-<p><strong>TypeScript中的never类型具体有什么用？ - 尤雨溪的回答 - 知乎: <em><a href="https://www.zhihu.com/question/354601204/answer/888551021">https://www.zhihu.com/question/354601204/answer/888551021</a></em></strong></p>
-<p>[6]</p>
-<p><strong>Typescript 2.8: <em><a href="https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-8.html#predefined-conditional-types">https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-8.html#predefined-conditional-types</a></em></strong></p>
-<p>[7]</p>
-<p><strong>using the workspace version of typescript: <em><a href="https://code.visualstudio.com/docs/typescript/typescript-compiling#">https://code.visualstudio.com/docs/typescript/typescript-compiling#</a>_using-the-workspace-version-of-typescript</em></strong></p>
-<p>[8]</p>
-<p><strong>typescript-plugin-css-modules: <em><a href="https://www.npmjs.com/package/typescript-plugin-css-modules">https://www.npmjs.com/package/typescript-plugin-css-modules</a></em></strong></p>
-<p>[9]</p>
-<p><strong>typings-for-css-modules-loader: <em><a href="https://www.npmjs.com/package/">https://www.npmjs.com/package/</a>@teamsupercell/typings-for-css-modules-loader</em></strong></p>
-<p>[10]</p>
-<p><strong>typescript-eslint-language-service: <em><a href="https://www.npmjs.com/package/typescript-eslint-language-service">https://www.npmjs.com/package/typescript-eslint-language-service</a></em></strong></p>
-<p>[11]</p>
-<p><strong>typescript-styled-plugin: <em><a href="https://www.npmjs.com/package/typescript-styled-plugin">https://www.npmjs.com/package/typescript-styled-plugin</a></em></strong></p>
-<p>[12]</p>
-<p><strong>styled-components: <em><a href="https://www.npmjs.com/package/styled-components">https://www.npmjs.com/package/styled-components</a></em></strong></p>
-<p>[13]</p>
-<p><strong>vscode-styled-components: <em><a href="https://github.com/styled-components/vscode-styled-components">https://github.com/styled-components/vscode-styled-components</a></em></strong></p>
-<p>[14]</p>
-<p><strong>Using the Compiler API: <em><a href="https://github.com/microsoft/TypeScript/wiki/Using-the-Compiler-API">https://github.com/microsoft/TypeScript/wiki/Using-the-Compiler-API</a></em></strong></p>
-<p>[15]</p>
-<p><strong>Using the Language Service API: <em><a href="https://github.com/microsoft/TypeScript/wiki/Using-the-Language-Service-API">https://github.com/microsoft/TypeScript/wiki/Using-the-Language-Service-API</a></em></strong></p>
-<p>[16]</p>
-<p><strong>Writing a Language Service Plugin: <em><a href="https://github.com/microsoft/TypeScript/wiki/Writing-a-Language-Service-Plugin">https://github.com/microsoft/TypeScript/wiki/Writing-a-Language-Service-Plugin</a></em></strong></p>
-<p>[17]</p>
-<p><strong>Useful Links for TypeScript Issue Management: <em><a href="https://github.com/microsoft/TypeScript/wiki/Useful-Links-for-TypeScript-Issue-Management">https://github.com/microsoft/TypeScript/wiki/Useful-Links-for-TypeScript-Issue-Management</a></em></strong></p>
+</div><p>哪个Activity需要滑动关闭的功能，只需要实例化一个SlideBackLayout对象，并调用bind()方法。这样，我们就实现了滑动关闭的效果了。</p>
+<p>附：<a href="http://download.csdn.net/detail/meijian531161724/9456684">源码</a></p>
 
     </article>
     
@@ -3001,13 +2461,13 @@
     
     
       
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fyichenlove.github.io%2fposts%2ftypescripts-high%2f" title="Facebook" aria-label="Facebook Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fyichenlove.github.io%2fposts%2fandroid-activity2%2f" title="Facebook" aria-label="Facebook Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
           <svg data-name="facebook" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"/></svg>
         </a>
       
     
       
-        <a href="https://twitter.com/intent/tweet?text=%e6%b7%b1%e5%85%a5%e7%90%86%e8%a7%a3%20Typescript%20%e9%ab%98%e7%ba%a7%e7%94%a8%e6%b3%95&url=https%3a%2f%2fyichenlove.github.io%2fposts%2ftypescripts-high%2f&hashtags=javascript%2ctypescript&via=" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
+        <a href="https://twitter.com/intent/tweet?text=%e6%bb%91%e5%8a%a8%e5%85%b3%e9%97%adActivity&url=https%3a%2f%2fyichenlove.github.io%2fposts%2fandroid-activity2%2f&via=" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
           <svg data-name="twitter" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m21.534 7.113c.976-.693 1.797-1.558 2.466-2.554v-.001c-.893.391-1.843.651-2.835.777 1.02-.609 1.799-1.566 2.165-2.719-.951.567-2.001.967-3.12 1.191-.903-.962-2.19-1.557-3.594-1.557-2.724 0-4.917 2.211-4.917 4.921 0 .39.033.765.114 1.122-4.09-.2-7.71-2.16-10.142-5.147-.424.737-.674 1.58-.674 2.487 0 1.704.877 3.214 2.186 4.089-.791-.015-1.566-.245-2.223-.606v.054c0 2.391 1.705 4.377 3.942 4.835-.401.11-.837.162-1.29.162-.315 0-.633-.018-.931-.084.637 1.948 2.447 3.381 4.597 3.428-1.674 1.309-3.8 2.098-6.101 2.098-.403 0-.79-.018-1.177-.067 2.18 1.405 4.762 2.208 7.548 2.208 8.683 0 14.342-7.244 13.986-14.637z"/></svg>
         </a>
       
@@ -3145,45 +2605,19 @@
     <section class="related">
     
     
-    <h1 class="related__title">
-      <hr class="hr-dots"/>
-      <div>
-        See Also
-      </div>
-      <hr class="hr-dots"/>
-    </h1>
-    <ul class="related-ul">
-        
-        <li>
-          <a href="/posts/javascripts-float/" class="related__link">说说 Javascript 数字精度丢失的问题，如何解决？</a>
-        </li>
-        
-        <li>
-          <a href="/posts/javascripts-bind/" class="related__link">Javascript中apply、call、bind</a>
-        </li>
-        
-    </ul>
-    
   </section>
     <div class="grow"></div>
 <nav class="pagination-single">
   
     
-      <a href="https://yichenlove.github.io/posts/aot-jit/" class="pagination-single__left">
+      <a href="https://yichenlove.github.io/posts/typescripts-high/" class="pagination-single__left">
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
         </div>
-        <div class="pagination-single__left-title">AOT和JIT</div>      
+        <div class="pagination-single__left-title">深入理解 Typescript 高级用法</div>      
       </a>
     
     <div class="grow"></div>
-    
-      <a href="https://yichenlove.github.io/posts/android-activity2/" class="pagination-single__right">      
-        <div class="pagination-single__right-title">滑动关闭Activity</div>
-        <div class="pagination-single__icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
-        </div>
-      </a>
     
   
 </nav>
@@ -3539,101 +2973,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
   </div>
   <div class="toc " data-dir="ltr" data-folding="true" data-ani="true">
-    <nav id="TableOfContents">
-  <ul>
-    <li><a href="#基础准备"><strong>基础准备</strong></a>
-      <ul>
-        <li><a href="#预备知识"><strong>预备知识</strong></a>
-          <ul>
-            <li></li>
-          </ul>
-        </li>
-        <li><a href="#相关资源推荐"><strong>相关资源推荐</strong></a></li>
-      </ul>
-    </li>
-    <li><a href="#背景"><strong>背景</strong></a></li>
-    <li><a href="#typescript-类型系统简述"><strong>Typescript 类型系统简述</strong></a>
-      <ul>
-        <li><a href="#typescript-的类型是支持定义-函数定义-的"><strong>Typescript 的类型是支持定义 &ldquo;函数定义&rdquo; 的</strong></a>
-          <ul>
-            <li></li>
-          </ul>
-        </li>
-        <li><a href="#typescript-的类型是支持-条件判断-的"><strong>Typescript 的类型是支持 &ldquo;条件判断&rdquo; 的</strong></a>
-          <ul>
-            <li></li>
-          </ul>
-        </li>
-        <li><a href="#typescript-的类型是支持-数据结构-的"><strong>Typescript 的类型是支持 &ldquo;数据结构&rdquo; 的</strong></a>
-          <ul>
-            <li><a href="#模拟真实数组"><strong>模拟真实数组</strong></a></li>
-            <li><a href="#类型系统中的-数组"><strong>类型系统中的 &ldquo;数组&rdquo;</strong></a></li>
-            <li><a href="#实战应用"><strong>实战应用</strong></a></li>
-            <li><a href="#其他数据类型"><strong>其他数据类型</strong></a></li>
-          </ul>
-        </li>
-        <li><a href="#typescript-的类型是支持-作用域-的"><strong>Typescript 的类型是支持 &ldquo;作用域&rdquo; 的</strong></a>
-          <ul>
-            <li><a href="#全局作用域"><strong>全局作用域</strong></a></li>
-            <li><a href="#模块作用域"><strong>模块作用域</strong></a></li>
-            <li><a href="#泛型操作符作用域函数作用域"><strong>泛型操作符作用域&amp;函数作用域</strong></a></li>
-          </ul>
-        </li>
-        <li><a href="#typescript-的类型是支持-递归-的"><strong>Typescript 的类型是支持 &ldquo;递归&rdquo; 的</strong></a>
-          <ul>
-            <li></li>
-          </ul>
-        </li>
-        <li><a href="#小结"><strong>小结</strong></a></li>
-      </ul>
-    </li>
-    <li><a href="#高级用法-的使用场景与价值"><strong>&ldquo;高级用法&rdquo; 的使用场景与价值</strong></a>
-      <ul>
-        <li><a href="#哪些用法可以被称为-高级用法"><strong>哪些用法可以被称为 &ldquo;高级用法&rdquo;</strong></a></li>
-        <li><a href="#举例说明-高级用法-的使用场景"><strong>举例说明 &ldquo;高级用法&rdquo; 的使用场景</strong></a></li>
-        <li><a href="#小结-1"><strong>小结</strong></a></li>
-      </ul>
-    </li>
-    <li><a href="#类型推导与泛型操作符"><strong>类型推导与泛型操作符</strong></a>
-      <ul>
-        <li><a href="#流动的类型类型编写思路"><strong>流动的类型（类型编写思路）</strong></a></li>
-        <li><a href="#typescript-代码哲学"><strong>Typescript 代码哲学</strong></a></li>
-      </ul>
-    </li>
-    <li><a href="#常见类型推导实现逻辑梳理与实践入门"><strong>常见类型推导实现逻辑梳理与实践入门</strong></a>
-      <ul>
-        <li><a href="#类型的传递流动"><strong>类型的传递（流动）</strong></a></li>
-        <li><a href="#类型的过滤与分流"><strong>类型的过滤与分流</strong></a></li>
-        <li><a href="#小结-2"><strong>小结</strong></a></li>
-      </ul>
-    </li>
-    <li><a href="#定制化扩展你的-typescript"><strong>定制化扩展你的 Typescript</strong></a>
-      <ul>
-        <li><a href="#typescript-service-plugins-的产生背景功能定位基础使用"><strong>Typescript Service Plugins 的产生背景、功能定位、基础使用</strong></a>
-          <ul>
-            <li><a href="#产生背景"><strong>产生背景</strong></a></li>
-            <li><a href="#功能定位"><strong>功能定位</strong></a></li>
-            <li><a href="#如何安装以及如何配置-typescript-service-plugins"><strong>如何安装以及如何配置 Typescript Service Plugins</strong></a></li>
-          </ul>
-        </li>
-        <li><a href="#市面上已有的-typescript-service-plugins-举例介绍"><strong>市面上已有的 Typescript Service Plugins 举例介绍</strong></a>
-          <ul>
-            <li><a href="#示例插件typescript-plugin-css-modules8"><strong>示例插件：typescript-plugin-css-modules[8]</strong></a></li>
-            <li><a href="#示例插件typescript-eslint-language-service10"><strong>示例插件：typescript-eslint-language-service[10]</strong></a></li>
-            <li><a href="#示例插件typescript-styled-plugin11"><strong>示例插件：typescript-styled-plugin[11]</strong></a></li>
-          </ul>
-        </li>
-        <li><a href="#参考资料链接"><strong>参考资料链接</strong></a></li>
-      </ul>
-    </li>
-    <li><a href="#qa"><strong>Q&amp;A</strong></a>
-      <ul>
-        <li><a href="#可以利用-typescript-service-plugin例如配置-eslint-规则阻塞编译或者在编译时告警吗"><strong>可以利用 Typescript Service Plugin（例如配置 eslint 规则）阻塞编译或者在编译时告警吗？</strong></a></li>
-        <li><a href="#reference"><strong>Reference</strong></a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+    <nav id="TableOfContents"></nav>
   </div>
 </section>
 
