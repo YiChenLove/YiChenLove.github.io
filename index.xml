@@ -14,7 +14,7 @@
     <managingEditor>chen61813772@gmail.com (wangyichen)</managingEditor>
     <webMaster>chen61813772@gmail.com (wangyichen)</webMaster>
     <copyright>©2021, All Rights Reserved</copyright>
-    <lastBuildDate>Wed, 24 Nov 2021 15:43:51 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 24 Nov 2021 22:05:15 +0800</lastBuildDate>
     
         <atom:link href="https://yichenlove.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -40,6 +40,30 @@
         
       
 
+      
+      <item>
+        <title>build.gradle配置参数</title>
+        <link>https://yichenlove.github.io/posts/android-gardle/</link>
+        <pubDate>Wed, 24 Nov 2021 22:05:15 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        <atom:modified>Wed, 24 Nov 2021 22:05:15 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/android-gardle/</guid>
+        <description>Gradle是一个基于Apache Ant和Apache Maven概念的项目自动化建构工具。它使用一种基于Groovy的特定领域语言来声明项目</description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>Android 生命周期</title>
