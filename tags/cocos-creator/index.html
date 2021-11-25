@@ -1745,7 +1745,7 @@
 <script>
     $(document).ready(function() {
         var int = setInterval(fixCount, 100);
-        var busuanziSiteOffset =  100000;
+        var busuanziSiteOffset =  parseInt(10000);;
         function fixCount() {
             if ($("#busuanzi_container_site_pv").css("display") != "none") {
                 clearInterval(int);
@@ -2030,7 +2030,20 @@
                         android
                     </span>
                     <span class="taxo__num" dir="auto">
-                        4
+                        5
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/arm/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        arm
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        1
                     </span>
                 </a>
             </span>
@@ -2134,7 +2147,7 @@
                         ios
                     </span>
                     <span class="taxo__num" dir="auto">
-                        1
+                        2
                     </span>
                 </a>
             </span>
@@ -2542,20 +2555,18 @@
     </div> 
 
         <p class="credits copyright text-muted">
-        &copy;2017-2018
+        &copy;2017-2022
           
           &nbsp;&bull;&nbsp;
-          November 24,2021
+          November 25,2021
           updated
           
             &nbsp;&bull;&nbsp;
             <a href="https://yichenlove.github.io/">Home</a>
           
         </p>
-        ...
         <p class="credits theme-by text-muted" style="text-align:center;">
-        ...
-        <span id="busuanzi_container_site_pv">
+        <span id="busuanzi_container_site_pv ">
             本站访问量：<span id="busuanzi_value_site_pv"></span>次
         </span>
         &nbsp;

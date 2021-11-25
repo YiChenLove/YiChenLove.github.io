@@ -6,9 +6,9 @@
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>ios on wangyichen&#39;s blog</title>
-    <link>https://yichenlove.github.io/tags/ios/</link>
-    <description>Recent content in ios on wangyichen&#39;s blog</description>
+    <title>arm on wangyichen&#39;s blog</title>
+    <link>https://yichenlove.github.io/tags/arm/</link>
+    <description>Recent content in arm on wangyichen&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>chen61813772@gmail.com (wangyichen)</managingEditor>
@@ -16,7 +16,7 @@
     <copyright>©2021, All Rights Reserved</copyright>
     <lastBuildDate>Thu, 25 Nov 2021 20:22:55 +0800</lastBuildDate>
     
-        <atom:link href="https://yichenlove.github.io/tags/ios/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://yichenlove.github.io/tags/arm/index.xml" rel="self" type="application/rss+xml" />
     
 
       
@@ -45,34 +45,6 @@
           
             
               <category>arm</category>
-            
-          
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>iOS 网络编程之 NSHTTPCookie/NSHTTPCookieStorage</title>
-        <link>https://yichenlove.github.io/posts/ios-cookie/</link>
-        <pubDate>Wed, 24 Nov 2021 10:34:02 +0800</pubDate>
-        <author>chen61813772@gmail.com (wangyichen)</author>
-        <atom:modified>Wed, 24 Nov 2021 10:34:02 +0800</atom:modified>
-        <guid>https://yichenlove.github.io/posts/ios-cookie/</guid>
-        <description>一、cookie 简介 由于HTTP协议的无状态，客户端经常使用cookie来提供跨URL请求的数据持久存储。URL加载系统提供了创建和管理co</description>
-        
-        <dc:creator>wangyichen</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>ios</category>
-            
-          
-            
-              <category>cookie</category>
             
           
         
