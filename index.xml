@@ -14,7 +14,7 @@
     <managingEditor>chen61813772@gmail.com (wangyichen)</managingEditor>
     <webMaster>chen61813772@gmail.com (wangyichen)</webMaster>
     <copyright>©2021, All Rights Reserved</copyright>
-    <lastBuildDate>Thu, 25 Nov 2021 20:22:55 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 26 Nov 2021 20:51:07 +0800</lastBuildDate>
     
         <atom:link href="https://yichenlove.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -40,6 +40,30 @@
         
       
 
+      
+      <item>
+        <title>深入理解 Java 反射和动态代理</title>
+        <link>https://yichenlove.github.io/posts/java-reflection/</link>
+        <pubDate>Fri, 26 Nov 2021 20:51:07 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        <atom:modified>Fri, 26 Nov 2021 20:51:07 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/java-reflection/</guid>
+        <description># 1. 反射简介 # 1.1. 什么是反射 反射(Reflection)是 Java 程序开发语言的特征之一，它允许运行中的 Java 程序获取自身的信息，并且可以操作类或对象的</description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>java</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>App 64位和32位</title>

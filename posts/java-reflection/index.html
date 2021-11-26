@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>iOS 网络编程之 NSHTTPCookie/NSHTTPCookieStorage – wangyichen&#39;s blog</title>
+    <title>深入理解 Java 反射和动态代理 – wangyichen&#39;s blog</title>
     
 
 
@@ -653,7 +653,7 @@
     
     var baseurl = JSON.parse("\"https://yichenlove.github.io/\"");
     
-    var permalink = JSON.parse("\"https://yichenlove.github.io/posts/ios-cookie/\"");
+    var permalink = JSON.parse("\"https://yichenlove.github.io/posts/java-reflection/\"");
     
     var langprefix = JSON.parse("\"\"");
     var searchResults = null;
@@ -1334,18 +1334,18 @@
 <meta name="description" content="The blog of wangyichen." />
 
 
-<meta name="keywords" content="ios,cookie">
+<meta name="keywords" content="java">
 
-<meta name="created" content="2021-11-24T10:34:02&#43;0800">
-<meta name="modified" content="2021-11-24T10:34:02&#43;0800">
-<meta property="article:published_time" content="2021-11-24T10:34:02&#43;0800">
+<meta name="created" content="2021-11-26T20:51:07&#43;0800">
+<meta name="modified" content="2021-11-26T20:51:07&#43;0800">
+<meta property="article:published_time" content="2021-11-26T20:51:07&#43;0800">
 
 <meta name="author" content="wangyichen">
 
 
 <meta property="og:site_name" content="wangyichen&#39;s blog">
-<meta property="og:title" content="iOS 网络编程之 NSHTTPCookie/NSHTTPCookieStorage">
-<meta property="og:url" content="https://yichenlove.github.io/posts/ios-cookie/">
+<meta property="og:title" content="深入理解 Java 反射和动态代理">
+<meta property="og:url" content="https://yichenlove.github.io/posts/java-reflection/">
 <meta property="og:type" content="article">
 <meta property="og:description" content="The blog of wangyichen.">
 
@@ -1358,7 +1358,7 @@
 
 <meta name="apple-mobile-web-app-status-bar-style" content="#fff">
 
-<link rel="canonical" href="https://yichenlove.github.io/posts/ios-cookie/">
+<link rel="canonical" href="https://yichenlove.github.io/posts/java-reflection/">
 
 <link rel="manifest" href="/manifest.json">
 
@@ -1383,12 +1383,12 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "iOS 网络编程之 NSHTTPCookie/NSHTTPCookieStorage",
-    "datePublished": "2021-11-24T10:34:02+08:00",
-    "dateModified": "2021-11-24T10:34:02+08:00",
-    "url" : "https://yichenlove.github.io/posts/ios-cookie/",
-    "description": "一、cookie 简介 由于HTTP协议的无状态，客户端经常使用cookie来提供跨URL请求的数据持久存储。URL加载系统提供了创建和管理co",
-    "keywords": ["ios","cookie"],
+    "headline": "深入理解 Java 反射和动态代理",
+    "datePublished": "2021-11-26T20:51:07+08:00",
+    "dateModified": "2021-11-26T20:51:07+08:00",
+    "url" : "https://yichenlove.github.io/posts/java-reflection/",
+    "description": "# 1. 反射简介 # 1.1. 什么是反射 反射(Reflection)是 Java 程序开发语言的特征之一，它允许运行中的 Java 程序获取自身的信息，并且可以操作类或对象的",
+    "keywords": ["java"],
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://yichenlove.github.io/"
@@ -1787,7 +1787,7 @@
   
   <li  class="is-active" >
     
-      <span>iOS 网络编程之 NSHTTPCookie/NSHTTPCookieStorage</span>
+      <span>深入理解 Java 反射和动态代理</span>
     
   </li>
   
@@ -1799,14 +1799,14 @@
   <div class="single ">
     <div class="single__nojs">This page looks best with JavaScript enabled</div>
     <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
-    <h2 class="single__title" data-ani="true">iOS 网络编程之 NSHTTPCookie/NSHTTPCookieStorage</h2>
+    <h2 class="single__title" data-ani="true">深入理解 Java 反射和动态代理</h2>
     <h3 class="single__subtitle"></h3>
     <div class="single__meta">
       
 <div class="single__infos">
-  <time class="single__info" title="Written At">📅&nbsp;Nov 24, 2021 </time>
+  <time class="single__info" title="Written At">📅&nbsp;Nov 26, 2021 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;4&nbsp;min read </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;17&nbsp;min read </span>
   
   <span class="single__info">
     
@@ -1819,37 +1819,223 @@
   🏷️
   
 
-  <li><a href="https://yichenlove.github.io/tags/ios/" class="single__tag" title="ios">#ios</a></li>
-
-  <li><a href="https://yichenlove.github.io/tags/cookie/" class="single__tag" title="cookie">#cookie</a></li>
+  <li><a href="https://yichenlove.github.io/tags/java/" class="single__tag" title="java">#java</a></li>
 
 </ul>
 
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <h4 id="一cookie-简介">一、cookie 简介</h4>
-<p>由于HTTP协议的无状态，客户端经常使用cookie来提供跨URL请求的数据持久存储。URL加载系统提供了创建和管理cookie的接口，作为HTTP请求的一部分发送cookies，并在Web服务器的响应时接收cookie。等多cookie信息请前往<a href="https://link.jianshu.com?t=https://baike.baidu.com/item/cookie/1119?fr=aladdin">百度百科cookie</a></p>
-<h4 id="二使用cookie">二、使用cookie</h4>
-<p>首先，正常业务场景下，<code>cookie</code>最先是由服务器生成好<br />
-然后客服端请求接口，获取到<code>cookie</code>，将<code>cookie</code>存储起来。<br />
-最后，在每次网络请求的时候附带<code>cookie</code></p>
-<p>但是在iOS网络请求中使用<code>cookie</code>还有1个条件，那就是在iOS中网络请求类<code>NSURLRequest</code>中设置是否要使用<code>cookie</code></p>
+      <h3 id="-1-反射简介"># 1. 反射简介</h3>
+<blockquote>
+<p><img src="https://raw.githubusercontent.com/dunwu/images/dev/cs/java/javacore/xmind/Java%E5%8F%8D%E5%B0%84.svg" alt="img" /></p>
+</blockquote>
+<h3 id="-11-什么是反射"># 1.1. 什么是反射</h3>
+<blockquote>
+<p>反射(Reflection)是 Java 程序开发语言的特征之一，它允许运行中的 Java 程序获取自身的信息，并且可以操作类或对象的内部属性。</p>
+</blockquote>
+<blockquote>
+<p><code>通过反射机制，可以在运行时访问 Java 对象的属性，方法，构造方法等。</code></p>
+</blockquote>
+<h3 id="-12-反射的应用场景"># 1.2. 反射的应用场景</h3>
+<blockquote>
+<p>反射的主要应用场景有：</p>
+</blockquote>
+<ul>
+<li><code>开发通用框架</code> - 反射最重要的用途就是开发各种通用框架。很多框架（比如 Spring）都是配置化的（比如通过 XML 文件配置 JavaBean、Filter 等），为了保证框架的通用性，它们可能需要根据配置文件加载不同的对象或类，调用不同的方法，这个时候就必须用到反射——运行时动态加载需要加载的对象。</li>
+<li><code>动态代理</code> - 在切面编程（AOP）中，需要拦截特定的方法，通常，会选择动态代理方式。这时，就需要反射技术来实现了。</li>
+<li><code>注解</code> - 注解本身仅仅是起到标记作用，它需要利用反射机制，根据注解标记去调用注解解释器，执行行为。如果没有反射机制，注解并不比注释更有用。</li>
+<li><code>可扩展性功能</code> - 应用程序可以通过使用完全限定名称创建可扩展性对象实例来使用外部的用户定义类。</li>
+</ul>
+<h3 id="-13-反射的缺点"># 1.3. 反射的缺点</h3>
+<ul>
+<li><code>性能开销</code> - 由于反射涉及动态解析的类型，因此无法执行某些 Java 虚拟机优化。因此，反射操作的性能要比非反射操作的性能要差，应该在性能敏感的应用程序中频繁调用的代码段中避免。</li>
+<li><code>破坏封装性</code> - 反射调用方法时可以忽略权限检查，因此可能会破坏封装性而导致安全问题。</li>
+<li><code>内部曝光</code> - 由于反射允许代码执行在非反射代码中非法的操作，例如访问私有字段和方法，所以反射的使用可能会导致意想不到的副作用，这可能会导致代码功能失常并可能破坏可移植性。反射代码打破了抽象，因此可能会随着平台的升级而改变行为。</li>
+</ul>
+<h3 id="-2-反射机制"># 2. 反射机制</h3>
+<h3 id="-21-类加载过程"># 2.1. 类加载过程</h3>
+<blockquote>
+<p><img src="https://raw.githubusercontent.com/dunwu/images/dev/snap/1553611895164.png" alt="img" /></p>
+</blockquote>
+<blockquote>
+<p>类加载的完整过程如下：</p>
+</blockquote>
+<ol>
+<li>在编译时，Java 编译器编译好 <code>.java</code> 文件之后，在磁盘中产生 <code>.class</code> 文件。 <code>.class</code> 文件是二进制文件，内容是只有 JVM 能够识别的机器码。</li>
+<li>JVM 中的类加载器读取字节码文件，取出二进制数据，加载到内存中，解析.class 文件内的信息。类加载器会根据类的全限定名来获取此类的二进制字节流；然后，将字节流所代表的静态存储结构转化为方法区的运行时数据结构；接着，在内存中生成代表这个类的 <code>java.lang.Class</code> 对象。</li>
+<li>加载结束后，JVM 开始进行连接阶段（包含验证、准备、初始化）。经过这一系列操作，类的变量会被初始化。</li>
+</ol>
+<h3 id="-22-class-对象"># 2.2. Class 对象</h3>
+<blockquote>
+<p>要想使用反射，首先需要获得待操作的类所对应的 Class 对象。 <code>Java 中，无论生成某个类的多少个对象，这些对象都会对应于同一个 Class 对象。这个 Class 对象是由 JVM 生成的，通过它能够获悉整个类的结构</code>。所以， <code>java.lang.Class</code> 可以视为所有反射 API 的入口点。</p>
+</blockquote>
+<blockquote>
+<p><code>反射的本质就是：在运行时，把 Java 类中的各种成分映射成一个个的 Java 对象。</code></p>
+</blockquote>
+<blockquote>
+<p>举例来说，假如定义了以下代码：</p>
+</blockquote>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="c">/*!
-</span><span class="c">决定这个请求是否要使用cookie，默认为YES
-</span><span class="c">*/</span>
-<span class="p">@</span><span class="k">property</span> <span class="nt">BOOL</span> <span class="nt">HTTPShouldHandleCookies</span><span class="p">;</span>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="n">User</span> <span class="n">user</span> <span class="o">=</span> <span class="k">new</span> <span class="n">User</span><span class="o">();</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>iOS 中cookie是一个NSHTTPCookie对象,它包含了各种各样的属性(properties)</p>
+</div><blockquote>
+<p>步骤说明：</p>
+</blockquote>
+<ol>
+<li>JVM 加载方法的时候，遇到 <code>new User()</code>，JVM 会根据 <code>User</code> 的全限定名去加载 <code>User.class</code> 。</li>
+<li>JVM 会去本地磁盘查找 <code>User.class</code> 文件并加载 JVM 内存中。</li>
+<li>JVM 通过调用类加载器自动创建这个类对应的 <code>Class</code> 对象，并且存储在 JVM 的方法区。注意： <code>一个类有且只有一个 </code>Class<code> 对象</code> 。</li>
+</ol>
+<h3 id="-23-方法的反射调用"># 2.3. 方法的反射调用</h3>
+<blockquote>
+<p>方法的反射调用，也就是 <code>Method.invoke</code> 方法。</p>
+</blockquote>
+<blockquote>
+<p><code>Method.invoke</code> 方法源码：</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">Method</span> <span class="kd">extends</span> <span class="n">Executable</span> <span class="o">{</span>
+  <span class="o">...</span>
+  <span class="kd">public</span> <span class="n">Object</span> <span class="nf">invoke</span><span class="o">(</span><span class="n">Object</span> <span class="n">obj</span><span class="o">,</span> <span class="n">Object</span><span class="o">...</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="o">...</span> <span class="o">{</span>
+    <span class="o">...</span> <span class="c1">// 权限检查
+</span><span class="c1"></span>    <span class="n">MethodAccessor</span> <span class="n">ma</span> <span class="o">=</span> <span class="n">methodAccessor</span><span class="o">;</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">ma</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">ma</span> <span class="o">=</span> <span class="n">acquireMethodAccessor</span><span class="o">();</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="n">ma</span><span class="o">.</span><span class="na">invoke</span><span class="o">(</span><span class="n">obj</span><span class="o">,</span> <span class="n">args</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p><code>Method.invoke</code> 方法实际上委派给 <code>MethodAccessor</code> 接口来处理。它有两个已有的具体实现：</p>
+</blockquote>
+<ul>
+<li><code>NativeMethodAccessorImpl</code>：本地方法来实现反射调用</li>
+<li><code>DelegatingMethodAccessorImpl</code>：委派模式来实现反射调用</li>
+</ul>
+<blockquote>
+<p>每个 <code>Method</code> 实例的第一次反射调用都会生成一个委派实现（ <code>DelegatingMethodAccessorImpl</code>），它所委派的具体实现便是一个本地实现（ <code>NativeMethodAccessorImpl</code>）。本地实现非常容易理解。当进入了 Java 虚拟机内部之后，我们便拥有了 <code>Method</code> 实例所指向方法的具体地址。这时候，反射调用无非就是将传入的参数准备好，然后调用进入目标方法。</p>
+</blockquote>
+<blockquote>
+<p>【示例】通过抛出异常方式 打印 <code>Method.invoke</code> 调用轨迹</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MethodDemo01</span> <span class="o">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">target</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">new</span> <span class="n">Exception</span><span class="o">(</span><span class="s">&#34;#&#34;</span> <span class="o">+</span> <span class="n">i</span><span class="o">).</span><span class="na">printStackTrace</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
+        <span class="n">Class</span><span class="o">&lt;?&gt;</span> <span class="n">clazz</span> <span class="o">=</span> <span class="n">Class</span><span class="o">.</span><span class="na">forName</span><span class="o">(</span><span class="s">&#34;io.github.dunwu.javacore.reflect.MethodDemo01&#34;</span><span class="o">);</span>
+        <span class="n">Method</span> <span class="n">method</span> <span class="o">=</span> <span class="n">clazz</span><span class="o">.</span><span class="na">getMethod</span><span class="o">(</span><span class="s">&#34;target&#34;</span><span class="o">,</span> <span class="kt">int</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+        <span class="n">method</span><span class="o">.</span><span class="na">invoke</span><span class="o">(</span><span class="kc">null</span><span class="o">,</span> <span class="n">0</span><span class="o">);</span>
+    <span class="o">}</span>
+
+<span class="o">}</span>
+<span class="c1">// Output:
+</span><span class="c1">// java.lang.Exception: #0
+</span><span class="c1">//     at io.github.dunwu.javacore.reflect.MethodDemo01.target(MethodDemo01.java:12)
+</span><span class="c1">//     at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+</span><span class="c1">//     at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+</span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>先调用 <code>DelegatingMethodAccessorImpl</code>；然后调用 <code>NativeMethodAccessorImpl</code>，最后调用实际方法。</p>
+</blockquote>
+<blockquote>
+<p>为什么反射调用 <code>DelegatingMethodAccessorImpl</code>作为中间层，而不是直接交给本地实现？</p>
+</blockquote>
+<blockquote>
+<p>其实，Java 的反射调用机制还设立了另一种动态生成字节码的实现（下称动态实现），直接使用 invoke 指令来调用目标方法。之所以采用委派实现，便是为了能够在本地实现以及动态实现中切换。动态实现和本地实现相比，其运行效率要快上 20 倍。这是因为动态实现无需经过 Java 到 C++ 再到 Java 的切换，但由于生成字节码十分耗时，仅调用一次的话，反而是本地实现要快上 3 到 4 倍。</p>
+</blockquote>
+<blockquote>
+<p>考虑到许多反射调用仅会执行一次，Java 虚拟机设置了一个阈值 15（可以通过 <code>-Dsun.reflect.inflationThreshold</code>来调整），当某个反射调用的调用次数在 15 之下时，采用本地实现；当达到 15 时，便开始动态生成字节码，并将委派实现的委派对象切换至动态实现，这个过程我们称之为 Inflation。</p>
+</blockquote>
+<blockquote>
+<p>【示例】执行 java -verbose:class MethodDemo02 启动</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MethodDemo02</span> <span class="o">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">target</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">new</span> <span class="n">Exception</span><span class="o">(</span><span class="s">&#34;#&#34;</span> <span class="o">+</span> <span class="n">i</span><span class="o">).</span><span class="na">printStackTrace</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
+        <span class="n">Class</span><span class="o">&lt;?&gt;</span> <span class="n">klass</span> <span class="o">=</span> <span class="n">Class</span><span class="o">.</span><span class="na">forName</span><span class="o">(</span><span class="s">&#34;io.github.dunwu.javacore.reflect.MethodDemo02&#34;</span><span class="o">);</span>
+        <span class="n">Method</span> <span class="n">method</span> <span class="o">=</span> <span class="n">klass</span><span class="o">.</span><span class="na">getMethod</span><span class="o">(</span><span class="s">&#34;target&#34;</span><span class="o">,</span> <span class="kt">int</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">20</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+            <span class="n">method</span><span class="o">.</span><span class="na">invoke</span><span class="o">(</span><span class="kc">null</span><span class="o">,</span> <span class="n">i</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>输出内容：</p>
+</blockquote>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1884,82 +2070,335 @@
 </span><span class="lnt">30
 </span><span class="lnt">31
 </span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-objectivec" data-lang="objectivec">
-<span class="c1">// cookie 版本
-</span><span class="c1">// 版本0：此版本是指由Netscape定义的原始cookie格式的“传统”或“旧式”cookie。遇到的大多数Cookie都是这种格式。
-</span><span class="c1">// 版本1：此版本是指RFC 2965（HTTP状态管理机制）中定义的Cookie。
-</span><span class="c1"></span><span class="k">@property</span> <span class="p">(</span><span class="k">readonly</span><span class="p">)</span> <span class="n">NSUInteger</span> <span class="n">version</span><span class="p">;</span>
-
-<span class="c1">// cookie存储信息的名字，比如：token
-</span><span class="c1"></span><span class="k">@property</span> <span class="p">(</span><span class="k">readonly</span><span class="p">,</span> <span class="k">copy</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">name</span><span class="p">;</span>
-
-<span class="c1">// cookie存储的信息，比如：8d2je219jjd0120d12e1212e12(token的值)
-</span><span class="c1"></span><span class="k">@property</span> <span class="p">(</span><span class="k">readonly</span><span class="p">,</span> <span class="k">copy</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">value</span><span class="p">;</span>
-
-<span class="c1">// cookie有效期（过期，NSHTTPCookieStorage会自动删除存储的cookie）
-</span><span class="c1"></span><span class="k">@property</span> <span class="p">(</span><span class="n">nullable</span><span class="p">,</span> <span class="k">readonly</span><span class="p">,</span> <span class="k">copy</span><span class="p">)</span> <span class="n">NSDate</span> <span class="o">*</span><span class="n">expiresDate</span><span class="p">;</span>
-
-<span class="c1">// 是否应在会话结束时被丢弃（不管过期日期如何）
-</span><span class="c1"></span><span class="k">@property</span> <span class="p">(</span><span class="k">readonly</span><span class="p">,</span> <span class="k">getter</span><span class="o">=</span><span class="n">isSessionOnly</span><span class="p">)</span> <span class="kt">BOOL</span> <span class="n">sessionOnly</span><span class="p">;</span>
-
-<span class="c1">// cookie的域名
-</span><span class="c1"></span><span class="k">@property</span> <span class="p">(</span><span class="k">readonly</span><span class="p">,</span> <span class="k">copy</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">domain</span><span class="p">;</span>
-
-<span class="c1">// 路径
-</span><span class="c1"></span><span class="k">@property</span> <span class="p">(</span><span class="k">readonly</span><span class="p">,</span> <span class="k">copy</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">path</span><span class="p">;</span>
-
-<span class="c1">// 该cookie是否应该仅通过安全通道发送
-</span><span class="c1"></span><span class="k">@property</span> <span class="p">(</span><span class="k">readonly</span><span class="p">,</span> <span class="k">getter</span><span class="o">=</span><span class="n">isSecure</span><span class="p">)</span> <span class="kt">BOOL</span> <span class="n">secure</span><span class="p">;</span>
-
-<span class="c1">// 是否应仅根据RFC 2965发送到HTTP服务器
-</span><span class="c1"></span><span class="k">@property</span> <span class="p">(</span><span class="k">readonly</span><span class="p">,</span> <span class="k">getter</span><span class="o">=</span><span class="n">isHTTPOnly</span><span class="p">)</span> <span class="kt">BOOL</span> <span class="n">HTTPOnly</span><span class="p">;</span>
-
-<span class="c1">// 端口列表
-</span><span class="c1"></span><span class="k">@property</span> <span class="p">(</span><span class="n">nullable</span><span class="p">,</span> <span class="k">readonly</span><span class="p">,</span> <span class="k">copy</span><span class="p">)</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSNumber</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">portList</span><span class="p">;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">Exception</span><span class="o">:</span> <span class="err">#</span><span class="n">14</span>
+        <span class="n">at</span> <span class="n">io</span><span class="o">.</span><span class="na">github</span><span class="o">.</span><span class="na">dunwu</span><span class="o">.</span><span class="na">javacore</span><span class="o">.</span><span class="na">reflect</span><span class="o">.</span><span class="na">MethodDemo02</span><span class="o">.</span><span class="na">target</span><span class="o">(</span><span class="n">MethodDemo02</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="n">13</span><span class="o">)</span>
+        <span class="n">at</span> <span class="n">sun</span><span class="o">.</span><span class="na">reflect</span><span class="o">.</span><span class="na">NativeMethodAccessorImpl</span><span class="o">.</span><span class="na">invoke0</span><span class="o">(</span><span class="n">Native</span> <span class="n">Method</span><span class="o">)</span>
+        <span class="n">at</span> <span class="n">sun</span><span class="o">.</span><span class="na">reflect</span><span class="o">.</span><span class="na">NativeMethodAccessorImpl</span><span class="o">.</span><span class="na">invoke</span><span class="o">(</span><span class="n">NativeMethodAccessorImpl</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="n">62</span><span class="o">)</span>
+        <span class="n">at</span> <span class="n">sun</span><span class="o">.</span><span class="na">reflect</span><span class="o">.</span><span class="na">DelegatingMethodAccessorImpl</span><span class="o">.</span><span class="na">invoke</span><span class="o">(</span><span class="n">DelegatingMethodAccessorImpl</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="n">43</span><span class="o">)</span>
+        <span class="n">at</span> <span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">reflect</span><span class="o">.</span><span class="na">Method</span><span class="o">.</span><span class="na">invoke</span><span class="o">(</span><span class="n">Method</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="n">498</span><span class="o">)</span>
+        <span class="n">at</span> <span class="n">io</span><span class="o">.</span><span class="na">github</span><span class="o">.</span><span class="na">dunwu</span><span class="o">.</span><span class="na">javacore</span><span class="o">.</span><span class="na">reflect</span><span class="o">.</span><span class="na">MethodDemo02</span><span class="o">.</span><span class="na">main</span><span class="o">(</span><span class="n">MethodDemo02</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="n">20</span><span class="o">)</span>
+<span class="o">[</span><span class="n">Loaded</span> <span class="n">sun</span><span class="o">.</span><span class="na">reflect</span><span class="o">.</span><span class="na">ClassFileConstants</span> <span class="n">from</span> <span class="n">D</span><span class="o">:</span><span class="err">\</span><span class="n">Tools</span><span class="err">\</span><span class="n">Java</span><span class="err">\</span><span class="n">jdk1</span><span class="o">.</span><span class="na">8</span><span class="o">.</span><span class="na">0_192</span><span class="err">\</span><span class="n">jre</span><span class="err">\</span><span class="n">lib</span><span class="err">\</span><span class="n">rt</span><span class="o">.</span><span class="na">jar</span><span class="o">]</span>
+<span class="o">[</span><span class="n">Loaded</span> <span class="n">sun</span><span class="o">.</span><span class="na">reflect</span><span class="o">.</span><span class="na">AccessorGenerator</span> <span class="n">from</span> <span class="n">D</span><span class="o">:</span><span class="err">\</span><span class="n">Tools</span><span class="err">\</span><span class="n">Java</span><span class="err">\</span><span class="n">jdk1</span><span class="o">.</span><span class="na">8</span><span class="o">.</span><span class="na">0_192</span><span class="err">\</span><span class="n">jre</span><span class="err">\</span><span class="n">lib</span><span class="err">\</span><span class="n">rt</span><span class="o">.</span><span class="na">jar</span><span class="o">]</span>
+<span class="o">[</span><span class="n">Loaded</span> <span class="n">sun</span><span class="o">.</span><span class="na">reflect</span><span class="o">.</span><span class="na">MethodAccessorGenerator</span> <span class="n">from</span> <span class="n">D</span><span class="o">:</span><span class="err">\</span><span class="n">Tools</span><span class="err">\</span><span class="n">Java</span><span class="err">\</span><span class="n">jdk1</span><span class="o">.</span><span class="na">8</span><span class="o">.</span><span class="na">0_192</span><span class="err">\</span><span class="n">jre</span><span class="err">\</span><span class="n">lib</span><span class="err">\</span><span class="n">rt</span><span class="o">.</span><span class="na">jar</span><span class="o">]</span>
+<span class="o">[</span><span class="n">Loaded</span> <span class="n">sun</span><span class="o">.</span><span class="na">reflect</span><span class="o">.</span><span class="na">ByteVectorFactory</span> <span class="n">from</span> <span class="n">D</span><span class="o">:</span><span class="err">\</span><span class="n">Tools</span><span class="err">\</span><span class="n">Java</span><span class="err">\</span><span class="n">jdk1</span><span class="o">.</span><span class="na">8</span><span class="o">.</span><span class="na">0_192</span><span class="err">\</span><span class="n">jre</span><span class="err">\</span><span class="n">lib</span><span class="err">\</span><span class="n">rt</span><span class="o">.</span><span class="na">jar</span><span class="o">]</span>
+<span class="o">[</span><span class="n">Loaded</span> <span class="n">sun</span><span class="o">.</span><span class="na">reflect</span><span class="o">.</span><span class="na">ByteVector</span> <span class="n">from</span> <span class="n">D</span><span class="o">:</span><span class="err">\</span><span class="n">Tools</span><span class="err">\</span><span class="n">Java</span><span class="err">\</span><span class="n">jdk1</span><span class="o">.</span><span class="na">8</span><span class="o">.</span><span class="na">0_192</span><span class="err">\</span><span class="n">jre</span><span class="err">\</span><span class="n">lib</span><span class="err">\</span><span class="n">rt</span><span class="o">.</span><span class="na">jar</span><span class="o">]</span>
+<span class="o">[</span><span class="n">Loaded</span> <span class="n">sun</span><span class="o">.</span><span class="na">reflect</span><span class="o">.</span><span class="na">ByteVectorImpl</span> <span class="n">from</span> <span class="n">D</span><span class="o">:</span><span class="err">\</span><span class="n">Tools</span><span class="err">\</span><span class="n">Java</span><span class="err">\</span><span class="n">jdk1</span><span class="o">.</span><span class="na">8</span><span class="o">.</span><span class="na">0_192</span><span class="err">\</span><span class="n">jre</span><span class="err">\</span><span class="n">lib</span><span class="err">\</span><span class="n">rt</span><span class="o">.</span><span class="na">jar</span><span class="o">]</span>
+<span class="o">[</span><span class="n">Loaded</span> <span class="n">sun</span><span class="o">.</span><span class="na">reflect</span><span class="o">.</span><span class="na">ClassFileAssembler</span> <span class="n">from</span> <span class="n">D</span><span class="o">:</span><span class="err">\</span><span class="n">Tools</span><span class="err">\</span><span class="n">Java</span><span class="err">\</span><span class="n">jdk1</span><span class="o">.</span><span class="na">8</span><span class="o">.</span><span class="na">0_192</span><span class="err">\</span><span class="n">jre</span><span class="err">\</span><span class="n">lib</span><span class="err">\</span><span class="n">rt</span><span class="o">.</span><span class="na">jar</span><span class="o">]</span>
+<span class="o">[</span><span class="n">Loaded</span> <span class="n">sun</span><span class="o">.</span><span class="na">reflect</span><span class="o">.</span><span class="na">UTF8</span> <span class="n">from</span> <span class="n">D</span><span class="o">:</span><span class="err">\</span><span class="n">Tools</span><span class="err">\</span><span class="n">Java</span><span class="err">\</span><span class="n">jdk1</span><span class="o">.</span><span class="na">8</span><span class="o">.</span><span class="na">0_192</span><span class="err">\</span><span class="n">jre</span><span class="err">\</span><span class="n">lib</span><span class="err">\</span><span class="n">rt</span><span class="o">.</span><span class="na">jar</span><span class="o">]</span>
+<span class="o">[</span><span class="n">Loaded</span> <span class="n">sun</span><span class="o">.</span><span class="na">reflect</span><span class="o">.</span><span class="na">Label</span> <span class="n">from</span> <span class="n">D</span><span class="o">:</span><span class="err">\</span><span class="n">Tools</span><span class="err">\</span><span class="n">Java</span><span class="err">\</span><span class="n">jdk1</span><span class="o">.</span><span class="na">8</span><span class="o">.</span><span class="na">0_192</span><span class="err">\</span><span class="n">jre</span><span class="err">\</span><span class="n">lib</span><span class="err">\</span><span class="n">rt</span><span class="o">.</span><span class="na">jar</span><span class="o">]</span>
+<span class="o">[</span><span class="n">Loaded</span> <span class="n">sun</span><span class="o">.</span><span class="na">reflect</span><span class="o">.</span><span class="na">Label$PatchInfo</span> <span class="n">from</span> <span class="n">D</span><span class="o">:</span><span class="err">\</span><span class="n">Tools</span><span class="err">\</span><span class="n">Java</span><span class="err">\</span><span class="n">jdk1</span><span class="o">.</span><span class="na">8</span><span class="o">.</span><span class="na">0_192</span><span class="err">\</span><span class="n">jre</span><span class="err">\</span><span class="n">lib</span><span class="err">\</span><span class="n">rt</span><span class="o">.</span><span class="na">jar</span><span class="o">]</span>
+<span class="o">[</span><span class="n">Loaded</span> <span class="n">java</span><span class="o">.</span><span class="na">util</span><span class="o">.</span><span class="na">ArrayList$Itr</span> <span class="n">from</span> <span class="n">D</span><span class="o">:</span><span class="err">\</span><span class="n">Tools</span><span class="err">\</span><span class="n">Java</span><span class="err">\</span><span class="n">jdk1</span><span class="o">.</span><span class="na">8</span><span class="o">.</span><span class="na">0_192</span><span class="err">\</span><span class="n">jre</span><span class="err">\</span><span class="n">lib</span><span class="err">\</span><span class="n">rt</span><span class="o">.</span><span class="na">jar</span><span class="o">]</span>
+<span class="o">[</span><span class="n">Loaded</span> <span class="n">sun</span><span class="o">.</span><span class="na">reflect</span><span class="o">.</span><span class="na">MethodAccessorGenerator$1</span> <span class="n">from</span> <span class="n">D</span><span class="o">:</span><span class="err">\</span><span class="n">Tools</span><span class="err">\</span><span class="n">Java</span><span class="err">\</span><span class="n">jdk1</span><span class="o">.</span><span class="na">8</span><span class="o">.</span><span class="na">0_192</span><span class="err">\</span><span class="n">jre</span><span class="err">\</span><span class="n">lib</span><span class="err">\</span><span class="n">rt</span><span class="o">.</span><span class="na">jar</span><span class="o">]</span>
+<span class="o">[</span><span class="n">Loaded</span> <span class="n">sun</span><span class="o">.</span><span class="na">reflect</span><span class="o">.</span><span class="na">ClassDefiner</span> <span class="n">from</span> <span class="n">D</span><span class="o">:</span><span class="err">\</span><span class="n">Tools</span><span class="err">\</span><span class="n">Java</span><span class="err">\</span><span class="n">jdk1</span><span class="o">.</span><span class="na">8</span><span class="o">.</span><span class="na">0_192</span><span class="err">\</span><span class="n">jre</span><span class="err">\</span><span class="n">lib</span><span class="err">\</span><span class="n">rt</span><span class="o">.</span><span class="na">jar</span><span class="o">]</span>
+<span class="o">[</span><span class="n">Loaded</span> <span class="n">sun</span><span class="o">.</span><span class="na">reflect</span><span class="o">.</span><span class="na">ClassDefiner$1</span> <span class="n">from</span> <span class="n">D</span><span class="o">:</span><span class="err">\</span><span class="n">Tools</span><span class="err">\</span><span class="n">Java</span><span class="err">\</span><span class="n">jdk1</span><span class="o">.</span><span class="na">8</span><span class="o">.</span><span class="na">0_192</span><span class="err">\</span><span class="n">jre</span><span class="err">\</span><span class="n">lib</span><span class="err">\</span><span class="n">rt</span><span class="o">.</span><span class="na">jar</span><span class="o">]</span>
+<span class="o">[</span><span class="n">Loaded</span> <span class="n">sun</span><span class="o">.</span><span class="na">reflect</span><span class="o">.</span><span class="na">GeneratedMethodAccessor1</span> <span class="n">from</span> <span class="n">__JVM_DefineClass__</span><span class="o">]</span>
+<span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">Exception</span><span class="o">:</span> <span class="err">#</span><span class="n">15</span>
+        <span class="n">at</span> <span class="n">io</span><span class="o">.</span><span class="na">github</span><span class="o">.</span><span class="na">dunwu</span><span class="o">.</span><span class="na">javacore</span><span class="o">.</span><span class="na">reflect</span><span class="o">.</span><span class="na">MethodDemo02</span><span class="o">.</span><span class="na">target</span><span class="o">(</span><span class="n">MethodDemo02</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="n">13</span><span class="o">)</span>
+        <span class="n">at</span> <span class="n">sun</span><span class="o">.</span><span class="na">reflect</span><span class="o">.</span><span class="na">NativeMethodAccessorImpl</span><span class="o">.</span><span class="na">invoke0</span><span class="o">(</span><span class="n">Native</span> <span class="n">Method</span><span class="o">)</span>
+        <span class="n">at</span> <span class="n">sun</span><span class="o">.</span><span class="na">reflect</span><span class="o">.</span><span class="na">NativeMethodAccessorImpl</span><span class="o">.</span><span class="na">invoke</span><span class="o">(</span><span class="n">NativeMethodAccessorImpl</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="n">62</span><span class="o">)</span>
+        <span class="n">at</span> <span class="n">sun</span><span class="o">.</span><span class="na">reflect</span><span class="o">.</span><span class="na">DelegatingMethodAccessorImpl</span><span class="o">.</span><span class="na">invoke</span><span class="o">(</span><span class="n">DelegatingMethodAccessorImpl</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="n">43</span><span class="o">)</span>
+        <span class="n">at</span> <span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">reflect</span><span class="o">.</span><span class="na">Method</span><span class="o">.</span><span class="na">invoke</span><span class="o">(</span><span class="n">Method</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="n">498</span><span class="o">)</span>
+        <span class="n">at</span> <span class="n">io</span><span class="o">.</span><span class="na">github</span><span class="o">.</span><span class="na">dunwu</span><span class="o">.</span><span class="na">javacore</span><span class="o">.</span><span class="na">reflect</span><span class="o">.</span><span class="na">MethodDemo02</span><span class="o">.</span><span class="na">main</span><span class="o">(</span><span class="n">MethodDemo02</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="n">20</span><span class="o">)</span>
+<span class="o">[</span><span class="n">Loaded</span> <span class="n">java</span><span class="o">.</span><span class="na">util</span><span class="o">.</span><span class="na">concurrent</span><span class="o">.</span><span class="na">ConcurrentHashMap$ForwardingNode</span> <span class="n">from</span> <span class="n">D</span><span class="o">:</span><span class="err">\</span><span class="n">Tools</span><span class="err">\</span><span class="n">Java</span><span class="err">\</span><span class="n">jdk1</span><span class="o">.</span><span class="na">8</span><span class="o">.</span><span class="na">0_192</span><span class="err">\</span><span class="n">jre</span><span class="err">\</span><span class="n">lib</span><span class="err">\</span><span class="n">rt</span><span class="o">.</span><span class="na">jar</span><span class="o">]</span>
+<span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">Exception</span><span class="o">:</span> <span class="err">#</span><span class="n">16</span>
+        <span class="n">at</span> <span class="n">io</span><span class="o">.</span><span class="na">github</span><span class="o">.</span><span class="na">dunwu</span><span class="o">.</span><span class="na">javacore</span><span class="o">.</span><span class="na">reflect</span><span class="o">.</span><span class="na">MethodDemo02</span><span class="o">.</span><span class="na">target</span><span class="o">(</span><span class="n">MethodDemo02</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="n">13</span><span class="o">)</span>
+        <span class="n">at</span> <span class="n">sun</span><span class="o">.</span><span class="na">reflect</span><span class="o">.</span><span class="na">GeneratedMethodAccessor1</span><span class="o">.</span><span class="na">invoke</span><span class="o">(</span><span class="n">Unknown</span> <span class="n">Source</span><span class="o">)</span>
+        <span class="n">at</span> <span class="n">sun</span><span class="o">.</span><span class="na">reflect</span><span class="o">.</span><span class="na">DelegatingMethodAccessorImpl</span><span class="o">.</span><span class="na">invoke</span><span class="o">(</span><span class="n">DelegatingMethodAccessorImpl</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="n">43</span><span class="o">)</span>
+        <span class="n">at</span> <span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">reflect</span><span class="o">.</span><span class="na">Method</span><span class="o">.</span><span class="na">invoke</span><span class="o">(</span><span class="n">Method</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="n">498</span><span class="o">)</span>
+        <span class="n">at</span> <span class="n">io</span><span class="o">.</span><span class="na">github</span><span class="o">.</span><span class="na">dunwu</span><span class="o">.</span><span class="na">javacore</span><span class="o">.</span><span class="na">reflect</span><span class="o">.</span><span class="na">MethodDemo02</span><span class="o">.</span><span class="na">main</span><span class="o">(</span><span class="n">MethodDemo02</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="n">20</span><span class="o">)</span>
+<span class="c1">// ...省略
+</span></code></pre></td></tr></table>
 </div>
-</div><h4 id="三接收cookie">三、接收cookie</h4>
-<p>假设当前有这么一个场景，客服端中用户在登录时服务器将当前用户的token等相关信息存在cookie中返回给客户端，客户端在每次请求其他数据时都需要将此cookie信息(保存的用户信息)携带，以便区分当前是哪个用户。<br />
-那么我们要如何接收这个<code>cookie</code>呢,iOS中提供了<code>NSHTTPCookieStorage</code>这个类，来存储服务器给我们发送的<code>cookie</code>,<code>NSURLResponse</code>根据会当前的<code>NSHTTPCookieStorage</code>接受策略自动接收返回的cookie并存储在<code>NSHTTPCookieStorage</code>中，我们不需要做任何操作，在我们发送请求是，我们只需要设置<code>HTTPShouldHandleCookies为YES（默认为YES）</code>, <code>NSURLRequest</code>会自动附带<code>cookie</code>的信息发送给服务器。以下是三种接收策略：</p>
+</div><blockquote>
+<p>可以看到，从第 16 次开始后，都是使用 <code>DelegatingMethodAccessorImpl</code>，不再使用本地实现 <code>NativeMethodAccessorImpl</code>。</p>
+</blockquote>
+<h3 id="-24-反射调用的开销"># 2.4. 反射调用的开销</h3>
+<blockquote>
+<p>方法的反射调用会带来不少性能开销，原因主要有三个：</p>
+</blockquote>
+<ul>
+<li>变长参数方法导致的 Object 数组</li>
+<li>基本类型的自动装箱、拆箱</li>
+<li>还有最重要的方法内联</li>
+</ul>
+<blockquote>
+<p><code>Class.forName</code> 会调用本地方法， <code>Class.getMethod</code> 则会遍历该类的公有方法。如果没有匹配到，它还将遍历父类的公有方法。可想而知，这两个操作都非常费时。</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>注意，以 <code>getMethod</code> 为代表的查找方法操作，会返回查找得到结果的一份拷贝。因此，我们应当避免在热点代码中使用返回 <code>Method</code> 数组的 <code>getMethods</code> 或者 <code>getDeclaredMethods</code> 方法，以减少不必要的堆空间消耗。在实践中，我们往往会在应用程序中缓存 <code>Class.forName</code> 和 <code>Class.getMethod</code> 的结果。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>下面只关注反射调用本身的性能开销。</p>
+</blockquote>
+<blockquote>
+<p>第一，由于 Method.invoke 是一个变长参数方法，在字节码层面它的最后一个参数会是 Object 数组（感兴趣的同学私下可以用 javap 查看）。Java 编译器会在方法调用处生成一个长度为传入参数数量的 Object 数组，并将传入参数一一存储进该数组中。</p>
+</blockquote>
+<blockquote>
+<p>第二，由于 Object 数组不能存储基本类型，Java 编译器会对传入的基本类型参数进行自动装箱。</p>
+</blockquote>
+<blockquote>
+<p>这两个操作除了带来性能开销外，还可能占用堆内存，使得 GC 更加频繁。（如果你感兴趣的话，可以用虚拟机参数 -XX:+PrintGC 试试。）那么，如何消除这部分开销呢？</p>
+</blockquote>
+<h3 id="-3-使用反射"># 3. 使用反射</h3>
+<h3 id="-31-javalangreflect-包"># 3.1. java.lang.reflect 包</h3>
+<blockquote>
+<p>Java 中的 <code>java.lang.reflect</code> 包提供了反射功能。 <code>java.lang.reflect</code> 包中的类都没有 <code>public</code> 构造方法。</p>
+</blockquote>
+<blockquote>
+<p><code>java.lang.reflect</code> 包的核心接口和类如下：</p>
+</blockquote>
+<ul>
+<li><code>Member</code> 接口：反映关于单个成员(字段或方法)或构造函数的标识信息。</li>
+<li><code>Field</code> 类：提供一个类的域的信息以及访问类的域的接口。</li>
+<li><code>Method</code> 类：提供一个类的方法的信息以及访问类的方法的接口。</li>
+<li><code>Constructor</code> 类：提供一个类的构造函数的信息以及访问类的构造函数的接口。</li>
+<li><code>Array</code> 类：该类提供动态地生成和访问 JAVA 数组的方法。</li>
+<li><code>Modifier</code> 类：提供了 static 方法和常量，对类和成员访问修饰符进行解码。</li>
+<li><code>Proxy</code> 类：提供动态地生成代理类和类实例的静态方法。</li>
+</ul>
+<h3 id="-32-获取-class-对象"># 3.2. 获取 Class 对象</h3>
+<blockquote>
+<p>获取 <code>Class</code> 对象的三种方法：</p>
+</blockquote>
+<blockquote>
+<p>（1） ``Class.forName<code> 静态方法</code></p>
+</blockquote>
+<blockquote>
+<p>【示例】使用 <code>Class.forName</code> 静态方法获取 <code>Class</code> 对象</p>
+</blockquote>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-objectivec" data-lang="objectivec"><span class="k">typedef</span> <span class="nf">NS_ENUM</span><span class="p">(</span><span class="n">NSUInteger</span><span class="p">,</span> <span class="n">NSHTTPCookieAcceptPolicy</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// 永远接收Cookie，这种情况下，NSHTTPCookieStorage会将接收到的cookie 存储在偏好设置中
-</span><span class="c1"></span>    <span class="n">NSHTTPCookieAcceptPolicyAlways</span><span class="p">,</span>
-    <span class="c1">// 永远不接受Cookie，这种情况下，NSHTTPCookieStorage不会存储cookie到本地
-</span><span class="c1"></span>    <span class="n">NSHTTPCookieAcceptPolicyNever</span><span class="p">,</span>
-    <span class="c1">// 只接收指定域名的Cookie
-</span><span class="c1"></span>    <span class="n">NSHTTPCookieAcceptPolicyOnlyFromMainDocumentDomain</span>
-<span class="p">};</span>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">io.github.dunwu.javacore.reflect</span><span class="o">;</span>
 
-</code></pre></td></tr></table>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ReflectClassDemo01</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">ClassNotFoundException</span> <span class="o">{</span>
+        <span class="n">Class</span> <span class="n">c1</span> <span class="o">=</span> <span class="n">Class</span><span class="o">.</span><span class="na">forName</span><span class="o">(</span><span class="s">&#34;io.github.dunwu.javacore.reflect.ReflectClassDemo01&#34;</span><span class="o">);</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">c1</span><span class="o">.</span><span class="na">getCanonicalName</span><span class="o">());</span>
+
+        <span class="n">Class</span> <span class="n">c2</span> <span class="o">=</span> <span class="n">Class</span><span class="o">.</span><span class="na">forName</span><span class="o">(</span><span class="s">&#34;[D&#34;</span><span class="o">);</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">c2</span><span class="o">.</span><span class="na">getCanonicalName</span><span class="o">());</span>
+
+        <span class="n">Class</span> <span class="n">c3</span> <span class="o">=</span> <span class="n">Class</span><span class="o">.</span><span class="na">forName</span><span class="o">(</span><span class="s">&#34;[[Ljava.lang.String;&#34;</span><span class="o">);</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">c3</span><span class="o">.</span><span class="na">getCanonicalName</span><span class="o">());</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+<span class="c1">//Output:
+</span><span class="c1">//io.github.dunwu.javacore.reflect.ReflectClassDemo01
+</span><span class="c1">//double[]
+</span><span class="c1">//java.lang.String[][]
+</span></code></pre></td></tr></table>
 </div>
-</div><p><code>NSHTPCookieStorage</code>对象是一个单例对象，它管理着所有的cookie，它提供了一些方法来允许客户端设置和移除cookie，和获取当前cookie的设置。</p>
-<p>通过单例获取<code>NSHTTPCookieStorage</code>对象</p>
+</div><blockquote>
+<p>使用类的完全限定名来反射对象的类。常见的应用场景为：在 JDBC 开发中常用此方法加载数据库驱动。</p>
+</blockquote>
+<blockquote>
+<p>（2） <code>类名 + </code>.class``</p>
+</blockquote>
+<blockquote>
+<p>【示例】直接用类名 + <code>.class</code> 获取 <code>Class</code> 对象</p>
+</blockquote>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-objectivec" data-lang="objectivec">
-<span class="n">NSHTTPCookieStorage</span> <span class="o">*</span><span class="n">cookieStorage</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSHTTPCookieStorage</span> <span class="n">sharedHTTPCookieStorage</span><span class="p">];</span>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ReflectClassDemo02</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">boolean</span> <span class="n">b</span><span class="o">;</span>
+        <span class="c1">// Class c = b.getClass(); // 编译错误
+</span><span class="c1"></span>        <span class="n">Class</span> <span class="n">c1</span> <span class="o">=</span> <span class="kt">boolean</span><span class="o">.</span><span class="na">class</span><span class="o">;</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">c1</span><span class="o">.</span><span class="na">getCanonicalName</span><span class="o">());</span>
+
+        <span class="n">Class</span> <span class="n">c2</span> <span class="o">=</span> <span class="n">java</span><span class="o">.</span><span class="na">io</span><span class="o">.</span><span class="na">PrintStream</span><span class="o">.</span><span class="na">class</span><span class="o">;</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">c2</span><span class="o">.</span><span class="na">getCanonicalName</span><span class="o">());</span>
+
+        <span class="n">Class</span> <span class="n">c3</span> <span class="o">=</span> <span class="kt">int</span><span class="o">[][][].</span><span class="na">class</span><span class="o">;</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">c3</span><span class="o">.</span><span class="na">getCanonicalName</span><span class="o">());</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+<span class="c1">//Output:
+</span><span class="c1">//boolean
+</span><span class="c1">//java.io.PrintStream
+</span><span class="c1">//int[][][]
+</span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>（3） ``Object<code>的</code>getClass<code> 方法</code></p>
+</blockquote>
+<blockquote>
+<p><code>Object</code> 类中有 <code>getClass</code> 方法，因为所有类都继承 <code>Object</code> 类。从而调用 <code>Object</code> 类来获取 <code>Class</code> 对象。</p>
+</blockquote>
+<blockquote>
+<p>【示例】 <code>Object</code> 的 <code>getClass</code> 方法获取 <code>Class</code> 对象</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">io.github.dunwu.javacore.reflect</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">java.util.HashSet</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Set</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ReflectClassDemo03</span> <span class="o">{</span>
+    <span class="kd">enum</span> <span class="n">E</span> <span class="o">{</span><span class="n">A</span><span class="o">,</span> <span class="n">B</span><span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">Class</span> <span class="n">c</span> <span class="o">=</span> <span class="s">&#34;foo&#34;</span><span class="o">.</span><span class="na">getClass</span><span class="o">();</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">c</span><span class="o">.</span><span class="na">getCanonicalName</span><span class="o">());</span>
+
+        <span class="n">Class</span> <span class="n">c2</span> <span class="o">=</span> <span class="n">ReflectClassDemo03</span><span class="o">.</span><span class="na">E</span><span class="o">.</span><span class="na">A</span><span class="o">.</span><span class="na">getClass</span><span class="o">();</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">c2</span><span class="o">.</span><span class="na">getCanonicalName</span><span class="o">());</span>
+
+        <span class="kt">byte</span><span class="o">[]</span> <span class="n">bytes</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">byte</span><span class="o">[</span><span class="n">1024</span><span class="o">];</span>
+        <span class="n">Class</span> <span class="n">c3</span> <span class="o">=</span> <span class="n">bytes</span><span class="o">.</span><span class="na">getClass</span><span class="o">();</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">c3</span><span class="o">.</span><span class="na">getCanonicalName</span><span class="o">());</span>
+
+        <span class="n">Set</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">set</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashSet</span><span class="o">&lt;&gt;();</span>
+        <span class="n">Class</span> <span class="n">c4</span> <span class="o">=</span> <span class="n">set</span><span class="o">.</span><span class="na">getClass</span><span class="o">();</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">c4</span><span class="o">.</span><span class="na">getCanonicalName</span><span class="o">());</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+<span class="c1">//Output:
+</span><span class="c1">//java.lang.String
+</span><span class="c1">//io.github.dunwu.javacore.reflect.ReflectClassDemo.E
+</span><span class="c1">//byte[]
+</span><span class="c1">//java.util.HashSet
+</span><span class="c1"></span>
 </code></pre></td></tr></table>
 </div>
-</div><p><code>NSHTPCookieStorage</code> 设置、删除、获取</p>
+</div><h3 id="-33-判断是否为某个类的实例"># 3.3. 判断是否为某个类的实例</h3>
+<blockquote>
+<p>判断是否为某个类的实例有两种方式：</p>
+</blockquote>
+<ol>
+<li><code>用 </code>instanceof<code> 关键字</code></li>
+<li><code>用 </code>Class<code>对象的</code>isInstance<code> 方法</code> （它是一个 Native 方法）</li>
+</ol>
+<blockquote>
+<p>【示例】</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">InstanceofDemo</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">ArrayList</span> <span class="n">arrayList</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">();</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">arrayList</span> <span class="k">instanceof</span> <span class="n">List</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;ArrayList is List&#34;</span><span class="o">);</span>
+        <span class="o">}</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">List</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">isInstance</span><span class="o">(</span><span class="n">arrayList</span><span class="o">))</span> <span class="o">{</span>
+            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;ArrayList is List&#34;</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+<span class="c1">//Output:
+</span><span class="c1">//ArrayList is List
+</span><span class="c1">//ArrayList is List
+</span></code></pre></td></tr></table>
+</div>
+</div><h3 id="-34-创建实例"># 3.4. 创建实例</h3>
+<blockquote>
+<p>通过反射来创建实例对象主要有两种方式：</p>
+</blockquote>
+<ul>
+<li>用 <code>Class</code> 对象的 <code>newInstance</code> 方法。</li>
+<li>用 <code>Constructor</code> 对象的 <code>newInstance</code> 方法。</li>
+</ul>
+<blockquote>
+<p>【示例】</p>
+</blockquote>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1984,30 +2423,76 @@
 </span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-objectivec" data-lang="objectivec"><span class="c1">// cookie的接收策略
-</span><span class="c1"></span><span class="k">@property</span> <span class="n">NSHTTPCookieAcceptPolicy</span> <span class="n">cookieAcceptPolicy</span>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">NewInstanceDemo</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span>
+        <span class="kd">throws</span> <span class="n">IllegalAccessException</span><span class="o">,</span> <span class="n">InstantiationException</span><span class="o">,</span> <span class="n">NoSuchMethodException</span><span class="o">,</span> <span class="n">InvocationTargetException</span> <span class="o">{</span>
+        <span class="n">Class</span><span class="o">&lt;?&gt;</span> <span class="n">c1</span> <span class="o">=</span> <span class="n">StringBuilder</span><span class="o">.</span><span class="na">class</span><span class="o">;</span>
+        <span class="n">StringBuilder</span> <span class="n">sb</span> <span class="o">=</span> <span class="o">(</span><span class="n">StringBuilder</span><span class="o">)</span> <span class="n">c1</span><span class="o">.</span><span class="na">newInstance</span><span class="o">();</span>
+        <span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">&#34;aaa&#34;</span><span class="o">);</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">sb</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
 
-<span class="c1">// 获取NSHTTPCookieStorage存储的所有cookie
-</span><span class="c1"></span><span class="k">@property</span> <span class="p">(</span><span class="n">nullable</span> <span class="p">,</span> <span class="k">readonly</span><span class="p">,</span> <span class="k">copy</span><span class="p">)</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSHTTPCookie</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">cookies</span>
-
-<span class="c1">// 设置cookie
-</span><span class="c1"></span><span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nl">setCookie</span><span class="p">:(</span><span class="n">NSHTTPCookie</span> <span class="o">*</span><span class="p">)</span><span class="n">cookie</span>
-
-<span class="c1">// 删除cookie
-</span><span class="c1"></span><span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nl">deleteCookie</span><span class="p">:(</span><span class="n">NSHTTPCookie</span> <span class="o">*</span><span class="p">)</span><span class="n">cookie</span>
-
-<span class="c1">// 在某个时间点删除cookies
-</span><span class="c1"></span><span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nl">removeCookiesSinceDate</span><span class="p">:(</span><span class="n">NSDate</span> <span class="o">*</span><span class="p">)</span><span class="n">date</span>
-
-<span class="c1">// 获取指定URL的cookies
-</span><span class="c1"></span><span class="o">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSHTTPCookie</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nl">cookiesForURL</span><span class="p">:(</span><span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="n">URL</span>
-
-<span class="c1">// 获取指定域名指定URL的cookies
-</span><span class="c1"></span><span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nl">setCookies</span><span class="p">:(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSHTTPCookie</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="n">cookies</span> <span class="nl">forURL</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="n">URL</span> <span class="nl">mainDocumentURL</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="n">mainDocumentURL</span>
-</code></pre></td></tr></table>
+        <span class="c1">//获取String所对应的Class对象
+</span><span class="c1"></span>        <span class="n">Class</span><span class="o">&lt;?&gt;</span> <span class="n">c2</span> <span class="o">=</span> <span class="n">String</span><span class="o">.</span><span class="na">class</span><span class="o">;</span>
+        <span class="c1">//获取String类带一个String参数的构造器
+</span><span class="c1"></span>        <span class="n">Constructor</span> <span class="n">constructor</span> <span class="o">=</span> <span class="n">c2</span><span class="o">.</span><span class="na">getConstructor</span><span class="o">(</span><span class="n">String</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+        <span class="c1">//根据构造器创建实例
+</span><span class="c1"></span>        <span class="n">String</span> <span class="n">str2</span> <span class="o">=</span> <span class="o">(</span><span class="n">String</span><span class="o">)</span> <span class="n">constructor</span><span class="o">.</span><span class="na">newInstance</span><span class="o">(</span><span class="s">&#34;bbb&#34;</span><span class="o">);</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">str2</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+<span class="c1">//Output:
+</span><span class="c1">//aaa
+</span><span class="c1">//bbb
+</span></code></pre></td></tr></table>
 </div>
-</div><h4 id="四清除cookie">四、清除cookie</h4>
-<p>还有一个场景需要清除cookie,那就是在客户端，用户退出登录，我们就需要删除<code>NSHTPCookieStorage</code>中的<code>cookie</code></p>
+</div><h3 id="-35-创建数组实例"># 3.5. 创建数组实例</h3>
+<blockquote>
+<p>数组在 Java 里是比较特殊的一种类型，它可以赋值给一个对象引用。Java 中， <code>通过 </code>Array.newInstance<code> 创建数组的实例</code> 。</p>
+</blockquote>
+<blockquote>
+<p>【示例】利用反射创建数组</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ReflectArrayDemo</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">ClassNotFoundException</span> <span class="o">{</span>
+        <span class="n">Class</span><span class="o">&lt;?&gt;</span> <span class="n">cls</span> <span class="o">=</span> <span class="n">Class</span><span class="o">.</span><span class="na">forName</span><span class="o">(</span><span class="s">&#34;java.lang.String&#34;</span><span class="o">);</span>
+        <span class="n">Object</span> <span class="n">array</span> <span class="o">=</span> <span class="n">Array</span><span class="o">.</span><span class="na">newInstance</span><span class="o">(</span><span class="n">cls</span><span class="o">,</span> <span class="n">25</span><span class="o">);</span>
+        <span class="c1">//往数组里添加内容
+</span><span class="c1"></span>        <span class="n">Array</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="n">array</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="s">&#34;Scala&#34;</span><span class="o">);</span>
+        <span class="n">Array</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="n">array</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="s">&#34;Java&#34;</span><span class="o">);</span>
+        <span class="n">Array</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="n">array</span><span class="o">,</span> <span class="n">2</span><span class="o">,</span> <span class="s">&#34;Groovy&#34;</span><span class="o">);</span>
+        <span class="n">Array</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="n">array</span><span class="o">,</span> <span class="n">3</span><span class="o">,</span> <span class="s">&#34;Scala&#34;</span><span class="o">);</span>
+        <span class="n">Array</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="n">array</span><span class="o">,</span> <span class="n">4</span><span class="o">,</span> <span class="s">&#34;Clojure&#34;</span><span class="o">);</span>
+        <span class="c1">//获取某一项的内容
+</span><span class="c1"></span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">Array</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">array</span><span class="o">,</span> <span class="n">3</span><span class="o">));</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+<span class="c1">//Output:
+</span><span class="c1">//Scala
+</span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>其中的 Array 类为 <code>java.lang.reflect.Array</code>类。我们 <code>Array.newInstance</code> 的原型是：</p>
+</blockquote>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -2016,17 +2501,730 @@
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-objectivec" data-lang="objectivec">    <span class="n">NSArray</span> <span class="o">*</span><span class="n">cookies</span> <span class="o">=</span> <span class="p">[[</span><span class="n">NSHTTPCookieStorage</span> <span class="n">sharedHTTPCookieStorage</span><span class="p">]</span> <span class="n">cookies</span><span class="p">];</span>
-    <span class="k">for</span> <span class="p">(</span><span class="n">NSHTTPCookie</span> <span class="o">*</span><span class="n">cookie</span> <span class="k">in</span> <span class="n">cookies</span><span class="p">)</span> <span class="p">{</span>
-        <span class="p">[[</span><span class="n">NSHTTPCookieStorage</span> <span class="n">sharedHTTPCookieStorage</span><span class="p">]</span> <span class="nl">deleteCookie</span><span class="p">:</span><span class="n">cookie</span><span class="p">];</span>
-    <span class="p">}</span>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">static</span> <span class="n">Object</span> <span class="nf">newInstance</span><span class="o">(</span><span class="n">Class</span><span class="o">&lt;?&gt;</span> <span class="n">componentType</span><span class="o">,</span> <span class="kt">int</span> <span class="n">length</span><span class="o">)</span>
+    <span class="kd">throws</span> <span class="n">NegativeArraySizeException</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">newArray</span><span class="o">(</span><span class="n">componentType</span><span class="o">,</span> <span class="n">length</span><span class="o">);</span>
+<span class="o">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><h4 id="五总结">五、总结</h4>
-<p>总体来说，使用cookie我们要确认三步信息：<br />
-1.<code>NSURLRequest</code>是否允许使用<code>cookie(HTTPShouldHandleCookies)</code>,默认允许。<br />
-2.<code>NSHTTPCookieStorage</code>的接收策略<br />
-3.退出时清除<code>NSHTTPCookieStorage</code>存储的<code>cookie</code></p>
+</div><h3 id="-36-field"># 3.6. Field</h3>
+<blockquote>
+<p><code>Class</code> 对象提供以下方法获取对象的成员（ <code>Field</code>）：</p>
+</blockquote>
+<ul>
+<li><code>getFiled</code> - 根据名称获取公有的（public）类成员。</li>
+<li><code>getDeclaredField</code> - 根据名称获取已声明的类成员。但不能得到其父类的类成员。</li>
+<li><code>getFields</code> - 获取所有公有的（public）类成员。</li>
+<li><code>getDeclaredFields</code> - 获取所有已声明的类成员。</li>
+</ul>
+<blockquote>
+<p>示例如下：</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ReflectFieldDemo</span> <span class="o">{</span>
+    <span class="kd">class</span> <span class="nc">FieldSpy</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="o">{</span>
+        <span class="kd">public</span> <span class="kt">boolean</span><span class="o">[][]</span> <span class="n">b</span> <span class="o">=</span> <span class="o">{</span> <span class="o">{</span><span class="kc">false</span><span class="o">,</span> <span class="kc">false</span><span class="o">},</span> <span class="o">{</span><span class="kc">true</span><span class="o">,</span> <span class="kc">true</span><span class="o">}</span> <span class="o">};</span>
+        <span class="kd">public</span> <span class="n">String</span> <span class="n">name</span> <span class="o">=</span> <span class="s">&#34;Alice&#34;</span><span class="o">;</span>
+        <span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">list</span><span class="o">;</span>
+        <span class="kd">public</span> <span class="n">T</span> <span class="n">val</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">NoSuchFieldException</span> <span class="o">{</span>
+        <span class="n">Field</span> <span class="n">f1</span> <span class="o">=</span> <span class="n">FieldSpy</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">getField</span><span class="o">(</span><span class="s">&#34;b&#34;</span><span class="o">);</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">&#34;Type: %s%n&#34;</span><span class="o">,</span> <span class="n">f1</span><span class="o">.</span><span class="na">getType</span><span class="o">());</span>
+
+        <span class="n">Field</span> <span class="n">f2</span> <span class="o">=</span> <span class="n">FieldSpy</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">getField</span><span class="o">(</span><span class="s">&#34;name&#34;</span><span class="o">);</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">&#34;Type: %s%n&#34;</span><span class="o">,</span> <span class="n">f2</span><span class="o">.</span><span class="na">getType</span><span class="o">());</span>
+
+        <span class="n">Field</span> <span class="n">f3</span> <span class="o">=</span> <span class="n">FieldSpy</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">getField</span><span class="o">(</span><span class="s">&#34;list&#34;</span><span class="o">);</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">&#34;Type: %s%n&#34;</span><span class="o">,</span> <span class="n">f3</span><span class="o">.</span><span class="na">getType</span><span class="o">());</span>
+
+        <span class="n">Field</span> <span class="n">f4</span> <span class="o">=</span> <span class="n">FieldSpy</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">getField</span><span class="o">(</span><span class="s">&#34;val&#34;</span><span class="o">);</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">&#34;Type: %s%n&#34;</span><span class="o">,</span> <span class="n">f4</span><span class="o">.</span><span class="na">getType</span><span class="o">());</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+<span class="c1">//Output:
+</span><span class="c1">//Type: class [[Z
+</span><span class="c1">//Type: class java.lang.String
+</span><span class="c1">//Type: interface java.util.List
+</span><span class="c1">//Type: class java.lang.Object
+</span><span class="c1"></span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="-37-method"># 3.7. Method</h3>
+<blockquote>
+<p><code>Class</code> 对象提供以下方法获取对象的方法（ <code>Method</code>）：</p>
+</blockquote>
+<ul>
+<li><code>getMethod</code> - 返回类或接口的特定方法。其中第一个参数为方法名称，后面的参数为方法参数对应 Class 的对象。</li>
+<li><code>getDeclaredMethod</code> - 返回类或接口的特定声明方法。其中第一个参数为方法名称，后面的参数为方法参数对应 Class 的对象。</li>
+<li><code>getMethods</code> - 返回类或接口的所有 public 方法，包括其父类的 public 方法。</li>
+<li><code>getDeclaredMethods</code> - 返回类或接口声明的所有方法，包括 public、protected、默认（包）访问和 private 方法，但不包括继承的方法。</li>
+</ul>
+<blockquote>
+<p>获取一个 <code>Method</code> 对象后，可以用 <code>invoke</code> 方法来调用这个方法。</p>
+</blockquote>
+<blockquote>
+<p><code>invoke</code> 方法的原型为:</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="n">Object</span> <span class="nf">invoke</span><span class="o">(</span><span class="n">Object</span> <span class="n">obj</span><span class="o">,</span> <span class="n">Object</span><span class="o">...</span> <span class="n">args</span><span class="o">)</span>
+        <span class="kd">throws</span> <span class="n">IllegalAccessException</span><span class="o">,</span> <span class="n">IllegalArgumentException</span><span class="o">,</span>
+           <span class="n">InvocationTargetException</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>【示例】</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ReflectMethodDemo</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span>
+        <span class="kd">throws</span> <span class="n">NoSuchMethodException</span><span class="o">,</span> <span class="n">InvocationTargetException</span><span class="o">,</span> <span class="n">IllegalAccessException</span> <span class="o">{</span>
+
+        <span class="c1">// 返回所有方法
+</span><span class="c1"></span>        <span class="n">Method</span><span class="o">[]</span> <span class="n">methods1</span> <span class="o">=</span> <span class="n">System</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">getDeclaredMethods</span><span class="o">();</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;System getDeclaredMethods 清单（数量 = &#34;</span> <span class="o">+</span> <span class="n">methods1</span><span class="o">.</span><span class="na">length</span> <span class="o">+</span> <span class="s">&#34;）：&#34;</span><span class="o">);</span>
+        <span class="k">for</span> <span class="o">(</span><span class="n">Method</span> <span class="n">m</span> <span class="o">:</span> <span class="n">methods1</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">m</span><span class="o">);</span>
+        <span class="o">}</span>
+
+        <span class="c1">// 返回所有 public 方法
+</span><span class="c1"></span>        <span class="n">Method</span><span class="o">[]</span> <span class="n">methods2</span> <span class="o">=</span> <span class="n">System</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">getMethods</span><span class="o">();</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;System getMethods 清单（数量 = &#34;</span> <span class="o">+</span> <span class="n">methods2</span><span class="o">.</span><span class="na">length</span> <span class="o">+</span> <span class="s">&#34;）：&#34;</span><span class="o">);</span>
+        <span class="k">for</span> <span class="o">(</span><span class="n">Method</span> <span class="n">m</span> <span class="o">:</span> <span class="n">methods2</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">m</span><span class="o">);</span>
+        <span class="o">}</span>
+
+        <span class="c1">// 利用 Method 的 invoke 方法调用 System.currentTimeMillis()
+</span><span class="c1"></span>        <span class="n">Method</span> <span class="n">method</span> <span class="o">=</span> <span class="n">System</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">getMethod</span><span class="o">(</span><span class="s">&#34;currentTimeMillis&#34;</span><span class="o">);</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">method</span><span class="o">);</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">method</span><span class="o">.</span><span class="na">invoke</span><span class="o">(</span><span class="kc">null</span><span class="o">));</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="-38-constructor"># 3.8. Constructor</h3>
+<blockquote>
+<p><code>Class</code> 对象提供以下方法获取对象的构造方法（ <code>Constructor</code>）：</p>
+</blockquote>
+<ul>
+<li><code>getConstructor</code> - 返回类的特定 public 构造方法。参数为方法参数对应 Class 的对象。</li>
+<li><code>getDeclaredConstructor</code>- 返回类的特定构造方法。参数为方法参数对应 Class 的对象。</li>
+<li><code>getConstructors</code> - 返回类的所有 public 构造方法。</li>
+<li><code>etDeclaredConstructors</code>- 返回类的所有构造方法。</li>
+</ul>
+<blockquote>
+<p>获取一个 <code>Constructor</code> 对象后，可以用 <code>newInstance</code> 方法来创建类实例。</p>
+</blockquote>
+<blockquote>
+<p>【示例】</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ReflectMethodConstructorDemo</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span>
+        <span class="kd">throws</span> <span class="n">NoSuchMethodException</span><span class="o">,</span> <span class="n">IllegalAccessException</span><span class="o">,</span> <span class="n">InvocationTargetException</span><span class="o">,</span> <span class="n">InstantiationException</span> <span class="o">{</span>
+        <span class="n">Constructor</span><span class="o">&lt;?&gt;[]</span> <span class="n">constructors1</span> <span class="o">=</span> <span class="n">String</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">getDeclaredConstructors</span><span class="o">();</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;String getDeclaredConstructors 清单（数量 = &#34;</span> <span class="o">+</span> <span class="n">constructors1</span><span class="o">.</span><span class="na">length</span> <span class="o">+</span> <span class="s">&#34;）：&#34;</span><span class="o">);</span>
+        <span class="k">for</span> <span class="o">(</span><span class="n">Constructor</span> <span class="n">c</span> <span class="o">:</span> <span class="n">constructors1</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">c</span><span class="o">);</span>
+        <span class="o">}</span>
+
+        <span class="n">Constructor</span><span class="o">&lt;?&gt;[]</span> <span class="n">constructors2</span> <span class="o">=</span> <span class="n">String</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">getConstructors</span><span class="o">();</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;String getConstructors 清单（数量 = &#34;</span> <span class="o">+</span> <span class="n">constructors2</span><span class="o">.</span><span class="na">length</span> <span class="o">+</span> <span class="s">&#34;）：&#34;</span><span class="o">);</span>
+        <span class="k">for</span> <span class="o">(</span><span class="n">Constructor</span> <span class="n">c</span> <span class="o">:</span> <span class="n">constructors2</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">c</span><span class="o">);</span>
+        <span class="o">}</span>
+
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;====================&#34;</span><span class="o">);</span>
+        <span class="n">Constructor</span> <span class="n">constructor</span> <span class="o">=</span> <span class="n">String</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">getConstructor</span><span class="o">(</span><span class="n">String</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">constructor</span><span class="o">);</span>
+        <span class="n">String</span> <span class="n">str</span> <span class="o">=</span> <span class="o">(</span><span class="n">String</span><span class="o">)</span> <span class="n">constructor</span><span class="o">.</span><span class="na">newInstance</span><span class="o">(</span><span class="s">&#34;bbb&#34;</span><span class="o">);</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">str</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="-39-绕开访问限制"># 3.9. 绕开访问限制</h3>
+<blockquote>
+<p>有时候，我们需要通过反射访问私有成员、方法。可以使用 <code>Constructor/Field/Method.setAccessible(true)</code>来绕开 Java 语言的访问限制。</p>
+</blockquote>
+<h3 id="-4-动态代理"># 4. 动态代理</h3>
+<blockquote>
+<p>动态代理是一种方便运行时动态构建代理、动态处理代理方法调用的机制，很多场景都是利用类似机制做到的，比如用来包装 RPC 调用、面向切面的编程（AOP）。</p>
+</blockquote>
+<blockquote>
+<p>实现动态代理的方式很多，比如 JDK 自身提供的动态代理，就是主要利用了上面提到的反射机制。还有其他的实现方式，比如利用传说中更高性能的字节码操作机制，类似 ASM、cglib（基于 ASM）、Javassist 等。</p>
+</blockquote>
+<blockquote>
+<p><img src="https://raw.githubusercontent.com/dunwu/images/dev/cs/java/javacore/xmind/Java%E4%BB%A3%E7%90%86.svg" alt="img" /></p>
+</blockquote>
+<h3 id="-41-静态代理"># 4.1. 静态代理</h3>
+<blockquote>
+<blockquote>
+<p>静态代理其实就是指设计模式中的代理模式。</p>
+</blockquote>
+<blockquote>
+<p><code>代理模式为其他对象提供一种代理以控制对这个对象的访问。</code></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/3101171-6269723ea61527bd.png" alt="img" /></p>
+</blockquote>
+<blockquote>
+<p><code>Subject</code> 定义了 RealSubject 和 Proxy 的公共接口，这样就在任何使用 RealSubject 的地方都可以使用 Proxy 。</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">Subject</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">abstract</span> <span class="kt">void</span> <span class="nf">Request</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p><code>RealSubject</code> 定义 Proxy 所代表的真实实体。</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">RealSubject</span> <span class="kd">extends</span> <span class="n">Subject</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">Request</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;真实的请求&#34;</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p><code>Proxy</code> 保存一个引用使得代理可以访问实体，并提供一个与 Subject 的接口相同的接口，这样代理就可以用来替代实体。</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">Proxy</span> <span class="kd">extends</span> <span class="n">Subject</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="n">RealSubject</span> <span class="n">real</span><span class="o">;</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">Request</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="kc">null</span> <span class="o">==</span> <span class="n">real</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">real</span> <span class="o">=</span> <span class="k">new</span> <span class="n">RealSubject</span><span class="o">();</span>
+        <span class="o">}</span>
+        <span class="n">real</span><span class="o">.</span><span class="na">Request</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<blockquote>
+<p>说明：</p>
+</blockquote>
+<blockquote>
+<p>静态代理模式固然在访问无法访问的资源，增强现有的接口业务功能方面有很大的优点，但是大量使用这种静态代理，会使我们系统内的类的规模增大，并且不易维护；并且由于 Proxy 和 RealSubject 的功能本质上是相同的，Proxy 只是起到了中介的作用，这种代理在系统中的存在，导致系统结构比较臃肿和松散。</p>
+</blockquote>
+</blockquote>
+<h3 id="-42-jdk-动态代理"># 4.2. JDK 动态代理</h3>
+<blockquote>
+<p>为了解决静态代理的问题，就有了创建动态代理的想法：</p>
+</blockquote>
+<blockquote>
+<p>在运行状态中，需要代理的地方，根据 Subject 和 RealSubject，动态地创建一个 Proxy，用完之后，就会销毁，这样就可以避免了 Proxy 角色的 class 在系统中冗杂的问题了。</p>
+</blockquote>
+<blockquote>
+<p><img src="https://raw.githubusercontent.com/dunwu/images/dev/snap/1553614585028.png" alt="img" /></p>
+</blockquote>
+<blockquote>
+<p>Java 动态代理基于经典代理模式，引入了一个 <code>InvocationHandler</code>， <code>InvocationHandler</code> 负责统一管理所有的方法调用。</p>
+</blockquote>
+<blockquote>
+<p>动态代理步骤：</p>
+</blockquote>
+<ol>
+<li>获取 RealSubject 上的所有接口列表；</li>
+<li>确定要生成的代理类的类名，默认为： <code>com.sun.proxy.$ProxyXXXX</code>；</li>
+<li>根据需要实现的接口信息，在代码中动态创建 该 Proxy 类的字节码；</li>
+<li>将对应的字节码转换为对应的 class 对象；</li>
+<li>创建 <code>InvocationHandler</code> 实例 handler，用来处理 <code>Proxy</code> 所有方法调用；</li>
+<li>Proxy 的 class 对象 以创建的 handler 对象为参数，实例化一个 proxy 对象。</li>
+</ol>
+<blockquote>
+<p>从上面可以看出，JDK 动态代理的实现是基于实现接口的方式，使得 Proxy 和 RealSubject 具有相同的功能。</p>
+</blockquote>
+<blockquote>
+<p>但其实还有一种思路：通过继承。即：让 Proxy 继承 RealSubject，这样二者同样具有相同的功能，Proxy 还可以通过重写 RealSubject 中的方法，来实现多态。CGLIB 就是基于这种思路设计的。</p>
+</blockquote>
+<blockquote>
+<p>在 Java 的动态代理机制中，有两个重要的类（接口），一个是 <code>InvocationHandler</code> 接口、另一个则是 <code>Proxy</code> 类，这一个类和一个接口是实现我们动态代理所必须用到的。</p>
+</blockquote>
+<h4 id="-invocationhandler-接口"># InvocationHandler 接口</h4>
+<blockquote>
+<p><code>InvocationHandler</code> 接口定义：</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">InvocationHandler</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="n">Object</span> <span class="nf">invoke</span><span class="o">(</span><span class="n">Object</span> <span class="n">proxy</span><span class="o">,</span> <span class="n">Method</span> <span class="n">method</span><span class="o">,</span> <span class="n">Object</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span>
+        <span class="kd">throws</span> <span class="n">Throwable</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>每一个动态代理类都必须要实现 <code>InvocationHandler</code> 这个接口，并且每个代理类的实例都关联到了一个 Handler，当我们通过代理对象调用一个方法的时候，这个方法的调用就会被转发为由 <code>InvocationHandler</code> 这个接口的 <code>invoke</code> 方法来进行调用。</p>
+</blockquote>
+<blockquote>
+<p>我们来看看 InvocationHandler 这个接口的唯一一个方法 invoke 方法：</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="n">Object</span> <span class="nf">invoke</span><span class="o">(</span><span class="n">Object</span> <span class="n">proxy</span><span class="o">,</span> <span class="n">Method</span> <span class="n">method</span><span class="o">,</span> <span class="n">Object</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Throwable</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>参数说明：</p>
+</blockquote>
+<ul>
+<li><code>proxy</code> - 代理的真实对象。</li>
+<li><code>method</code> - 所要调用真实对象的某个方法的 <code>Method</code> 对象</li>
+<li><code>args</code> - 所要调用真实对象某个方法时接受的参数</li>
+</ul>
+<blockquote>
+<p>如果不是很明白，等下通过一个实例会对这几个参数进行更深的讲解。</p>
+</blockquote>
+<h4 id="-proxy-类"># Proxy 类</h4>
+<blockquote>
+<p><code>Proxy</code> 这个类的作用就是用来动态创建一个代理对象的类，它提供了许多的方法，但是我们用的最多的就是 <code>newProxyInstance</code> 这个方法：</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">static</span> <span class="n">Object</span> <span class="nf">newProxyInstance</span><span class="o">(</span><span class="n">ClassLoader</span> <span class="n">loader</span><span class="o">,</span> <span class="n">Class</span><span class="o">&lt;?&gt;[]</span> <span class="n">interfaces</span><span class="o">,</span>  <span class="n">InvocationHandler</span> <span class="n">h</span><span class="o">)</span>  <span class="kd">throws</span> <span class="n">IllegalArgumentException</span>
+
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>这个方法的作用就是得到一个动态的代理对象。</p>
+</blockquote>
+<blockquote>
+<p>参数说明：</p>
+</blockquote>
+<ul>
+<li><code>loader</code> - 一个 <code>ClassLoader</code> 对象，定义了由哪个 <code>ClassLoader</code> 对象来对生成的代理对象进行加载。</li>
+<li><code>interfaces</code> - 一个 <code>Class&lt;?&gt;</code> 对象的数组，表示的是我将要给我需要代理的对象提供一组什么接口，如果我提供了一组接口给它，那么这个代理对象就宣称实现了该接口(多态)，这样我就能调用这组接口中的方法了</li>
+<li><code>h</code> - 一个 <code>InvocationHandler</code> 对象，表示的是当我这个动态代理对象在调用方法的时候，会关联到哪一个 <code>InvocationHandler</code> 对象上</li>
+</ul>
+<h4 id="-jdk-动态代理实例"># JDK 动态代理实例</h4>
+<blockquote>
+<p>上面的内容介绍完这两个接口(类)以后，我们来通过一个实例来看看我们的动态代理模式是什么样的：</p>
+</blockquote>
+<blockquote>
+<p>首先我们定义了一个 Subject 类型的接口，为其声明了两个方法：</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Subject</span> <span class="o">{</span>
+
+    <span class="kt">void</span> <span class="nf">hello</span><span class="o">(</span><span class="n">String</span> <span class="n">str</span><span class="o">);</span>
+
+    <span class="n">String</span> <span class="nf">bye</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>接着，定义了一个类来实现这个接口，这个类就是我们的真实对象，RealSubject 类：</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">RealSubject</span> <span class="kd">implements</span> <span class="n">Subject</span> <span class="o">{</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">hello</span><span class="o">(</span><span class="n">String</span> <span class="n">str</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;Hello  &#34;</span> <span class="o">+</span> <span class="n">str</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">bye</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;Goodbye&#34;</span><span class="o">);</span>
+        <span class="k">return</span> <span class="s">&#34;Over&#34;</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>下一步，我们就要定义一个动态代理类了，前面说个，每一个动态代理类都必须要实现 <code>InvocationHandler</code> 这个接口，因此我们这个动态代理类也不例外：</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">InvocationHandlerDemo</span> <span class="kd">implements</span> <span class="n">InvocationHandler</span> <span class="o">{</span>
+    <span class="c1">// 这个就是我们要代理的真实对象
+</span><span class="c1"></span>    <span class="kd">private</span> <span class="n">Object</span> <span class="n">subject</span><span class="o">;</span>
+
+    <span class="c1">// 构造方法，给我们要代理的真实对象赋初值
+</span><span class="c1"></span>    <span class="kd">public</span> <span class="nf">InvocationHandlerDemo</span><span class="o">(</span><span class="n">Object</span> <span class="n">subject</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">subject</span> <span class="o">=</span> <span class="n">subject</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">Object</span> <span class="nf">invoke</span><span class="o">(</span><span class="n">Object</span> <span class="n">object</span><span class="o">,</span> <span class="n">Method</span> <span class="n">method</span><span class="o">,</span> <span class="n">Object</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span>
+        <span class="kd">throws</span> <span class="n">Throwable</span> <span class="o">{</span>
+        <span class="c1">// 在代理真实对象前我们可以添加一些自己的操作
+</span><span class="c1"></span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;Before method&#34;</span><span class="o">);</span>
+
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;Call Method: &#34;</span> <span class="o">+</span> <span class="n">method</span><span class="o">);</span>
+
+        <span class="c1">// 当代理对象调用真实对象的方法时，其会自动的跳转到代理对象关联的handler对象的invoke方法来进行调用
+</span><span class="c1"></span>        <span class="n">Object</span> <span class="n">obj</span> <span class="o">=</span> <span class="n">method</span><span class="o">.</span><span class="na">invoke</span><span class="o">(</span><span class="n">subject</span><span class="o">,</span> <span class="n">args</span><span class="o">);</span>
+
+        <span class="c1">// 在代理真实对象后我们也可以添加一些自己的操作
+</span><span class="c1"></span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;After method&#34;</span><span class="o">);</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>
+
+        <span class="k">return</span> <span class="n">obj</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>最后，来看看我们的 Client 类：</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Client</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// 我们要代理的真实对象
+</span><span class="c1"></span>        <span class="n">Subject</span> <span class="n">realSubject</span> <span class="o">=</span> <span class="k">new</span> <span class="n">RealSubject</span><span class="o">();</span>
+
+        <span class="c1">// 我们要代理哪个真实对象，就将该对象传进去，最后是通过该真实对象来调用其方法的
+</span><span class="c1"></span>        <span class="n">InvocationHandler</span> <span class="n">handler</span> <span class="o">=</span> <span class="k">new</span> <span class="n">InvocationHandlerDemo</span><span class="o">(</span><span class="n">realSubject</span><span class="o">);</span>
+
+        <span class="cm">/*
+</span><span class="cm">         * 通过Proxy的newProxyInstance方法来创建我们的代理对象，我们来看看其三个参数
+</span><span class="cm">         * 第一个参数 handler.getClass().getClassLoader() ，我们这里使用handler这个类的ClassLoader对象来加载我们的代理对象
+</span><span class="cm">         * 第二个参数realSubject.getClass().getInterfaces()，我们这里为代理对象提供的接口是真实对象所实行的接口，表示我要代理的是该真实对象，这样我就能调用这组接口中的方法了
+</span><span class="cm">         * 第三个参数handler， 我们这里将这个代理对象关联到了上方的 InvocationHandler 这个对象上
+</span><span class="cm">         */</span>
+        <span class="n">Subject</span> <span class="n">subject</span> <span class="o">=</span> <span class="o">(</span><span class="n">Subject</span><span class="o">)</span><span class="n">Proxy</span><span class="o">.</span><span class="na">newProxyInstance</span><span class="o">(</span><span class="n">handler</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getClassLoader</span><span class="o">(),</span> <span class="n">realSubject</span>
+                <span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getInterfaces</span><span class="o">(),</span> <span class="n">handler</span><span class="o">);</span>
+
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">subject</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getName</span><span class="o">());</span>
+        <span class="n">subject</span><span class="o">.</span><span class="na">hello</span><span class="o">(</span><span class="s">&#34;World&#34;</span><span class="o">);</span>
+        <span class="n">String</span> <span class="n">result</span> <span class="o">=</span> <span class="n">subject</span><span class="o">.</span><span class="na">bye</span><span class="o">();</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;Result is: &#34;</span> <span class="o">+</span> <span class="n">result</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>我们先来看看控制台的输出：</p>
+</blockquote>
+<pre tabindex="0"><code>com.sun.proxy.$Proxy0
+Before method
+Call Method: public abstract void io.github.dunwu.javacore.reflect.InvocationHandlerDemo$Subject.hello(java.lang.String)
+Hello  World
+After method
+
+Before method
+Call Method: public abstract java.lang.String io.github.dunwu.javacore.reflect.InvocationHandlerDemo$Subject.bye()
+Goodbye
+After method
+
+Result is: Over
+</code></pre><blockquote>
+<p>我们首先来看看 <code>com.sun.proxy.$Proxy0</code>这东西，我们看到，这个东西是由 <code>System.out.println(subject.getClass().getName());</code>这条语句打印出来的，那么为什么我们返回的这个代理对象的类名是这样的呢？</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="n">Subject</span> <span class="n">subject</span> <span class="o">=</span> <span class="o">(</span><span class="n">Subject</span><span class="o">)</span><span class="n">Proxy</span><span class="o">.</span><span class="na">newProxyInstance</span><span class="o">(</span><span class="n">handler</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getClassLoader</span><span class="o">(),</span> <span class="n">realSubject</span>
+                <span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getInterfaces</span><span class="o">(),</span> <span class="n">handler</span><span class="o">);</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>可能我以为返回的这个代理对象会是 Subject 类型的对象，或者是 InvocationHandler 的对象，结果却不是，首先我们解释一下 <code>为什么我们这里可以将其转化为 Subject 类型的对象？</code></p>
+</blockquote>
+<blockquote>
+<p>原因就是：在 newProxyInstance 这个方法的第二个参数上，我们给这个代理对象提供了一组什么接口，那么我这个代理对象就会实现了这组接口，这个时候我们当然可以将这个代理对象强制类型转化为这组接口中的任意一个，因为这里的接口是 Subject 类型，所以就可以将其转化为 Subject 类型了。</p>
+</blockquote>
+<blockquote>
+<p>同时我们一定要记住，通过 <code>Proxy.newProxyInstance</code>创建的代理对象是在 jvm 运行时动态生成的一个对象，它并不是我们的 InvocationHandler 类型，也不是我们定义的那组接口的类型，而是在运行是动态生成的一个对象，并且命名方式都是这样的形式，以$开头，proxy 为中，最后一个数字表示对象的标号。</p>
+</blockquote>
+<blockquote>
+<p>接着我们来看看这两句</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="n">subject</span><span class="o">.</span><span class="na">hello</span><span class="o">(</span><span class="s">&#34;World&#34;</span><span class="o">);</span>
+<span class="n">String</span> <span class="n">result</span> <span class="o">=</span> <span class="n">subject</span><span class="o">.</span><span class="na">bye</span><span class="o">();</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>这里是通过代理对象来调用实现的那种接口中的方法，这个时候程序就会跳转到由这个代理对象关联到的 handler 中的 invoke 方法去执行，而我们的这个 handler 对象又接受了一个 RealSubject 类型的参数，表示我要代理的就是这个真实对象，所以此时就会调用 handler 中的 invoke 方法去执行。</p>
+</blockquote>
+<blockquote>
+<p>我们看到，在真正通过代理对象来调用真实对象的方法的时候，我们可以在该方法前后添加自己的一些操作，同时我们看到我们的这个 method 对象是这样的：</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">abstract</span> <span class="kt">void</span> <span class="n">io</span><span class="o">.</span><span class="na">github</span><span class="o">.</span><span class="na">dunwu</span><span class="o">.</span><span class="na">javacore</span><span class="o">.</span><span class="na">reflect</span><span class="o">.</span><span class="na">InvocationHandlerDemo$Subject</span><span class="o">.</span><span class="na">hello</span><span class="o">(</span><span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">String</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">abstract</span> <span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">String</span> <span class="n">io</span><span class="o">.</span><span class="na">github</span><span class="o">.</span><span class="na">dunwu</span><span class="o">.</span><span class="na">javacore</span><span class="o">.</span><span class="na">reflect</span><span class="o">.</span><span class="na">InvocationHandlerDemo$Subject</span><span class="o">.</span><span class="na">bye</span><span class="o">()</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>正好就是我们的 Subject 接口中的两个方法，这也就证明了当我通过代理对象来调用方法的时候，起实际就是委托由其关联到的 handler 对象的 invoke 方法中来调用，并不是自己来真实调用，而是通过代理的方式来调用的。</p>
+</blockquote>
+<h4 id="-jdk-动态代理小结"># JDK 动态代理小结</h4>
+<blockquote>
+<p>代理类与委托类实现同一接口，主要是通过代理类实现 <code>InvocationHandler</code> 并重写 <code>invoke</code> 方法来进行动态代理的，在 <code>invoke</code> 方法中将对方法进行处理。</p>
+</blockquote>
+<blockquote>
+<p>JDK 动态代理特点：</p>
+</blockquote>
+<ul>
+<li>
+<blockquote>
+<p>优点：相对于静态代理模式，不需要硬编码接口，代码复用率高。</p>
+</blockquote>
+</li>
+<li>
+<blockquote>
+<p>缺点：强制要求代理类实现 <code>InvocationHandler</code> 接口。</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="-43-cglib-动态代理"># 4.3. CGLIB 动态代理</h3>
+<blockquote>
+<p>CGLIB 提供了与 JDK 动态代理不同的方案。很多框架，例如 Spring AOP 中，就使用了 CGLIB 动态代理。</p>
+</blockquote>
+<blockquote>
+<p>CGLIB 底层，其实是借助了 ASM 这个强大的 Java 字节码框架去进行字节码增强操作。</p>
+</blockquote>
+<blockquote>
+<p>CGLIB 动态代理的工作步骤：</p>
+</blockquote>
+<ul>
+<li>生成代理类的二进制字节码文件；</li>
+<li>加载二进制字节码，生成 <code>Class</code> 对象( 例如使用 <code>Class.forName()</code> 方法 )；</li>
+<li>通过反射机制获得实例构造，并创建代理类对象。</li>
+</ul>
+<blockquote>
+<p>CGLIB 动态代理特点：</p>
+</blockquote>
+<blockquote>
+<p>优点：使用字节码增强，比 JDK 动态代理方式性能高。可以在运行时对类或者是接口进行增强操作，且委托类无需实现接口。</p>
+</blockquote>
+<blockquote>
+<p>缺点：不能对 <code>final</code> 类以及 <code>final</code> 方法进行代理。</p>
+</blockquote>
 
     </article>
     
@@ -2226,13 +3424,13 @@
     
     
       
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fyichenlove.github.io%2fposts%2fios-cookie%2f" title="Facebook" aria-label="Facebook Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fyichenlove.github.io%2fposts%2fjava-reflection%2f" title="Facebook" aria-label="Facebook Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
           <svg data-name="facebook" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"/></svg>
         </a>
       
     
       
-        <a href="https://twitter.com/intent/tweet?text=iOS%20%e7%bd%91%e7%bb%9c%e7%bc%96%e7%a8%8b%e4%b9%8b%20NSHTTPCookie%2fNSHTTPCookieStorage&url=https%3a%2f%2fyichenlove.github.io%2fposts%2fios-cookie%2f&hashtags=ios%2ccookie&via=" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
+        <a href="https://twitter.com/intent/tweet?text=%e6%b7%b1%e5%85%a5%e7%90%86%e8%a7%a3%20Java%20%e5%8f%8d%e5%b0%84%e5%92%8c%e5%8a%a8%e6%80%81%e4%bb%a3%e7%90%86&url=https%3a%2f%2fyichenlove.github.io%2fposts%2fjava-reflection%2f&hashtags=java&via=" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
           <svg data-name="twitter" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m21.534 7.113c.976-.693 1.797-1.558 2.466-2.554v-.001c-.893.391-1.843.651-2.835.777 1.02-.609 1.799-1.566 2.165-2.719-.951.567-2.001.967-3.12 1.191-.903-.962-2.19-1.557-3.594-1.557-2.724 0-4.917 2.211-4.917 4.921 0 .39.033.765.114 1.122-4.09-.2-7.71-2.16-10.142-5.147-.424.737-.674 1.58-.674 2.487 0 1.704.877 3.214 2.186 4.089-.791-.015-1.566-.245-2.223-.606v.054c0 2.391 1.705 4.377 3.942 4.835-.401.11-.837.162-1.29.162-.315 0-.633-.018-.931-.084.637 1.948 2.447 3.381 4.597 3.428-1.674 1.309-3.8 2.098-6.101 2.098-.403 0-.79-.018-1.177-.067 2.18 1.405 4.762 2.208 7.548 2.208 8.683 0 14.342-7.244 13.986-14.637z"/></svg>
         </a>
       
@@ -2370,26 +3568,38 @@
     <section class="related">
     
     
+    <h1 class="related__title">
+      <hr class="hr-dots"/>
+      <div>
+        See Also
+      </div>
+      <hr class="hr-dots"/>
+    </h1>
+    <ul class="related-ul">
+        
+        <li>
+          <a href="/posts/java-char-add/" class="related__link">Java中char，int，String的相加减</a>
+        </li>
+        
+        <li>
+          <a href="/posts/javajdk/" class="related__link">你安装的是Oracle JDK还是OpenJDK?</a>
+        </li>
+        
+    </ul>
+    
   </section>
     <div class="grow"></div>
 <nav class="pagination-single">
   
     
-      <a href="https://yichenlove.github.io/posts/android-activity2/" class="pagination-single__left">
+      <a href="https://yichenlove.github.io/posts/app-32-64/" class="pagination-single__left">
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
         </div>
-        <div class="pagination-single__left-title">滑动关闭Activity</div>      
+        <div class="pagination-single__left-title">App 64位和32位</div>      
       </a>
     
     <div class="grow"></div>
-    
-      <a href="https://yichenlove.github.io/posts/android-lifecrcle/" class="pagination-single__right">      
-        <div class="pagination-single__right-title">Android 生命周期</div>
-        <div class="pagination-single__icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
-        </div>
-      </a>
     
   
 </nav>
@@ -2749,15 +3959,36 @@ document.addEventListener('DOMContentLoaded', function () {
   <ul>
     <li>
       <ul>
-        <li>
+        <li><a href="#-1-反射简介"># 1. 反射简介</a></li>
+        <li><a href="#-11-什么是反射"># 1.1. 什么是反射</a></li>
+        <li><a href="#-12-反射的应用场景"># 1.2. 反射的应用场景</a></li>
+        <li><a href="#-13-反射的缺点"># 1.3. 反射的缺点</a></li>
+        <li><a href="#-2-反射机制"># 2. 反射机制</a></li>
+        <li><a href="#-21-类加载过程"># 2.1. 类加载过程</a></li>
+        <li><a href="#-22-class-对象"># 2.2. Class 对象</a></li>
+        <li><a href="#-23-方法的反射调用"># 2.3. 方法的反射调用</a></li>
+        <li><a href="#-24-反射调用的开销"># 2.4. 反射调用的开销</a></li>
+        <li><a href="#-3-使用反射"># 3. 使用反射</a></li>
+        <li><a href="#-31-javalangreflect-包"># 3.1. java.lang.reflect 包</a></li>
+        <li><a href="#-32-获取-class-对象"># 3.2. 获取 Class 对象</a></li>
+        <li><a href="#-33-判断是否为某个类的实例"># 3.3. 判断是否为某个类的实例</a></li>
+        <li><a href="#-34-创建实例"># 3.4. 创建实例</a></li>
+        <li><a href="#-35-创建数组实例"># 3.5. 创建数组实例</a></li>
+        <li><a href="#-36-field"># 3.6. Field</a></li>
+        <li><a href="#-37-method"># 3.7. Method</a></li>
+        <li><a href="#-38-constructor"># 3.8. Constructor</a></li>
+        <li><a href="#-39-绕开访问限制"># 3.9. 绕开访问限制</a></li>
+        <li><a href="#-4-动态代理"># 4. 动态代理</a></li>
+        <li><a href="#-41-静态代理"># 4.1. 静态代理</a></li>
+        <li><a href="#-42-jdk-动态代理"># 4.2. JDK 动态代理</a>
           <ul>
-            <li><a href="#一cookie-简介">一、cookie 简介</a></li>
-            <li><a href="#二使用cookie">二、使用cookie</a></li>
-            <li><a href="#三接收cookie">三、接收cookie</a></li>
-            <li><a href="#四清除cookie">四、清除cookie</a></li>
-            <li><a href="#五总结">五、总结</a></li>
+            <li><a href="#-invocationhandler-接口"># InvocationHandler 接口</a></li>
+            <li><a href="#-proxy-类"># Proxy 类</a></li>
+            <li><a href="#-jdk-动态代理实例"># JDK 动态代理实例</a></li>
+            <li><a href="#-jdk-动态代理小结"># JDK 动态代理小结</a></li>
           </ul>
         </li>
+        <li><a href="#-43-cglib-动态代理"># 4.3. CGLIB 动态代理</a></li>
       </ul>
     </li>
   </ul>
