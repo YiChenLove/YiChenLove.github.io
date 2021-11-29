@@ -14,67 +14,29 @@
     <managingEditor>chen61813772@gmail.com (wangyichen)</managingEditor>
     <webMaster>chen61813772@gmail.com (wangyichen)</webMaster>
     <copyright>©2021, All Rights Reserved</copyright>
-    <lastBuildDate>Sat, 16 Nov 2019 12:00:06 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 29 Nov 2021 15:04:06 +0800</lastBuildDate>
     
         <atom:link href="https://yichenlove.github.io/categories/math/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
-        <title>MathJax support</title>
-        <link>https://yichenlove.github.io/posts/test-mathjax/</link>
-        <pubDate>Sat, 16 Nov 2019 12:00:06 +0900</pubDate>
+        <title>递归的静态方法计算ln(N!)的值</title>
+        <link>https://yichenlove.github.io/posts/ln-factorial/</link>
+        <pubDate>Mon, 29 Nov 2021 15:04:06 +0800</pubDate>
         <author>chen61813772@gmail.com (wangyichen)</author>
-        <atom:modified>Sat, 16 Nov 2019 12:00:06 +0900</atom:modified>
-        <guid>https://yichenlove.github.io/posts/test-mathjax/</guid>
-        <description>When $a \ne 0$, there are two solutions to $(ax^2 + bx + c = 0)$ and they are
-$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$</description>
+        <atom:modified>Mon, 29 Nov 2021 15:04:06 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/ln-factorial/</guid>
+        <description>编写一个递归的静态方法计算ln(N!)的值。 代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 public class Main { public static double f(int N){ //递归的题目还是要靠递归的方式解决 //递归吧</description>
         
         <dc:creator>wangyichen</dc:creator>
-        <media:content url="https://yichenlove.github.io/images/feature1/infinity.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
-        
-          
-            
-          
         
         
           
             
-              <category>math</category>
-            
-          
-        
-        
-          
-            
-          
-        
-      </item>
-      
-      <item>
-        <title>Katex support</title>
-        <link>https://yichenlove.github.io/posts/test-katex/</link>
-        <pubDate>Fri, 15 Nov 2019 12:00:06 +0900</pubDate>
-        <author>chen61813772@gmail.com (wangyichen)</author>
-        <atom:modified>Fri, 15 Nov 2019 12:00:06 +0900</atom:modified>
-        <guid>https://yichenlove.github.io/posts/test-katex/</guid>
-        <description>The following
-$$ \int_{a}^{b} x^2 dx $$
-Is an integral
-$$ \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } } $$
-Enable Katex in the config file by setting the katex param to true. This will import the necessary Katex CSS/JS.
-See the online reference of supported TeX functions.
-Note: For inline math to render correctly, your content file extension must be .mmark. See the official mmark site.
-Inline math: $ \varphi = \dfrac{1+\sqrt5}{2}= 1.</description>
-        
-        <dc:creator>wangyichen</dc:creator>
-        <media:content url="https://yichenlove.github.io/images/feature2/mathbook.png" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
+              <category>algorithms</category>
             
           
         

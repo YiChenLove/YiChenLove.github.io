@@ -1336,9 +1336,9 @@
 <meta name="description" content="The blog of wangyichen." />
 
 
-<meta name="created" content="2019-11-16T12:00:06&#43;0900">
-<meta name="modified" content="2019-11-16T12:00:06&#43;0900">
-<meta property="article:published_time" content="2019-11-16T12:00:06&#43;0900">
+<meta name="created" content="2021-11-29T15:04:06&#43;0800">
+<meta name="modified" content="2021-11-29T15:04:06&#43;0800">
+<meta property="article:published_time" content="2021-11-29T15:04:06&#43;0800">
 
 <meta name="author" content="wangyichen">
 
@@ -1349,7 +1349,7 @@
 <meta property="og:type" content="website">
 <meta property="og:description" content="The blog of wangyichen.">
 
-<meta name="generator" content="Hugo 0.87.0" />
+<meta name="generator" content="Hugo 0.89.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1378,7 +1378,6 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-
 
     <script type="application/ld+json">
   {
@@ -1734,6 +1733,28 @@
 </div>
 </nav>
             
+
+<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+<script src="https://cdn.jsdelivr.net/gh/YiChenLove/live2d-widget@latest/autoload.js"></script>
+
+
+<script async src="//cdn.busuanzi.ibruce.info/cdn/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        var int = setInterval(fixCount, 100);
+        var busuanziSiteOffset =  parseInt(10000);;
+        function fixCount() {
+            if ($("#busuanzi_container_site_pv").css("display") != "none") {
+                clearInterval(int);
+                $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + busuanziSiteOffset);
+            }
+        }
+    });
+</script>
+
             
 
 <main class="main inner" data-sidebar-position="right">
@@ -1785,18 +1806,12 @@
   <div class="summary-classic__flex-box" >
 
     
-    <div class="summary-classic__image-container summary-classic__image-wrapper" data-position="right" data-hwm="">
-      <a href="https://yichenlove.github.io/posts/test-mathjax/">
-        <img data-src="/images/feature1/infinity.png" alt="MathJax support" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload summary-classic__image" data-ani="true" data-hwm="" style=""/>
-      </a>
-    </div>
-    
 
     <div class="summary-classic__content">
       <header>
-        <h5 class="title h5"><a href='https://yichenlove.github.io/posts/test-mathjax/'>MathJax support</a> </h5>
+        <h5 class="title h5"><a href='https://yichenlove.github.io/posts/ln-factorial/'>递归的静态方法计算ln(N!)的值</a> </h5>
         <h6 class="subtitle caption">
-          <time title="Written At" dir="ltr">📅&nbsp;Nov 16, 2019 </time>
+          <time title="Written At" dir="ltr">📅&nbsp;Nov 29, 2021 </time>
           
           <span title="Reading Time" dir="ltr"> &middot; ☕&nbsp;1&nbsp;min read </span>
           
@@ -1805,46 +1820,7 @@
       <div>
         <div class="summary-classic__text p2">
           
-            A JavaScript display engine for mathematics that works in all browsers.No more setup for readers. It just works.
-          
-        </div>
-      </div>
-    </div>
-
-    
-    
-  </div>
-  <hr />
-</article>
-
-
-      
-        
-  <article class="summary-classic" data-ani="true">
-  <div class="summary-classic__flex-box" >
-
-    
-    <div class="summary-classic__image-container summary-classic__image-wrapper" data-position="right" data-hwm="">
-      <a href="https://yichenlove.github.io/posts/test-katex/">
-        <img data-src="/images/feature2/mathbook.png" alt="Katex support" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload summary-classic__image" data-ani="true" data-hwm="" style=""/>
-      </a>
-    </div>
-    
-
-    <div class="summary-classic__content">
-      <header>
-        <h5 class="title h5"><a href='https://yichenlove.github.io/posts/test-katex/'>Katex support</a> </h5>
-        <h6 class="subtitle caption">
-          <time title="Written At" dir="ltr">📅&nbsp;Nov 15, 2019 </time>
-          
-          <span title="Reading Time" dir="ltr"> &middot; ☕&nbsp;1&nbsp;min read </span>
-          
-        </h6>
-      </header>
-      <div>
-        <div class="summary-classic__text p2">
-          
-            KaTeX is a fast, easy-to-use JavaScript library for TeX math rendering on the web.
+            编写一个递归的静态方法计算ln(N!)的值。 代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 public class Main { public static double f(int N){ //递归的题目还是要靠递归的方式解决 //递归吧
           
         </div>
       </div>
@@ -1906,11 +1882,7 @@
     
         
         <li class="sidebar-recent">
-            <a href="/posts/test-mathjax/" class="sidebar-recent__title p1">MathJax support</a>
-        </li>
-        
-        <li class="sidebar-recent">
-            <a href="/posts/test-katex/" class="sidebar-recent__title p1">Katex support</a>
+            <a href="/posts/ln-factorial/" class="sidebar-recent__title p1">递归的静态方法计算ln(N!)的值</a>
         </li>
         
         <hr class="hr-fade sidebar-hr" />
@@ -1929,12 +1901,12 @@
         
         
             <span class="tag">
-                <a href="/tags/amoji/" class="is-tags taxo__link" data-dir="ltr">
+                <a href="/tags/algorithms/" class="is-tags taxo__link" data-dir="ltr">
                     <span class="taxo__text">
-                        amoji
+                        algorithms
                     </span>
                     <span class="taxo__num" dir="auto">
-                        1
+                        2
                     </span>
                 </a>
             </span>
@@ -1947,7 +1919,7 @@
                         android
                     </span>
                     <span class="taxo__num" dir="auto">
-                        1
+                        5
                     </span>
                 </a>
             </span>
@@ -1955,9 +1927,9 @@
         
         
             <span class="tag">
-                <a href="/tags/bamoji/" class="is-tags taxo__link" data-dir="ltr">
+                <a href="/tags/arm/" class="is-tags taxo__link" data-dir="ltr">
                     <span class="taxo__text">
-                        bamoji
+                        arm
                     </span>
                     <span class="taxo__num" dir="auto">
                         1
@@ -1981,48 +1953,9 @@
         
         
             <span class="tag">
-                <a href="/tags/css/" class="is-tags taxo__link" data-dir="ltr">
+                <a href="/tags/cookie/" class="is-tags taxo__link" data-dir="ltr">
                     <span class="taxo__text">
-                        css
-                    </span>
-                    <span class="taxo__num" dir="auto">
-                        1
-                    </span>
-                </a>
-            </span>
-        
-        
-        
-            <span class="tag">
-                <a href="/tags/diagram/" class="is-tags taxo__link" data-dir="ltr">
-                    <span class="taxo__text">
-                        diagram
-                    </span>
-                    <span class="taxo__num" dir="auto">
-                        1
-                    </span>
-                </a>
-            </span>
-        
-        
-        
-            <span class="tag">
-                <a href="/tags/emoji/" class="is-tags taxo__link" data-dir="ltr">
-                    <span class="taxo__text">
-                        emoji
-                    </span>
-                    <span class="taxo__num" dir="auto">
-                        1
-                    </span>
-                </a>
-            </span>
-        
-        
-        
-            <span class="tag">
-                <a href="/tags/gamoji/" class="is-tags taxo__link" data-dir="ltr">
-                    <span class="taxo__text">
-                        gamoji
+                        cookie
                     </span>
                     <span class="taxo__num" dir="auto">
                         1
@@ -2036,19 +1969,6 @@
                 <a href="/tags/glsl/" class="is-tags taxo__link" data-dir="ltr">
                     <span class="taxo__text">
                         glsl
-                    </span>
-                    <span class="taxo__num" dir="auto">
-                        1
-                    </span>
-                </a>
-            </span>
-        
-        
-        
-            <span class="tag">
-                <a href="/tags/html/" class="is-tags taxo__link" data-dir="ltr">
-                    <span class="taxo__text">
-                        html
                     </span>
                     <span class="taxo__num" dir="auto">
                         1
@@ -2077,7 +1997,20 @@
                         hugo
                     </span>
                     <span class="taxo__num" dir="auto">
-                        2
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/ic/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        IC
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        1
                     </span>
                 </a>
             </span>
@@ -2098,9 +2031,48 @@
         
         
             <span class="tag">
+                <a href="/tags/ios/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        ios
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        2
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/java/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        java
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        3
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
                 <a href="/tags/javascript/" class="is-tags taxo__link" data-dir="ltr">
                     <span class="taxo__text">
                         javascript
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        3
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/jdk/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        jdk
                     </span>
                     <span class="taxo__num" dir="auto">
                         1
@@ -2124,9 +2096,9 @@
         
         
             <span class="tag">
-                <a href="/tags/markdown/" class="is-tags taxo__link" data-dir="ltr">
+                <a href="/tags/lua/" class="is-tags taxo__link" data-dir="ltr">
                     <span class="taxo__text">
-                        markdown
+                        lua
                     </span>
                     <span class="taxo__num" dir="auto">
                         1
@@ -2150,61 +2122,9 @@
         
         
             <span class="tag">
-                <a href="/tags/namoji/" class="is-tags taxo__link" data-dir="ltr">
-                    <span class="taxo__text">
-                        namoji
-                    </span>
-                    <span class="taxo__num" dir="auto">
-                        1
-                    </span>
-                </a>
-            </span>
-        
-        
-        
-            <span class="tag">
-                <a href="/tags/privacy/" class="is-tags taxo__link" data-dir="ltr">
-                    <span class="taxo__text">
-                        privacy
-                    </span>
-                    <span class="taxo__num" dir="auto">
-                        1
-                    </span>
-                </a>
-            </span>
-        
-        
-        
-            <span class="tag">
                 <a href="/tags/profiler/" class="is-tags taxo__link" data-dir="ltr">
                     <span class="taxo__text">
                         Profiler
-                    </span>
-                    <span class="taxo__num" dir="auto">
-                        1
-                    </span>
-                </a>
-            </span>
-        
-        
-        
-            <span class="tag">
-                <a href="/tags/shortcode/" class="is-tags taxo__link" data-dir="ltr">
-                    <span class="taxo__text">
-                        shortcode
-                    </span>
-                    <span class="taxo__num" dir="auto">
-                        1
-                    </span>
-                </a>
-            </span>
-        
-        
-        
-            <span class="tag">
-                <a href="/tags/shortcodes/" class="is-tags taxo__link" data-dir="ltr">
-                    <span class="taxo__text">
-                        shortcodes
                     </span>
                     <span class="taxo__num" dir="auto">
                         1
@@ -2228,9 +2148,9 @@
         
         
             <span class="tag">
-                <a href="/tags/themes/" class="is-tags taxo__link" data-dir="ltr">
+                <a href="/tags/tolua/" class="is-tags taxo__link" data-dir="ltr">
                     <span class="taxo__text">
-                        themes
+                        toLua
                     </span>
                     <span class="taxo__num" dir="auto">
                         1
@@ -2241,9 +2161,9 @@
         
         
             <span class="tag">
-                <a href="/tags/tolua/" class="is-tags taxo__link" data-dir="ltr">
+                <a href="/tags/typescript/" class="is-tags taxo__link" data-dir="ltr">
                     <span class="taxo__text">
-                        toLua
+                        typescript
                     </span>
                     <span class="taxo__num" dir="auto">
                         1
@@ -2259,7 +2179,7 @@
                         Unity
                     </span>
                     <span class="taxo__num" dir="auto">
-                        3
+                        4
                     </span>
                 </a>
             </span>
@@ -2272,7 +2192,7 @@
                         xLua
                     </span>
                     <span class="taxo__num" dir="auto">
-                        1
+                        2
                     </span>
                 </a>
             </span>
@@ -2293,63 +2213,11 @@
         
         
             <span class="tag">
-                <a href="/categories/diagram/" class="is-categories taxo__link" data-dir="ltr">
-                    <span class="taxo__text">
-                        diagram
-                    </span>
-                    <span class="taxo__num" dir="auto">
-                        6
-                    </span>
-                </a>
-            </span>
-        
-        
-        
-            <span class="tag">
-                <a href="/categories/hugo/" class="is-categories taxo__link" data-dir="ltr">
-                    <span class="taxo__text">
-                        hugo
-                    </span>
-                    <span class="taxo__num" dir="auto">
-                        1
-                    </span>
-                </a>
-            </span>
-        
-        
-        
-            <span class="tag">
                 <a href="/categories/math/" class="is-categories taxo__link" data-dir="ltr">
                     <span class="taxo__text">
                         math
                     </span>
                     <span class="taxo__num" dir="auto">
-                        2
-                    </span>
-                </a>
-            </span>
-        
-        
-        
-            <span class="tag">
-                <a href="/categories/syntax/" class="is-categories taxo__link" data-dir="ltr">
-                    <span class="taxo__text">
-                        syntax
-                    </span>
-                    <span class="taxo__num" dir="auto">
-                        1
-                    </span>
-                </a>
-            </span>
-        
-        
-        
-            <span class="tag">
-                <a href="/categories/themes/" class="is-categories taxo__link" data-dir="ltr">
-                    <span class="taxo__text">
-                        themes
-                    </span>
-                    <span class="taxo__num" dir="auto">
                         1
                     </span>
                 </a>
@@ -2359,31 +2227,6 @@
     </section>
 </div>
 
-
-<div class="taxo">
-    <section>
-        <span class="title p2">
-            <a href="/series/" class="taxo__title">
-                Series
-            </a>
-        </span>
-        
-        
-        
-            <span class="tag">
-                <a href="/series/themes-guide/" class="is-series taxo__link" data-dir="ltr">
-                    <span class="taxo__text">
-                        Themes Guide
-                    </span>
-                    <span class="taxo__num" dir="auto">
-                        1
-                    </span>
-                </a>
-            </span>
-        
-        
-    </section>
-</div>
 
 
 </div>
@@ -2624,6 +2467,27 @@
         
         
     </div> 
+
+        <p class="credits copyright text-muted">
+        &copy;2017-2022
+          
+          &nbsp;&bull;&nbsp;
+          November 29,2021
+          updated
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://yichenlove.github.io/">Home</a>
+          
+        </p>
+        <p class="credits theme-by text-muted" style="text-align:center;">
+        <span id="busuanzi_container_site_pv ">
+            本站访问量：<span id="busuanzi_value_site_pv"></span>次
+        </span>
+        &nbsp;
+        <span id="busuanzi_container_site_uv">
+            您是本站第 <span id="busuanzi_value_site_uv"></span> 位访问者
+        </span>
+        </p>
 </footer>
         </div>
         
