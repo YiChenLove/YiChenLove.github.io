@@ -27,7 +27,7 @@
         <author>chen61813772@gmail.com (wangyichen)</author>
         <atom:modified>Mon, 29 Nov 2021 15:04:06 +0800</atom:modified>
         <guid>https://yichenlove.github.io/posts/ln-factorial/</guid>
-        <description>编写一个递归的静态方法计算ln(N!)的值。 代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 public class Main { public static double f(int N){ //递归的题目还是要靠递归的方式解决 //递归吧</description>
+        <description>编写一个递归的静态方法计算ln(N!)的值。 代码 alo 1 2 3 4 5 6 7 8 9 10 11 12 13 14 public class Main { public static double f(int N){ //递归的题目还是要靠递归的方式解决 //递归</description>
         
         <dc:creator>wangyichen</dc:creator>
         
