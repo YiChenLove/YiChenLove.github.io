@@ -1408,6 +1408,8 @@
 
 
 
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
     
 </head>
 
@@ -2959,7 +2961,7 @@
   window.onload = function() {
     
     
-    var enableBusuanzi = JSON.parse("false");
+    var enableBusuanzi = JSON.parse("true");
     if (enableBusuanzi) {
       var sitePvElem = document.querySelector('#busuanzi_value_site_pv');
       var siteUvElem = document.querySelector('#busuanzi_value_site_uv');
@@ -3111,6 +3113,28 @@
 
     <div class="footer__poweredby">
         
+  <div class="busuanzi">
+    
+    
+      <div class="busuanzi__item">
+        <span class="busuanzi__item--label">
+          Total visitors
+        </span>
+        <span id="busuanzi_value_site_uv" class="busuanzi__item--number">...</span>
+      </div>
+    
+
+    
+      <div class="busuanzi__item">
+        <span class="busuanzi__item--label">
+          Total views
+        </span>
+        <span id="busuanzi_value_site_pv" class="busuanzi__item--number">...</span>
+      </div>
+    
+
+  </div>
+
                 
             <p class="caption">
                 
@@ -3125,26 +3149,6 @@
         
     </div> 
 
-        <p class="credits copyright text-muted">
-        &copy;2017-2022
-          
-          &nbsp;&bull;&nbsp;
-          November 30,2021
-          updated
-          
-            &nbsp;&bull;&nbsp;
-            <a href="https://yichenlove.github.io/">Home</a>
-          
-        </p>
-        <p class="credits theme-by text-muted" style="text-align:center;">
-        <span id="busuanzi_container_site_pv ">
-            本站访问量：<span id="busuanzi_value_site_pv"></span>次
-        </span>
-        &nbsp;
-        <span id="busuanzi_container_site_uv">
-            您是本站第 <span id="busuanzi_value_site_uv"></span> 位访问者
-        </span>
-        </p>
 </footer>
         </div>
         
