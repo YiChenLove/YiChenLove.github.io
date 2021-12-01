@@ -14,11 +14,35 @@
     <managingEditor>chen61813772@gmail.com (wangyichen)</managingEditor>
     <webMaster>chen61813772@gmail.com (wangyichen)</webMaster>
     <copyright>©2021, All Rights Reserved</copyright>
-    <lastBuildDate>Tue, 30 Nov 2021 14:28:41 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 01 Dec 2021 20:33:28 +0800</lastBuildDate>
     
         <atom:link href="https://yichenlove.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>Unity的DraCall和Batch</title>
+        <link>https://yichenlove.github.io/posts/unity-drawcall-batch/</link>
+        <pubDate>Wed, 01 Dec 2021 20:33:28 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        <atom:modified>Wed, 01 Dec 2021 20:33:28 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/unity-drawcall-batch/</guid>
+        <description>制作性能更高的UI DrawCall和Batch 抛去他复杂的定义，从字面意思上来理解，DrawCall,就是CPU准备好了数据呼叫GPU去绘制</description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>unity</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>欧几里得算法</title>
