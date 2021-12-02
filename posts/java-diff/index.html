@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Unity的DraCall和Batch – wangyichen&#39;s blog</title>
+    <title>Java中的难点知识 – wangyichen&#39;s blog</title>
     
 
 
@@ -653,7 +653,7 @@
     
     var baseurl = JSON.parse("\"https://yichenlove.github.io/\"");
     
-    var permalink = JSON.parse("\"https://yichenlove.github.io/posts/unity-drawcall-batch/\"");
+    var permalink = JSON.parse("\"https://yichenlove.github.io/posts/java-diff/\"");
     
     var langprefix = JSON.parse("\"\"");
     var searchResults = null;
@@ -1334,18 +1334,18 @@
 <meta name="description" content="The blog of wangyichen." />
 
 
-<meta name="keywords" content="unity">
+<meta name="keywords" content="java">
 
-<meta name="created" content="2021-12-01T20:33:28&#43;0800">
-<meta name="modified" content="2021-12-01T20:33:28&#43;0800">
-<meta property="article:published_time" content="2021-12-01T20:33:28&#43;0800">
+<meta name="created" content="2021-12-02T20:12:01&#43;0800">
+<meta name="modified" content="2021-12-02T20:12:01&#43;0800">
+<meta property="article:published_time" content="2021-12-02T20:12:01&#43;0800">
 
 <meta name="author" content="wangyichen">
 
 
 <meta property="og:site_name" content="wangyichen&#39;s blog">
-<meta property="og:title" content="Unity的DraCall和Batch">
-<meta property="og:url" content="https://yichenlove.github.io/posts/unity-drawcall-batch/">
+<meta property="og:title" content="Java中的难点知识">
+<meta property="og:url" content="https://yichenlove.github.io/posts/java-diff/">
 <meta property="og:type" content="article">
 <meta property="og:description" content="The blog of wangyichen.">
 
@@ -1358,7 +1358,7 @@
 
 <meta name="apple-mobile-web-app-status-bar-style" content="#fff">
 
-<link rel="canonical" href="https://yichenlove.github.io/posts/unity-drawcall-batch/">
+<link rel="canonical" href="https://yichenlove.github.io/posts/java-diff/">
 
 <link rel="manifest" href="/manifest.json">
 
@@ -1383,12 +1383,12 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "Unity的DraCall和Batch",
-    "datePublished": "2021-12-01T20:33:28+08:00",
-    "dateModified": "2021-12-01T20:33:28+08:00",
-    "url" : "https://yichenlove.github.io/posts/unity-drawcall-batch/",
-    "description": "制作性能更高的UI DrawCall和Batch 抛去他复杂的定义，从字面意思上来理解，DrawCall,就是CPU准备好了数据呼叫GPU去绘制",
-    "keywords": ["unity"],
+    "headline": "Java中的难点知识",
+    "datePublished": "2021-12-02T20:12:01+08:00",
+    "dateModified": "2021-12-02T20:12:01+08:00",
+    "url" : "https://yichenlove.github.io/posts/java-diff/",
+    "description": "1、简述一下JVM加载class文件的原理机制。 Java中的所有类，都需要由类加载器装载到JVM中才能运行。类加载器本身也是一个类，而它的工",
+    "keywords": ["java"],
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://yichenlove.github.io/"
@@ -1789,7 +1789,7 @@
   
   <li  class="is-active" >
     
-      <span>Unity的DraCall和Batch</span>
+      <span>Java中的难点知识</span>
     
   </li>
   
@@ -1801,14 +1801,14 @@
   <div class="single ">
     <div class="single__nojs">This page looks best with JavaScript enabled</div>
     <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
-    <h2 class="single__title" data-ani="true">Unity的DraCall和Batch</h2>
+    <h2 class="single__title" data-ani="true">Java中的难点知识</h2>
     <h3 class="single__subtitle"></h3>
     <div class="single__meta">
       
 <div class="single__infos">
-  <time class="single__info" title="Written At">📅&nbsp;Dec 1, 2021 </time>
+  <time class="single__info" title="Written At">📅&nbsp;Dec 2, 2021 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;5&nbsp;min read </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;12&nbsp;min read </span>
   
   <span class="single__info">
      &middot; 👀<span id="busuanzi_value_page_pv">...</span> views
@@ -1821,56 +1821,516 @@
   🏷️
   
 
-  <li><a href="https://yichenlove.github.io/tags/unity/" class="single__tag" title="Unity">#Unity</a></li>
+  <li><a href="https://yichenlove.github.io/tags/java/" class="single__tag" title="java">#java</a></li>
 
 </ul>
 
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <h2 id="制作性能更高的ui">制作性能更高的UI</h2>
-<h3 id="drawcall和batch">DrawCall和Batch</h3>
+      <h2 id="1简述一下jvm加载class文件的原理机制">1、简述一下JVM加载class文件的原理机制。</h2>
 <blockquote>
-<p>抛去他复杂的定义，从字面意思上来理解，DrawCall,就是CPU准备好了数据呼叫GPU去绘制。假设场景中有两个按钮，他们使用了两张不同的图，那么每一帧就会存在2个DrawCall来分别绘制这两个按钮。但是，如果这两个按钮使用的是同一个贴图，而且使用了同一个材质，那么每一帧就只会有一个DrawCall，DrawCall的数量越低，表示性能越好。<br />
-Batch可以理解为DrawCall的另一种称呼，每一次DrawCall都会产生一个Batch，里面存放这需要绘制的顶点信息，Batch由CPU送往GPU进行绘制。所以Drawcall越多，Batch的数量越多，CPU的负担会越大。NVIDIA 在 GDC 曾经提出，25K batchs/sec 会消耗掉 1GHz 的 CPU，100% 的使用率。<br />
-所以制作性能更好的UI，最基本的思路，就是尽量使用同一个材质，将单独的图片制作成图集，在Unity里进行slice之后再使用。</p>
+<p>Java中的所有类，都需要由类加载器装载到JVM中才能运行。类加载器本身也是一个类，而它的工作就是把class文件从硬盘读取到内存中。在写程序的时候，我们几乎不需要关心类的加载，因为这些都是隐式装载的，除非我们有特殊的用法，像是反射，就需要显式的加载所需要的类。</p>
 </blockquote>
-<h3 id="关于batch">关于Batch</h3>
 <blockquote>
-<p>上面为了便于理解，把Batch解释成一个装有顶点信息的箱子，实际上batch是一个过程。batch render 是大部分引擎提高渲染效率的方法，基本原理就是通过将一些渲染状态一致的物体合成一个大物体，一次提交给gpu进行绘制，如果不batch的话，就要提交给很多次，这可以显著的节省drawcall，实际上这主要节省了cpu的时间，cpu从提交多次到提交一次，对gpu来说也不用多次切换渲染状态。当然能batch的前提一定是渲染状态一致的一组物体。<br />
-Unity3d的批渲染分为两种，动态和静态。<br />
-静态批<br />
-要求：必须使用同一材质，然后在编辑器里设置为static batching的。<br />
-特点：静态批是无法运动的。<br />
-所以一般制作流程上，对于场景这些静态的物体都采用静态批，美术会根据场景的规模，将相邻的一片物件的贴图合并到一张或几张1024或512的大图上，这样这些物件可以使用同一个material，就可以静态批在一起，大幅节省dc（drawCall）。静态批的时候Unity3d会在运行时生成一个合并的大模型，并且为这个模型指定一张共同的贴图，所以这个批在一起的数量是有限的，如果批在一起的定点数过多，它就会自动分成两个。<br />
-动态批<br />
-动态批是对那些没有标记成static batching的物体在runtime unity自动将他们批在一起，这个是可以支持运动物体的，但是限制较为严格：<br />
-1.一个批次总顶点单元少于900<br />
-2.批在一起的所有的模型应用同样的缩放值<br />
-3.使用相同的材质<br />
-4.相同的一张lightmap等等</p>
+<p><code>1.1、类装载方式</code><br />
+<code>类装载方式</code>，有两种 ：<br />
+　　1.隐式装载， 程序在运行过程中当碰到通过new 等方式生成对象时，隐式调用类装载器加载对应的类到jvm中，<br />
+　　2.显式装载， 通过class.forname()等方法，显式加载需要的类</p>
 </blockquote>
-<h3 id="动静分离">动静分离</h3>
+<p>隐式加载与显式加载的区别：两者本质是一样?</p>
 <blockquote>
-<p>从上面的内容我们知道，只要把UI统一材质，然后使用图集，就能减少DrawCall，那么我们把所有的内容都集中到一个图上，做一个超大的图集，是不是能做到只有一个DrawCall呢？显然没有那么简单。<br />
-在大部分情况下，UI是静止的，这种时候使用上面的方法确实是最好的办法。但有很多时候UI还是会动的，比如血条长短的变化，比如需要一个UI从视野外面飞入的动画。这种时候如果你把会动的UI和静止的UI使用了同一个图集，每一次的动画都会导致Batch箱子里的内容发生变化从而静止的UI也都会重新绘制，这是得不偿失的。<br />
-解决这个问题的办法是做分离，我们可以在canvas节点下新建canvas，Unity会在每个canvas内做合并。我们可以把静态的UI放在一个canvas内，动态的UI放在另一个canvas内部，这样做到动静分离，就能保证大部分的UI元素都会被合并渲染，而且动态的UI变化不会导致静态的UI重绘。</p>
+<p>Java类的加载是动态的，它并不会一次性将所有类全部加载后再运行，而是保证程序运行的基础类(像是基类)完全加载到jvm中，至于其他类，则在需要的时候才加载。这当然就是为了节省内存开销。</p>
 </blockquote>
-<h3 id="渲染顺序对合批的影响">渲染顺序对合批的影响</h3>
 <blockquote>
-<p>依次点击Window–Analysis–FrameDebugger打开界面<br />
+<p><code>1.2、Java的类加载器</code><br />
+<code>Java的类加载器</code>有三个，对应Java的三种类:（java中的类大致分为三种： 1.系统类 2.扩展类 3.由程序员自定义的类 ）</p>
+</blockquote>
+<pre tabindex="0"><code>Bootstrap Loader  // 负责加载系统类 (指的是内置类，像是String，对应于C#中的System类和C/C++标准库中的类)
+            | 
+          - - ExtClassLoader   // 负责加载扩展类(就是继承类和实现类)
+                          | 
+                      - - AppClassLoader   // 负责加载应用类(程序员自定义的类)
+</code></pre><blockquote>
+<p>三个加载器各自完成自己的工作，但它们是如何协调工作呢？哪一个类该由哪个类加载器完成呢？为了解决这个问题，Java采用了委托模型机制。</p>
+</blockquote>
+<blockquote>
+<p><code>1.3、类加载器工作原理</code><br />
+<code>委托模型机制</code>的工作原理很简单：当类加载器需要加载类的时候，先请示其Parent(即上一层加载器)在其搜索路径载入，如果找不到，才在自己的搜索路径搜索该类。这样的顺序其实就是加载器层次上自顶而下的搜索，因为加载器必须保证基础类的加载。之所以是这种机制，还有一个安全上的考虑：如果某人将一个恶意的基础类加载到jvm，委托模型机制会搜索其父类加载器，显然是不可能找到的，自然就不会将该类加载进来。</p>
+</blockquote>
+<blockquote>
+<p><code>1.4 JVM加载class文件的原理机制</code></p>
+</blockquote>
+<ul>
+<li>
+<blockquote>
+<p><code>装载</code>：查找和导入class文件;</p>
+</blockquote>
+</li>
+<li>
+<blockquote>
+<p><code>连接</code>：</p>
+</blockquote>
+<ul>
+<li>
+<blockquote>
+<p><code>检查</code>：检查载入的class文件数据的正确性;</p>
+</blockquote>
+</li>
+<li>
+<blockquote>
+<p><code>准备</code>：为类的静态变量分配存储空间;</p>
+</blockquote>
+</li>
+<li>
+<blockquote>
+<p><code>解析</code>：将符号引用转换成直接引用(这一步是可选的)</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>
+<blockquote>
+<p><code>初始化</code>：初始化静态变量，静态代码块。</p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>这样的过程在程序调用类的静态成员的时候开始执行，所以静态方法main()才会成为一般程序的入口方法。类的构造器也会引发该动作。</p>
+</blockquote>
+<h2 id="2多线程有几种实现方法同步有几种实现方法">2、多线程有几种实现方法？同步有几种实现方法？</h2>
+<blockquote>
+<p><code>多线程有两种实现方法</code>，分别是继承Thread类与实现Runnable接口；也可以使用实现Callable接口，重写call（）方法，这实际上是Executor框架中的功能类</p>
+</blockquote>
+<blockquote>
+<p><code>同步的实现方面有两种</code>，分别是synchronized,wait与notify</p>
+</blockquote>
+<h2 id="3什么是分布式事务如何解决分布式事务">3、什么是分布式事务，如何解决分布式事务</h2>
+<blockquote>
+<p><code>分布式事务</code>：单体应用拆分为分布式系统后，进程间的通讯机制和故障处理措施变的更加复杂。系统微服务化后，一个看似简单的功能，内部可能需要调用多个服务并操作多个数据库实现，服务调用的分布式事务问题变的非常突出。</p>
+</blockquote>
+<blockquote>
+<p><code>如何解决</code>：<br />
+1、 <code>基于XA协议的两阶段提交方案</code>：交易中间件与数据库通过 XA 接口规范，使用两阶段提交来完成一个全局事务， XA 规范的基础是两阶段提交协议。</p>
+</blockquote>
+<blockquote>
+<p>第一阶段是表决阶段，所有参与者都将本事务能否成功的信息反馈发给协调者；第二阶段是执行阶段，协调者根据所有参与者的反馈，通知所有参与者，步调一致地在所有分支上提交或者回滚。</p>
+</blockquote>
+<blockquote>
+<p>但是两阶段提交方案锁定资源时间长，对性能影响很大，基本不适合解决微服务事务问题。</p>
+</blockquote>
+<blockquote>
+<p>2、 <code>TCC方案</code>：其将整个业务逻辑的每个分支显式的分成了Try、Confirm、Cancel三个操作。Try部分完成业务的准备工作，confirm部分完成业务的提交，cancel部分完成事务的回滚。</p>
+</blockquote>
+<blockquote>
+<p>事务开始时，业务应用会向事务协调器注册启动事务。之后业务应用会调用所有服务的try接口，完成一阶段准备。之后事务协调器会根据try接口返回情况，决定调用confirm接口或者cancel接口。如果接口调用失败，会进行重试。</p>
+</blockquote>
+<blockquote>
+<p>TCC方案让应用自己定义数据库操作的粒度，使得降低锁冲突、提高吞吐量成为可能。 当然TCC方案也有不足之处，集中表现在以下两个方面：</p>
+</blockquote>
+<ul>
+<li>对应用的侵入性强。业务逻辑的每个分支都需要实现try、confirm、cancel三个操作，应用侵入性较强，改造成本高。</li>
+<li>实现难度较大。需要按照网络状态、系统故障等不同的失败原因实现不同的回滚策略。为了满足一致性的要求，confirm和cancel接口必须实现幂等。</li>
+</ul>
+<blockquote>
+<p>3、 <code>基于消息的最终一致性方案</code><br />
+消息一致性方案是通过消息中间件保证上、下游应用数据操作的一致性。基本思路是将本地操作和发送消息放在一个事务中，保证本地操作和消息发送要么两者都成功或者都失败。下游应用向消息系统订阅该消息，收到消息后执行相应操作。</p>
+</blockquote>
+<blockquote>
+<p>4、 <code>GTS–分布式事务解决方案</code></p>
+</blockquote>
+<ul>
+<li>
+<blockquote>
+<p><code>性能超强</code>：<br />
+GTS通过大量创新，解决了事务ACID特性与高性能、高可用、低侵入不可兼得的问题。单事务分支的平均响应时间在2ms左右，3台服务器组成的集群可以支撑3万TPS以上的分布式事务请求。</p>
+</blockquote>
+</li>
+<li>
+<blockquote>
+<p><code>应用侵入性极低</code>：<br />
+GTS对业务低侵入，业务代码最少只需要添加一行注解（@TxcTransaction）声明事务即可。业务与事务分离，将微服务从事务中解放出来，微服务关注于业务本身，不再需要考虑反向接口、幂等、回滚策略等复杂问题，极大降低了微服务开发的难度与工作量。</p>
+</blockquote>
+</li>
+<li>
+<blockquote>
+<p><code>完整解决方案</code>：<br />
+GTS支持多种主流的服务框架，包括EDAS，Dubbo，Spring Cloud等。<br />
+有些情况下，应用需要调用第三方系统的接口，而第三方系统没有接入GTS。此时需要用到GTS的MT模式。GTS的MT模式可以等价于TCC模式，用户可以根据自身业务需求自定义每个事务阶段的具体行为。MT模式提供了更多的灵活性，可能性，以达到特殊场景下的自定义优化及特殊功能的实现。</p>
+</blockquote>
+</li>
+<li>
+<blockquote>
+<p><code>容错能力强</code>：<br />
+GTS解决了XA事务协调器单点问题，实现真正的高可用，可以保证各种异常情况下的严格数据一致。</p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>参考文档：</p>
+</blockquote>
+<ul>
+<li><a href="https://www.cnblogs.com/jiangyu666/p/8522547.html">https://www.cnblogs.com/jiangyu666/p/8522547.html</a></li>
+</ul>
+<h2 id="4-hashmap与hashtable的异同">4. HashMap与Hashtable的异同？</h2>
+<blockquote>
+<p>相同点：键不可重复，值可以重复。底层都是哈希表（单链Node构成的数组）。<br />
+不同点：</p>
+</blockquote>
+<ul>
+<li>HashMap：线程不安全，允许key和value为null。</li>
+<li>Hashtable：线程安全，key和value都不能为null，否则会抛NullPointerException异常。</li>
+</ul>
+<h2 id="5-arraylist和vector和linkedlist">5. ArrayList和Vector和LinkedList</h2>
+<blockquote>
+<p>相同点：都是List的子类，因此排列有序，值可重复。<br />
+特点：</p>
+</blockquote>
+<ul>
+<li>ArrayList ：底层使用数组，因此查找速度快，增删速度慢。线程不安全。当容量不足时，扩容方案是 <code>当前容量 * 1.5 +1</code></li>
+<li>Vector：底层使用数组，因此查找速度快，增删速度慢。因为add方法使用了synchronized关键字，所以线程安全，但效率低。当容量不足时，扩容方案是当前容量的一倍。</li>
+<li>LinkedList：底层使用的是双向循环链表结构，因此查询慢，增删快。线程不安全。</li>
+</ul>
+<h2 id="6-hashmap实现数组--链表--红黑树red-black-tree">6. HashMap实现（数组 + 链表 + 红黑树red-black tree）</h2>
+<blockquote>
+<p>HashMap源码剖析：<br />
+可以看到，其数据结构是一个单项链表Node数组构成。根据Node的数据结构，可以看出，HashMap中存储了一个hash（算法生成，后面具体讲）、key、value，以及一个Node指针。</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="c1">// @since   2
+</span><span class="c1"></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">HashMap</span><span class="o">&lt;</span><span class="n">K</span><span class="o">,</span><span class="n">V</span><span class="o">&gt;</span> <span class="kd">extends</span> <span class="n">AbstractMap</span><span class="o">&lt;</span><span class="n">K</span><span class="o">,</span><span class="n">V</span><span class="o">&gt;</span>
+    <span class="kd">implements</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">K</span><span class="o">,</span><span class="n">V</span><span class="o">&gt;,</span> <span class="n">Cloneable</span><span class="o">,</span> <span class="n">Serializable</span> <span class="o">{</span>
+
+ <span class="kd">transient</span> <span class="n">Node</span><span class="o">&lt;</span><span class="n">K</span><span class="o">,</span><span class="n">V</span><span class="o">&gt;[]</span> <span class="n">table</span><span class="o">;</span>   <span class="c1">//数组Node
+</span><span class="c1"></span>
+	<span class="c1">//Node是一个单项链表，静态内部类
+</span><span class="c1"></span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">Node</span><span class="o">&lt;</span><span class="n">K</span><span class="o">,</span><span class="n">V</span><span class="o">&gt;</span> <span class="kd">implements</span> <span class="n">Map</span><span class="o">.</span><span class="na">Entry</span><span class="o">&lt;</span><span class="n">K</span><span class="o">,</span><span class="n">V</span><span class="o">&gt;</span> <span class="o">{</span>
+        <span class="kd">final</span> <span class="kt">int</span> <span class="n">hash</span><span class="o">;</span>
+        <span class="kd">final</span> <span class="n">K</span> <span class="n">key</span><span class="o">;</span>
+        <span class="n">V</span> <span class="n">value</span><span class="o">;</span>
+        <span class="n">Node</span><span class="o">&lt;</span><span class="n">K</span><span class="o">,</span><span class="n">V</span><span class="o">&gt;</span> <span class="n">next</span><span class="o">;</span>
+
+        <span class="n">Node</span><span class="o">(</span><span class="kt">int</span> <span class="n">hash</span><span class="o">,</span> <span class="n">K</span> <span class="n">key</span><span class="o">,</span> <span class="n">V</span> <span class="n">value</span><span class="o">,</span> <span class="n">Node</span><span class="o">&lt;</span><span class="n">K</span><span class="o">,</span><span class="n">V</span><span class="o">&gt;</span> <span class="n">next</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">this</span><span class="o">.</span><span class="na">hash</span> <span class="o">=</span> <span class="n">hash</span><span class="o">;</span>
+            <span class="k">this</span><span class="o">.</span><span class="na">key</span> <span class="o">=</span> <span class="n">key</span><span class="o">;</span>
+            <span class="k">this</span><span class="o">.</span><span class="na">value</span> <span class="o">=</span> <span class="n">value</span><span class="o">;</span>
+            <span class="k">this</span><span class="o">.</span><span class="na">next</span> <span class="o">=</span> <span class="n">next</span><span class="o">;</span>
+        <span class="o">}</span>
+      <span class="c1">//  ...
+</span><span class="c1"></span>    <span class="o">}</span>
+
+
+<span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>put方法如下，该方法的主要目的是要确定插入节点的位置，如果节点已存在，则替换value值。<br />
+可以看到，</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="o">(</span><span class="n">h</span> <span class="o">=</span> <span class="n">key</span><span class="o">.</span><span class="na">hashCode</span><span class="o">())</span> <span class="o">^</span> <span class="o">(</span><span class="n">h</span> <span class="o">&gt;&gt;&gt;</span> <span class="n">16</span><span class="o">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>用来计算出hash值后， <code>(n - 1) &amp; hash</code>来计算出这个key、value应该存储再数组的下表的那个链表下， <code>n = table.length</code>。所以</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="n">tab</span><span class="o">[</span><span class="n">i</span> <span class="o">=</span> <span class="o">(</span><span class="n">n</span> <span class="o">-</span> <span class="n">1</span><span class="o">)</span> <span class="o">&amp;</span> <span class="n">hash</span><span class="o">]</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>实际上是链表头节点位置。然后顺着这个头节点遍历下去，如果节点已存在，则替换value值；否则讲节点放在链尾上。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="n">V</span> <span class="nf">put</span><span class="o">(</span><span class="n">K</span> <span class="n">key</span><span class="o">,</span> <span class="n">V</span> <span class="n">value</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">putVal</span><span class="o">(</span><span class="n">hash</span><span class="o">(</span><span class="n">key</span><span class="o">),</span> <span class="n">key</span><span class="o">,</span> <span class="n">value</span><span class="o">,</span> <span class="kc">false</span><span class="o">,</span> <span class="kc">true</span><span class="o">);</span>
+    <span class="o">}</span>
+
+	<span class="c1">//hash值生成算法
+</span><span class="c1"></span>    <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="nf">hash</span><span class="o">(</span><span class="n">Object</span> <span class="n">key</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">h</span><span class="o">;</span>
+        <span class="c1">//取key得hashCode码  异或 key得hashCode码无符号右移16的结果，这个值算出来是可重复的。也就是不同的key，可能算出来相同的值，这个值就是数组的下标，相同值得key会放在这个数据下表下面得链表中。
+</span><span class="c1"></span>        <span class="k">return</span> <span class="o">(</span><span class="n">key</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">?</span> <span class="n">0</span> <span class="o">:</span> <span class="o">(</span><span class="n">h</span> <span class="o">=</span> <span class="n">key</span><span class="o">.</span><span class="na">hashCode</span><span class="o">())</span> <span class="o">^</span> <span class="o">(</span><span class="n">h</span> <span class="o">&gt;&gt;&gt;</span> <span class="n">16</span><span class="o">);</span>
+    <span class="o">}</span>
+
+	<span class="c1">//具体的算法
+</span><span class="c1"></span>   <span class="kd">final</span> <span class="n">V</span> <span class="nf">putVal</span><span class="o">(</span><span class="kt">int</span> <span class="n">hash</span><span class="o">,</span> <span class="n">K</span> <span class="n">key</span><span class="o">,</span> <span class="n">V</span> <span class="n">value</span><span class="o">,</span> <span class="kt">boolean</span> <span class="n">onlyIfAbsent</span><span class="o">,</span>
+                   <span class="kt">boolean</span> <span class="n">evict</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">Node</span><span class="o">&lt;</span><span class="n">K</span><span class="o">,</span><span class="n">V</span><span class="o">&gt;[]</span> <span class="n">tab</span><span class="o">;</span> <span class="n">Node</span><span class="o">&lt;</span><span class="n">K</span><span class="o">,</span><span class="n">V</span><span class="o">&gt;</span> <span class="n">p</span><span class="o">;</span> <span class="kt">int</span> <span class="n">n</span><span class="o">,</span> <span class="n">i</span><span class="o">;</span>
+        <span class="k">if</span> <span class="o">((</span><span class="n">tab</span> <span class="o">=</span> <span class="n">table</span><span class="o">)</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">||</span> <span class="o">(</span><span class="n">n</span> <span class="o">=</span> <span class="n">tab</span><span class="o">.</span><span class="na">length</span><span class="o">)</span> <span class="o">==</span> <span class="n">0</span><span class="o">)</span> <span class="c1">//如果table为空，就初始化table
+</span><span class="c1"></span>            <span class="n">n</span> <span class="o">=</span> <span class="o">(</span><span class="n">tab</span> <span class="o">=</span> <span class="n">resize</span><span class="o">()).</span><span class="na">length</span><span class="o">;</span>  
+        <span class="k">if</span> <span class="o">((</span><span class="n">p</span> <span class="o">=</span> <span class="n">tab</span><span class="o">[</span><span class="n">i</span> <span class="o">=</span> <span class="o">(</span><span class="n">n</span> <span class="o">-</span> <span class="n">1</span><span class="o">)</span> <span class="o">&amp;</span> <span class="n">hash</span><span class="o">])</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span>   <span class="c1">//如果数组下标下，没有链表
+</span><span class="c1"></span>            <span class="n">tab</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">newNode</span><span class="o">(</span><span class="n">hash</span><span class="o">,</span> <span class="n">key</span><span class="o">,</span> <span class="n">value</span><span class="o">,</span> <span class="kc">null</span><span class="o">);</span> <span class="c1">//新建一个Node节点，放在指定位置上
+</span><span class="c1"></span>        <span class="k">else</span> <span class="o">{</span><span class="c1">//如果数组下标下，存在链表
+</span><span class="c1"></span>            <span class="n">Node</span><span class="o">&lt;</span><span class="n">K</span><span class="o">,</span><span class="n">V</span><span class="o">&gt;</span> <span class="n">e</span><span class="o">;</span> <span class="n">K</span> <span class="n">k</span><span class="o">;</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">p</span><span class="o">.</span><span class="na">hash</span> <span class="o">==</span> <span class="n">hash</span> <span class="o">&amp;&amp;</span>
+                <span class="o">((</span><span class="n">k</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="na">key</span><span class="o">)</span> <span class="o">==</span> <span class="n">key</span> <span class="o">||</span> <span class="o">(</span><span class="n">key</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="n">key</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">k</span><span class="o">))))</span> <span class="c1">//判断是不是和头节点的key相同，相同则位置确定
+</span><span class="c1"></span>                <span class="n">e</span> <span class="o">=</span> <span class="n">p</span><span class="o">;</span>
+            <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">p</span> <span class="k">instanceof</span> <span class="n">TreeNode</span><span class="o">)</span> <span class="c1">//看是不是红黑树
+</span><span class="c1"></span>                <span class="n">e</span> <span class="o">=</span> <span class="o">((</span><span class="n">TreeNode</span><span class="o">&lt;</span><span class="n">K</span><span class="o">,</span><span class="n">V</span><span class="o">&gt;)</span><span class="n">p</span><span class="o">).</span><span class="na">putTreeVal</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="n">tab</span><span class="o">,</span> <span class="n">hash</span><span class="o">,</span> <span class="n">key</span><span class="o">,</span> <span class="n">value</span><span class="o">);</span>
+            <span class="k">else</span> <span class="o">{</span> <span class="c1">//遍历链表，
+</span><span class="c1"></span>                <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">binCount</span> <span class="o">=</span> <span class="n">0</span><span class="o">;</span> <span class="o">;</span> <span class="o">++</span><span class="n">binCount</span><span class="o">)</span> <span class="o">{</span>
+                    <span class="k">if</span> <span class="o">((</span><span class="n">e</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="na">next</span><span class="o">)</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span> <span class="c1">//节点遍历完时，即链表最后一个了，还没有找到与key相同的节点，则把该节点放在最后。
+</span><span class="c1"></span>                        <span class="n">p</span><span class="o">.</span><span class="na">next</span> <span class="o">=</span> <span class="n">newNode</span><span class="o">(</span><span class="n">hash</span><span class="o">,</span> <span class="n">key</span><span class="o">,</span> <span class="n">value</span><span class="o">,</span> <span class="kc">null</span><span class="o">);</span>
+                        <span class="k">if</span> <span class="o">(</span><span class="n">binCount</span> <span class="o">&gt;=</span> <span class="n">TREEIFY_THRESHOLD</span> <span class="o">-</span> <span class="n">1</span><span class="o">)</span> <span class="c1">// -1 for 1st
+</span><span class="c1"></span>                            <span class="n">treeifyBin</span><span class="o">(</span><span class="n">tab</span><span class="o">,</span> <span class="n">hash</span><span class="o">);</span>  <span class="c1">//如果节点超过8个，降链表结构转换为红黑树结构
+</span><span class="c1"></span>                        <span class="k">break</span><span class="o">;</span>
+                    <span class="o">}</span>
+                    <span class="k">if</span> <span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="na">hash</span> <span class="o">==</span> <span class="n">hash</span> <span class="o">&amp;&amp;</span>
+                        <span class="o">((</span><span class="n">k</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="na">key</span><span class="o">)</span> <span class="o">==</span> <span class="n">key</span> <span class="o">||</span> <span class="o">(</span><span class="n">key</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="n">key</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">k</span><span class="o">))))</span> <span class="c1">//如链表中有key值相等的，则目标位置确定
+</span><span class="c1"></span>                        <span class="k">break</span><span class="o">;</span>
+                    <span class="n">p</span> <span class="o">=</span> <span class="n">e</span><span class="o">;</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">e</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span> <span class="c1">// existing mapping for key ，则值替换
+</span><span class="c1"></span>                <span class="n">V</span> <span class="n">oldValue</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="na">value</span><span class="o">;</span>
+                <span class="k">if</span> <span class="o">(!</span><span class="n">onlyIfAbsent</span> <span class="o">||</span> <span class="n">oldValue</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span>
+                    <span class="n">e</span><span class="o">.</span><span class="na">value</span> <span class="o">=</span> <span class="n">value</span><span class="o">;</span> <span class="c1">//如果key已经存在，替换value值
+</span><span class="c1"></span>                <span class="n">afterNodeAccess</span><span class="o">(</span><span class="n">e</span><span class="o">);</span>
+                <span class="k">return</span> <span class="n">oldValue</span><span class="o">;</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+        <span class="o">++</span><span class="n">modCount</span><span class="o">;</span>
+        <span class="k">if</span> <span class="o">(++</span><span class="n">size</span> <span class="o">&gt;</span> <span class="n">threshold</span><span class="o">)</span>
+            <span class="n">resize</span><span class="o">();</span>
+        <span class="n">afterNodeInsertion</span><span class="o">(</span><span class="n">evict</span><span class="o">);</span>
+        <span class="k">return</span> <span class="kc">null</span><span class="o">;</span>
+    <span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>get方法：</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="n">V</span> <span class="nf">get</span><span class="o">(</span><span class="n">Object</span> <span class="n">key</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">Node</span><span class="o">&lt;</span><span class="n">K</span><span class="o">,</span><span class="n">V</span><span class="o">&gt;</span> <span class="n">e</span><span class="o">;</span>
+        <span class="k">return</span> <span class="o">(</span><span class="n">e</span> <span class="o">=</span> <span class="n">getNode</span><span class="o">(</span><span class="n">hash</span><span class="o">(</span><span class="n">key</span><span class="o">),</span> <span class="n">key</span><span class="o">))</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">?</span> <span class="kc">null</span> <span class="o">:</span> <span class="n">e</span><span class="o">.</span><span class="na">value</span><span class="o">;</span>  <span class="c1">//hash生成和上面put方法一样。
+</span><span class="c1"></span>    <span class="o">}</span>
+
+    <span class="kd">final</span> <span class="n">Node</span><span class="o">&lt;</span><span class="n">K</span><span class="o">,</span><span class="n">V</span><span class="o">&gt;</span> <span class="nf">getNode</span><span class="o">(</span><span class="kt">int</span> <span class="n">hash</span><span class="o">,</span> <span class="n">Object</span> <span class="n">key</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">Node</span><span class="o">&lt;</span><span class="n">K</span><span class="o">,</span><span class="n">V</span><span class="o">&gt;[]</span> <span class="n">tab</span><span class="o">;</span> <span class="n">Node</span><span class="o">&lt;</span><span class="n">K</span><span class="o">,</span><span class="n">V</span><span class="o">&gt;</span> <span class="n">first</span><span class="o">,</span> <span class="n">e</span><span class="o">;</span> <span class="kt">int</span> <span class="n">n</span><span class="o">;</span> <span class="n">K</span> <span class="n">k</span><span class="o">;</span>
+        <span class="k">if</span> <span class="o">((</span><span class="n">tab</span> <span class="o">=</span> <span class="n">table</span><span class="o">)</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="o">(</span><span class="n">n</span> <span class="o">=</span> <span class="n">tab</span><span class="o">.</span><span class="na">length</span><span class="o">)</span> <span class="o">&gt;</span> <span class="n">0</span> <span class="o">&amp;&amp;</span>
+            <span class="o">(</span><span class="n">first</span> <span class="o">=</span> <span class="n">tab</span><span class="o">[(</span><span class="n">n</span> <span class="o">-</span> <span class="n">1</span><span class="o">)</span> <span class="o">&amp;</span> <span class="n">hash</span><span class="o">])</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span><span class="c1">//数组部位空，并且头节点不为空
+</span><span class="c1"></span>            <span class="k">if</span> <span class="o">(</span><span class="n">first</span><span class="o">.</span><span class="na">hash</span> <span class="o">==</span> <span class="n">hash</span> <span class="o">&amp;&amp;</span> <span class="c1">// always check first node
+</span><span class="c1"></span>                <span class="o">((</span><span class="n">k</span> <span class="o">=</span> <span class="n">first</span><span class="o">.</span><span class="na">key</span><span class="o">)</span> <span class="o">==</span> <span class="n">key</span> <span class="o">||</span> <span class="o">(</span><span class="n">key</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="n">key</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">k</span><span class="o">))))</span><span class="c1">//如果头节点就是该key，则目标找到
+</span><span class="c1"></span>                <span class="k">return</span> <span class="n">first</span><span class="o">;</span>
+            <span class="k">if</span> <span class="o">((</span><span class="n">e</span> <span class="o">=</span> <span class="n">first</span><span class="o">.</span><span class="na">next</span><span class="o">)</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+                <span class="k">if</span> <span class="o">(</span><span class="n">first</span> <span class="k">instanceof</span> <span class="n">TreeNode</span><span class="o">)</span>
+                    <span class="k">return</span> <span class="o">((</span><span class="n">TreeNode</span><span class="o">&lt;</span><span class="n">K</span><span class="o">,</span><span class="n">V</span><span class="o">&gt;)</span><span class="n">first</span><span class="o">).</span><span class="na">getTreeNode</span><span class="o">(</span><span class="n">hash</span><span class="o">,</span> <span class="n">key</span><span class="o">);</span>
+                <span class="k">do</span> <span class="o">{</span>
+                    <span class="k">if</span> <span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="na">hash</span> <span class="o">==</span> <span class="n">hash</span> <span class="o">&amp;&amp;</span>
+                        <span class="o">((</span><span class="n">k</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="na">key</span><span class="o">)</span> <span class="o">==</span> <span class="n">key</span> <span class="o">||</span> <span class="o">(</span><span class="n">key</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="n">key</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">k</span><span class="o">))))</span>
+                        <span class="k">return</span> <span class="n">e</span><span class="o">;</span>
+                <span class="o">}</span> <span class="k">while</span> <span class="o">((</span><span class="n">e</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="na">next</span><span class="o">)</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">);</span> <span class="c1">//遍历找出
+</span><span class="c1"></span>            <span class="o">}</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="kc">null</span><span class="o">;</span>
+    <span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="7-volatile-关键字的作用-变量可见性禁止重排序">7. volatile 关键字的作用 （变量可见性、禁止重排序）</h2>
+<blockquote>
+<p>Java 语言提供了一种稍弱的同步机制，即 volatile 变量，用来确保将变量的更新操作通知到其他线程。<br />
+volatile 变量具备两种特性，volatile 变量不会被缓存在寄存器或者对其他处理器不可见的地方，因此在读取 volatile 类型的变量时总会返回最新写入的值。</p>
+</blockquote>
+<ul>
+<li>变量可见性：其一是保证该变量对所有线程可见，这里的可见性指的是当一个线程修改了变量的值，那么新的值对于其他线程是可以立即获取的。</li>
+<li>禁止重排序：volatile 禁止了指令重排。但是使用volatile将使得JVM优化失去作用，导致效率较低，所以要在必要的时候使用。</li>
+</ul>
+<blockquote>
+<p>原理：<br />
 <img src="media/image1.png" alt="" /><br />
-启用后能看到最近的帧的数据以及每个DrawCall，可以在这里检查预计的合批是否成功了。<br />
-<img src="media/image2.png" alt="" /><br />
-首先我们来了解渲染顺序<br />
-渲染顺序决定了物体的覆盖顺序，可以理解为画笔的笔顺，后落笔会盖住先落笔的内容。影响渲染渲染顺序的因素有哪些呢，从上到下依次是：相机高度（深度越大越后渲染）；透明、不透明物体间隔（RenderQueue 2500是透明与不透明的分水岭）；Sorting Layer；Order In Layer；等等，下图很好的表现了这些因素对渲染顺序的影响。<br />
-<img src="media/image3.png" alt="" /><br />
-了解了渲染顺序后，我们来理解这样一个道理，假设有ABC这样一个渲染顺序，A和C满足合批条件，但B不满足。此时会无法合批，因为渲染A和C的batch无法用于B，所以此时会产生3个DrawCall。但如果我们把渲染顺序改一下，不让B夹在A和C中间，我们就能减少一次DrawCall。<br />
-在实际项目中，合理的安排渲染顺序可以节省很多不必要的DrawCall。所以在UI开发的过程中，我们应该在不影响效果的情况下，尽可能把可以合批的控件安排一个不间断的渲染顺序。</p>
+当对非 volatile 变量进行读写的时候，每个线程先从内存拷贝变量到 CPU 缓存中。如果计算机有多个 CPU，每个线程可能在不同的 CPU 上被处理，这意味着每个线程可以拷贝到不同的 CPUcache 中。而声明变量是 volatile 的，JVM 保证了每次读变量都从内存中读，跳过 CPU cache这一步。</p>
 </blockquote>
-<h3 id="易被忽略的raycast-target">易被忽略的Raycast Target</h3>
 <blockquote>
-<p>RaycastTarget可以简单理解为可交互性，有这个选项控件才能响应触摸，滑动，点击等等操作，同时Unity把所有的控件都打开了这个开关，这就导致大量原本不需要响应操作的控件白白浪费了大量资源，所以我们应该合理地取消这个开关。例如，绝大部分的text，不需要响应点击的Image都不需要RaycasrTarget，再比如一些进度条，之类的，只是显示作用不需要交互，我们可以合理地关闭这些控件的Raycast以达到节省性能的目的。</p>
+<p>适用场景：<br />
+值得说明的是对 volatile 变量的单次读/写操作可以保证原子性的，如 long 和 double 类型变量，但是并不能保证 i++这种操作的原子性，因为本质上 i++是读、写两次操作。在某些场景下可以代替 Synchronized。但是,volatile 不能完全取代 Synchronized 的位置，只有在一些特殊的场景下，才能适用 volatile。</p>
+</blockquote>
+<blockquote>
+<p>总的来说，必须同时满足下面两个条件才能保证在并发环境的线程安全：<br />
+（1）对变量的写操作不依赖于当前值（比如 i++），或者说是单纯的变量赋值（boolean flag = true）。<br />
+（2）该变量没有包含在具有其他变量的不变式中，也就是说，不同的 volatile 变量之间，不能互相依赖。只有在状态真正独立于程序内其他内容时才能使用volatile。</p>
+</blockquote>
+<h2 id="8-synchronized-同步锁">8. Synchronized 同步锁</h2>
+<blockquote>
+<p>synchronized 它可以把任意一个非 NULL 的对象当作锁。他属于独占式的悲观锁，同时属于可重入锁。</p>
+</blockquote>
+<blockquote>
+<p>Synchronized 作用范围：</p>
+</blockquote>
+<ol>
+<li>作用于方法时，锁住的是对象的实例(this)；</li>
+<li>当作用于静态方法时，锁住的是Class实例，又因为Class的相关数据存储在永久带PermGen（jdk1.8 则是 metaspace），永久带是全局共享的，因此静态方法锁相当于类的一个全局锁，会锁所有调用该方法的线程；</li>
+<li>synchronized 作用于一个对象实例时，锁住的是所有以该对象为锁的代码块。</li>
+</ol>
+<h2 id="9-atomicinteger原子类">9. AtomicInteger原子类</h2>
+<blockquote>
+<p>首先说明，此处 AtomicInteger，一个提供原子操作的 Integer 的类，常见的还有<br />
+AtomicBoolean、AtomicInteger、AtomicLong、AtomicReference 等，他们的实现原理相同，区别在与运算对象类型的不同。令人兴奋地，还可以通过AtomicReference将一个对象的所有操作转化成原子操作。</p>
+</blockquote>
+<blockquote>
+<p>我们知道，在多线程程序中，诸如++i 或 i++等运算不具有原子性，是不安全的线程操作之一。通常我们会使用 synchronized 将该操作变成一个原子操作，但 JVM 为此类操作特意提供了一些同步类，使得使用更方便，且使程序运行效率变得更高。</p>
+</blockquote>
+<blockquote>
+<p>部分源码如下：</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">AtomicInteger</span> <span class="kd">extends</span> <span class="n">Number</span> <span class="kd">implements</span> <span class="n">java</span><span class="o">.</span><span class="na">io</span><span class="o">.</span><span class="na">Serializable</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">long</span> <span class="n">serialVersionUID</span> <span class="o">=</span> <span class="n">6214790243416807050L</span><span class="o">;</span>
+
+    <span class="c1">// setup to use Unsafe.compareAndSwapInt for updates
+</span><span class="c1"></span>    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">Unsafe</span> <span class="n">unsafe</span> <span class="o">=</span> <span class="n">Unsafe</span><span class="o">.</span><span class="na">getUnsafe</span><span class="o">();</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">long</span> <span class="n">valueOffset</span><span class="o">;</span>
+
+    <span class="kd">static</span> <span class="o">{</span>
+      <span class="k">try</span> <span class="o">{</span>
+        <span class="n">valueOffset</span> <span class="o">=</span> <span class="n">unsafe</span><span class="o">.</span><span class="na">objectFieldOffset</span>
+            <span class="o">(</span><span class="n">AtomicInteger</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">getDeclaredField</span><span class="o">(</span><span class="s">&#34;value&#34;</span><span class="o">));</span>
+      <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span> <span class="k">throw</span> <span class="k">new</span> <span class="n">Error</span><span class="o">(</span><span class="n">ex</span><span class="o">);</span> <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="kd">private</span> <span class="kd">volatile</span> <span class="kt">int</span> <span class="n">value</span><span class="o">;</span>
+    <span class="c1">//......
+</span><span class="c1"></span><span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>在这里说下其中的value，这里value使用了volatile关键字，volatile在这里可以做到的作用是使得多个线程可以共享变量，但是问题在于使用volatile将使得JVM优化失去作用，导致效率较低，所以要在必要的时候使用。</p>
 </blockquote>
 
     </article>
@@ -2071,13 +2531,13 @@ Unity3d的批渲染分为两种，动态和静态。<br />
     
     
       
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fyichenlove.github.io%2fposts%2funity-drawcall-batch%2f" title="Facebook" aria-label="Facebook Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fyichenlove.github.io%2fposts%2fjava-diff%2f" title="Facebook" aria-label="Facebook Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
           <svg data-name="facebook" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"/></svg>
         </a>
       
     
       
-        <a href="https://twitter.com/intent/tweet?text=Unity%e7%9a%84DraCall%e5%92%8cBatch&url=https%3a%2f%2fyichenlove.github.io%2fposts%2funity-drawcall-batch%2f&hashtags=unity&via=" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
+        <a href="https://twitter.com/intent/tweet?text=Java%e4%b8%ad%e7%9a%84%e9%9a%be%e7%82%b9%e7%9f%a5%e8%af%86&url=https%3a%2f%2fyichenlove.github.io%2fposts%2fjava-diff%2f&hashtags=java&via=" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
           <svg data-name="twitter" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m21.534 7.113c.976-.693 1.797-1.558 2.466-2.554v-.001c-.893.391-1.843.651-2.835.777 1.02-.609 1.799-1.566 2.165-2.719-.951.567-2.001.967-3.12 1.191-.903-.962-2.19-1.557-3.594-1.557-2.724 0-4.917 2.211-4.917 4.921 0 .39.033.765.114 1.122-4.09-.2-7.71-2.16-10.142-5.147-.424.737-.674 1.58-.674 2.487 0 1.704.877 3.214 2.186 4.089-.791-.015-1.566-.245-2.223-.606v.054c0 2.391 1.705 4.377 3.942 4.835-.401.11-.837.162-1.29.162-.315 0-.633-.018-.931-.084.637 1.948 2.447 3.381 4.597 3.428-1.674 1.309-3.8 2.098-6.101 2.098-.403 0-.79-.018-1.177-.067 2.18 1.405 4.762 2.208 7.548 2.208 8.683 0 14.342-7.244 13.986-14.637z"/></svg>
         </a>
       
@@ -2225,7 +2685,15 @@ Unity3d的批渲染分为两种，动态和静态。<br />
     <ul class="related-ul">
         
         <li>
-          <a href="/posts/xluacoroutine/" class="related__link"> XLua框架——lua协程实现</a>
+          <a href="/posts/java-reflection/" class="related__link">深入理解 Java 反射和动态代理</a>
+        </li>
+        
+        <li>
+          <a href="/posts/java-char-add/" class="related__link">Java中char，int，String的相加减</a>
+        </li>
+        
+        <li>
+          <a href="/posts/javajdk/" class="related__link">你安装的是Oracle JDK还是OpenJDK?</a>
         </li>
         
     </ul>
@@ -2235,21 +2703,14 @@ Unity3d的批渲染分为两种，动态和静态。<br />
 <nav class="pagination-single">
   
     
-      <a href="https://yichenlove.github.io/posts/euclidean-algorithm/" class="pagination-single__left">
+      <a href="https://yichenlove.github.io/posts/unity-drawcall-batch/" class="pagination-single__left">
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
         </div>
-        <div class="pagination-single__left-title">欧几里得算法</div>      
+        <div class="pagination-single__left-title">Unity的DraCall和Batch</div>      
       </a>
     
     <div class="grow"></div>
-    
-      <a href="https://yichenlove.github.io/posts/java-diff/" class="pagination-single__right">      
-        <div class="pagination-single__right-title">Java中的难点知识</div>
-        <div class="pagination-single__icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
-        </div>
-      </a>
     
   
 </nav>
@@ -2607,15 +3068,15 @@ document.addEventListener('DOMContentLoaded', function () {
   <div class="toc " data-dir="ltr" data-folding="true" data-ani="true">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#制作性能更高的ui">制作性能更高的UI</a>
-      <ul>
-        <li><a href="#drawcall和batch">DrawCall和Batch</a></li>
-        <li><a href="#关于batch">关于Batch</a></li>
-        <li><a href="#动静分离">动静分离</a></li>
-        <li><a href="#渲染顺序对合批的影响">渲染顺序对合批的影响</a></li>
-        <li><a href="#易被忽略的raycast-target">易被忽略的Raycast Target</a></li>
-      </ul>
-    </li>
+    <li><a href="#1简述一下jvm加载class文件的原理机制">1、简述一下JVM加载class文件的原理机制。</a></li>
+    <li><a href="#2多线程有几种实现方法同步有几种实现方法">2、多线程有几种实现方法？同步有几种实现方法？</a></li>
+    <li><a href="#3什么是分布式事务如何解决分布式事务">3、什么是分布式事务，如何解决分布式事务</a></li>
+    <li><a href="#4-hashmap与hashtable的异同">4. HashMap与Hashtable的异同？</a></li>
+    <li><a href="#5-arraylist和vector和linkedlist">5. ArrayList和Vector和LinkedList</a></li>
+    <li><a href="#6-hashmap实现数组--链表--红黑树red-black-tree">6. HashMap实现（数组 + 链表 + 红黑树red-black tree）</a></li>
+    <li><a href="#7-volatile-关键字的作用-变量可见性禁止重排序">7. volatile 关键字的作用 （变量可见性、禁止重排序）</a></li>
+    <li><a href="#8-synchronized-同步锁">8. Synchronized 同步锁</a></li>
+    <li><a href="#9-atomicinteger原子类">9. AtomicInteger原子类</a></li>
   </ul>
 </nav>
   </div>

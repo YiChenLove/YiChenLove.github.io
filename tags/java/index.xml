@@ -14,11 +14,35 @@
     <managingEditor>chen61813772@gmail.com (wangyichen)</managingEditor>
     <webMaster>chen61813772@gmail.com (wangyichen)</webMaster>
     <copyright>©2021, All Rights Reserved</copyright>
-    <lastBuildDate>Fri, 26 Nov 2021 20:51:07 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 02 Dec 2021 20:12:01 +0800</lastBuildDate>
     
         <atom:link href="https://yichenlove.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>Java中的难点知识</title>
+        <link>https://yichenlove.github.io/posts/java-diff/</link>
+        <pubDate>Thu, 02 Dec 2021 20:12:01 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        <atom:modified>Thu, 02 Dec 2021 20:12:01 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/java-diff/</guid>
+        <description>1、简述一下JVM加载class文件的原理机制。 Java中的所有类，都需要由类加载器装载到JVM中才能运行。类加载器本身也是一个类，而它的工</description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>java</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>深入理解 Java 反射和动态代理</title>
