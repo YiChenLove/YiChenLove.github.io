@@ -14,11 +14,35 @@
     <managingEditor>chen61813772@gmail.com (wangyichen)</managingEditor>
     <webMaster>chen61813772@gmail.com (wangyichen)</webMaster>
     <copyright>©2021, All Rights Reserved</copyright>
-    <lastBuildDate>Thu, 02 Dec 2021 20:12:01 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 03 Dec 2021 19:24:46 +0800</lastBuildDate>
     
         <atom:link href="https://yichenlove.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>Unity SRP URP HDRP 的区别</title>
+        <link>https://yichenlove.github.io/posts/unity-urp-hdrp/</link>
+        <pubDate>Fri, 03 Dec 2021 19:24:46 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        <atom:modified>Fri, 03 Dec 2021 19:24:46 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/unity-urp-hdrp/</guid>
+        <description>1.Build-In Render 内置渲染器（默认）兼容太多，反而不能面面俱到，效果不好 2.Scriptable Render Pipline 可编程渲染管线技术，是Unity提供的新渲染系统，可用C#脚本定制Unity</description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>unity</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>Java中的难点知识</title>
