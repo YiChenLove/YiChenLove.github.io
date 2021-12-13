@@ -14,11 +14,59 @@
     <managingEditor>chen61813772@gmail.com (wangyichen)</managingEditor>
     <webMaster>chen61813772@gmail.com (wangyichen)</webMaster>
     <copyright>©2021, All Rights Reserved</copyright>
-    <lastBuildDate>Wed, 08 Dec 2021 15:40:01 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 13 Dec 2021 21:31:47 +0800</lastBuildDate>
     
         <atom:link href="https://yichenlove.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>简单了解Mono和IL2CPP</title>
+        <link>https://yichenlove.github.io/posts/monoandil2cpp/</link>
+        <pubDate>Mon, 13 Dec 2021 21:31:47 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        <atom:modified>Mon, 13 Dec 2021 21:31:47 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/monoandil2cpp/</guid>
+        <description>目录 .NET 应用程序是怎么运行的？ 跨平台需求 CIL，公共中间语言（Common Intermediate Language） CLR，公共语言运行时（Common Language Runti</description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>unity</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Unity 内存优化</title>
+        <link>https://yichenlove.github.io/posts/unity-cpu/</link>
+        <pubDate>Thu, 09 Dec 2021 20:32:12 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        <atom:modified>Thu, 09 Dec 2021 20:32:12 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/unity-cpu/</guid>
+        <description>性能分析 优化工作的第一个步骤便是通过性能分析来收集性能数据，这也是移动端优化的第一步。 我们要尽早在目标设备上进行性能分析，而且要经常分析。 Unity</description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>unity</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>iOS 一键上传AppStore脚本</title>
