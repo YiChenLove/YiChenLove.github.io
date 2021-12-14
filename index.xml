@@ -14,7 +14,7 @@
     <managingEditor>chen61813772@gmail.com (wangyichen)</managingEditor>
     <webMaster>chen61813772@gmail.com (wangyichen)</webMaster>
     <copyright>©2021, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 13 Dec 2021 21:31:47 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 14 Dec 2021 11:29:41 +0800</lastBuildDate>
     
         <atom:link href="https://yichenlove.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -40,6 +40,24 @@
         
       
 
+      
+      <item>
+        <title>搭建免费的图床工具</title>
+        <link>https://yichenlove.github.io/posts/imagehostingservice/</link>
+        <pubDate>Tue, 14 Dec 2021 11:29:41 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        <atom:modified>Tue, 14 Dec 2021 11:29:41 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/imagehostingservice/</guid>
+        <description>简单来说，图床就是一个在网络上存储图片的地方，目的是为了节省本地服务器空间，做到一次存储，多个地方引用，加快图片的打开速度， Markdown</description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>简单了解Mono和IL2CPP</title>
