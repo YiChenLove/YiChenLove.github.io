@@ -14,11 +14,79 @@
     <managingEditor>chen61813772@gmail.com (wangyichen)</managingEditor>
     <webMaster>chen61813772@gmail.com (wangyichen)</webMaster>
     <copyright>©2021, All Rights Reserved</copyright>
-    <lastBuildDate>Tue, 30 Nov 2021 14:28:41 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 16 Dec 2021 16:39:31 +0800</lastBuildDate>
     
         <atom:link href="https://yichenlove.github.io/categories/math/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>二项式分布算法（Java实现）</title>
+        <link>https://yichenlove.github.io/posts/java-binomial-distribution/</link>
+        <pubDate>Thu, 16 Dec 2021 16:39:31 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        <atom:modified>Thu, 16 Dec 2021 16:39:31 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/java-binomial-distribution/</guid>
+        <description>二项式分布算法（Java实现） 最近开始看《算法(第四版)》，这是遇到的第一个算法题。题目要求的只是估计一下算法递归的次数，但我进一步研究了不</description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>algorithms</category>
+            
+          
+        
+        
+          
+            
+              <category>math</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>伯努利分布及计算公式(二项分布)</title>
+        <link>https://yichenlove.github.io/posts/mathemticsbinomial/</link>
+        <pubDate>Thu, 16 Dec 2021 15:55:15 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        <atom:modified>Thu, 16 Dec 2021 15:55:15 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/mathemticsbinomial/</guid>
+        <description>伯努利分布（Bernoulli Distribution）是一种离散分布，在概率学中非常常用，有两种可能的结果： 1 表示成功，出现的概率为 p（其</description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>algorithms</category>
+            
+          
+        
+        
+          
+            
+              <category>math</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
       
       <item>
         <title>欧几里得算法</title>
