@@ -14,7 +14,7 @@
     <managingEditor>chen61813772@gmail.com (wangyichen)</managingEditor>
     <webMaster>chen61813772@gmail.com (wangyichen)</webMaster>
     <copyright>©2021, All Rights Reserved</copyright>
-    <lastBuildDate>Tue, 14 Dec 2021 11:29:41 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 16 Dec 2021 15:55:15 +0800</lastBuildDate>
     
         <atom:link href="https://yichenlove.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -40,6 +40,24 @@
         
       
 
+      
+      <item>
+        <title>伯努利分布及计算公式(二项分布)</title>
+        <link>https://yichenlove.github.io/posts/mathemticsbinomial/</link>
+        <pubDate>Thu, 16 Dec 2021 15:55:15 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        <atom:modified>Thu, 16 Dec 2021 15:55:15 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/mathemticsbinomial/</guid>
+        <description>伯努利分布（Bernoulli Distribution）是一种离散分布，在概率学中非常常用，有两种可能的结果： 1 表示成功，出现的概率为 p（其</description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>搭建免费的图床工具</title>
