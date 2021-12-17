@@ -14,11 +14,35 @@
     <managingEditor>chen61813772@gmail.com (wangyichen)</managingEditor>
     <webMaster>chen61813772@gmail.com (wangyichen)</webMaster>
     <copyright>©2021, All Rights Reserved</copyright>
-    <lastBuildDate>Thu, 25 Nov 2021 20:22:55 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 17 Dec 2021 19:31:29 +0800</lastBuildDate>
     
         <atom:link href="https://yichenlove.github.io/tags/android/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>安卓gradle splits</title>
+        <link>https://yichenlove.github.io/posts/build-gradle-splits/</link>
+        <pubDate>Fri, 17 Dec 2021 19:31:29 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        <atom:modified>Fri, 17 Dec 2021 19:31:29 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/build-gradle-splits/</guid>
+        <description>一、前言 今天分享 splits 配置，从字面意思知道有着 切开 的意思，他的作用其实是帮我们把 apk 包从不同维度进行切开，减小apk的大小，从而让用户在下载时节省</description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>App 64位和32位</title>
