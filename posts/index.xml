@@ -14,11 +14,29 @@
     <managingEditor>chen61813772@gmail.com (wangyichen)</managingEditor>
     <webMaster>chen61813772@gmail.com (wangyichen)</webMaster>
     <copyright>©2021, All Rights Reserved</copyright>
-    <lastBuildDate>Fri, 17 Dec 2021 19:31:29 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 28 Dec 2021 11:20:27 +0800</lastBuildDate>
     
         <atom:link href="https://yichenlove.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>Shader Language</title>
+        <link>https://yichenlove.github.io/posts/shader-language/</link>
+        <pubDate>Tue, 28 Dec 2021 11:20:27 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        <atom:modified>Tue, 28 Dec 2021 11:20:27 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/shader-language/</guid>
+        <description>三大主流编程语言 HLSL/GLSL/Cg Shader Language Shader Language的发展方向是设计出在便携性方面可以和C++、Java等相比的高级语言，赋予程序员灵活而方便的编程方式</description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>安卓gradle splits</title>
