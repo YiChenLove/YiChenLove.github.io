@@ -14,11 +14,35 @@
     <managingEditor>chen61813772@gmail.com (wangyichen)</managingEditor>
     <webMaster>chen61813772@gmail.com (wangyichen)</webMaster>
     <copyright>©2022, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 13 Dec 2021 21:31:47 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 20 Jun 2022 21:14:13 +0800</lastBuildDate>
     
         <atom:link href="https://yichenlove.github.io/tags/unity/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>UnityEngine.Vector3 - Unity 脚本 API</title>
+        <link>https://yichenlove.github.io/posts/unity-vector3/</link>
+        <pubDate>Mon, 20 Jun 2022 21:14:13 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        <atom:modified>Mon, 20 Jun 2022 21:14:13 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/unity-vector3/</guid>
+        <description>Vector3 struct in UnityEngine 切换到手册 描述 用于表示 3D 向量和点。 Unity 内部使用该结构传递 3D 位置和方向。 此外，它还包含用于执行常见向量操作的函数。 除了下面列出的函数以外</description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>Unity</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>简单了解Mono和IL2CPP</title>
