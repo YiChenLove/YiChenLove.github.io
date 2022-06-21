@@ -14,7 +14,7 @@
     <managingEditor>chen61813772@gmail.com (wangyichen)</managingEditor>
     <webMaster>chen61813772@gmail.com (wangyichen)</webMaster>
     <copyright>©2022, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 20 Jun 2022 21:14:13 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jun 2022 14:20:40 +0800</lastBuildDate>
     
         <atom:link href="https://yichenlove.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -40,6 +40,54 @@
         
       
 
+      
+      <item>
+        <title>C# List 底层源码剖析</title>
+        <link>https://yichenlove.github.io/posts/c#-list/</link>
+        <pubDate>Tue, 21 Jun 2022 14:20:40 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        <atom:modified>Tue, 21 Jun 2022 14:20:40 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/c#-list/</guid>
+        <description>List 底层代码剖析 List是C#中最常见的可伸缩数组组件，我们常常用来替代数组使用，因为它是可伸缩的，所以我们在使用的时候可以不用手动去分配数组</description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>C#</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>C# 接口Interface及其作用</title>
+        <link>https://yichenlove.github.io/posts/c#-interface/</link>
+        <pubDate>Tue, 21 Jun 2022 11:49:26 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        <atom:modified>Tue, 21 Jun 2022 11:49:26 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/c#-interface/</guid>
+        <description>C# Interface接口定义了所有继承接口时应遵循的语法合同。 接口可以是命名空间或类的成员。接口声明可以包含一下成员的声明（没有任何实现的签</description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>C#</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>UnityEngine.Vector3 - Unity 脚本 API</title>
