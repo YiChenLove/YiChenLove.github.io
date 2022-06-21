@@ -9,7 +9,13 @@
     <lastmod>2020-01-19T21:13:42+09:00</lastmod>
   </url><url>
     <loc>https://yichenlove.github.io/</loc>
-    <lastmod>2022-06-21T18:14:43+08:00</lastmod>
+    <lastmod>2022-06-21T21:17:45+08:00</lastmod>
+  </url><url>
+    <loc>https://yichenlove.github.io/publication/</loc>
+    <lastmod>2022-06-21T21:17:45+08:00</lastmod>
+  </url><url>
+    <loc>https://yichenlove.github.io/publication/book/intimate-relationship/</loc>
+    <lastmod>2022-06-21T21:17:45+08:00</lastmod>
   </url><url>
     <loc>https://yichenlove.github.io/tags/data-structure/</loc>
     <lastmod>2022-06-21T18:14:43+08:00</lastmod>
@@ -41,7 +47,7 @@
     <loc>https://yichenlove.github.io/posts/unity-vector3/</loc>
     <lastmod>2022-06-20T21:14:13+08:00</lastmod>
   </url><url>
-    <loc>https://yichenlove.github.io/tags/algorithm/</loc>
+    <loc>https://yichenlove.github.io/tags/algorithms/</loc>
     <lastmod>2022-06-16T21:54:47+08:00</lastmod>
   </url><url>
     <loc>https://yichenlove.github.io/posts/shellsort-algorithm/</loc>
@@ -58,9 +64,6 @@
   </url><url>
     <loc>https://yichenlove.github.io/posts/build-gradle-splits/</loc>
     <lastmod>2021-12-17T19:31:29+08:00</lastmod>
-  </url><url>
-    <loc>https://yichenlove.github.io/tags/algorithms/</loc>
-    <lastmod>2021-12-16T16:39:31+08:00</lastmod>
   </url><url>
     <loc>https://yichenlove.github.io/categories/</loc>
     <lastmod>2021-12-16T16:39:31+08:00</lastmod>
@@ -255,9 +258,6 @@
     <lastmod>2020-03-05T14:08:48+00:00</lastmod>
   </url><url>
     <loc>https://yichenlove.github.io/publication/misc/</loc>
-    <lastmod>2020-03-05T14:08:48+00:00</lastmod>
-  </url><url>
-    <loc>https://yichenlove.github.io/publication/</loc>
     <lastmod>2020-03-05T14:08:48+00:00</lastmod>
   </url><url>
     <loc>https://yichenlove.github.io/showcase/hugo/</loc>
