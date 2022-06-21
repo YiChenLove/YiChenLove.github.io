@@ -14,11 +14,35 @@
     <managingEditor>chen61813772@gmail.com (wangyichen)</managingEditor>
     <webMaster>chen61813772@gmail.com (wangyichen)</webMaster>
     <copyright>©2022, All Rights Reserved</copyright>
-    <lastBuildDate>Tue, 21 Jun 2022 15:29:41 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jun 2022 18:14:43 +0800</lastBuildDate>
     
         <atom:link href="https://yichenlove.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>链表—链式存储</title>
+        <link>https://yichenlove.github.io/posts/listnode/</link>
+        <pubDate>Tue, 21 Jun 2022 18:14:43 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        <atom:modified>Tue, 21 Jun 2022 18:14:43 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/listnode/</guid>
+        <description>在计算机科学中，链表作为一种基础的数据结构可以用来生成其它类型的数据结构。链表通常由一连串节点组成，每个节点包含任意的实例数据（data fi</description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>data structure</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>数据结构中堆、栈和队列的理解Stak Heap Queue</title>
@@ -35,6 +59,8 @@
         
         
           
+            
+              <category>data structure</category>
             
           
         
