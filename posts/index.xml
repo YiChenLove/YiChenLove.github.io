@@ -14,11 +14,33 @@
     <managingEditor>chen61813772@gmail.com (wangyichen)</managingEditor>
     <webMaster>chen61813772@gmail.com (wangyichen)</webMaster>
     <copyright>©2022, All Rights Reserved</copyright>
-    <lastBuildDate>Tue, 21 Jun 2022 14:20:40 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jun 2022 15:29:41 +0800</lastBuildDate>
     
         <atom:link href="https://yichenlove.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>数据结构中堆、栈和队列的理解Stak Heap Queue</title>
+        <link>https://yichenlove.github.io/posts/stak-heap-queue/</link>
+        <pubDate>Tue, 21 Jun 2022 15:29:41 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        <atom:modified>Tue, 21 Jun 2022 15:29:41 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/stak-heap-queue/</guid>
+        <description>一、堆Heap 堆是一种经过排序的树形数据结构，每个节点都有一个值，通常我们所说的堆的数据结构是指二叉树。所以堆在数据结构中通常可以被看做是一</description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+          
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>C# List 底层源码剖析</title>

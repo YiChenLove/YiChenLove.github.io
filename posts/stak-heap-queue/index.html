@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>C# List 底层源码剖析 – wangyichen&#39;s blog</title>
+    <title>数据结构中堆、栈和队列的理解Stak Heap Queue – wangyichen&#39;s blog</title>
     
 
 
@@ -653,7 +653,7 @@
     
     var baseurl = JSON.parse("\"https://yichenlove.github.io/\"");
     
-    var permalink = JSON.parse("\"https://yichenlove.github.io/posts/csharp-list/\"");
+    var permalink = JSON.parse("\"https://yichenlove.github.io/posts/stak-heap-queue/\"");
     
     var langprefix = JSON.parse("\"\"");
     var searchResults = null;
@@ -1334,18 +1334,18 @@
 <meta name="description" content="The blog of wangyichen." />
 
 
-<meta name="keywords" content="C#">
+<meta name="keywords" content="">
 
-<meta name="created" content="2022-06-21T14:20:40&#43;0800">
-<meta name="modified" content="2022-06-21T14:20:40&#43;0800">
-<meta property="article:published_time" content="2022-06-21T14:20:40&#43;0800">
+<meta name="created" content="2022-06-21T15:29:41&#43;0800">
+<meta name="modified" content="2022-06-21T15:29:41&#43;0800">
+<meta property="article:published_time" content="2022-06-21T15:29:41&#43;0800">
 
 <meta name="author" content="wangyichen">
 
 
 <meta property="og:site_name" content="wangyichen&#39;s blog">
-<meta property="og:title" content="C# List 底层源码剖析">
-<meta property="og:url" content="https://yichenlove.github.io/posts/csharp-list/">
+<meta property="og:title" content="数据结构中堆、栈和队列的理解Stak Heap Queue">
+<meta property="og:url" content="https://yichenlove.github.io/posts/stak-heap-queue/">
 <meta property="og:type" content="article">
 <meta property="og:description" content="The blog of wangyichen.">
 
@@ -1358,7 +1358,7 @@
 
 <meta name="apple-mobile-web-app-status-bar-style" content="#fff">
 
-<link rel="canonical" href="https://yichenlove.github.io/posts/csharp-list/">
+<link rel="canonical" href="https://yichenlove.github.io/posts/stak-heap-queue/">
 
 <link rel="manifest" href="/manifest.json">
 
@@ -1383,12 +1383,12 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "C# List 底层源码剖析",
-    "datePublished": "2022-06-21T14:20:40+08:00",
-    "dateModified": "2022-06-21T14:20:40+08:00",
-    "url" : "https://yichenlove.github.io/posts/csharp-list/",
-    "description": "List 底层代码剖析 List是C#中最常见的可伸缩数组组件，我们常常用来替代数组使用，因为它是可伸缩的，所以我们在使用的时候可以不用手动去分配数组",
-    "keywords": ["C#"],
+    "headline": "数据结构中堆、栈和队列的理解Stak Heap Queue",
+    "datePublished": "2022-06-21T15:29:41+08:00",
+    "dateModified": "2022-06-21T15:29:41+08:00",
+    "url" : "https://yichenlove.github.io/posts/stak-heap-queue/",
+    "description": "一、堆Heap 堆是一种经过排序的树形数据结构，每个节点都有一个值，通常我们所说的堆的数据结构是指二叉树。所以堆在数据结构中通常可以被看做是一",
+    "keywords": [""],
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://yichenlove.github.io/"
@@ -1789,7 +1789,7 @@
   
   <li  class="is-active" >
     
-      <span>C# List 底层源码剖析</span>
+      <span>数据结构中堆、栈和队列的理解Stak Heap Queue</span>
     
   </li>
   
@@ -1801,7 +1801,7 @@
   <div class="single ">
     <div class="single__nojs">This page looks best with JavaScript enabled</div>
     <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
-    <h2 class="single__title" data-ani="true">C# List 底层源码剖析</h2>
+    <h2 class="single__title" data-ani="true">数据结构中堆、栈和队列的理解Stak Heap Queue</h2>
     <h3 class="single__subtitle"></h3>
     <div class="single__meta">
       
@@ -1821,311 +1821,71 @@
   🏷️
   
 
-  <li><a href="https://yichenlove.github.io/tags/c#/" class="single__tag" title="C#">#C#</a></li>
-
 </ul>
 
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <h2 id="list-底层代码剖析">List 底层代码剖析</h2>
-<p>List是C#中最常见的可伸缩数组组件，我们常常用来替代数组使用，因为它是可伸缩的，所以我们在使用的时候可以不用手动去分配数组的大小。那么它的底层是怎么实现的，每次Add和remove以及赋值，在内部是怎么执行和运作的呢？我们可以查看它的源码分析。<br />
-源码：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-C#" data-lang="C#"><span class="k">public</span> <span class="k">class</span> <span class="nc">List</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;</span> <span class="p">:</span> <span class="n">IList</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;,</span> <span class="n">System</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">IList</span><span class="p">,</span> <span class="n">IReadOnlyList</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;</span>
-<span class="p">{</span>
-    <span class="k">private</span> <span class="k">const</span> <span class="kt">int</span> <span class="m">_d</span><span class="n">efaultCapacity</span> <span class="p">=</span> <span class="m">4</span><span class="p">;</span>
-
-    <span class="k">private</span> <span class="n">T</span><span class="p">[]</span> <span class="m">_</span><span class="n">items</span><span class="p">;</span>
-    <span class="k">private</span> <span class="kt">int</span> <span class="m">_</span><span class="n">size</span><span class="p">;</span>
-    <span class="k">private</span> <span class="kt">int</span> <span class="m">_</span><span class="n">version</span><span class="p">;</span>
-    <span class="k">private</span> <span class="n">Object</span> <span class="m">_</span><span class="n">syncRoot</span><span class="p">;</span>
-    
-    <span class="k">static</span> <span class="k">readonly</span> <span class="n">T</span><span class="p">[]</span>  <span class="m">_</span><span class="n">emptyArray</span> <span class="p">=</span> <span class="k">new</span> <span class="n">T</span><span class="p">[</span><span class="m">0</span><span class="p">];</span>        
-        
-    <span class="c1">// Constructs a List. The list is initially empty and has a capacity
-</span><span class="c1"></span>    <span class="c1">// of zero. Upon adding the first element to the list the capacity is
-</span><span class="c1"></span>    <span class="c1">// increased to 16, and then increased in multiples of two as required.
-</span><span class="c1"></span>    <span class="k">public</span> <span class="n">List</span><span class="p">()</span> <span class="p">{</span>
-        <span class="m">_</span><span class="n">items</span> <span class="p">=</span> <span class="m">_</span><span class="n">emptyArray</span><span class="p">;</span>
-    <span class="p">}</span>
-
-    <span class="c1">// Constructs a List with a given initial capacity. The list is
-</span><span class="c1"></span>    <span class="c1">// initially empty, but will have room for the given number of elements
-</span><span class="c1"></span>    <span class="c1">// before any reallocations are required.
-</span><span class="c1"></span>    <span class="c1">// 
-</span><span class="c1"></span>    <span class="k">public</span> <span class="n">List</span><span class="p">(</span><span class="kt">int</span> <span class="n">capacity</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">capacity</span> <span class="p">&lt;</span> <span class="m">0</span><span class="p">)</span> <span class="n">ThrowHelper</span><span class="p">.</span><span class="n">ThrowArgumentOutOfRangeException</span><span class="p">(</span><span class="n">ExceptionArgument</span><span class="p">.</span><span class="n">capacity</span><span class="p">,</span> <span class="n">ExceptionResource</span><span class="p">.</span><span class="n">ArgumentOutOfRange_NeedNonNegNum</span><span class="p">);</span>
-        <span class="n">Contract</span><span class="p">.</span><span class="n">EndContractBlock</span><span class="p">();</span>
-
-        <span class="k">if</span> <span class="p">(</span><span class="n">capacity</span> <span class="p">==</span> <span class="m">0</span><span class="p">)</span>
-            <span class="m">_</span><span class="n">items</span> <span class="p">=</span> <span class="m">_</span><span class="n">emptyArray</span><span class="p">;</span>
-        <span class="k">else</span>
-            <span class="m">_</span><span class="n">items</span> <span class="p">=</span> <span class="k">new</span> <span class="n">T</span><span class="p">[</span><span class="n">capacity</span><span class="p">];</span>
-    <span class="p">}</span>
-
-    <span class="c1">//...
-</span><span class="c1"></span>    <span class="c1">//其他内容
-</span><span class="c1"></span><span class="p">}</span>
-
-</code></pre></td></tr></table>
-</div>
-</div><p>分析List构造部分，List内部是使用数组实现的，而不是链表。没有给予特定容量时，初始容量为0.<br />
-List组件在Add,Remove两个函数调用时都采用的是“从原数组拷贝生成到新数组”的方式工作的。</p>
-<p>Add接口源码：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-C#" data-lang="C#">
-<span class="c1">// Adds the given object to the end of this list. The size of the list is
-</span><span class="c1">// increased by one. If required, the capacity of the list is doubled
-</span><span class="c1">// before adding the new element.
-</span><span class="c1">//
-</span><span class="c1"></span><span class="k">public</span> <span class="k">void</span> <span class="n">Add</span><span class="p">(</span><span class="n">T</span> <span class="n">item</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="m">_</span><span class="n">size</span> <span class="p">==</span> <span class="m">_</span><span class="n">items</span><span class="p">.</span><span class="n">Length</span><span class="p">)</span> <span class="n">EnsureCapacity</span><span class="p">(</span><span class="m">_</span><span class="n">size</span> <span class="p">+</span> <span class="m">1</span><span class="p">);</span>
-    <span class="m">_</span><span class="n">items</span><span class="p">[</span><span class="m">_</span><span class="n">size</span><span class="p">++]</span> <span class="p">=</span> <span class="n">item</span><span class="p">;</span>
-    <span class="m">_</span><span class="n">version</span><span class="p">++;</span>
-<span class="p">}</span>
-
-<span class="c1">// Ensures that the capacity of this list is at least the given minimum
-</span><span class="c1">// value. If the currect capacity of the list is less than min, the
-</span><span class="c1">// capacity is increased to twice the current capacity or to min,
-</span><span class="c1">// whichever is larger.
-</span><span class="c1"></span><span class="k">private</span> <span class="k">void</span> <span class="n">EnsureCapacity</span><span class="p">(</span><span class="kt">int</span> <span class="n">min</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="m">_</span><span class="n">items</span><span class="p">.</span><span class="n">Length</span> <span class="p">&lt;</span> <span class="n">min</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kt">int</span> <span class="n">newCapacity</span> <span class="p">=</span> <span class="m">_</span><span class="n">items</span><span class="p">.</span><span class="n">Length</span> <span class="p">==</span> <span class="m">0</span><span class="p">?</span> <span class="m">_d</span><span class="n">efaultCapacity</span> <span class="p">:</span> <span class="m">_</span><span class="n">items</span><span class="p">.</span><span class="n">Length</span> <span class="p">*</span> <span class="m">2</span><span class="p">;</span>
-        <span class="c1">// Allow the list to grow to maximum possible capacity (~2G elements) before encountering overflow.
-</span><span class="c1"></span>        <span class="c1">// Note that this check works even when _items.Length overflowed thanks to the (uint) cast
-</span><span class="c1"></span>        <span class="k">if</span> <span class="p">((</span><span class="kt">uint</span><span class="p">)</span><span class="n">newCapacity</span> <span class="p">&gt;</span> <span class="n">Array</span><span class="p">.</span><span class="n">MaxArrayLength</span><span class="p">)</span> <span class="n">newCapacity</span> <span class="p">=</span> <span class="n">Array</span><span class="p">.</span><span class="n">MaxArrayLength</span><span class="p">;</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">newCapacity</span> <span class="p">&lt;</span> <span class="n">min</span><span class="p">)</span> <span class="n">newCapacity</span> <span class="p">=</span> <span class="n">min</span><span class="p">;</span>
-        <span class="n">Capacity</span> <span class="p">=</span> <span class="n">newCapacity</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-</code></pre></td></tr></table>
-</div>
-</div><p>Add函数，每次增加一个元素的数据，Add接口都会首先检查的是容量还够不够，如果不够则用 EnsureCapacity 来增加容量。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-C#" data-lang="C#">    <span class="kt">int</span> <span class="n">newCapacity</span> <span class="p">=</span> <span class="m">_</span><span class="n">items</span><span class="p">.</span><span class="n">Length</span> <span class="p">==</span> <span class="m">0</span><span class="p">?</span> <span class="m">_d</span><span class="n">efaultCapacity</span> <span class="p">:</span> <span class="m">_</span><span class="n">items</span><span class="p">.</span><span class="n">Length</span> <span class="p">*</span> <span class="m">2</span><span class="p">;</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>每次容量不够的时候，整个数组的容量都会扩充一倍，_defaultCapacity 是容量的默认值为4。因此整个扩充的路线为4，8，16，32，64，128，256，512，1024…依次类推。<br />
-List使用数组形式作为底层数据结构，好处是使用索引方式提取元素很快，但在扩容的时候就会很糟糕，每次new数组都会造成内存垃圾，这给垃圾回收GC带来了很多负担。</p>
-<p>Remove接口源码：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span><span class="lnt">38
-</span><span class="lnt">39
-</span><span class="lnt">40
-</span><span class="lnt">41
-</span><span class="lnt">42
-</span><span class="lnt">43
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-C#" data-lang="C#"><span class="c1">// Removes the element at the given index. The size of the list is
-</span><span class="c1">// decreased by one.
-</span><span class="c1">// 
-</span><span class="c1"></span><span class="k">public</span> <span class="kt">bool</span> <span class="n">Remove</span><span class="p">(</span><span class="n">T</span> <span class="n">item</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kt">int</span> <span class="n">index</span> <span class="p">=</span> <span class="n">IndexOf</span><span class="p">(</span><span class="n">item</span><span class="p">);</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">index</span> <span class="p">&gt;=</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">RemoveAt</span><span class="p">(</span><span class="n">index</span><span class="p">);</span>
-        <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
-    <span class="p">}</span>
-
-    <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="c1">// Returns the index of the first occurrence of a given value in a range of
-</span><span class="c1">// this list. The list is searched forwards from beginning to end.
-</span><span class="c1">// The elements of the list are compared to the given value using the
-</span><span class="c1">// Object.Equals method.
-</span><span class="c1">// 
-</span><span class="c1">// This method uses the Array.IndexOf method to perform the
-</span><span class="c1">// search.
-</span><span class="c1">// 
-</span><span class="c1"></span><span class="k">public</span> <span class="kt">int</span> <span class="n">IndexOf</span><span class="p">(</span><span class="n">T</span> <span class="n">item</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">Contract</span><span class="p">.</span><span class="n">Ensures</span><span class="p">(</span><span class="n">Contract</span><span class="p">.</span><span class="n">Result</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;()</span> <span class="p">&gt;=</span> <span class="p">-</span><span class="m">1</span><span class="p">);</span>
-    <span class="n">Contract</span><span class="p">.</span><span class="n">Ensures</span><span class="p">(</span><span class="n">Contract</span><span class="p">.</span><span class="n">Result</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;()</span> <span class="p">&lt;</span> <span class="n">Count</span><span class="p">);</span>
-    <span class="k">return</span> <span class="n">Array</span><span class="p">.</span><span class="n">IndexOf</span><span class="p">(</span><span class="m">_</span><span class="n">items</span><span class="p">,</span> <span class="n">item</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">_</span><span class="n">size</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="c1">// Removes the element at the given index. The size of the list is
-</span><span class="c1">// decreased by one.
-</span><span class="c1">// 
-</span><span class="c1"></span><span class="k">public</span> <span class="k">void</span> <span class="n">RemoveAt</span><span class="p">(</span><span class="kt">int</span> <span class="n">index</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">((</span><span class="kt">uint</span><span class="p">)</span><span class="n">index</span> <span class="p">&gt;=</span> <span class="p">(</span><span class="kt">uint</span><span class="p">)</span><span class="m">_</span><span class="n">size</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">ThrowHelper</span><span class="p">.</span><span class="n">ThrowArgumentOutOfRangeException</span><span class="p">();</span>
-    <span class="p">}</span>
-    <span class="n">Contract</span><span class="p">.</span><span class="n">EndContractBlock</span><span class="p">();</span>
-    <span class="m">_</span><span class="n">size</span><span class="p">--;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">index</span> <span class="p">&lt;</span> <span class="m">_</span><span class="n">size</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">Array</span><span class="p">.</span><span class="n">Copy</span><span class="p">(</span><span class="m">_</span><span class="n">items</span><span class="p">,</span> <span class="n">index</span> <span class="p">+</span> <span class="m">1</span><span class="p">,</span> <span class="m">_</span><span class="n">items</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="m">_</span><span class="n">size</span> <span class="p">-</span> <span class="n">index</span><span class="p">);</span>
-    <span class="p">}</span>
-    <span class="m">_</span><span class="n">items</span><span class="p">[</span><span class="m">_</span><span class="n">size</span><span class="p">]</span> <span class="p">=</span> <span class="k">default</span><span class="p">(</span><span class="n">T</span><span class="p">);</span>
-    <span class="m">_</span><span class="n">version</span><span class="p">++;</span>
-<span class="p">}</span>
-
-</code></pre></td></tr></table>
-</div>
-</div><p>从源码中我们可以看到，元素删除的原理其实就是用 Array.Copy 对数组进行覆盖。</p>
-<p>再看来 Insert 接口源码：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-C#" data-lang="C#"><span class="c1">// Inserts an element into this list at a given index. The size of the list
-</span><span class="c1">// is increased by one. If required, the capacity of the list is doubled
-</span><span class="c1">// before inserting the new element.
-</span><span class="c1">// 
-</span><span class="c1"></span><span class="k">public</span> <span class="k">void</span> <span class="n">Insert</span><span class="p">(</span><span class="kt">int</span> <span class="n">index</span><span class="p">,</span> <span class="n">T</span> <span class="n">item</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// Note that insertions at the end are legal.
-</span><span class="c1"></span>    <span class="k">if</span> <span class="p">((</span><span class="kt">uint</span><span class="p">)</span> <span class="n">index</span> <span class="p">&gt;</span> <span class="p">(</span><span class="kt">uint</span><span class="p">)</span><span class="m">_</span><span class="n">size</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">ThrowHelper</span><span class="p">.</span><span class="n">ThrowArgumentOutOfRangeException</span><span class="p">(</span><span class="n">ExceptionArgument</span><span class="p">.</span><span class="n">index</span><span class="p">,</span> <span class="n">ExceptionResource</span><span class="p">.</span><span class="n">ArgumentOutOfRange_ListInsert</span><span class="p">);</span>
-    <span class="p">}</span>
-    <span class="n">Contract</span><span class="p">.</span><span class="n">EndContractBlock</span><span class="p">();</span>
-    <span class="k">if</span> <span class="p">(</span><span class="m">_</span><span class="n">size</span> <span class="p">==</span> <span class="m">_</span><span class="n">items</span><span class="p">.</span><span class="n">Length</span><span class="p">)</span> <span class="n">EnsureCapacity</span><span class="p">(</span><span class="m">_</span><span class="n">size</span> <span class="p">+</span> <span class="m">1</span><span class="p">);</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">index</span> <span class="p">&lt;</span> <span class="m">_</span><span class="n">size</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">Array</span><span class="p">.</span><span class="n">Copy</span><span class="p">(</span><span class="m">_</span><span class="n">items</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="m">_</span><span class="n">items</span><span class="p">,</span> <span class="n">index</span> <span class="p">+</span> <span class="m">1</span><span class="p">,</span> <span class="m">_</span><span class="n">size</span> <span class="p">-</span> <span class="n">index</span><span class="p">);</span>
-    <span class="p">}</span>
-    <span class="m">_</span><span class="n">items</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="p">=</span> <span class="n">item</span><span class="p">;</span>
-    <span class="m">_</span><span class="n">size</span><span class="p">++;</span>            
-    <span class="m">_</span><span class="n">version</span><span class="p">++;</span>
-<span class="p">}</span>
-
-</code></pre></td></tr></table>
-</div>
-</div><p>与Add接口一样，先检查容量是否足够，不足则扩容。从源码中获悉，Insert插入元素时，使用的用拷贝数组的形式，将数组里的指定元素后面的元素向后移动一个位置。</p>
-<p>可以看到 List 的效率并不高，只是通用性强而已，大部分的算法都使用的是线性复杂度的算法，这种线性算法当遇到规模比较大的计算量级时就会导致CPU的大量损耗。<br />
-List的内存分配方式也极为不合理，当List里的元素不断增加时，会多次重新new数组，导致原来的数组被抛弃，最后当GC被调用时造成回收的压力。</p>
-<p>最后List并不是高效的组件，真实情况是，他比数组的效率还要差的多，他只是个兼容性比较强得组件而已，好用，但效率差。</p>
-<h5 id="参考文章">参考文章</h5>
-<p><a href="http://www.luzexi.com/2018/07/06/Unity3D%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E4%B9%8B%E8%BF%9B%E9%98%B6%E4%B8%BB%E7%A8%8B-CSharp%E8%A6%81%E7%82%B9%E6%8A%80%E6%9C%AF1">《Unity3D高级编程之进阶主程》第一章，C#要点技术(一) - List 底层源码剖析</a></p>
+      <h3 id="一堆heap">一、堆Heap</h3>
+<blockquote>
+<p>堆是一种经过排序的树形数据结构，每个节点都有一个值，通常我们所说的堆的数据结构是指二叉树。所以堆在数据结构中通常可以被看做是一棵树的数组对象。而且堆需要满足一下两个性质：<br />
+（1）堆中某个节点的值总是不大于或不小于其父节点的值；<br />
+（2）堆总是一棵完全二叉树。</p>
+</blockquote>
+<blockquote>
+<p>堆分为两种情况，有最大堆和最小堆。将根节点最大的堆叫做最大堆或大根堆，根节点最小的堆叫做最小堆或小根堆。下图图一就是一个最大堆，图二就是一个最小堆。在一个摆放好元素的最小堆中，可以看到，父结点中的元素一定比子结点的元素要小，但对于左右结点的大小则没有规定谁大谁小。</p>
+</blockquote>
+<blockquote>
+<p>堆常用来实现优先队列，堆的存取是随意的，这就如同我们在图书馆的书架上取书，虽然书的摆放是有顺序的，但是我们想取任意一本时不必像栈一样，先取出前面所有的书，书架这种机制不同于箱子，我们可以直接取出我们想要的书。</p>
+</blockquote>
+<p>堆<img src="https://cdn.jsdelivr.net/gh/YiChenLove/ImageHostingService/blogImg/4037795-d609d607f67d4c0a.jpg" alt="" /></p>
+<h3 id="二栈-stak">二、栈 Stak</h3>
+<blockquote>
+<p>栈是限定仅在表尾进行插入和删除操作的线性表。我们把允许插入和删除的一端称为栈顶，另一端称为栈底，不含任何数据元素的栈称为空栈。栈的特殊之处在于它限制了这个线性表的插入和删除位置，它始终只在栈顶进行。</p>
+</blockquote>
+<blockquote>
+<p>而且栈是一种具有后进先出的数据结构，又称为后进先出的线性表，简称 LIFO（Last In First Out）结构。也就是说后存放的先取，先存放的后取，这就类似于我们要在取放在箱子底部的东西（放进去比较早的物体），我们首先要移开压在它上面的物体（放进去比较晚的物体）。</p>
+</blockquote>
+<blockquote>
+<p>堆栈中定义了一些操作。两个最重要的是PUSH和POP。PUSH操作在堆栈的顶部加入一个元素。POP操作相反，在堆栈顶部移去一个元素，并将堆栈的大小减一。</p>
+</blockquote>
+<h5 id="注意其实堆栈本身就是栈只是换了个抽象的名字">注意：其实堆栈本身就是栈，只是换了个抽象的名字。</h5>
+<p>栈<img src="https://cdn.jsdelivr.net/gh/YiChenLove/ImageHostingService/blogImg/4037795-707975f1f45a6a0d.png" alt="" /></p>
+<h4 id="栈的应用递归">栈的应用——递归</h4>
+<blockquote>
+<p>在高级语言中，调用自己和其它函数没有本质的不同。我们把一个直接用自己或通过一系列的调用语句间接地调用自己的函数，称作递归函数。每个递归函数必须至少有一个条件，满足时递归不再执行，即不再引用自身而是返回值退出。</p>
+</blockquote>
+<blockquote>
+<p>递归和迭代的区别是：迭代使用的是循环结构，递归使用的是选择结构。 递归能使程序的结构更清晰、更简洁、更容易让人理解，从而减少读懂代码的时间。但是大量的递归调用会建立函数的副本，会耗费大量的时间和内存。迭代则不需要反复调用函数和占用额外的内存。因此我们应该视不同情况选择不同的代码实现方式。</p>
+</blockquote>
+<blockquote>
+<p>在前行阶段，对于每一层递归，函数的局部变量、参数值以及返回地址都被压入栈中。在退回阶段，位于栈顶的局部变量、参数值和返回地址被弹出，用于返回调用层次中执行代码的其余部分，也就是恢复了调用的状态。</p>
+</blockquote>
+<h3 id="三队列-queue">三、队列 Queue</h3>
+<blockquote>
+<p>队列是只允许在一端进行插入操作、而在另一端进行删除操作的线性表。允许插入的一端称为队尾，允许删除的一端称为队头。它是一种特殊的线性表，特殊之处在于它只允许在表的前端进行删除操作，而在表的后端进行插入操作，和栈一样，队列是一种操作受限制的线性表。</p>
+</blockquote>
+<blockquote>
+<p>而且队列是一种先进先出的数据结构，又称为先进先出的线性表，简称 FIFO（First In First Out）结构。也就是说先放的先取，后放的后取，就如同行李过安检的时候，先放进去的行李在另一端总是先出来，后放入的行李会在最后面出来。</p>
+</blockquote>
+<blockquote>
+<p>解决假溢出的办法就是后面满了，就再从头开始，也就是头尾相接的循环。我们把队列的这种头尾相接的顺序存储结构称为循环队列。</p>
+</blockquote>
+<p>队列<img src="https://cdn.jsdelivr.net/gh/YiChenLove/ImageHostingService/blogImg/4037795-e3bb5ac208c49c73.jpeg" alt="" /></p>
+<h3 id="以上是数据结构中的堆栈和队列另补充一点内存分配中的堆区和栈区">以上是数据结构中的堆、栈和队列，另补充一点：内存分配中的堆区和栈区</h3>
+<blockquote>
+<p>内存中的堆和栈第一个区别就是申请方式的不同：栈是系统自动分配空间的，而堆则是程序员根据需要自己申请的空间。由于栈上的空间是自动分配自动回收的，所以栈上的数据的生存周期只是在函数的运行过程中，运行后就释放掉，不可以再访问。而堆上的数据只要程序员不释放空间，就一直可以访问到，不过缺点是一旦忘记释放会造成内存泄露。</p>
+</blockquote>
+<blockquote>
+<p>申请效率的比较：栈由系统自动分配，速度较快。但程序员是无法控制的。堆是由new分配的内存，一般速度比较慢，而且容易产生内存碎片，不过用起来最方便。</p>
+</blockquote>
+<h5 id="申请大小的限制">申请大小的限制：</h5>
+<blockquote>
+<p>栈：在Windows下，栈是向低地址扩展的数据结构，是一块连续的内存的区域。这句话的意思是栈顶的地址和栈的最大容量是系统预先规定好的，在Windows下，栈的大小是2M（也有的说是1M，总之是一个编译时就确定的常数），如果申请的空间超过栈的剩余空间时，将提示overflow。因此，能从栈获得的空间较小。</p>
+</blockquote>
+<blockquote>
+<p>堆：堆是向高地址扩展的数据结构，是不连续的内存区域。这是由于系统是用链表来存储空闲内存地址的，自然是不连续的，而链表的遍历方向是由低地址向高地址。堆的大小受限于计算机系统中有效的虚拟内存。由此可见，堆获得的空间比较灵活，也比较大。</p>
+</blockquote>
 
     </article>
     
@@ -2325,13 +2085,13 @@ List的内存分配方式也极为不合理，当List里的元素不断增加时
     
     
       
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fyichenlove.github.io%2fposts%2fcsharp-list%2f" title="Facebook" aria-label="Facebook Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fyichenlove.github.io%2fposts%2fstak-heap-queue%2f" title="Facebook" aria-label="Facebook Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
           <svg data-name="facebook" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"/></svg>
         </a>
       
     
       
-        <a href="https://twitter.com/intent/tweet?text=C%23%20List%20%e5%ba%95%e5%b1%82%e6%ba%90%e7%a0%81%e5%89%96%e6%9e%90&url=https%3a%2f%2fyichenlove.github.io%2fposts%2fcsharp-list%2f&hashtags=C%23&via=" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
+        <a href="https://twitter.com/intent/tweet?text=%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84%e4%b8%ad%e5%a0%86%e3%80%81%e6%a0%88%e5%92%8c%e9%98%9f%e5%88%97%e7%9a%84%e7%90%86%e8%a7%a3Stak%20Heap%20Queue&url=https%3a%2f%2fyichenlove.github.io%2fposts%2fstak-heap-queue%2f&hashtags=&via=" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
           <svg data-name="twitter" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m21.534 7.113c.976-.693 1.797-1.558 2.466-2.554v-.001c-.893.391-1.843.651-2.835.777 1.02-.609 1.799-1.566 2.165-2.719-.951.567-2.001.967-3.12 1.191-.903-.962-2.19-1.557-3.594-1.557-2.724 0-4.917 2.211-4.917 4.921 0 .39.033.765.114 1.122-4.09-.2-7.71-2.16-10.142-5.147-.424.737-.674 1.58-.674 2.487 0 1.704.877 3.214 2.186 4.089-.791-.015-1.566-.245-2.223-.606v.054c0 2.391 1.705 4.377 3.942 4.835-.401.11-.837.162-1.29.162-.315 0-.633-.018-.931-.084.637 1.948 2.447 3.381 4.597 3.428-1.674 1.309-3.8 2.098-6.101 2.098-.403 0-.79-.018-1.177-.067 2.18 1.405 4.762 2.208 7.548 2.208 8.683 0 14.342-7.244 13.986-14.637z"/></svg>
         </a>
       
@@ -2479,7 +2239,19 @@ List的内存分配方式也极为不合理，当List里的元素不断增加时
     <ul class="related-ul">
         
         <li>
-          <a href="/posts/csharp-interface/" class="related__link">C# 接口Interface及其作用</a>
+          <a href="/presentation/dir/fourth/" class="related__link">Fourth</a>
+        </li>
+        
+        <li>
+          <a href="/presentation/third/" class="related__link">Third</a>
+        </li>
+        
+        <li>
+          <a href="/presentation/second/" class="related__link">Second</a>
+        </li>
+        
+        <li>
+          <a href="/presentation/first/" class="related__link">First</a>
         </li>
         
     </ul>
@@ -2489,21 +2261,14 @@ List的内存分配方式也极为不合理，当List里的元素不断增加时
 <nav class="pagination-single">
   
     
-      <a href="https://yichenlove.github.io/posts/csharp-interface/" class="pagination-single__left">
+      <a href="https://yichenlove.github.io/posts/csharp-list/" class="pagination-single__left">
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
         </div>
-        <div class="pagination-single__left-title">C# 接口Interface及其作用</div>      
+        <div class="pagination-single__left-title">C# List 底层源码剖析</div>      
       </a>
     
     <div class="grow"></div>
-    
-      <a href="https://yichenlove.github.io/posts/stak-heap-queue/" class="pagination-single__right">      
-        <div class="pagination-single__right-title">数据结构中堆、栈和队列的理解Stak Heap Queue</div>
-        <div class="pagination-single__icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
-        </div>
-      </a>
     
   
 </nav>
@@ -2861,9 +2626,17 @@ document.addEventListener('DOMContentLoaded', function () {
   <div class="toc " data-dir="ltr" data-folding="true" data-ani="true">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#list-底层代码剖析">List 底层代码剖析</a>
+    <li>
       <ul>
-        <li>
+        <li><a href="#一堆heap">一、堆Heap</a></li>
+        <li><a href="#二栈-stak">二、栈 Stak</a>
+          <ul>
+            <li></li>
+            <li><a href="#栈的应用递归">栈的应用——递归</a></li>
+          </ul>
+        </li>
+        <li><a href="#三队列-queue">三、队列 Queue</a></li>
+        <li><a href="#以上是数据结构中的堆栈和队列另补充一点内存分配中的堆区和栈区">以上是数据结构中的堆、栈和队列，另补充一点：内存分配中的堆区和栈区</a>
           <ul>
             <li></li>
           </ul>
