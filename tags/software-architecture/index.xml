@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>software architecture on wangyichen&#39;s blog</title>
+    <link>https://yichenlove.github.io/tags/software-architecture/</link>
+    <description>Recent content in software architecture on wangyichen&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>chen61813772@gmail.com (wangyichen)</managingEditor>
+    <webMaster>chen61813772@gmail.com (wangyichen)</webMaster>
+    <copyright>©2022, All Rights Reserved</copyright>
+    <lastBuildDate>Wed, 22 Jun 2022 20:46:45 +0800</lastBuildDate>
+    
+        <atom:link href="https://yichenlove.github.io/tags/software-architecture/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>架构</title>
+        <link>https://yichenlove.github.io/posts/software-architecture/</link>
+        <pubDate>Wed, 22 Jun 2022 20:46:45 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        <atom:modified>Wed, 22 Jun 2022 20:46:45 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/software-architecture/</guid>
+        <description>架构 项目中的每个子系统的都有自己的决策方向，而子系统的决策方向，把它们合起来加入一定的关联性就构成了一个完整架构整体，即每个系统、模块、组件</description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>software architecture</category>
+            
+          
+        
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

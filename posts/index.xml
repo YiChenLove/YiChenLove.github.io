@@ -14,11 +14,35 @@
     <managingEditor>chen61813772@gmail.com (wangyichen)</managingEditor>
     <webMaster>chen61813772@gmail.com (wangyichen)</webMaster>
     <copyright>©2022, All Rights Reserved</copyright>
-    <lastBuildDate>Tue, 21 Jun 2022 18:14:43 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jun 2022 20:46:45 +0800</lastBuildDate>
     
         <atom:link href="https://yichenlove.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>架构</title>
+        <link>https://yichenlove.github.io/posts/software-architecture/</link>
+        <pubDate>Wed, 22 Jun 2022 20:46:45 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        <atom:modified>Wed, 22 Jun 2022 20:46:45 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/software-architecture/</guid>
+        <description>架构 项目中的每个子系统的都有自己的决策方向，而子系统的决策方向，把它们合起来加入一定的关联性就构成了一个完整架构整体，即每个系统、模块、组件</description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>software architecture</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>链表—链式存储</title>
