@@ -14,11 +14,35 @@
     <managingEditor>chen61813772@gmail.com (wangyichen)</managingEditor>
     <webMaster>chen61813772@gmail.com (wangyichen)</webMaster>
     <copyright>©2022, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 20 Jun 2022 21:14:13 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jun 2022 11:11:26 +0800</lastBuildDate>
     
         <atom:link href="https://yichenlove.github.io/tags/unity/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>Unity Canvas 的三种渲染模式</title>
+        <link>https://yichenlove.github.io/posts/unity-canvas-render-mode/</link>
+        <pubDate>Mon, 27 Jun 2022 11:11:26 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        <atom:modified>Mon, 27 Jun 2022 11:11:26 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/unity-canvas-render-mode/</guid>
+        <description>Canvas的三种渲染模式 Canvas共有三种渲染模式，分别是ScreenSpace-Overlay、ScreenSpace-Camera和</description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>Unity</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>UnityEngine.Vector3 - Unity 脚本 API</title>
