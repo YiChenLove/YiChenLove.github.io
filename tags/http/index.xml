@@ -14,11 +14,35 @@
     <managingEditor>chen61813772@gmail.com (wangyichen)</managingEditor>
     <webMaster>chen61813772@gmail.com (wangyichen)</webMaster>
     <copyright>©2022, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 08 Nov 2021 17:45:53 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 29 Jun 2022 16:06:18 +0800</lastBuildDate>
     
         <atom:link href="https://yichenlove.github.io/tags/http/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>Http的1.0，1.1，2.0</title>
+        <link>https://yichenlove.github.io/posts/http-info/</link>
+        <pubDate>Wed, 29 Jun 2022 16:06:18 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        <atom:modified>Wed, 29 Jun 2022 16:06:18 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/http-info/</guid>
+        <description>HTTP1.0，1.1，2.0的简述 HTTP/1.1是HTTP协议的版本号，我们现在常用的协议为1.1，也有少部分仍然在使用HTTP1.0。</description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>http</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>详解 HTTP 协议</title>
