@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Protocol Buffer – wangyichen&#39;s blog</title>
+    <title>Vector3类详解 – wangyichen&#39;s blog</title>
     
 
 
@@ -653,7 +653,7 @@
     
     var baseurl = JSON.parse("\"https://yichenlove.github.io/\"");
     
-    var permalink = JSON.parse("\"https://yichenlove.github.io/posts/protocol-buffer/\"");
+    var permalink = JSON.parse("\"https://yichenlove.github.io/posts/unity-vector3-class/\"");
     
     var langprefix = JSON.parse("\"\"");
     var searchResults = null;
@@ -1334,16 +1334,18 @@
 <meta name="description" content="The blog of wangyichen." />
 
 
-<meta name="created" content="2022-06-30T20:29:36&#43;0800">
-<meta name="modified" content="2022-06-30T20:29:36&#43;0800">
-<meta property="article:published_time" content="2022-06-30T20:29:36&#43;0800">
+<meta name="keywords" content="Unity">
+
+<meta name="created" content="2022-07-05T14:52:12&#43;0800">
+<meta name="modified" content="2022-07-05T14:52:12&#43;0800">
+<meta property="article:published_time" content="2022-07-05T14:52:12&#43;0800">
 
 <meta name="author" content="wangyichen">
 
 
 <meta property="og:site_name" content="wangyichen&#39;s blog">
-<meta property="og:title" content="Protocol Buffer">
-<meta property="og:url" content="https://yichenlove.github.io/posts/protocol-buffer/">
+<meta property="og:title" content="Vector3类详解">
+<meta property="og:url" content="https://yichenlove.github.io/posts/unity-vector3-class/">
 <meta property="og:type" content="article">
 <meta property="og:description" content="The blog of wangyichen.">
 
@@ -1356,7 +1358,7 @@
 
 <meta name="apple-mobile-web-app-status-bar-style" content="#fff">
 
-<link rel="canonical" href="https://yichenlove.github.io/posts/protocol-buffer/">
+<link rel="canonical" href="https://yichenlove.github.io/posts/unity-vector3-class/">
 
 <link rel="manifest" href="/manifest.json">
 
@@ -1381,11 +1383,12 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "Protocol Buffer",
-    "datePublished": "2022-06-30T20:29:36+08:00",
-    "dateModified": "2022-06-30T20:29:36+08:00",
-    "url" : "https://yichenlove.github.io/posts/protocol-buffer/",
-    "description": "注：本教程使用 Proto3 版本 一、什么是Protobuf？ 全称Protocol buffers，是google的一种数据交换的格式，它独立于语言，独立于",
+    "headline": "Vector3类详解",
+    "datePublished": "2022-07-05T14:52:12+08:00",
+    "dateModified": "2022-07-05T14:52:12+08:00",
+    "url" : "https://yichenlove.github.io/posts/unity-vector3-class/",
+    "description": "一、向量、点乘、叉乘的介绍 在数学中，几何向量（也称为欧几里得向量，通常简称向量、矢量），指具有大小（magnitude）和方向的量。 向量可以",
+    "keywords": ["Unity"],
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://yichenlove.github.io/"
@@ -1786,7 +1789,7 @@
   
   <li  class="is-active" >
     
-      <span>Protocol Buffer</span>
+      <span>Vector3类详解</span>
     
   </li>
   
@@ -1798,14 +1801,14 @@
   <div class="single ">
     <div class="single__nojs">This page looks best with JavaScript enabled</div>
     <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
-    <h2 class="single__title" data-ani="true">Protocol Buffer</h2>
+    <h2 class="single__title" data-ani="true">Vector3类详解</h2>
     <h3 class="single__subtitle"></h3>
     <div class="single__meta">
       
 <div class="single__infos">
-  <time class="single__info" title="Written At">📅&nbsp;Jun 30, 2022 </time>
+  <time class="single__info" title="Written At">📅&nbsp;Jul 5, 2022 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;7&nbsp;min read </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;5&nbsp;min read </span>
   
   <span class="single__info">
      &middot; 👀<span id="busuanzi_value_page_pv">...</span> views
@@ -1815,29 +1818,121 @@
       
 <ul class="single__tags caption">
   
+  🏷️
+  
+
+  <li><a href="https://yichenlove.github.io/tags/unity/" class="single__tag" title="Unity">#Unity</a></li>
 
 </ul>
 
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <blockquote>
-<p>注：本教程使用 <code>Proto3</code> 版本</p>
+      <h4 id="一向量点乘叉乘的介绍">一、向量、点乘、叉乘的介绍</h4>
+<blockquote>
+<p>在数学中，几何向量（也称为欧几里得向量，通常简称向量、矢量），指具有大小（magnitude）和方向的量。  向量可以形象化地表示为带箭头的线段。箭头所指：代表向量的方向；线段长度：代表向量的大小。</p>
 </blockquote>
-<h4 id="一什么是protobuf">一、什么是Protobuf？</h4>
-<p>  全称<code>Protocol buffers</code>，是<code>google</code>的一种数据交换的格式，它独立于语言，独立于平台。</p>
-<p>  <strong>作用：<strong>作为一种效率和兼容性都很优秀的二进制数据传输格式，可以用于诸如</strong>网络传输</strong>、<strong>配置文件</strong>、**数据存储（序列化与反序列化）**等诸多领域。</p>
-<p>  **优点：**相比较XML和JSON格式，<code>protobuf</code>更小、更快、更便捷。你只需要将要被序列化的数据结构定义一次(译注：使用<code>.proto</code>文件定义)，便可以使用特别生成的源代码(译注：使用<code>protobuf</code>提供的生成工具)轻松的使用不同的数据流完成对这些结构数据的读写操作，即使你使用不同的语言（译注：<code>protobuf</code>的跨语言支持特性）。你甚至可以更新你的数据结构的定义（译注：就是更新<code>.proto</code>文件内容）而不会破坏依赖“老”格式编译出来的程序。</p>
-<p>  </p>
-<h4 id="二protobuf的版本">二、ProtoBuf的版本</h4>
-<p>  PB具有三个版本：</p>
-<p>  一、<a href="https://github.com/google/protobuf/tree/master/csharp">Google官方版本：</a>     谷歌官方开发、比较晦涩，主库名字：Google.ProtoBuf.dll</p>
-<p>  二、<a href="https://github.com/mgravell/protobuf-net">.Net社区版本：</a>     .Net社区爱好者开发，写法上比较符合.net上的语法习惯，主库名字：protobuf-net.dll</p>
-<p>  三、<a href="https://github.com/jskeet/protobuf-csharp-port">.Net社区版本（二）：</a>     据说是由谷歌的.net员工为.net开发，在官方没有出来csharp的时候开发，到发博文时还在维护，主库名字：Google.ProtocolBuffers.dll</p>
-<p>  至于选用那个版本，跨平台的需求不大的话，可以用版本二、大的话可以选用一或者三。</p>
-<p>  </p>
-<h4 id="三protocol-buffers的工作流程">三、protocol buffers的工作流程</h4>
-<p>首先，你需要通过在<code>.proto</code>文件中定义<code>protocol buffer</code>的<code>message</code>类型来指定你想要序列化的数据结构，每一个<code>protocol buffer message</code>是一个逻辑上的信息记录，它包含一系列的键值对。这里展示一个最基本的<code>.ptoto</code>文件的例子，它定义了一个包含<code>Person</code>信息的<code>message</code>：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YiChenLove/ImageHostingService/blogImg/3912830-c6a1147b8de57afb.png" alt="向量" /></p>
+<p>向量的运算：<br />
+加减：各个分量分别相加减。<br />
+标量：只有大小,没有方向<br />
+数乘：向量与标量的乘数，可以对向量的长度进行缩放，如果标量&gt;0，向量的<br />
+方向不变，如果&lt;0,向量的方向为反方向</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YiChenLove/ImageHostingService/blogImg/3912830-4a712ebcdb353d9b.png" alt="向量运算" /></p>
+<p><code>点乘（点积）：</code>是接受在实数R上的两个向量相乘并返回一个实数值标量u的大小、v的大小、u,v夹角的余弦。在u,v非零的前提下，点积如果为负，则u,v形成的角大于90度；如果为零，那么u,v垂直；如果为正，那么u,v形成的角为锐角。两个单位向量的点积得到两个向量的夹角的cos值，通过它可以知道两个向量的相似性，利用点积可判断一个多边形是否面向摄像机还是背向摄像机。如果点积越大，说明夹角越小，则物理离光照的轴线越近，光照越强。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YiChenLove/ImageHostingService/blogImg/Scalarproduct.gif" alt="" /></p>
+<blockquote>
+<p>A·B = |A| |B| cos(θ). |A| cos(θ)是A到B的投影。</p>
+</blockquote>
+<p>叉乘：两个向量的叉乘得到一个新的向量，新向量垂直于原来两个向量，并且长度等于原向量长度相乘后再乘以夹角的正弦值，类似左手坐标系Z</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YiChenLove/ImageHostingService/blogImg/Cross_product_vector.svg" alt="" /></p>
+<pre tabindex="0"><code>点乘与叉乘的理解：
+
+点乘：两个向量点乘得到一个标量 ，数值等于两个向量长度相乘后再乘以二者夹角的余弦值 。
+如果两个向量a,b均 为单位 向量 ,那么a.b等于向量b在向量a方向上的投影的长度
+
+#点乘后得到的是一个值
+若结果 == o，则 两向量 互垂直 。
+若结果 &lt; 0 ，则 两向量夹角大于90°。
+若结果 &gt;0 ，则两向量夹角小于 90°。
+叉乘：两 个向量的叉乘得到一个新的向量 ,新向量垂直于原来的两个向量再乘夹角的正弦值
+叉乘后得到的还是一个向量
+在Unity3D里面。两个向量的点乘所得到的是两个向量的余弦值，也就是-1 到1之间，
+0表示垂直，-1表示相反，1表示相同方向。 两个向量的叉乘所得到的是两个向量所组成的面
+的垂直向量，分两个方向。 简单的说，点乘判断角度，叉乘判断方向。 形象的说当一个敌人
+在你身后的时候，叉乘可以判断你是往左转还是往右转更好的转向敌人，点乘得到你当前的面
+朝向的方向和你到敌人的方向的所成的角度大小。
+</code></pre><h4 id="二vector3的常用方法">二、Vector3的常用方法</h4>
+<blockquote>
+<p>****Vector是结构体 ****<br />
+静态成员变量<br />
+right（右）：代表坐标轴（1,0,0）<br />
+left （左）：代表坐标轴（-1,0,0）<br />
+up（上） :代表坐标轴（0,1,0）<br />
+down （下）： 代表坐标轴（0,-1,0）<br />
+forward （前）：代表坐标轴（0,0,1）<br />
+back（后）：代表坐标轴（0,0,-1）<br />
+zero（零）：代表坐标轴（0,0,0）<br />
+one（一）：代表坐标轴（1,1,1）<br />
+<strong><strong>实例成员变量</strong></strong></p>
+</blockquote>
+<pre tabindex="0"><code>magnitude：（返回向量的长度，向量的长度是(x*x+y*y+z*z)的平方根）（只读）
+normalized：返回一个长度为一的新向量，原向量长度不变
+sqrMagnitude:返回向量的长度的平方（只读）
+</code></pre><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-C#" data-lang="C#"><span class="k">public</span> <span class="n">Vector3</span> <span class="n">pos</span><span class="p">;</span>
+<span class="k">void</span> <span class="n">Start</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">float</span> <span class="n">a</span> <span class="p">=</span> <span class="n">Vector3</span><span class="p">.</span><span class="n">Magnitude</span><span class="p">(</span><span class="k">new</span> <span class="n">Vector3</span><span class="p">(</span><span class="m">10</span><span class="p">,</span> <span class="m">5</span><span class="p">,</span> <span class="m">2</span><span class="p">));</span> <span class="c1">// 返回向量的长度，向量的长度事(x * x + y * y + z * z)的平方根
+</span><span class="c1"></span>    <span class="n">Debug</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="s">&#34;向量的长度&#34;</span> <span class="p">+</span> <span class="n">a</span><span class="p">);</span> <span class="c1">// 输出向量长度
+</span><span class="c1"></span>
+    <span class="n">Vector3</span> <span class="n">b</span> <span class="p">=</span> <span class="n">Vector3</span><span class="p">.</span><span class="n">Normalize</span><span class="p">(</span><span class="k">new</span> <span class="n">Vector3</span><span class="p">(</span><span class="m">10</span><span class="p">,</span> <span class="m">5</span><span class="p">,</span> <span class="m">2</span><span class="p">));</span> <span class="c1">// 返回一个长度为1的新向量（单位向量），原向量长度不变
+</span><span class="c1"></span>    <span class="n">Debug</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="s">&#34;返回向量的长度为1&#34;</span> <span class="p">+</span> <span class="n">b</span><span class="p">);</span>
+
+    <span class="kt">float</span> <span class="n">c</span> <span class="p">=</span> <span class="n">Vector3</span><span class="p">.</span><span class="n">SqrMagnitude</span><span class="p">(</span><span class="k">new</span> <span class="n">Vector3</span><span class="p">(</span><span class="m">10</span><span class="p">,</span> <span class="m">5</span><span class="p">,</span> <span class="m">2</span><span class="p">));</span> <span class="c1">// 返回向量的长度平凡
+</span><span class="c1"></span>    <span class="n">Debug</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="s">&#34;返回向量的长度的平方&#34;</span> <span class="p">+</span> <span class="n">c</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><img src="https://cdn.jsdelivr.net/gh/YiChenLove/ImageHostingService/blogImg/3912830-e0654c4d026ab96a.png" alt="" /></p>
+<p>打印结果</p>
+<p><code>Vector3常用方法：</code></p>
+<pre tabindex="0"><code>Cross:向量叉乘
+Dot:向量点乘
+Lerp(v(from),v(to),t):两个向量之间的线性插值。按照数字t在from到to之间插值。
+MoveTowards(v,v,speed);当前的地点移向目标。
+RotateTowards(v,v,r,m);当前的向量转向目标。
+Max(v,v),Min(v,v); 向量的最大值，最小值
+Angle:返回两个向量之间的夹角
+Distance:返回两个向量之间的距离
+</code></pre><blockquote>
+<p>Project : 极端向量在另一向量上的投影<br />
+Operator + 向量相加<br />
+Operator - 向量相减<br />
+Operator * 向量乘以标量<br />
+Operator / 向量除以标量<br />
+Operator== 若向量相等返回true<br />
+Operator != 若向量不等于则返回true</p>
+</blockquote>
+<h4 id="三vector3方法的应用">三、Vector3方法的应用</h4>
+<blockquote>
+<p><code>Dot(向量点乘)方法;</code><br />
+在做rpg类游戏的过程中,经常遇到要判断周围怪物相对自身的方位**<br />
+判断一个物体处于另一个物体的前后方位（背对或面对）,点积大于前面（面对）,否则（背对）。</p>
+</blockquote>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1857,43 +1952,34 @@
 </span><span class="lnt">15
 </span><span class="lnt">16
 </span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-protobuf" data-lang="protobuf">    <span class="n">syntax</span> <span class="o">=</span> <span class="s">&#34;proto3&#34;</span><span class="p">;</span><span class="err">
-</span><span class="err"></span>    <span class="kn">package</span> <span class="nn">shenjun</span><span class="p">;</span><span class="err">
-</span><span class="err">
-</span><span class="err"></span>    <span class="kd">message</span> <span class="nc">Person</span><span class="err">
-</span><span class="err"></span>    <span class="p">{</span><span class="err">
-</span><span class="err"></span>        <span class="kt">string</span> <span class="n">name</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span><span class="err">
-</span><span class="err"></span>        <span class="kt">int32</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span><span class="err">
-</span><span class="err"></span>        <span class="kt">string</span> <span class="n">email</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span><span class="err">
-</span><span class="err">
-</span><span class="err"></span>        <span class="kd">enum</span> <span class="n">PhoneType</span><span class="err">
-</span><span class="err"></span>        <span class="p">{</span><span class="err">
-</span><span class="err"></span>            <span class="n">HOME</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="err">
-</span><span class="err"></span>            <span class="n">MOBILE</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span><span class="err">
-</span><span class="err"></span>            <span class="n">WORK</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span><span class="err">
-</span><span class="err"></span>        <span class="p">}</span><span class="err">
-</span><span class="err">
-</span><span class="err"></span>        <span class="kd">message</span> <span class="nc">PhoneNumber</span><span class="err">
-</span><span class="err"></span>        <span class="p">{</span><span class="err">
-</span><span class="err"></span>            <span class="kt">string</span> <span class="n">number</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span><span class="err">
-</span><span class="err"></span>            <span class="n">PhoneType</span> <span class="n">type</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span><span class="err">
-</span><span class="err"></span>        <span class="p">}</span><span class="err">
-</span><span class="err">
-</span><span class="err"></span>        <span class="k">repeated</span> <span class="n">PhoneNumber</span> <span class="n">phone</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span><span class="err">
-</span><span class="err"></span>    <span class="p">}</span><span class="err">
-</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-C#" data-lang="C#"><span class="k">void</span> <span class="n">Start</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// 判断一个物体处于另一个物体的前后方位，点积大雨0前面（面对）,否则（背对）。
+</span><span class="c1"></span>    <span class="kt">float</span> <span class="n">dis</span> <span class="p">=</span> <span class="n">Vector3</span><span class="p">.</span><span class="n">Dot</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">forward</span><span class="p">,</span> <span class="n">Green</span><span class="p">.</span><span class="n">position</span> <span class="p">-</span> <span class="k">this</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">);</span>
+    <span class="n">Debug</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="s">&#34;距离为&#34;</span> <span class="p">+</span> <span class="n">dis</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">dis</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">Debug</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="s">&#34;在前方&#34;</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">dis</span> <span class="p">&lt;</span> <span class="m">0</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">Debug</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="s">&#34;在后方&#34;</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">else</span>
+    <span class="p">{</span>
+        <span class="n">Debug</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="s">&#34;重合&#34;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
 </div>
-</div><p>正如你所看见的那样，<code>message</code>的格式非常简单&ndash;每一个<code>message</code>类型都有一个或多个带有唯一编号的字段，每一个字段有一个字段名和一个字段类型，字段类型可以是数值类型（比如整形或浮点型）、<code>booleans</code>（布尔类型）、<code>strings</code>（字符串类型）、<code>raw bytes</code>、甚至（正如上面的例子）还可以是其他的<code>protocol buffer message</code>类型，这允许你可以分层次的组织你的数据结构。</p>
-<p>运行编译器编译上述的例子将生成一个名为<code>Person</code>的类，在你的应用程序中你可以使用这个类来填充、序列化和反序列化<code>Person protocol buffer messages</code>。之后你可能会写下如下类似的代码(译注：序列化)：</p>
+</div><p>判断前后位置</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YiChenLove/ImageHostingService/blogImg/3912830-8d85c10d1facf2dd.png" alt="" /></p>
+<p>打印结果</p>
+<blockquote>
+<p><code>Cross(向量叉乘方法)</code><br />
+判断一个物体处于另一个物体的左右边（通过v3.y&gt;0右边，否则在左边）</p>
+</blockquote>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1911,101 +1997,33 @@
 </span><span class="lnt">13
 </span><span class="lnt">14
 </span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cs" data-lang="cs">    <span class="n">Person</span> <span class="n">p</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Person</span><span class="p">();</span>
-    <span class="n">p</span><span class="p">.</span><span class="n">Name</span> <span class="p">=</span> <span class="s">&#34;shenjun&#34;</span><span class="p">;</span>
-    <span class="n">p</span><span class="p">.</span><span class="n">Id</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span>
-    <span class="n">p</span><span class="p">.</span><span class="n">Email</span> <span class="p">=</span> <span class="s">&#34;380921128@qq.com&#34;</span><span class="p">;</span>
-
-    <span class="n">p</span><span class="p">.</span><span class="n">Phone</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="k">new</span> <span class="n">Person</span><span class="p">.</span><span class="n">Types</span><span class="p">.</span><span class="n">PhoneNumber</span>
+<pre tabindex="0" class="chroma"><code class="language-C#" data-lang="C#">    <span class="c1">// 判断一个物体处于另一个物体的左右边（通过v3.y&gt;0右边，否则在左边）
+</span><span class="c1"></span>    <span class="n">Vector3</span> <span class="n">v3</span> <span class="p">=</span> <span class="n">Vector3</span><span class="p">.</span><span class="n">Cross</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">forward</span><span class="p">,</span> <span class="n">Green</span><span class="p">.</span><span class="n">position</span> <span class="p">-</span> <span class="k">this</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">);</span>
+    <span class="n">Debug</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="s">&#34;距离为&#34;</span> <span class="p">+</span> <span class="n">v3</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">v3</span><span class="p">.</span><span class="n">y</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">)</span>
     <span class="p">{</span>
-        <span class="n">Number</span> <span class="p">=</span> <span class="s">&#34;12345678901&#34;</span><span class="p">,</span>
-        <span class="n">Type</span> <span class="p">=</span> <span class="n">Person</span><span class="p">.</span><span class="n">Types</span><span class="p">.</span><span class="n">PhoneType</span><span class="p">.</span><span class="n">Mobile</span>
-    <span class="p">});</span>
-    <span class="n">p</span><span class="p">.</span><span class="n">Phone</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="k">new</span> <span class="n">Person</span><span class="p">.</span><span class="n">Types</span><span class="p">.</span><span class="n">PhoneNumber</span>
+        <span class="n">Debug</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="s">&#34;在右方&#34;</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">v3</span><span class="p">.</span><span class="n">y</span> <span class="p">&lt;</span> <span class="m">0</span><span class="p">)</span>
     <span class="p">{</span>
-        <span class="n">Number</span> <span class="p">=</span> <span class="s">&#34;123456&#34;</span><span class="p">,</span>
-        <span class="n">Type</span> <span class="p">=</span> <span class="n">Person</span><span class="p">.</span><span class="n">Types</span><span class="p">.</span><span class="n">PhoneType</span><span class="p">.</span><span class="n">Home</span>
-    <span class="p">});</span>
-
-    <span class="kt">byte</span><span class="p">[]</span> <span class="n">buff</span> <span class="p">=</span> <span class="n">p</span><span class="p">.</span><span class="n">ToByteArray</span><span class="p">();</span>
+        <span class="n">Debug</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="s">&#34;在左方&#34;</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">v3</span> <span class="p">==</span> <span class="n">Vector3</span><span class="p">.</span><span class="n">zero</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">Debug</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="s">&#34;位置一致&#34;</span><span class="p">);</span>
+    <span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>之后，你可以将你的<code>message</code>读回(译注：反序列化)：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cs" data-lang="cs">    <span class="n">IMessage</span> <span class="n">IMperson</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Person</span><span class="p">();</span>
-    <span class="n">Person</span> <span class="n">person</span> <span class="p">=</span> <span class="p">(</span><span class="n">Person</span><span class="p">)</span><span class="n">IMperson</span><span class="p">.</span><span class="n">Descriptor</span><span class="p">.</span><span class="n">Parser</span><span class="p">.</span><span class="n">ParseFrom</span><span class="p">(</span><span class="n">buff</span><span class="p">);</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>你可以向你的<code>message</code>中添加新的字段而不会破坏前向兼容性；在解析时旧的二进制文件会简单的忽略掉新字段，所以，如果你的通信协议中使用<code>protocol buffers</code>作为数据交换格式，那么你可以扩展你的协议而不用担心会打乱现有的代码。</p>
-<h4 id="四为什么不使用xml">四、为什么不使用XML?</h4>
-<p>相对于XML，<code>protocol buffers</code>在序列化结构数据时拥有许多先进的特性：</p>
-<pre tabindex="0"><code>    1、更简单
-
-    2、序列化后字节占用空间比XML少3-10倍
-
-    3、序列化的时间效率比XML快20-100倍
-
-    4、具有更少的歧义性
-
-    5、自动生成数据访问类方便应用程序的使用
-</code></pre><p>举个例子，如果你想描述一个具有<code>name</code>和<code>email</code>的<code>person</code>数据结构，在XML中，你需要这样做：</p>
-<pre tabindex="0"><code>    &lt;person&gt;
-        &lt;name&gt;John Doe&lt;/name&gt;
-        &lt;email&gt;jdoe@example.com&lt;/email&gt;
-    &lt;/person&gt;
-</code></pre><p>然而，在<code>protocol buffers</code>的<code>message</code>中(<code>protocol buffers</code>的文本格式)你需要这样做：</p>
-<pre tabindex="0"><code>    # Textual representation of a protocol buffer.
-    # This is *not* the binary format used on the wire.
-    person {
-        name: &quot;John Doe&quot;
-        email: &quot;jdoe@example.com&quot;
-    }
-</code></pre><p>当这个<code>message</code>被编码成<code>protocol buffer</code>的二进制格式(上述的文本格式只是为了方便阅读、调试和编辑)，它将可能占用28个字节长度并且仅需要100-200纳秒的解析时间。相比，XML版本的则至少需要占用69字节的空间(这是在移除XML中的空格、换行之后)，同时，将耗费大约5000-10000纳秒的解析时间。</p>
-<p>  除此之外，手动操作<code>protocol buffer</code>更为方便，例如如下C++代码：</p>
-<pre tabindex="0"><code>    cout &lt;&lt; &quot;Name: &quot; &lt;&lt; person.name() &lt;&lt; endl;
-    cout &lt;&lt; &quot;E-mail: &quot; &lt;&lt; person.email() &lt;&lt; endl;
-</code></pre><p>  然而如果你使用XML，那么你将需要这样做：</p>
-<pre tabindex="0"><code>    cout &lt;&lt; &quot;Name: &quot;&lt;&lt; person.getElementsByTagName(&quot;name&quot;)-&gt;item(0)-&gt;innerText()&lt;&lt; endl;
-    cout &lt;&lt; &quot;E-mail: &quot;&lt;&lt; person.getElementsByTagName(&quot;email&quot;)-&gt;item(0)-&gt;innerText()&lt;&lt; endl;
-</code></pre><p>事物总有两面性，和XML相比<code>protocol buffers</code>并不总是更好的选择，例如，<code>protocol buffers</code>并不适合用来描述一个基于文本的标记型文档（比如HTML），因为你无法轻易的交错文本的结构。另外，XML具有很好的可读性和可编辑性；而<code>protocol buffers</code>，至少在它们的原生形式上并不具备这个特点。XML同时也是可扩展、自描述的。而一个<code>protocol buffer</code>只有在具有<code>message</code> 定义(在<code>.proto</code>文件中定义)时才会有意义。</p>
-<h4 id="五如何开始使用protocol-buffers">五、如何开始使用protocol buffers?</h4>
-<p>首先，可以在这里下载安装包或者源码包</p>
-<p>  <a href="https://developers.google.com/protocol-buffers/docs/downloads#release-packages">https://developers.google.com/protocol-buffers/docs/downloads#release-packages</a></p>
-<p>  这包含了针对JAVA、Python、C#和C++编译器的完整源码，同时包含了你所需要的I/O和测试类。为了完成编译和安装，请参照README文件。</p>
-<p>  一旦你完成了编译和安装，那么就可以开始使用<code>protocol buffers</code>了。</p>
-<h4 id="六proto3介绍">六、proto3介绍</h4>
-<p>我们最新的版本<code>version 3 alpha release</code>引进了一个新的语言版本&ndash;<code>Protocol Buffers version 3</code> (称之为<code>proto3</code>)，它在我们现存的语言版本(<code>proto2</code>)上引进了一些新特性。<code>proto3</code>简化了<code>protocol buffer language</code>，这使其可以更便于使用和支持更多的编程语言：我们现在的<code>alpha release</code>版本可以让你能产生<code>JAVA</code>、<code>C++</code>、<code>Python</code>、<code>JavaNano</code>、<code>Ruby</code>、<code>Objective-C</code>和<code>C#</code>版本的<code>protocol buffer code</code>，不过可能有时会有一些局限性。另外，你可以使用最新的<code>Go protoc</code>插件来产生<code>Go</code>语言版本的<code>proto3 code</code>，这可以从<code>golang/protobuf Github repository</code>获取。</p>
-<p><strong>我们现在只推荐你使用<code>proto3</code>:</strong></p>
-<p>  1、如果你想尝试在我们新支持的语言中使用<code>protocol buffers</code></p>
-<p>  2、如果你想尝试我们最新开源的<code>RPC</code>实现<code>gRPC</code>(目前仍处于<code>alpha release</code>版本)，我们建议你为所有的<code>gRPC</code> 服务器和客户端都使用<code>proto3</code>以避免兼容性问题。</p>
-<p>  注意两个版本的语言<code>APIs</code>并不是完全兼容的，为了避免给原来的用户造成不便，我们将会继续维护之前的那个版本(译注：<code>proto2</code>)。</p>
-<h4 id="七最后说一点历史">七、最后说一点历史</h4>
-<p><code>Protocol buffers</code>最初被<code>Google</code>开发用来作为处理索引服务器的<code>request/response</code>协议。在<code>protocol buffers</code>诞生之前，有一个需要手动编码/解码<code>requests</code>、<code>responses</code>的协议，这个协议支持一个数字版本号，这导致了一个非常丑陋的代码，如下所示：</p>
-<pre tabindex="0"><code>    if (version == 3) {
-        ...
-    } else if (version &gt; 4) {
-        if (version == 5) {
-            ...
-        }
-        ...
-    }
-</code></pre><p>很显然的，格式化的协议也导致了复杂的新版本推出问题，因为开发人员必须确保所有服务器请求的发起者和实际的请求处理者之间都要理解新的协议。</p>
-<p><strong>Protocol buffers 就是用来解决这些问题的：</strong></p>
-<p>  1、可以很容易的插入新字段，中间的服务器可以简单的解析它而不需要了解所有字段。</p>
-<p>  2、格式更具有自描述性，可以被不同的语言处理(比如<code>JAVA</code>、<code>C++</code>、<code>Python</code>等)。</p>
-<p>  3、自动产生序列化和反序列化代码从而避免了手动解析。</p>
-<p>  4、除了应用在具有短暂生命周期的<code>RPC</code>请求中，人们开始使用<code>protocol buffers</code> 作为一种便利的自描述格式来存储数据(比如在<code>Bigtable</code>中)。</p>
-<p>  5、服务器的<code>RPC</code>接口开始被声明为协议文件的一部分，通过<code>protocol</code> 编译器产生<code>stub</code>类，该类可以被用户根据实际实现的服务器接口进行重写。</p>
-<p>🔚</p>
+</div><p>判断左右位置</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YiChenLove/ImageHostingService/blogImg/3912830-e8f7f2a26473d7ba.png" alt="" /></p>
+<p><code>MoveTowards(v,v,speed) 当前的地点移向目标。</code><br />
+<code>Distance:返回两个向量之间的距离</code></p>
+<p><code>Lerp(v(from),v(to),t):两个向量之间的线性插值。按照数字t在from到to之间插值。</code><br />
+<code>返回值的运算方式为:from+(to-from)*t</code></p>
+<p><code>RotateTowards(v,v,r,m);当前的向量转向目标。</code></p>
+<p><code>Angle:返回两个向量之间的夹角</code></p>
 
     </article>
     
@@ -2205,13 +2223,13 @@
     
     
       
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fyichenlove.github.io%2fposts%2fprotocol-buffer%2f" title="Facebook" aria-label="Facebook Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fyichenlove.github.io%2fposts%2funity-vector3-class%2f" title="Facebook" aria-label="Facebook Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
           <svg data-name="facebook" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"/></svg>
         </a>
       
     
       
-        <a href="https://twitter.com/intent/tweet?text=Protocol%20Buffer&url=https%3a%2f%2fyichenlove.github.io%2fposts%2fprotocol-buffer%2f&via=" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
+        <a href="https://twitter.com/intent/tweet?text=Vector3%e7%b1%bb%e8%af%a6%e8%a7%a3&url=https%3a%2f%2fyichenlove.github.io%2fposts%2funity-vector3-class%2f&hashtags=Unity&via=" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
           <svg data-name="twitter" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m21.534 7.113c.976-.693 1.797-1.558 2.466-2.554v-.001c-.893.391-1.843.651-2.835.777 1.02-.609 1.799-1.566 2.165-2.719-.951.567-2.001.967-3.12 1.191-.903-.962-2.19-1.557-3.594-1.557-2.724 0-4.917 2.211-4.917 4.921 0 .39.033.765.114 1.122-4.09-.2-7.71-2.16-10.142-5.147-.424.737-.674 1.58-.674 2.487 0 1.704.877 3.214 2.186 4.089-.791-.015-1.566-.245-2.223-.606v.054c0 2.391 1.705 4.377 3.942 4.835-.401.11-.837.162-1.29.162-.315 0-.633-.018-.931-.084.637 1.948 2.447 3.381 4.597 3.428-1.674 1.309-3.8 2.098-6.101 2.098-.403 0-.79-.018-1.177-.067 2.18 1.405 4.762 2.208 7.548 2.208 8.683 0 14.342-7.244 13.986-14.637z"/></svg>
         </a>
       
@@ -2349,26 +2367,50 @@
     <section class="related">
     
     
+    <h1 class="related__title">
+      <hr class="hr-dots"/>
+      <div>
+        See Also
+      </div>
+      <hr class="hr-dots"/>
+    </h1>
+    <ul class="related-ul">
+        
+        <li>
+          <a href="/posts/unity-canvas-render-mode/" class="related__link">Unity Canvas 的三种渲染模式</a>
+        </li>
+        
+        <li>
+          <a href="/posts/unity-vector3/" class="related__link">UnityEngine.Vector3 - Unity 脚本 API</a>
+        </li>
+        
+        <li>
+          <a href="/posts/unity-profiler/" class="related__link">【unity】使用Profiler进行性能分析</a>
+        </li>
+        
+        <li>
+          <a href="/posts/unity-xlua-vector3/" class="related__link">Unity中xLua与toLua对Vector3的优化</a>
+        </li>
+        
+        <li>
+          <a href="/posts/litjson-fix/" class="related__link">Litjson Fix</a>
+        </li>
+        
+    </ul>
+    
   </section>
     <div class="grow"></div>
 <nav class="pagination-single">
   
     
-      <a href="https://yichenlove.github.io/posts/http-info/" class="pagination-single__left">
+      <a href="https://yichenlove.github.io/posts/protocol-buffer/" class="pagination-single__left">
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
         </div>
-        <div class="pagination-single__left-title">Http的1.0，1.1，2.0</div>      
+        <div class="pagination-single__left-title">Protocol Buffer</div>      
       </a>
     
     <div class="grow"></div>
-    
-      <a href="https://yichenlove.github.io/posts/unity-vector3-class/" class="pagination-single__right">      
-        <div class="pagination-single__right-title">Vector3类详解</div>
-        <div class="pagination-single__icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
-        </div>
-      </a>
     
   
 </nav>
@@ -2730,13 +2772,9 @@ document.addEventListener('DOMContentLoaded', function () {
       <ul>
         <li>
           <ul>
-            <li><a href="#一什么是protobuf">一、什么是Protobuf？</a></li>
-            <li><a href="#二protobuf的版本">二、ProtoBuf的版本</a></li>
-            <li><a href="#三protocol-buffers的工作流程">三、protocol buffers的工作流程</a></li>
-            <li><a href="#四为什么不使用xml">四、为什么不使用XML?</a></li>
-            <li><a href="#五如何开始使用protocol-buffers">五、如何开始使用protocol buffers?</a></li>
-            <li><a href="#六proto3介绍">六、proto3介绍</a></li>
-            <li><a href="#七最后说一点历史">七、最后说一点历史</a></li>
+            <li><a href="#一向量点乘叉乘的介绍">一、向量、点乘、叉乘的介绍</a></li>
+            <li><a href="#二vector3的常用方法">二、Vector3的常用方法</a></li>
+            <li><a href="#三vector3方法的应用">三、Vector3方法的应用</a></li>
           </ul>
         </li>
       </ul>

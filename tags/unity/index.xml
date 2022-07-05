@@ -14,11 +14,35 @@
     <managingEditor>chen61813772@gmail.com (wangyichen)</managingEditor>
     <webMaster>chen61813772@gmail.com (wangyichen)</webMaster>
     <copyright>©2022, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 27 Jun 2022 11:11:26 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 05 Jul 2022 14:52:12 +0800</lastBuildDate>
     
         <atom:link href="https://yichenlove.github.io/tags/unity/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>Vector3类详解</title>
+        <link>https://yichenlove.github.io/posts/unity-vector3-class/</link>
+        <pubDate>Tue, 05 Jul 2022 14:52:12 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        <atom:modified>Tue, 05 Jul 2022 14:52:12 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/unity-vector3-class/</guid>
+        <description>一、向量、点乘、叉乘的介绍 在数学中，几何向量（也称为欧几里得向量，通常简称向量、矢量），指具有大小（magnitude）和方向的量。 向量可以</description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>Unity</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>Unity Canvas 的三种渲染模式</title>
