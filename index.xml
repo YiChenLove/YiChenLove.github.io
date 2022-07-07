@@ -14,7 +14,7 @@
     <managingEditor>chen61813772@gmail.com (wangyichen)</managingEditor>
     <webMaster>chen61813772@gmail.com (wangyichen)</webMaster>
     <copyright>©2022, All Rights Reserved</copyright>
-    <lastBuildDate>Tue, 05 Jul 2022 14:52:12 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 06 Jul 2022 18:43:16 +0800</lastBuildDate>
     
         <atom:link href="https://yichenlove.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -40,6 +40,30 @@
         
       
 
+      
+      <item>
+        <title>克服焦虑、内耗、消极想法</title>
+        <link>https://yichenlove.github.io/posts/psychology-overcome-negative/</link>
+        <pubDate>Wed, 06 Jul 2022 18:43:16 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        <atom:modified>Wed, 06 Jul 2022 18:43:16 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/psychology-overcome-negative/</guid>
+        <description>01 前几周，我情绪低落了一阵子。 原因是工作出现了小小的动荡，部门的一位同事因成本优化的原因被公司辞退了，公司与一些合作方的合作暂停了，我们部门</description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>psychology</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>Vector3类详解</title>
