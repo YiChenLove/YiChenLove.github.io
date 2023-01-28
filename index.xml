@@ -13,8 +13,8 @@
     <language>en</language>
     <managingEditor>chen61813772@gmail.com (wangyichen)</managingEditor>
     <webMaster>chen61813772@gmail.com (wangyichen)</webMaster>
-    <copyright>©2022, All Rights Reserved</copyright>
-    <lastBuildDate>Wed, 06 Jul 2022 18:43:16 +0800</lastBuildDate>
+    <copyright>©2023, All Rights Reserved</copyright>
+    <lastBuildDate>Sat, 28 Jan 2023 15:51:16 +0800</lastBuildDate>
     
         <atom:link href="https://yichenlove.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -40,6 +40,30 @@
         
       
 
+      
+      <item>
+        <title>Unity Shader入门（一）</title>
+        <link>https://yichenlove.github.io/posts/unity-shader1/</link>
+        <pubDate>Sat, 28 Jan 2023 15:51:16 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        <atom:modified>Sat, 28 Jan 2023 15:51:16 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/unity-shader1/</guid>
+        <description>1. Untiy 图形相关概念以及基础知识 Mesh / MeshFilter / MeshRenderer / Material 相关概念以及基础知识 在Unity 3D物体中包含了MeshFilter， MeshRenderer，M</description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>unity</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>克服焦虑、内耗、消极想法</title>

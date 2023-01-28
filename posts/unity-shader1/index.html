@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>【unity】使用Profiler进行性能分析 – wangyichen&#39;s blog</title>
+    <title>Unity Shader入门（一） – wangyichen&#39;s blog</title>
     
 
 
@@ -653,7 +653,7 @@
     
     var baseurl = JSON.parse("\"https://yichenlove.github.io/\"");
     
-    var permalink = JSON.parse("\"https://yichenlove.github.io/posts/unity-profiler/\"");
+    var permalink = JSON.parse("\"https://yichenlove.github.io/posts/unity-shader1/\"");
     
     var langprefix = JSON.parse("\"\"");
     var searchResults = null;
@@ -1334,18 +1334,18 @@
 <meta name="description" content="The blog of wangyichen." />
 
 
-<meta name="keywords" content="Unity,Profiler">
+<meta name="keywords" content="unity">
 
-<meta name="created" content="2021-11-08T10:45:06&#43;0800">
-<meta name="modified" content="2021-11-08T10:45:06&#43;0800">
-<meta property="article:published_time" content="2021-11-08T10:45:06&#43;0800">
+<meta name="created" content="2023-01-28T15:51:16&#43;0800">
+<meta name="modified" content="2023-01-28T15:51:16&#43;0800">
+<meta property="article:published_time" content="2023-01-28T15:51:16&#43;0800">
 
 <meta name="author" content="wangyichen">
 
 
 <meta property="og:site_name" content="wangyichen&#39;s blog">
-<meta property="og:title" content="【unity】使用Profiler进行性能分析">
-<meta property="og:url" content="https://yichenlove.github.io/posts/unity-profiler/">
+<meta property="og:title" content="Unity Shader入门（一）">
+<meta property="og:url" content="https://yichenlove.github.io/posts/unity-shader1/">
 <meta property="og:type" content="article">
 <meta property="og:description" content="The blog of wangyichen.">
 
@@ -1358,7 +1358,7 @@
 
 <meta name="apple-mobile-web-app-status-bar-style" content="#fff">
 
-<link rel="canonical" href="https://yichenlove.github.io/posts/unity-profiler/">
+<link rel="canonical" href="https://yichenlove.github.io/posts/unity-shader1/">
 
 <link rel="manifest" href="/manifest.json">
 
@@ -1383,12 +1383,12 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "【unity】使用Profiler进行性能分析",
-    "datePublished": "2021-11-08T10:45:06+08:00",
-    "dateModified": "2021-11-08T10:45:06+08:00",
-    "url" : "https://yichenlove.github.io/posts/unity-profiler/",
-    "description": "在游戏开发过程中，游戏性能是非常重要的，学会使用unity自带的profiler工具是非常必要的，以下是我从官方地址找到的进阶教程，感觉文章",
-    "keywords": ["Unity","Profiler"],
+    "headline": "Unity Shader入门（一）",
+    "datePublished": "2023-01-28T15:51:16+08:00",
+    "dateModified": "2023-01-28T15:51:16+08:00",
+    "url" : "https://yichenlove.github.io/posts/unity-shader1/",
+    "description": "1. Untiy 图形相关概念以及基础知识 Mesh / MeshFilter / MeshRenderer / Material 相关概念以及基础知识 在Unity 3D物体中包含了MeshFilter， MeshRenderer，M",
+    "keywords": ["unity"],
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://yichenlove.github.io/"
@@ -1789,7 +1789,7 @@
   
   <li  class="is-active" >
     
-      <span>【unity】使用Profiler进行性能分析</span>
+      <span>Unity Shader入门（一）</span>
     
   </li>
   
@@ -1801,14 +1801,14 @@
   <div class="single ">
     <div class="single__nojs">This page looks best with JavaScript enabled</div>
     <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
-    <h2 class="single__title" data-ani="true">【unity】使用Profiler进行性能分析</h2>
+    <h2 class="single__title" data-ani="true">Unity Shader入门（一）</h2>
     <h3 class="single__subtitle"></h3>
     <div class="single__meta">
       
 <div class="single__infos">
-  <time class="single__info" title="Written At">📅&nbsp;Nov 8, 2021 </time>
+  <time class="single__info" title="Written At">📅&nbsp;Jan 28, 2023 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;15&nbsp;min read </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;5&nbsp;min read </span>
   
   <span class="single__info">
      &middot; 👀<span id="busuanzi_value_page_pv">...</span> views
@@ -1823,223 +1823,377 @@
 
   <li><a href="https://yichenlove.github.io/tags/unity/" class="single__tag" title="Unity">#Unity</a></li>
 
-  <li><a href="https://yichenlove.github.io/tags/profiler/" class="single__tag" title="Profiler">#Profiler</a></li>
-
 </ul>
 
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <p>在游戏开发过程中，游戏性能是非常重要的，学会使用unity自带的profiler工具是非常必要的，以下是我从官方地址找到的进阶教程，感觉文章非常详细，于是尝试翻译。</p>
-<p>官方教学文档翻译，英文教程地址<a href="https://unity3d.com/cn/learn/tutorials/temas/performance-optimization/diagnosing-performance-problems-using-profiler-window?playlist=44069">https://unity3d.com/cn/learn/tutorials/temas/performance-optimization/diagnosing-performance-problems-using-profiler-window?playlist=44069</a></p>
-<h2 id="介绍">介绍</h2>
-<p>如果我们游戏运行很慢，卡顿甚至卡死，我们就知道游戏出现了性能问题。在我们尝试修复问题之前，我们首先要知道是什么造成了这种问题。不同的问题需要不同的解决方案。如果我们尝试猜测问题或根据其他项目对游戏进行调整，这会非常浪费时间甚至会使问题变得更加糟糕。</p>
-<p>这个时候，我们就需要对问题进行分析。分析是在运行我们游戏的时候对各个方面进行测量。使用<strong>profiling</strong>工具，当我们游戏运行的时候，可以看到屏幕后面发生的事情并且根据这些信息跟踪造成性能问题的原因。通过查看<strong>profiling</strong>工具，我们可以测量我们修改后的结果，这样我们就可以判断我们的修复是否有效。</p>
-<p>在这篇文章中，我们将：</p>
+      <h2 id="1-untiy-图形相关概念以及基础知识">1. Untiy 图形相关概念以及基础知识</h2>
+<h3 id="mesh--meshfilter--meshrenderer--material-相关概念以及基础知识">Mesh / MeshFilter / MeshRenderer / Material 相关概念以及基础知识</h3>
+<p><img src="https://cdn.jsdelivr.net/gh/YiChenLove/ImageHostingService/blogImg/20230128160757.png" alt="" /></p>
+<p>在Unity 3D物体中包含了MeshFilter， MeshRenderer，Material组件，然后MeshFilter中包含了Mesh。</p>
+<h4 id="mesh-unity-的主要图形基元是指模型的网格描述形状的数据集合">Mesh： Unity 的主要图形基元，是指模型的网格，描述形状的数据集合。</h4>
+<h5 id="mesh由以下属性定义">Mesh由以下属性定义：</h5>
 <ul>
-<li>使用Unity自带的的<strong>Profiler工具</strong>去收集我们游戏性能差的游戏的数据。</li>
-<li>分析这些数据并且使用分析的结构去<strong>追踪</strong>到性能问题</li>
-<li>提供修复这些问题的<strong>链接</strong></li>
+<li>Vertices：3D 空间中位置的集合，具有可选的附加属性，可以理解为这里面存储的是构成网格面全部的点。（顶点数组 Vector3[]）</li>
+<li>Topology：定义曲面的每个面的结构类型。Unity给我们提供了5种拓扑类型，三角面、四边形、线条、虚线、点阵，最常用的则是三角面。（Topology 拓扑类型）</li>
+<li>Indices：一个整数集合，描述顶点如何组合以基于拓扑创建表面。它是每个三角面顶点的索引，可以理解为他存储了构网格三角面所用到的顶点索引。（Indices 索引数组 int[]<br />
+）</li>
 </ul>
-<p>要让一个游戏运行顺畅是一个平衡的过程。在获得理想结果之前，我们可能要对游戏进行好几次的修改和验证。知道如何使用<strong>profiling</strong>工具去分析我们的问题意味着我们能够确定游戏的问题是什么并且知道下一步要怎么做。</p>
-<h2 id="写在开始">写在开始</h2>
-<p>这篇文章会帮助我们跟踪到造成Unity游戏运行缓慢、卡顿甚至卡死的位置。如果我们有其他问题，比如崩溃或图像异常，这篇文章可能不会有太大的帮助。如果我们游戏中出现了这篇文章没所提到的一些问题，可以尝试搜索Unity手册、Unity社区或Unity解答。</p>
-<p>如果我们对Profiler窗口或如何使用<strong>Profiler</strong>不熟悉的话，建议先看<a href="https://unity3d.com/cn/learn/tutorials/temas/performance-optimization/profiler-window?playlist=44069">这篇文章</a></p>
-<h2 id="对游戏性能的一个简介">对游戏性能的一个简介</h2>
-<p>帧率是衡量游戏性能的标准。游戏里面的帧跟动画的帧类似。只是游戏里面的图像被画到了屏幕。画一帧到屏幕被称为渲染一帧。帧率或帧被渲染的速度以每秒来衡量(<strong>FPS</strong>)</p>
-<p>现在大多数游戏都是以<strong>60FPS</strong>为目标。通常<strong>30FPS</strong>以上被认为是可以接受的，特别是对于一些对反应速度要求不高的游戏，如解谜或冒险游戏。一些游戏对帧率要求比较高，如VR，<strong>90FPS</strong>都会被嫌弃。帧率在<strong>30FPS</strong>以下，玩家体验通常会比较差，图像可能会卡顿、操作起来也很迟钝。然而，不仅仅速度重要，帧率稳定也很重要。帧率发生变对对玩家来说是很明显的。不稳定的帧率通常比稳定但是帧率低的游戏更糟糕。</p>
-<p>尽管帧率是谈论游戏性能经常提到，但是要尝试去改善游戏性能的时候考虑渲染一帧所需要的毫秒数会更有用。有两个原因，首先这种一种更精准的测量方法。当我们尝试改善我们游戏性能的时候，每毫秒都能达到我们的目标。其次，帧率的相对变化意味着不同的规模帧率也是不一样的。从<strong>60FPS</strong>到<strong>50FPS</strong>代表处理时间增加了<strong>3.3</strong>毫秒，但是如果从<strong>30FPS</strong>到<strong>20FPS</strong>代表处理时间增加了<strong>16.6</strong>毫秒。同样是降低了<strong>10FPS</strong>，但是渲染一帧所花费的时间是<strong>截然不同</strong>的。</p>
-<p>了解普遍帧率渲染一帧所需要花费多少毫秒是非常有帮助的。要找到这个花费的时间，我们应该遵循这个公式<strong>1000/[渴望的帧率]</strong>。使用这个公式，我们可以知道每秒渲染<strong>30FPS</strong>，那么渲染每帧花费在<strong>33.3</strong>毫秒以内。一个游戏要运行到<strong>60FPS</strong>, 那么渲染每帧花费在<strong>16.6</strong>毫秒以内。</p>
-<p>对于渲染的每一帧，Unity都必须要执行很多不同的任务。简单来说，Unity必须更新游戏的状态，拿到游戏的快照并且渲染到屏幕。每帧必须要执行的任务包括读取用户输入、执行脚本、灯光运算。除此之外，还有一些一帧内执行多次的操作，如物理计算。当所有的任务执行的足够快，我们的游戏将会有一个一致性的，可接受的帧率。当所有的任务执行得不够快，会花费更长的时间去渲染，并且帧率会下降。</p>
-<p>知道哪个任务执行时间长，对如何解决游戏性能问题是至关重要的。一旦我们知道哪个任务在减低帧率，我们可以尝试优化那部分内容。这就是为什么分析如此重要：<strong>profiling</strong>工具可以显示在给定的帧在每个任务花费多长时间。</p>
-<h2 id="记录分析数据">记录分析数据</h2>
-<p>为了研究我们的游戏性能，我们必须记录游戏中性能不佳的数据。为了获得更加精准的分析数据，我们要打一个测试包运行在目标硬件上，并且记录分析数据。</p>
-<p>如果我们还不熟悉打包和真机记录分析数据，点击这里查看<a href="https://unity3d.com/cn/learn/tutorials/temas/performance-optimization/profiler-window?playlist=44069">操作指南</a></p>
-<h3 id="记录游戏数据">记录游戏数据</h3>
+<h5 id="vertex-data-顶点数据包含了顶点的位置法线切线uv等属性">Vertex data 顶点数据：包含了顶点的位置、法线、切线、UV等属性。</h5>
+<p>每个顶点都可以具有以下属性：</p>
 <ul>
-<li>
-<p>使用<strong>development build</strong>方式打包，在目标机上运行</p>
-</li>
-<li>
-<p>在我们达到有性能问题之前，开始记录分析数据</p>
-</li>
-<li>
-<p>一旦我们记录的分析数据包含了性能问题的例子，点击Profiler窗口上方任意位置以暂停游戏并选择一帧</p>
-</li>
-<li>
-<p>在<strong>Profiler</strong>窗口的上方，选择显示性能较差的帧。这可能是低于我们要求帧率的“尖峰”或是有代表性的帧。我们可以使用左右按键或前进后退键在帧之间更好的移动。</p>
-<p><img src="media/image1.png" alt="" /></p>
-</li>
+<li>Position：顶点位置表示顶点在对象空间中的位置。（顶点位置 Vector3）</li>
+<li>Normal：法线就是垂直于该顶点三角面的一条三维向量，它只有方向，没有大小。法线的方向就是顶点三角面朝外的方向。(法线 Vector3[] )</li>
+<li>Tangent：它是垂直于法线的一条向量，而由于垂直于法线的向量有无数条，所以切线最终是由UV坐标来决定朝向的。（ Tangent 切线 Vector3[] ）</li>
+<li>Color：顶点颜色表示顶点的基色（如果有）。（顶点颜色）</li>
+<li>texture coordinates(UVs)：U增长的方向就是切线的方向，它和三维空间的X, Y, Z较为类似，它是一个二维的坐标系统，模型网格除了有三维空间的xyz坐标外，还有一个二维的UV坐标，在UV坐标中，U和V分别代表顶点在Texture水平和垂直方向上的采样坐标，这些坐标通常位于(0，0)和(1，1)之间，（0，0）代表最左下角，而（1，1）代表最右上角。可以理解为它是Texture映射到模型表面的依据，模型顶点 会依据UV坐标对Texture进行采样。（ UV  纹理坐标 Vector2[] ）</li>
 </ul>
-<p>我们已经获取游戏中性能较差的分析数据。下一步，让我们学习如何分析这些数据。</p>
-<h2 id="分析数据">分析数据</h2>
-<p>在得出任何关于游戏性能结论之前，我们必须学习如何阅读和分析显示在Profiler窗口的性能数据。我们知道，当Unity无法及时的完成渲染所需要的所有任务时，帧率会下降。我们将会使用Profiler窗口查看什么任务被执行了，任务花费多长时间以及按什么顺序执行的。这些信息会帮助会帮助我们明白我们游戏的哪些部分会造成任务花费太长的时间去渲染。</p>
-<p>最好去学习如何分析而不是学习一系列的步骤。自己理解这些数据更有用，这样当我们遇到了新问题的时候可以自己去研究。即使我们只是学会了在Unity解答上搜索，这也是一个伟大的开始。</p>
-<p>为了学习如何分析，我们将会使用CPU分析器作为例子，这可能是我们在研究帧率问题上用的最多的分析器。</p>
-<h3 id="cpu分析器">CPU分析器</h3>
-<p>当我们在Profiler窗口看CPU分析器的时候，我们可以看到CPU完成每帧所花费的时间。</p>
-<p><img src="media/image2.png" alt="" /></p>
-<p>我们可以看到时间花费的彩色浪图。不同的颜色代表时间花在渲染操作上，物理计算上等等。那些关键字标明哪些颜色代表哪些任务。</p>
-<p>在接下来的截图中，我们可以到这一帧的主要时间花费在渲染操作上。下方的CPU时间指示器表明了我们的总的CPU时间在这一帧花费了<strong>85.95</strong>毫秒。</p>
-<p><img src="media/image3.png" alt="" /></p>
-<h4 id="层次结构图">层次结构图</h4>
-<p>让我们使用CPU分析器的层次结构视图去深挖当前数据并且更精确的查看当前帧哪一个任务花费CPU时间最多。当选中CPU分析器的时候，我们可以在Profiler窗口的下半屏看到当前帧的详细信息。查看Profiler窗口的下半屏，我们在做上方可以使用下拉菜单选择结构视图。这可以让我们看到CPU上正在发生的任务的详细信息。</p>
-<p><img src="media/image4.png" alt="" /></p>
-<p>在层次结构图中，点击任何列的列头按该值排序。比如，点击<strong>Time ms</strong>按花费时间最长开始排序，点击<strong>Calls</strong>按当前高亮的帧调用次数最多的函数排序。在以上截图中，我们按照耗时排序，我们可以看到CPU最耗时的函数是Camera.Render。</p>
-<p>如果一个函数名字的左右有小箭头，我们可以展开看到这个函数调用了其他哪些函数和他们的性能影响。<strong>Self ms</strong>列表明这个函数自己的耗时，<strong>Time me</strong>列表明这个函数和它调用的其他函数的耗时。</p>
-<p><img src="media/image5.png" alt="" /></p>
-<p>在这种情况下，我们可以看到Camera.Render下，最耗时的函数是Shadows.RenderJob。即使我们对这个具体的函数还不太了解，但是我们已经有关于我们游戏问题的信息了。我们知道我们的问题跟渲染有关，这个当前最耗时的任务是shaodws有关。</p>
-<p>我们可以在层次结构图做的另一个有用的事是比较我们游戏的帧，这样我们可以明白性能是如何随着时间的变化而变化的。我们使用CPU分析器一帧一帧的分析出单个最耗时的函数。当我们点击CPU分析器层级结构图上的函数名的时候，函数相关数据会高亮。</p>
-<p><img src="media/image6.png" alt="" /></p>
-<p>比如，我们在层级结构视图点击Gfx.WaitForPresent，跟Gfx.WaitForPresent相关的渲染函数会高亮显示。</p>
-<h4 id="时间线视图">时间线视图</h4>
-<p>现在让我们使用CPU分析器的时间视图学习更多关于我们渲染的问题。时间视图显示了两个东西：CPU任务执行的顺序和哪个线程负责哪个任务。我们可以在Profiler窗口的下半屏的左上角使用下拉按钮选择时间线视图（那里之前显示的是结构视图选项）</p>
-<p><img src="media/image7.png" alt="" /></p>
-<p>线程可以同时运行多个单独任务。当一个线程执行任务的时，另一个线程可以执行完全独立的任务。Unity的渲染处理包含三种类型的线程：<strong>main thread、render thread和worker threads</strong>。了解哪些线程负责哪些任务是非常有帮助的：一旦我们知道了哪个线程执行了的任务最慢，我们就明白应该集中精力去优化那些线程的操作。</p>
-<p><img src="media/image8.png" alt="" /></p>
-<p>我们可以放大时间线视图来更仔细的查看单个任务。被调用的函数也会在调用者下方立即显示出来。在这个例子中，我们已经放大了Shadows.RenderJob看到了组成这个任务的单个任务。我们可以看到Shadows.RenderJob是在main thread调用的。我们同样看到workder threads执行了跟shadows相关的任务。主线程列出了一个叫WaitingForJob的任务，表明main thread正在等待worker thread完成任务。从这我们可以得出结论，shadows相关的渲染操作在main thread和worker threads花费太长时间了。我们现在知道问题所在了。</p>
-<h4 id="其他分析器">其他分析器</h4>
-<p>尽管在跟踪与帧率相关的性能问题时，CPU分析器是最常用的工具，其他分析器也同样非常有用。熟悉他们提供的信息是一个不错的主意。</p>
-<p>按照上面的步骤，尝试学习其他几个不同的分析器每帧提供了什么信息。比如，尝试使用渲染分析器，了解不同帧的渲染统计数据是如何变化的。</p>
-<h2 id="确定造成性能问题的原因">确定造成性能问题的原因</h2>
-<p>既然我们熟悉了在分析器中读取和分析性能数据的过程，我可以开始找到造成性能问题的原因了。</p>
-<h3 id="排除垂直同步">排除垂直同步</h3>
-<p>垂直同步简称VSync，用来匹配游戏帧率与屏幕刷新速度。垂直同步会影响游戏帧率，并且它的影响会显示在Profiler窗口上。如果我们不明确在看什么，还容易认为这是一个性能问题，所以在我们继续研究性能问题之前要学会如何排除掉垂直同步</p>
-<h4 id="在cpu分析器中隐藏垂直同步信息">在CPU分析器中隐藏垂直同步信息</h4>
-<p>我们可以在CPU分析器中选择要隐藏的信息。这可以让我们忽略对当前研究没有帮助的信息。</p>
-<p>隐藏垂直同步的步骤如下：</p>
+<h5 id="topology拓扑描述了网格的面类型">Topology拓扑描述了网格的面类型。</h5>
+<p>Unity 支持以下网格拓扑：</p>
 <ul>
-<li>点击CPU分析器</li>
-<li>在Profiler窗口的顶部，CPU分析器区域显示当前关注的数据，点击标记为VSync的黄色正方形就可以隐藏垂直同步的信息</li>
+<li>Triangle 三角形</li>
+<li>Quad 四边形</li>
+<li>Line 线条</li>
+<li>LineStrip 虚线</li>
+<li>Points 点阵</li>
 </ul>
-<h4 id="在层级结构视图中无视垂直同步信息">在层级结构视图中无视垂直同步信息</h4>
-<p>没有办法在层级结构视图中隐藏垂直同步信息，但我们知道了它长什么样子，我们就可以无视它。</p>
-<p>无论什么时候，我们在层级结构视图中看到WaitForTargetFPS，这意味着我们的游戏在等待垂直同步,我们不需要研究这个函数，忽略它就好。</p>
-<h4 id="屏蔽垂直同步">屏蔽垂直同步</h4>
-<p>垂直同步不能在所有的平台上都屏蔽：许多（如IOS）强制使用垂直同步。但如果我们正在为一个不需要强制使用垂直同步的平台开发，我们就可以屏蔽掉垂直同步。点击 <strong>Edit -&gt; Project Settings -&gt; Quality</strong>，找到VSync Count,下来菜单选中<strong>Don&rsquo;t Sync</strong></p>
-<h3 id="渲染分析器">渲染分析器</h3>
-<p>渲染是造成性能问题的常见原因。尝试修复渲染问题之前，确认我们的游戏是CPU密集还是GPU密集是很关键的，因为不同的情况，解决方法也不一样。</p>
-<p>简单的说，CPU负责决定绘制什么，而GPU负责绘制。如果渲染问题归咎于CPU耗时太多，那游戏就属于CPU密集，如果渲染问题归咎于GPU还是太多，那游戏就属于GPC密集。</p>
-<h4 id="辨别我们的游戏是否是gpu密集">辨别我们的游戏是否是GPU密集</h4>
-<p>辨别我们的游戏是否是GPU密集最快捷的方法是使用GPU分析器。不幸的是，<strong>并不是所有的设备或驱动都支持这个分析器</strong>。在我们使用GPU分析器之前，我们先检测GPU分析器在目标设备上是否可用。</p>
-<p>检测GPU分析器在目标设备上是否可用，我们应该执行一下步骤：</p>
-<ul>
-<li>在Profiler窗口左上角，选择Add profiler</li>
-<li>通过下拉菜单选择GPU</li>
-</ul>
-<p>如果GPU分析器不支持使用，我们会在GPU正常显示数据的区域看到一条以“GPU Profiling is not supported”开头的信息。</p>
-<p><img src="media/image9.png" alt="" /></p>
-<p>如果没有没有看到这条信息，这意味着GPU分析器在目标设备上是支持的。如果GPU分析器是可用的，那执行一下步骤就能非常快速辨别出我们游戏是否是GPU密集：</p>
-<ul>
-<li>
-<p>点击GPU分析器</p>
-</li>
-<li>
-<p>查看屏幕正中心区域，那里显示了当前选中帧的CPU和GPU耗时。</p>
-<p>如果GPU耗时大于CPU耗时，则我们可以确认我们的游戏是GPU密集。</p>
-<p><img src="media/image10.jpg" alt="" /></p>
-</li>
-</ul>
-<p>如果GPU分析器不能在目标设备上使用，我们仍然可以辨别我们的游戏是否是GPU密集。我们可以通过观察CPU分析器。如果我们看到CPU正在等待GPU完成任务，这就是意味着我们游戏是GPU密集。为了查明是否存在这种情况，我们可以执行以下步骤：</p>
-<ul>
-<li>点击选择CPU分析器</li>
-<li>检查Profiler窗口底部区域显示的当前帧信息和分析器信息</li>
-<li>在区域左上角的下拉菜单中选择层级结构视图</li>
-<li>选择<strong>Time ms</strong>列头，函数耗时按时间排序</li>
-</ul>
-<p>如果函数Gfx.WaitForPresent是CPU分析器中最好是的函数，这表明CPU正在等待GPU。这意味着我们的游戏是GPU密集。</p>
-<p><img src="media/image11.png" alt="" /></p>
-<p>解决我们游戏是GPU密集时的渲染问题。<br />
-如果我们已经确认我们的游戏是GPU密集，我们应该<a href="https://unity3d.com/cn/learn/tutorials/temas/performance-optimization/optimizing-graphics-rendering-unity-games?playlist=44069">阅读这篇文章</a></p>
-<h4 id="辨别我们的游戏是否是cpu密集">辨别我们的游戏是否是CPU密集</h4>
-<p>如果我们还没有确认造成性能问题的原因，现在我们研究基于CPU的渲染问题。</p>
-<ul>
-<li>点击选择CPU分析器</li>
-<li>随着时间的推移，Profiler窗口顶部信息会显示分析数据，检测图像中代表渲染的部分。我们可以通过点击关键字旁边的带颜色的正方形图片显示或隐藏这些数据。</li>
-</ul>
-<p>如果慢帧的大部分时间被渲染占用了，这意味着渲染可能是造成我们问题的原因。我们可以按以下步骤继续挖掘来确认：</p>
-<ul>
-<li>点击选择CPU分析器</li>
-<li>检测Profiler窗口显示的当前帧信息和分析器信息</li>
-<li>在分析数据区域左上角下拉菜单中选择层级结构</li>
-<li>选择列头<strong>Time ms</strong>，按函数耗时排序</li>
-<li>点击选择最顶部的函数</li>
-</ul>
-<p>如果选中的是一个渲染函数，CPU分析器图像将会高亮显示Rendering图像。如果是这种情况，这意味着喧嚷相关的操作是造成我们性能问题的原因，也可以确认我们的游戏是CPU密集。留意函数名和是哪个线程执行这个函数。当我们尝试解决问题的时候，这些信息是很有用的。</p>
-<p>解决我们的游戏是CPU密集时的渲染问题。<br />
-如果我们已经确认我们的游戏是CPU密集的渲染问题时，我们应该<a href="https://unity3d.com/cn/learn/tutorials/temas/performance-optimization/optimizing-graphics-rendering-unity-games?playlist=44069">阅读这篇文章</a></p>
-<h3 id="垃圾回收分析器">垃圾回收分析器</h3>
-<p>接下来，我们检查垃圾回收是否会造成瓶颈。垃圾回收是Unity自动内存管理的特性，这可能是一个缓慢的操作。</p>
-<ul>
-<li>
-<p>点击选择CPU分析器</p>
-</li>
-<li>
-<p>注意，你可以拖拽你感兴趣的部分的名称，重新排序它们，在下面的截图中，我们拖拽GarbageCollector到顶部，并且点击关掉了其他方面的数据。<br />
-<img src="media/image12.jpg" alt="" /><br />
-如果慢帧的大部分时间被垃圾回收占用了，这指明了我们有垃圾回收过度的问题。我们可以深入研究以确认问题。</p>
-</li>
-<li>
-<p>点击选择CPU分析器，检测Profiler窗口底部显示的当前帧相信信息</p>
-</li>
-<li>
-<p>底部区域左上角下拉按钮选择层次结构视图</p>
-</li>
-<li>
-<p>选择<strong>Time ms</strong>列头，以函数耗时排序</p>
-</li>
-</ul>
-<p>如果**GC.Collect()**函数出现，并且耗时比较多，我们就可以确认我们的游戏有垃圾回收问题。</p>
-<h3 id="解决垃圾回收问题">解决垃圾回收问题</h3>
-<p>如果我们确认我们的额游戏有垃圾回收问题，我们应该<a href="https://unity3d.com/cn/learn/tutorials/topics/performance-optimization/optimizing-garbage-collection-unity-games?playlist=44069">阅读这篇文章</a></p>
-<h3 id="物理分析器">物理分析器</h3>
-<p>如果我们排除了渲染和垃圾会回收问题，我们检查负责的物理计算是否是造成我们性能问题的原因。</p>
-<ul>
-<li>点击选择CPU分析器</li>
-<li>在Profiler窗口显示数据的顶部，检测代表Physics的图像（橙色图像）。我们通过点击名字旁边的带颜色正方形来显示或隐藏图像。</li>
-</ul>
-<p>如果慢帧的大部分时间被物理占用，那么可以确认武林是造成我们问题的原因。我们可以进一步研究以确认问题：</p>
-<ul>
-<li>点击选中CPU分析器，检测Profiler下方区域显示的当前帧详细信息。</li>
-<li>在底部区域左上角的下拉菜单选择层级结构视图</li>
-<li>选择<strong>Time ms</strong>列头，按函数耗时排序</li>
-<li>点击选择顶部的函数</li>
-</ul>
-<p>如果选中的是一个物理函数，CPU分析器图像将会高亮显示Physics图像。如果是这种情况，我们可以确定造成性能问题的原因和物理计算相关。</p>
-<h4 id="解决物理问题">解决物理问题</h4>
-<p>如果我们确认我们的问题是物理引起，以下资料会有帮助：</p>
-<ul>
-<li><a href="https://docs.unity3d.com/Manual/iphone-Optimizing-Physics.html?_ga=2.42683168.446335361.1522371544-942124006.1522371544">文章</a></li>
-<li><a href="https://unity3d.com/cn/learn/tutorials/topics/physics/physics-best-practices">文章</a></li>
-<li><a href="https://youtu.be/jZ4LL1LlqF8?t=1254">文章</a></li>
-</ul>
-<h3 id="运行缓慢的脚本">运行缓慢的脚本</h3>
-<p>现在我们检测缓慢的或过度负责的脚本是否是造成性能问题的原因。脚本，这里将的是非Unity引擎代码。这些脚本通常是我们自己写的，或者是第三方插件引入的。</p>
-<ul>
-<li>点击选择CPU分析器</li>
-<li>在Profiler窗口显示数据的顶部，检测代表Script的图像,我们可以通过点击关键字旁边的颜色方块显示或隐藏图像数据。</li>
-</ul>
-<p>如果慢帧大部分时间被scripts占用，那可以确认开发者写的脚本是造成问题的原因。我们可以继续研究确认问题：</p>
-<ul>
-<li>点击选中CPU分析器，检测Profiler窗口下方的当前帧详细数据</li>
-<li>在底部区域左上角的下拉菜单选择层级结构视图</li>
-<li>选择<strong>Time ms</strong>列头，按函数耗时排序</li>
-<li>点击选择顶部的函数</li>
-</ul>
-<p>如果是自己写的脚本，CPU分析器图像将会高亮显示Scripts图像。这种情况下，我们可以确认造成性能问题的原因与我们写的脚本有关。</p>
-<p>请注意，上面有一种特殊情况：当我们游戏包含渲染相关的函数，如<a href="https://docs.unity3d.com/Manual/comp-ImageEffects.html?_ga=2.115017474.446335361.1522371544-942124006.1522371544">Image Effects</a>脚本或<a href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.OnWillRenderObject.html?_ga=2.115017474.446335361.1522371544-942124006.1522371544">OnWillRenderObject</a>或<a href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.OnPreCull.html?_ga=2.115017474.446335361.1522371544-942124006.1522371544">OnPreCull</a>函数，这些将会出现在渲染分析器而不是脚本分析器。</p>
-<p>尽管起初有点小混乱，但是平常使用层级结构视图和时间线视图检测代码的时候，也能够跟踪到相关的代码。</p>
-<h4 id="解决缓慢代码问题">解决缓慢代码问题</h4>
-<p>如果我们确定自己写的脚本是造成性能问题的原因，这里有一些简单的技巧可以改善性能。下面是一个关于代码优化的资源：</p>
-<ul>
-<li><a href="https://docs.unity3d.com/Manual/MobileOptimizationScriptingMethods.html?_ga=2.73066390.446335361.1522371544-942124006.1522371544">文章</a></li>
-<li><a href="https://docs.unity3d.com/Manual/MobileOptimizationPracticalScriptingOptimizations.html?_ga=2.73066390.446335361.1522371544-942124006.1522371544">文章</a></li>
-<li><a href="https://youtu.be/jZ4LL1LlqF8">文章</a></li>
-</ul>
-<h3 id="其他造成性能问题的原因">其他造成性能问题的原因</h3>
-<p>虽然我们已经讨论了性能问题最常见的四个原因，但是我们游戏可能有一些这里没有提到的性能问题。这种情况下，我们应该以上的一些方法来收集数据，研究<strong>CPU分析器</strong>并且找到造成问题的<strong>函数名字</strong>。一旦我们知道了函数名字，我们可以通过搜索<strong>Unity手册、Unity社区和Unity解答</strong>来或者这个函数的一些信息和如何减少这些函数消耗的方法。</p>
-<p><strong>参考文章：</strong></p>
-<p><a href="https://www.jianshu.com/p/a7cee5e548cf">使用Profiler进行性能分析</a></p>
+<h5 id="indices-索引数组中的index-data">Indices 索引数组中的index data</h5>
+<p>Index data 索引数据<br />
+这个数据取决于拓扑类型，如果是三角面他储存的就是[0,1,2]，四边形储存的就是[0,1,2,3]，这个索引数值对应的就是顶点数组的下标。</p>
+<h4 id="meshfilter内包含一个mesh组件可以根据meshfilter获得模型网格的组件也可以为meshfilter设置mesh内容">MeshFilter：内包含一个Mesh组件，可以根据MeshFilter获得模型网格的组件，也可以为MeshFilter设置Mesh内容。</h4>
+<h4 id="mesh-render是用于把网格渲染出来的组件meshfilter的作用就是把mesh扔给meshrender将模型或者说是几何体绘制显示出来">Mesh Render：是用于把网格渲染出来的组件。MeshFilter的作用就是把Mesh扔给MeshRender将模型或者说是几何体绘制显示出来。</h4>
+<h4 id="material本质是shader的实例meshrenderer中非常重要的角色它的配置决定了物体表面的外观将以怎样的质地呈现到我们眼前">Material：本质是shader的实例，MeshRenderer中非常重要的角色，它的配置决定了物体表面的外观将以怎样的质地呈现到我们眼前。</h4>
+<p>要在 Unity 中绘制某物，您必须提供描述其形状的信息以及描述其表面外观的信息。使用网格可描述形状，使用材质可描述表面的外观。</p>
+<h2 id="2-创建mesh示例">2. 创建Mesh示例：</h2>
+<p>1.创建一个GameObject并添加MeshFilter以及MeshRender组件，并创建一个“CreateMesh.cs”脚本给它。<br />
+2.获取该对象的filter组件，并创建一个mesh给它。<br />
+3.为该mesh设置属性，这里先设置顶点，然后将三角形与顶点绑定</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span><span class="lnt">155
+</span><span class="lnt">156
+</span><span class="lnt">157
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-C#" data-lang="C#"><span class="k">using</span> <span class="nn">UnityEngine</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections</span><span class="p">;</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">CreateMesh</span> <span class="p">:</span> <span class="n">MonoBehaviour</span> <span class="p">{</span>
+
+    <span class="k">private</span> <span class="n">MeshFilter</span> <span class="n">filter</span><span class="p">;</span>
+    <span class="k">private</span> <span class="n">Mesh</span> <span class="n">mesh</span><span class="p">;</span>
+
+    <span class="c1">// Use this for initialization
+</span><span class="c1"></span>    <span class="k">void</span> <span class="n">Start</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// 获取GameObject的Filter组件
+</span><span class="c1"></span>        <span class="n">filter</span> <span class="p">=</span> <span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">MeshFilter</span><span class="p">&gt;();</span>
+        <span class="c1">// 并新建一个mesh给它
+</span><span class="c1"></span>        <span class="n">mesh</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Mesh</span><span class="p">();</span>
+        <span class="n">filter</span><span class="p">.</span><span class="n">mesh</span> <span class="p">=</span> <span class="n">mesh</span><span class="p">;</span>
+
+        <span class="c1">// 初始化网格
+</span><span class="c1"></span>        <span class="n">InitMesh</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Update is called once per frame
+</span><span class="c1"></span>    <span class="k">void</span> <span class="n">Update</span> <span class="p">()</span> <span class="p">{</span>
+
+    <span class="p">}</span>
+
+    <span class="c1">/// &lt;summary&gt;
+</span><span class="c1"></span>    <span class="c1">/// Inits the mesh.
+</span><span class="c1"></span>    <span class="c1">/// &lt;/summary&gt;
+</span><span class="c1"></span>    <span class="k">void</span> <span class="n">InitMesh</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">mesh</span><span class="p">.</span><span class="n">name</span> <span class="p">=</span> <span class="s">&#34;MyMesh&#34;</span><span class="p">;</span>
+
+        <span class="c1">// 为网格创建顶点数组
+</span><span class="c1"></span>        <span class="c1">// 顶点数组 模型空间顶点坐标
+</span><span class="c1"></span>        <span class="n">Vector3</span><span class="p">[]</span> <span class="n">vertices</span> <span class="p">=</span> 
+        <span class="p">{</span>
+            <span class="c1">// Front
+</span><span class="c1"></span>            <span class="c1">// point[1]
+</span><span class="c1"></span>            <span class="k">new</span> <span class="n">Vector3</span><span class="p">(-</span><span class="m">2.0f</span><span class="p">,</span> <span class="m">5.0f</span><span class="p">,</span> <span class="p">-</span><span class="m">2.0f</span><span class="p">),</span><span class="c1">//[0]
+</span><span class="c1"></span>            <span class="c1">// point[2]
+</span><span class="c1"></span>            <span class="k">new</span> <span class="n">Vector3</span><span class="p">(-</span><span class="m">2.0f</span><span class="p">,</span> <span class="m">0.0f</span><span class="p">,</span> <span class="p">-</span><span class="m">2.0f</span><span class="p">),</span><span class="c1">//[1]
+</span><span class="c1"></span>            <span class="c1">// point[3]
+</span><span class="c1"></span>            <span class="k">new</span> <span class="n">Vector3</span><span class="p">(</span><span class="m">2.0f</span><span class="p">,</span> <span class="m">0.0f</span><span class="p">,</span> <span class="p">-</span><span class="m">2.0f</span><span class="p">),</span><span class="c1">//[2]
+</span><span class="c1"></span>            <span class="c1">// point[4]
+</span><span class="c1"></span>            <span class="k">new</span> <span class="n">Vector3</span><span class="p">(</span><span class="m">2.0f</span><span class="p">,</span> <span class="m">5.0f</span><span class="p">,</span> <span class="p">-</span><span class="m">2.0f</span><span class="p">),</span><span class="c1">//[3]
+</span><span class="c1"></span>
+            <span class="c1">// Left  
+</span><span class="c1"></span>            <span class="k">new</span> <span class="n">Vector3</span><span class="p">(-</span><span class="m">2.0f</span><span class="p">,</span> <span class="m">5.0f</span><span class="p">,</span> <span class="p">-</span><span class="m">2.0f</span><span class="p">),</span><span class="c1">//[4]
+</span><span class="c1"></span>            <span class="k">new</span> <span class="n">Vector3</span><span class="p">(-</span><span class="m">2.0f</span><span class="p">,</span> <span class="m">0.0f</span><span class="p">,</span> <span class="p">-</span><span class="m">2.0f</span><span class="p">),</span><span class="c1">//[5]
+</span><span class="c1"></span>            <span class="k">new</span> <span class="n">Vector3</span><span class="p">(-</span><span class="m">2.0f</span><span class="p">,</span> <span class="m">0.0f</span><span class="p">,</span> <span class="m">2.0f</span><span class="p">),</span><span class="c1">//[6]
+</span><span class="c1"></span>            <span class="k">new</span> <span class="n">Vector3</span><span class="p">(-</span><span class="m">2.0f</span><span class="p">,</span> <span class="m">5.0f</span><span class="p">,</span> <span class="m">2.0f</span><span class="p">),</span><span class="c1">//[7]
+</span><span class="c1"></span>    
+            <span class="c1">// Back
+</span><span class="c1"></span>            <span class="k">new</span> <span class="n">Vector3</span><span class="p">(-</span><span class="m">2.0f</span><span class="p">,</span> <span class="m">5.0f</span><span class="p">,</span> <span class="m">2.0f</span><span class="p">),</span><span class="c1">//[8]
+</span><span class="c1"></span>            <span class="k">new</span> <span class="n">Vector3</span><span class="p">(-</span><span class="m">2.0f</span><span class="p">,</span> <span class="m">0.0f</span><span class="p">,</span> <span class="m">2.0f</span><span class="p">),</span><span class="c1">//[9]
+</span><span class="c1"></span>            <span class="k">new</span> <span class="n">Vector3</span><span class="p">(</span><span class="m">2.0f</span><span class="p">,</span> <span class="m">0.0f</span><span class="p">,</span> <span class="m">2.0f</span><span class="p">),</span><span class="c1">//[10]
+</span><span class="c1"></span>            <span class="k">new</span> <span class="n">Vector3</span><span class="p">(</span><span class="m">2.0f</span><span class="p">,</span> <span class="m">5.0f</span><span class="p">,</span> <span class="m">2.0f</span><span class="p">),</span><span class="c1">//[11]
+</span><span class="c1"></span>         
+            <span class="c1">// Right  
+</span><span class="c1"></span>            <span class="k">new</span> <span class="n">Vector3</span><span class="p">(</span><span class="m">2.0f</span><span class="p">,</span> <span class="m">5.0f</span><span class="p">,</span> <span class="m">2.0f</span><span class="p">),</span><span class="c1">//[12]
+</span><span class="c1"></span>            <span class="k">new</span> <span class="n">Vector3</span><span class="p">(</span><span class="m">2.0f</span><span class="p">,</span> <span class="m">0.0f</span><span class="p">,</span> <span class="m">2.0f</span><span class="p">),</span><span class="c1">//[13]
+</span><span class="c1"></span>            <span class="k">new</span> <span class="n">Vector3</span><span class="p">(</span><span class="m">2.0f</span><span class="p">,</span> <span class="m">0.0f</span><span class="p">,</span> <span class="p">-</span><span class="m">2.0f</span><span class="p">),</span><span class="c1">//[14]
+</span><span class="c1"></span>            <span class="k">new</span> <span class="n">Vector3</span><span class="p">(</span><span class="m">2.0f</span><span class="p">,</span> <span class="m">5.0f</span><span class="p">,</span> <span class="p">-</span><span class="m">2.0f</span><span class="p">),</span><span class="c1">//[15]
+</span><span class="c1"></span>
+            <span class="c1">// Top
+</span><span class="c1"></span>            <span class="k">new</span> <span class="n">Vector3</span><span class="p">(-</span><span class="m">2.0f</span><span class="p">,</span> <span class="m">5.0f</span><span class="p">,</span> <span class="m">2.0f</span><span class="p">),</span><span class="c1">//[16]
+</span><span class="c1"></span>            <span class="k">new</span> <span class="n">Vector3</span><span class="p">(</span><span class="m">2.0f</span><span class="p">,</span> <span class="m">5.0f</span><span class="p">,</span> <span class="m">2.0f</span><span class="p">),</span><span class="c1">//[17]
+</span><span class="c1"></span>            <span class="k">new</span> <span class="n">Vector3</span><span class="p">(</span><span class="m">2.0f</span><span class="p">,</span> <span class="m">5.0f</span><span class="p">,</span> <span class="p">-</span><span class="m">2.0f</span><span class="p">),</span><span class="c1">//[18]
+</span><span class="c1"></span>            <span class="k">new</span> <span class="n">Vector3</span><span class="p">(-</span><span class="m">2.0f</span><span class="p">,</span> <span class="m">5.0f</span><span class="p">,</span> <span class="p">-</span><span class="m">2.0f</span><span class="p">),</span><span class="c1">//[19]
+</span><span class="c1"></span>    
+            <span class="c1">// Bottom
+</span><span class="c1"></span>            <span class="k">new</span> <span class="n">Vector3</span><span class="p">(-</span><span class="m">2.0f</span><span class="p">,</span> <span class="m">0.0f</span><span class="p">,</span> <span class="m">2.0f</span><span class="p">),</span><span class="c1">//[20]
+</span><span class="c1"></span>            <span class="k">new</span> <span class="n">Vector3</span><span class="p">(</span><span class="m">2.0f</span><span class="p">,</span> <span class="m">0.0f</span><span class="p">,</span> <span class="m">2.0f</span><span class="p">),</span><span class="c1">//[21]
+</span><span class="c1"></span>            <span class="k">new</span> <span class="n">Vector3</span><span class="p">(</span><span class="m">2.0f</span><span class="p">,</span> <span class="m">0.0f</span><span class="p">,</span> <span class="p">-</span><span class="m">2.0f</span><span class="p">),</span><span class="c1">//[22]
+</span><span class="c1"></span>            <span class="k">new</span> <span class="n">Vector3</span><span class="p">(-</span><span class="m">2.0f</span><span class="p">,</span> <span class="m">0.0f</span><span class="p">,</span> <span class="p">-</span><span class="m">2.0f</span><span class="p">),</span><span class="c1">//[23]
+</span><span class="c1"></span>        <span class="p">};</span>
+
+        <span class="n">mesh</span><span class="p">.</span><span class="n">vertices</span> <span class="p">=</span> <span class="n">vertices</span><span class="p">;</span>
+
+        <span class="c1">// 通过顶点为网格创建三角形
+</span><span class="c1"></span>        <span class="c1">// 索引数组
+</span><span class="c1"></span>        <span class="kt">int</span><span class="p">[]</span> <span class="n">triangles</span> <span class="p">=</span>
+        <span class="p">{</span>
+            <span class="c1">// Front
+</span><span class="c1"></span>            <span class="m">2</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">0</span><span class="p">,</span>
+            <span class="m">0</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">2</span><span class="p">,</span>
+        
+            <span class="c1">// Left
+</span><span class="c1"></span>            <span class="m">4</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">6</span><span class="p">,</span>
+            <span class="m">4</span><span class="p">,</span><span class="m">6</span><span class="p">,</span><span class="m">7</span><span class="p">,</span>
+        
+            <span class="c1">// Back
+</span><span class="c1"></span>            <span class="m">9</span><span class="p">,</span><span class="m">11</span><span class="p">,</span><span class="m">8</span><span class="p">,</span>
+            <span class="m">9</span><span class="p">,</span><span class="m">10</span><span class="p">,</span><span class="m">11</span><span class="p">,</span>
+        
+            <span class="c1">// Right
+</span><span class="c1"></span>            <span class="m">12</span><span class="p">,</span><span class="m">13</span><span class="p">,</span><span class="m">14</span><span class="p">,</span>
+            <span class="m">12</span><span class="p">,</span><span class="m">14</span><span class="p">,</span><span class="m">15</span><span class="p">,</span>
+        
+            <span class="c1">// Top
+</span><span class="c1"></span>            <span class="m">16</span><span class="p">,</span><span class="m">17</span><span class="p">,</span><span class="m">18</span><span class="p">,</span>
+            <span class="m">16</span><span class="p">,</span><span class="m">18</span><span class="p">,</span><span class="m">19</span><span class="p">,</span>
+        
+            <span class="c1">// Buttom
+</span><span class="c1"></span>            <span class="m">21</span><span class="p">,</span><span class="m">23</span><span class="p">,</span><span class="m">22</span><span class="p">,</span>
+            <span class="m">21</span><span class="p">,</span><span class="m">20</span><span class="p">,</span><span class="m">23</span><span class="p">,</span>
+        <span class="p">};</span>
+
+        <span class="n">mesh</span><span class="p">.</span><span class="n">triangles</span> <span class="p">=</span> <span class="n">triangles</span><span class="p">;</span>
+        
+        <span class="c1">// UV数组
+</span><span class="c1"></span>        <span class="n">Vector2</span><span class="p">[]</span> <span class="n">uvs</span> <span class="p">=</span>
+        <span class="p">{</span>
+            <span class="c1">// point[1]
+</span><span class="c1"></span>            <span class="k">new</span> <span class="n">Vector2</span><span class="p">(</span><span class="m">0.0f</span><span class="p">,</span> <span class="m">1.0f</span><span class="p">),</span>
+            <span class="c1">// point[2]
+</span><span class="c1"></span>            <span class="k">new</span> <span class="n">Vector2</span><span class="p">(</span><span class="m">0.0f</span><span class="p">,</span> <span class="m">0.0f</span><span class="p">),</span>
+            <span class="c1">// point[3]
+</span><span class="c1"></span>            <span class="k">new</span> <span class="n">Vector2</span><span class="p">(</span><span class="m">1.0f</span><span class="p">,</span> <span class="m">0.0f</span><span class="p">),</span>
+            <span class="c1">// point[4]
+</span><span class="c1"></span>            <span class="k">new</span> <span class="n">Vector2</span><span class="p">(</span><span class="m">1.0f</span><span class="p">,</span> <span class="m">1.0f</span><span class="p">),</span>
+		                   
+            <span class="c1">// Left
+</span><span class="c1"></span>            <span class="k">new</span> <span class="n">Vector2</span><span class="p">(</span><span class="m">1.0f</span><span class="p">,</span> <span class="m">1.0f</span><span class="p">),</span>
+            <span class="k">new</span> <span class="n">Vector2</span><span class="p">(</span><span class="m">1.0f</span><span class="p">,</span> <span class="m">0.0f</span><span class="p">),</span>
+            <span class="k">new</span> <span class="n">Vector2</span><span class="p">(</span><span class="m">0.0f</span><span class="p">,</span> <span class="m">0.0f</span><span class="p">),</span>
+            <span class="k">new</span> <span class="n">Vector2</span><span class="p">(</span><span class="m">0.0f</span><span class="p">,</span> <span class="m">1.0f</span><span class="p">),</span>
+		                   
+            <span class="c1">// Back
+</span><span class="c1"></span>            <span class="k">new</span> <span class="n">Vector2</span><span class="p">(</span><span class="m">1.0f</span><span class="p">,</span> <span class="m">1.0f</span><span class="p">),</span>
+            <span class="k">new</span> <span class="n">Vector2</span><span class="p">(</span><span class="m">1.0f</span><span class="p">,</span> <span class="m">0.0f</span><span class="p">),</span>
+            <span class="k">new</span> <span class="n">Vector2</span><span class="p">(</span><span class="m">0.0f</span><span class="p">,</span> <span class="m">0.0f</span><span class="p">),</span>
+            <span class="k">new</span> <span class="n">Vector2</span><span class="p">(</span><span class="m">0.0f</span><span class="p">,</span> <span class="m">1.0f</span><span class="p">),</span>
+		                   
+            <span class="c1">// Right
+</span><span class="c1"></span>            <span class="k">new</span> <span class="n">Vector2</span><span class="p">(</span><span class="m">1.0f</span><span class="p">,</span> <span class="m">1.0f</span><span class="p">),</span>
+            <span class="k">new</span> <span class="n">Vector2</span><span class="p">(</span><span class="m">1.0f</span><span class="p">,</span> <span class="m">0.0f</span><span class="p">),</span>
+            <span class="k">new</span> <span class="n">Vector2</span><span class="p">(</span><span class="m">0.0f</span><span class="p">,</span> <span class="m">0.0f</span><span class="p">),</span>
+            <span class="k">new</span> <span class="n">Vector2</span><span class="p">(</span><span class="m">0.0f</span><span class="p">,</span> <span class="m">1.0f</span><span class="p">),</span>
+		                   
+            <span class="c1">// Top
+</span><span class="c1"></span>            <span class="k">new</span> <span class="n">Vector2</span><span class="p">(</span><span class="m">0.0f</span><span class="p">,</span> <span class="m">1.0f</span><span class="p">),</span>
+            <span class="k">new</span> <span class="n">Vector2</span><span class="p">(</span><span class="m">1.0f</span><span class="p">,</span> <span class="m">1.0f</span><span class="p">),</span>
+            <span class="k">new</span> <span class="n">Vector2</span><span class="p">(</span><span class="m">1.0f</span><span class="p">,</span> <span class="m">0.0f</span><span class="p">),</span>
+            <span class="k">new</span> <span class="n">Vector2</span><span class="p">(</span><span class="m">0.0f</span><span class="p">,</span> <span class="m">0.0f</span><span class="p">),</span>
+
+            <span class="c1">// Bottom
+</span><span class="c1"></span>            <span class="k">new</span> <span class="n">Vector2</span><span class="p">(</span><span class="m">0.0f</span><span class="p">,</span> <span class="m">0.0f</span><span class="p">),</span>
+            <span class="k">new</span> <span class="n">Vector2</span><span class="p">(</span><span class="m">1.0f</span><span class="p">,</span> <span class="m">0.0f</span><span class="p">),</span>
+            <span class="k">new</span> <span class="n">Vector2</span><span class="p">(</span><span class="m">1.0f</span><span class="p">,</span> <span class="m">1.0f</span><span class="p">),</span>
+            <span class="k">new</span> <span class="n">Vector2</span><span class="p">(</span><span class="m">0.0f</span><span class="p">,</span> <span class="m">1.0f</span><span class="p">),</span>
+        <span class="p">};</span>
+        
+        <span class="n">mesh</span><span class="p">.</span><span class="n">uv</span> <span class="p">=</span> <span class="n">uvs</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre></td></tr></table>
+</div>
+</div><p>定义立方体顶点数组<br />
+正常来说立方体共有6个面，每个面由2个三角面组成，三角面有3个顶点数据，所以正常来说每个面需要有6个顶点数据，一共需要36个三角面顶点索引。那为什么这里我们每个面只用到了4个顶点数据呢，这是因为每个面的2个三角面顶点数据中有两个顶点它们的数据是共同的，Unity会直接通过索引找到相对应的数据。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/YiChenLove/ImageHostingService/blogImg/0f990751-e462-4254-be03-c5f8330049b7.jpg" alt="" /></p>
+<p>看到这里，可能又会有人觉得奇怪，既然共用的顶点数据可以通过索引找到，为什么一个立方面只有8个顶点，为什么这里不直接用8个顶点数据，而是需要24个？<br />
+这是因为Unity中不仅依靠这个三角面的索引数组索引三角面的顶点坐标，而且索引纹理坐标，索引法线向量。而立方体的每个顶点都参与了3个平面，而这个顶点相对于这3个平面来说，虽然顶点数据相同，但它们的法线向量是不同的，这个顶点在渲染这3个平面的时候则需要索引到不同的法线向量。而在Unity中由于顶点坐标和法线向量是由同一个索引值取得的，所以这里立方体一共8个顶点，每个顶点我们要存3份，刚好是24个顶点数据。</p>
 
     </article>
     
@@ -2239,13 +2393,13 @@
     
     
       
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fyichenlove.github.io%2fposts%2funity-profiler%2f" title="Facebook" aria-label="Facebook Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fyichenlove.github.io%2fposts%2funity-shader1%2f" title="Facebook" aria-label="Facebook Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
           <svg data-name="facebook" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"/></svg>
         </a>
       
     
       
-        <a href="https://twitter.com/intent/tweet?text=%e3%80%90unity%e3%80%91%e4%bd%bf%e7%94%a8Profiler%e8%bf%9b%e8%a1%8c%e6%80%a7%e8%83%bd%e5%88%86%e6%9e%90&url=https%3a%2f%2fyichenlove.github.io%2fposts%2funity-profiler%2f&hashtags=Unity%2cProfiler&via=" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
+        <a href="https://twitter.com/intent/tweet?text=Unity%20Shader%e5%85%a5%e9%97%a8%ef%bc%88%e4%b8%80%ef%bc%89&url=https%3a%2f%2fyichenlove.github.io%2fposts%2funity-shader1%2f&hashtags=unity&via=" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
           <svg data-name="twitter" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m21.534 7.113c.976-.693 1.797-1.558 2.466-2.554v-.001c-.893.391-1.843.651-2.835.777 1.02-.609 1.799-1.566 2.165-2.719-.951.567-2.001.967-3.12 1.191-.903-.962-2.19-1.557-3.594-1.557-2.724 0-4.917 2.211-4.917 4.921 0 .39.033.765.114 1.122-4.09-.2-7.71-2.16-10.142-5.147-.424.737-.674 1.58-.674 2.487 0 1.704.877 3.214 2.186 4.089-.791-.015-1.566-.245-2.223-.606v.054c0 2.391 1.705 4.377 3.942 4.835-.401.11-.837.162-1.29.162-.315 0-.633-.018-.931-.084.637 1.948 2.447 3.381 4.597 3.428-1.674 1.309-3.8 2.098-6.101 2.098-.403 0-.79-.018-1.177-.067 2.18 1.405 4.762 2.208 7.548 2.208 8.683 0 14.342-7.244 13.986-14.637z"/></svg>
         </a>
       
@@ -2393,11 +2547,23 @@
     <ul class="related-ul">
         
         <li>
-          <a href="/posts/unity-xlua-vector3/" class="related__link">Unity中xLua与toLua对Vector3的优化</a>
+          <a href="/posts/monoandil2cpp/" class="related__link">简单了解Mono和IL2CPP</a>
         </li>
         
         <li>
-          <a href="/posts/litjson-fix/" class="related__link">Litjson Fix</a>
+          <a href="/posts/unity-cpu/" class="related__link">Unity 内存优化</a>
+        </li>
+        
+        <li>
+          <a href="/posts/unity-urp-hdrp/" class="related__link">Unity SRP URP HDRP 的区别</a>
+        </li>
+        
+        <li>
+          <a href="/posts/unity-drawcall-batch/" class="related__link">Unity的DraCall和Batch</a>
+        </li>
+        
+        <li>
+          <a href="/posts/xluacoroutine/" class="related__link"> XLua框架——lua协程实现</a>
         </li>
         
     </ul>
@@ -2407,21 +2573,14 @@
 <nav class="pagination-single">
   
     
-      <a href="https://yichenlove.github.io/posts/unity-xlua-vector3/" class="pagination-single__left">
+      <a href="https://yichenlove.github.io/posts/psychology-overcome-negative/" class="pagination-single__left">
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
         </div>
-        <div class="pagination-single__left-title">Unity中xLua与toLua对Vector3的优化</div>      
+        <div class="pagination-single__left-title">克服焦虑、内耗、消极想法</div>      
       </a>
     
     <div class="grow"></div>
-    
-      <a href="https://yichenlove.github.io/posts/javascripts-bind/" class="pagination-single__right">      
-        <div class="pagination-single__right-title">Javascript中apply、call、bind</div>
-        <div class="pagination-single__icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
-        </div>
-      </a>
     
   
 </nav>
@@ -2779,55 +2938,19 @@ document.addEventListener('DOMContentLoaded', function () {
   <div class="toc " data-dir="ltr" data-folding="true" data-ani="true">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#介绍">介绍</a></li>
-    <li><a href="#写在开始">写在开始</a></li>
-    <li><a href="#对游戏性能的一个简介">对游戏性能的一个简介</a></li>
-    <li><a href="#记录分析数据">记录分析数据</a>
+    <li><a href="#1-untiy-图形相关概念以及基础知识">1. Untiy 图形相关概念以及基础知识</a>
       <ul>
-        <li><a href="#记录游戏数据">记录游戏数据</a></li>
-      </ul>
-    </li>
-    <li><a href="#分析数据">分析数据</a>
-      <ul>
-        <li><a href="#cpu分析器">CPU分析器</a>
+        <li><a href="#mesh--meshfilter--meshrenderer--material-相关概念以及基础知识">Mesh / MeshFilter / MeshRenderer / Material 相关概念以及基础知识</a>
           <ul>
-            <li><a href="#层次结构图">层次结构图</a></li>
-            <li><a href="#时间线视图">时间线视图</a></li>
-            <li><a href="#其他分析器">其他分析器</a></li>
+            <li><a href="#mesh-unity-的主要图形基元是指模型的网格描述形状的数据集合">Mesh： Unity 的主要图形基元，是指模型的网格，描述形状的数据集合。</a></li>
+            <li><a href="#meshfilter内包含一个mesh组件可以根据meshfilter获得模型网格的组件也可以为meshfilter设置mesh内容">MeshFilter：内包含一个Mesh组件，可以根据MeshFilter获得模型网格的组件，也可以为MeshFilter设置Mesh内容。</a></li>
+            <li><a href="#mesh-render是用于把网格渲染出来的组件meshfilter的作用就是把mesh扔给meshrender将模型或者说是几何体绘制显示出来">Mesh Render：是用于把网格渲染出来的组件。MeshFilter的作用就是把Mesh扔给MeshRender将模型或者说是几何体绘制显示出来。</a></li>
+            <li><a href="#material本质是shader的实例meshrenderer中非常重要的角色它的配置决定了物体表面的外观将以怎样的质地呈现到我们眼前">Material：本质是shader的实例，MeshRenderer中非常重要的角色，它的配置决定了物体表面的外观将以怎样的质地呈现到我们眼前。</a></li>
           </ul>
         </li>
       </ul>
     </li>
-    <li><a href="#确定造成性能问题的原因">确定造成性能问题的原因</a>
-      <ul>
-        <li><a href="#排除垂直同步">排除垂直同步</a>
-          <ul>
-            <li><a href="#在cpu分析器中隐藏垂直同步信息">在CPU分析器中隐藏垂直同步信息</a></li>
-            <li><a href="#在层级结构视图中无视垂直同步信息">在层级结构视图中无视垂直同步信息</a></li>
-            <li><a href="#屏蔽垂直同步">屏蔽垂直同步</a></li>
-          </ul>
-        </li>
-        <li><a href="#渲染分析器">渲染分析器</a>
-          <ul>
-            <li><a href="#辨别我们的游戏是否是gpu密集">辨别我们的游戏是否是GPU密集</a></li>
-            <li><a href="#辨别我们的游戏是否是cpu密集">辨别我们的游戏是否是CPU密集</a></li>
-          </ul>
-        </li>
-        <li><a href="#垃圾回收分析器">垃圾回收分析器</a></li>
-        <li><a href="#解决垃圾回收问题">解决垃圾回收问题</a></li>
-        <li><a href="#物理分析器">物理分析器</a>
-          <ul>
-            <li><a href="#解决物理问题">解决物理问题</a></li>
-          </ul>
-        </li>
-        <li><a href="#运行缓慢的脚本">运行缓慢的脚本</a>
-          <ul>
-            <li><a href="#解决缓慢代码问题">解决缓慢代码问题</a></li>
-          </ul>
-        </li>
-        <li><a href="#其他造成性能问题的原因">其他造成性能问题的原因</a></li>
-      </ul>
-    </li>
+    <li><a href="#2-创建mesh示例">2. 创建Mesh示例：</a></li>
   </ul>
 </nav>
   </div>
