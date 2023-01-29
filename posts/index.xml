@@ -14,11 +14,35 @@
     <managingEditor>chen61813772@gmail.com (wangyichen)</managingEditor>
     <webMaster>chen61813772@gmail.com (wangyichen)</webMaster>
     <copyright>©2023, All Rights Reserved</copyright>
-    <lastBuildDate>Sat, 28 Jan 2023 15:51:16 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 29 Jan 2023 15:18:50 +0800</lastBuildDate>
     
         <atom:link href="https://yichenlove.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>Unity Shader入门（二）</title>
+        <link>https://yichenlove.github.io/posts/unity-shader2/</link>
+        <pubDate>Sun, 29 Jan 2023 15:18:50 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        <atom:modified>Sun, 29 Jan 2023 15:18:50 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/unity-shader2/</guid>
+        <description>1.渲染管线的相关概念 渲染管线是实时渲染的核心组件。渲染管线的功能是通过给定虚拟相机、3D场景物体以及光源等场景要素来产生或者渲染一副2D的</description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>unity</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>Unity Shader入门（一）</title>
