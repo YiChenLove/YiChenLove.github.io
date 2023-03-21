@@ -14,11 +14,35 @@
     <managingEditor>chen61813772@gmail.com (wangyichen)</managingEditor>
     <webMaster>chen61813772@gmail.com (wangyichen)</webMaster>
     <copyright>©2023, All Rights Reserved</copyright>
-    <lastBuildDate>Sun, 29 Jan 2023 15:18:50 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 20 Mar 2023 17:06:20 +0800</lastBuildDate>
     
         <atom:link href="https://yichenlove.github.io/tags/unity/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>Unity Shader入门（三）</title>
+        <link>https://yichenlove.github.io/posts/unity-shader3/</link>
+        <pubDate>Mon, 20 Mar 2023 17:06:20 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        <atom:modified>Mon, 20 Mar 2023 17:06:20 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/unity-shader3/</guid>
+        <description>1.NPR基础概念 NPR 是 Non-Photorealistic Rendering 的简称，也就是图形渲染中的非真实感渲染，常见的 NPR 渲染包括卡通渲染、油画渲染、像素感渲染、素描画、水墨画等类型。 卡通</description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>unity</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>Unity Shader入门（二）</title>
