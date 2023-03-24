@@ -14,7 +14,7 @@
     <managingEditor>chen61813772@gmail.com (wangyichen)</managingEditor>
     <webMaster>chen61813772@gmail.com (wangyichen)</webMaster>
     <copyright>©2023, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 20 Mar 2023 17:06:20 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 24 Mar 2023 14:23:15 +0800</lastBuildDate>
     
         <atom:link href="https://yichenlove.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -40,6 +40,30 @@
         
       
 
+      
+      <item>
+        <title>抽象概念</title>
+        <link>https://yichenlove.github.io/posts/csharp-abstract/</link>
+        <pubDate>Fri, 24 Mar 2023 14:23:15 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        <atom:modified>Fri, 24 Mar 2023 14:23:15 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/csharp-abstract/</guid>
+        <description>抽象概念 抽象：笼统，模糊，看不懂，不明白 抽象类的特点： 1.如果一个类中只存在着只有方法声明但是没有方法体（没有实现）。那么这个方法就是抽象方</description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>c#</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>Unity Shader入门（三）</title>
