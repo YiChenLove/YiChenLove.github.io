@@ -13,8 +13,8 @@
     <language>en</language>
     <managingEditor>chen61813772@gmail.com (wangyichen)</managingEditor>
     <webMaster>chen61813772@gmail.com (wangyichen)</webMaster>
-    <copyright>©2023, All Rights Reserved</copyright>
-    <lastBuildDate>Fri, 24 Mar 2023 14:23:15 +0800</lastBuildDate>
+    <copyright>©2024, All Rights Reserved</copyright>
+    <lastBuildDate>Mon, 08 Apr 2024 14:10:20 +0800</lastBuildDate>
     
         <atom:link href="https://yichenlove.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -40,6 +40,24 @@
         
       
 
+      
+      <item>
+        <title>顶级思维</title>
+        <link>https://yichenlove.github.io/posts/zhihu-doc/</link>
+        <pubDate>Mon, 08 Apr 2024 14:10:20 +0800</pubDate>
+        <author>chen61813772@gmail.com (wangyichen)</author>
+        <atom:modified>Mon, 08 Apr 2024 14:10:20 +0800</atom:modified>
+        <guid>https://yichenlove.github.io/posts/zhihu-doc/</guid>
+        <description>1.墨菲定律：越怕什么，越发生什么 推论：越害怕什么？就越准备什么，那样发生什么都不需要害怕 2.吉德林法则：把问题清楚记下来，就能解决一半问题</description>
+        
+        <dc:creator>wangyichen</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>C# 之 抽象类简介</title>
