@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Glsl on wangyichen&#39;s blog</title>
+    <link>http://localhost:1313/en/tags/glsl/</link>
+    <description>Recent content in Glsl on wangyichen&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Mon, 08 Nov 2021 17:18:21 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/en/tags/glsl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>cocos creator glsl</title>
+      <link>http://localhost:1313/en/posts/crea_mf4/</link>
+      <pubDate>Mon, 08 Nov 2021 17:18:21 +0800</pubDate>
+      <guid>http://localhost:1313/en/posts/crea_mf4/</guid>
+      <description>&lt;h2 id=&#34;cocos-creator&#34;&gt;cocos creator&lt;/h2&gt;&#xA;&lt;p&gt;右键菜单，除了创建组件，effect material是什么？&lt;br /&gt;&#xA;纹理：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;关于Material:&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;threejs是js基于webgl的一个3D图形库&#xA;这里有个对Material很好的描述&#xA;threejs的接口都是基于Material + Geometry来创建一个现实对象&#xA;&#xA;对于2d  3d显示对象，原理理应是类似的&#xA;cocos只是对sprite的封装隐藏细节&#xA;threejs对Material + Geometry接口更加GPU友好&#xA;&#xA;https://segmentfault.com/a/1190000014639067&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;&#xA;&lt;li&gt;关于Effect:&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Material是怎么来的？&#xA;&#xA;渲染管线：&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;&#xA;&lt;li&gt;cocos creator 里面的shader怎么和cocos2d-x里面的不一样&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;根上都是顶点着色器和片段着色器的&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;&#xA;&lt;li&gt;yaml格式是什么?&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;https://docs.cocos.com/creator3d/manual/zh/material-system/yaml-101.html&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;内置变量：https://docs.cocos.com/creator3d/manual/zh/material-system/builtin-shader-uniforms.html&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

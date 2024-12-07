@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ToLua on wangyichen&#39;s blog</title>
+    <link>http://localhost:1313/en/tags/tolua/</link>
+    <description>Recent content in ToLua on wangyichen&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Fri, 05 Nov 2021 17:55:54 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/en/tags/tolua/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Unity中xLua与toLua对Vector3的优化</title>
+      <link>http://localhost:1313/en/posts/unity-xlua-vector3/</link>
+      <pubDate>Fri, 05 Nov 2021 17:55:54 +0800</pubDate>
+      <guid>http://localhost:1313/en/posts/unity-xlua-vector3/</guid>
+      <description>&lt;h3 id=&#34;目录&#34;&gt;目录&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;概述&lt;br /&gt;&#xA;1.1 Vector3的定义&lt;br /&gt;&#xA;1.2 主要优化的是什么？&lt;/li&gt;&#xA;&lt;li&gt;xLua对Vector3的优化&lt;br /&gt;&#xA;2.1 xLua创建Vector3&lt;br /&gt;&#xA;2.2 xLua获取Vector3 &amp;ndash; C#的Vector3传入lua&lt;br /&gt;&#xA;2.3 xLua 设置 Vector3到C#&lt;br /&gt;&#xA;2.4 GCOptimize &amp;ndash; &lt;code&gt;PushUnityEngineVector3&lt;/code&gt;的由来&lt;/li&gt;&#xA;&lt;li&gt;toLua对Vector3的优化&lt;br /&gt;&#xA;3.1 toLua创建Vector3&lt;br /&gt;&#xA;3.2 toLua获取Vector3 &amp;ndash; C#的Vector3传入lua&lt;br /&gt;&#xA;3.3 toLua 设置 Vector3到C#&lt;/li&gt;&#xA;&lt;li&gt;xLua与toLua对Vector3的优化的区别&lt;br /&gt;&#xA;4.1 效率性能的比较&lt;br /&gt;&#xA;4.2 扩展性的比较&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h3 id=&#34;一-概述&#34;&gt;一. 概述&lt;/h3&gt;&#xA;&lt;h5 id=&#34;11-vector3的定义&#34;&gt;1.1 Vector3的定义&lt;/h5&gt;&#xA;&lt;p&gt;&lt;code&gt;public struct Vector3&lt;/code&gt;，是一个struct 结构体，值类型。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

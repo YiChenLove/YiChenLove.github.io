@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Android on wangyichen&#39;s blog</title>
+    <link>http://localhost:1313/en/tags/android/</link>
+    <description>Recent content in Android on wangyichen&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Fri, 17 Dec 2021 19:31:29 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/en/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>安卓gradle splits</title>
+      <link>http://localhost:1313/en/posts/build-gradle-splits/</link>
+      <pubDate>Fri, 17 Dec 2021 19:31:29 +0800</pubDate>
+      <guid>http://localhost:1313/en/posts/build-gradle-splits/</guid>
+      <description>&lt;h3 id=&#34;一前言&#34;&gt;一、前言&lt;/h3&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;今天分享 splits 配置，从字面意思知道有着 切开 的意思，他的作用其实是帮我们&lt;code&gt;把 apk 包从不同维度进行切开，减小apk的大小&lt;/code&gt;，从而让用户在下载时节省流量。&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h3 id=&#34;二splits-的结构简析&#34;&gt;二、splits 的结构简析&lt;/h3&gt;&#xA;&lt;h3 id=&#34;1splits-的存在位置&#34;&gt;1、splits 的存在位置&lt;/h3&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Splits 会映射为 &lt;code&gt;com.android.build.gradle.internal.dsl.Splits&lt;/code&gt;类，没有继承任何类。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>App 64位和32位</title>
+      <link>http://localhost:1313/en/posts/app-32-64/</link>
+      <pubDate>Thu, 25 Nov 2021 20:22:55 +0800</pubDate>
+      <guid>http://localhost:1313/en/posts/app-32-64/</guid>
+      <description>&lt;h3 id=&#34;一架构差异&#34;&gt;一、架构差异&lt;/h3&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;ARM是RISC（精简指令集）处理器，不同于x86指令集（CISC,复杂指令集）。&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;ARM 有不同的CPU 架构 包括:&lt;br /&gt;&#xA;ARMV8架构、ARMV7架构、ARMV5和ARMV6架构&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>build.gradle配置参数</title>
+      <link>http://localhost:1313/en/posts/android-gardle/</link>
+      <pubDate>Wed, 24 Nov 2021 22:05:15 +0800</pubDate>
+      <guid>http://localhost:1313/en/posts/android-gardle/</guid>
+      <description>&lt;h6 id=&#34;gradle是一个基于apache-ant和apache-maven概念的项目自动化建构工具它使用一种基于groovy的特定领域语言来声明项目设置而不是传统的xml当前其支持的语言限于javagroovy和scala计划未来将支持更多的语言&#34;&gt;Gradle是一个基于Apache Ant和Apache Maven概念的项目自动化建构工具。它使用一种基于Groovy的特定领域语言来声明项目设置，而不是传统的XML。当前其支持的语言限于Java、Groovy和Scala，计划未来将支持更多的语言。&lt;/h6&gt;&#xA;&lt;p&gt;android build.gradle各个配置参数的含义&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Android 生命周期</title>
+      <link>http://localhost:1313/en/posts/android-lifecrcle/</link>
+      <pubDate>Wed, 24 Nov 2021 15:43:51 +0800</pubDate>
+      <guid>http://localhost:1313/en/posts/android-lifecrcle/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;生命周期感知型组件可执行操作来响应另一个组件（如 Activity 和 Fragment）的生命周期状态的变化。这些组件有助于您编写出更有条理且往往更精简的代码，此类代码更易于维护。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>滑动关闭Activity</title>
+      <link>http://localhost:1313/en/posts/android-activity2/</link>
+      <pubDate>Tue, 23 Nov 2021 21:12:17 +0800</pubDate>
+      <guid>http://localhost:1313/en/posts/android-activity2/</guid>
+      <description>&lt;p&gt;常常可以看到，很多Android应用都有这么一个功能，就是滑动关闭Activity，比如微信，CSDN移动端，百度贴吧移动端等。我自己也想写个滑动关闭Activity，最近事情没有那么多，我就google了一下，查看了一下实现滑动关闭Activity的实现方法，其中，有个思路，我觉得很不错，因此，在这里，我通过别人的思路，自己实现了一下滑动关闭Activity的方法，在此记录一下。我希望这篇博客，能给人有所启发，也希望大家能对我有所批判，如有更好的方式，请给我留言，不甚感激。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Android Activity的Launch Mode</title>
+      <link>http://localhost:1313/en/posts/android-launchmode/</link>
+      <pubDate>Fri, 05 Nov 2021 16:54:48 +0800</pubDate>
+      <guid>http://localhost:1313/en/posts/android-launchmode/</guid>
+      <description>&lt;h3 id=&#34;android-activity的launch-modeandroid-activity的launch-mode&#34;&gt;&lt;a href=&#34;http://localhost:1313/en/posts/android-launchmode/#android-activity的launch-mode&#34;&gt;&lt;/a&gt;Android Activity的Launch Mode&lt;/h3&gt;&#xA;&lt;h4 id=&#34;综述综述&#34;&gt;&lt;a href=&#34;http://localhost:1313/en/posts/android-launchmode/#综述&#34;&gt;&lt;/a&gt;综述&lt;/h4&gt;&#xA;&lt;p&gt;对安卓而言，Activity有四种启动模式，它们是：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;standard 标准模式，每次都新建一个实例对象&lt;/li&gt;&#xA;&lt;li&gt;singleTop 如果在任务栈顶发现了相同的实例则重用，否则新建并压入栈顶&lt;/li&gt;&#xA;&lt;li&gt;singleTask 如果在任务栈中发现了相同的实例，将其上面的任务终止并移除，重用该实例。否则新建实例并入栈&lt;/li&gt;&#xA;&lt;li&gt;singleInstance 允许不同应用，进程线程等共用一个实例，无论从何应用调用该实例都重用&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;想要感受一下的话写一个小demo，然后自己启动自己再点返回键就看出来了。下面详细说说每一种启动模式&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
