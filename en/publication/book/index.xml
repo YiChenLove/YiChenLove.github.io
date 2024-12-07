@@ -1,27 +1,44 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>book on wangyichen&#39;s blog</title>
-    <link>http://localhost:1313/en/publication/book/</link>
-    <description>Recent content in book on wangyichen&#39;s blog</description>
-    <generator>Hugo</generator>
+    <title>book on Hugo Zzo Theme</title>
+    <link>http://yichenlove.github.io/en/publication/book/</link>
+    <description>Recent content in book on Hugo Zzo Theme</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Tue, 21 Jun 2022 21:17:45 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/en/publication/book/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>《亲密关系》</title>
-      <link>http://localhost:1313/en/publication/book/intimate-relationship/</link>
-      <pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/en/publication/book/intimate-relationship/</guid>
-      <description>&lt;p&gt;这本书的优点在于，以&lt;code&gt;系统的、完整的、科学的&lt;/code&gt;方式，解答了我对爱情的困惑，对亲密关系有了较为全面的认知。&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;【系统性】在于，这本书在解析亲密关系的各个话题时，有从始至终的理论框架（例如相互依赖理论），让人能够形成系统的观点。相比之下，有些心理学公众号的文章，今天讲依恋类型，明天讲原生家庭，充斥着不同的理论和名词，每读一篇似乎学到了新的知识，却难以沉淀、成为自己的知识网络中的一部分，甚至不同文章的观点还会出现冲突。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Donec vel ipsum vulputate, dapibus magna quis</title>
-      <link>http://localhost:1313/en/publication/book/book_any_folder_name_1/</link>
-      <pubDate>Thu, 01 Jun 2017 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/en/publication/book/book_any_folder_name_1/</guid>
-      <description></description>
-    </item>
+    <managingEditor>zzossig@gmail.com (zzossig)</managingEditor>
+    <webMaster>zzossig@gmail.com (zzossig)</webMaster>
+    <copyright>©2021, All Rights Reserved</copyright>
+    <lastBuildDate>Thu, 05 Mar 2020 14:08:48 +0000</lastBuildDate>
+    
+        <atom:link href="http://yichenlove.github.io/en/publication/book/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>Donec vel ipsum vulputate, dapibus magna quis</title>
+        <link>http://yichenlove.github.io/en/publication/book/book_any_folder_name_1/</link>
+        <pubDate>Thu, 01 Jun 2017 00:00:00 +0000</pubDate>
+        <author>zzossig@gmail.com (zzossig)</author>
+        <atom:modified>Thu, 01 Jun 2017 00:00:00 +0000</atom:modified>
+        <guid>http://yichenlove.github.io/en/publication/book/book_any_folder_name_1/</guid>
+        <description></description>
+        
+        <dc:creator>zzossig</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+
+    
   </channel>
 </rss>
